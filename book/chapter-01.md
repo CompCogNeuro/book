@@ -1,119 +1,78 @@
-# Chapter 1
+# Introduction
 
-Lorem ipsum dolor sit amet diam vestibulum dolorem velit nam parturient orci.
-Dictum mollis et. Odio ut odio ullamcorper diam ac. Risus a wisi nec wisi
-aliquet. Suscipit platea et massa in mattis. Id ac risus. Necessitatibus
-pharetra risus. Cursus dui nunc ut magna quam. Sem ut nec curabitur ut sed. Id
-nec neque ipsum vestibulum vestibulum sodales purus ornare.
+You are about to embark on one of the most fascinating scientific journeys possible: inside your own brain! We start this journey by understanding what individual [neurons](CCNBook/Neuron "wikilink") in your neocortex do with the roughly 10,000 synaptic input signals that they receive from other neurons. The *neocortex* is the most evolutionarily recent part of the brain, which is also most enlarged in humans, and is where most of your thinking takes place. The numbers of neurons and synapses between neurons in the neocortex are astounding: roughly 20 billion neurons, each of which is interconnected with roughly 10,000 others. That is several times more neurons than people on earth. And each neuron is far more social than we are as people \-- estimates of the size of stable human social networks are only around 150-200 people, compared to the 10,000 for neurons. We\'ve got a lot going on under the hood. At these scales, the influence of any one neuron on any other is relatively small. We\'ll see that these small influences can be shaped in powerful ways through [learning](CCNBook/Learning "wikilink") mechanisms, to achieve complex and powerful forms of information processing. And this information processing prowess does not require much complexity from the individual neurons themselves \-- fairly simple forms of information integration both accurately describe the response properties of actual neocortical neurons, and enable sophisticated information processing at the level of aggregate neural [networks](CCNBook/Networks "wikilink").
 
-[See @WatsonCrick1953]
+After developing an understanding of these basic neural information processing mechanisms in Part I of this book, we continue our journey in Part II by exploring many different aspects of human thought (cognition), including [perception and attention](CCNBook/Perception "wikilink"), [motor control and reinforcement learning](CCNBook/Motor "wikilink"), [learning and memory](CCNBook/Memory "wikilink"), [language](CCNBook/Language "wikilink"), and [executive function](CCNBook/Executive "wikilink"). Amazingly, all these seemingly different cognitive functions can be understood using the small set of common neural mechanisms developed in Part I. In effect, our neocortex is a fantastic form of silly putty, which can be molded by the learning process to take on many different cognitive tasks. For example, we will find striking similarities across different brain areas and cognitive functions \-- the development of primary visual cortex turns out to tell us a lot about the development of rich semantic knowledge of word meanings!
 
-Nec aliquam magnam luctus et mi tellus nec lacus duis elit convallis. Sed amet
-a. Metus sed nunc. Ligula per venenatis. Mi etiam sagittis. Mauris in
-scelerisque. Porta non vel ut nunc dictum. Tincidunt id massa. Consectetuer
-dui sodales elit ridiculus euismod. Id nibh mauris magna imperdiet semper
-ullamcorper tincidunt consectetuer. Nec dolor amet. Ultricies amet aliqua
-elementum nec accumsan. Eget magna cras non sociosqu gravida. Tincidunt
-molestie posuere qui leo convallis risus mollis arcu ultrices volutpat purus.
-Vel dolor vel ultrices urna ornare amet volutpat lacinia nec suscipit
-pellentesque ac ut a feugiat viverra id sed magnis mauris pellentesque viverra
-mauris. Consequat cras ipsum. Mauris etiam fermentum. Enim consectetuer sem.
-Fusce metus sed. Felis erat adipiscing suscipit fusce sodales.
+## Some Phenomena We\'ll Explore
 
-Here's a short-form PlantUML example:
+Here is a list of some of the cognitive neuroscience phenomena we\'ll explore in Part II of the book:
 
-```plantuml
-@startuml
-client->server: SYN
-server->client: SYN+ACK
-client->server: ACK
-@enduml
-```
+-   **Vision:** We can effortlessly recognize countless people, places, and things. Why is this so hard for robots? We will explore this issue in a network that views natural scenes (mountains, trees, etc.), and develops brain-like ways of encoding them using principles of learning.
+-   **Attention:** Where\'s Waldo? We\'ll see in a model how two visual processing pathways work together to help focus our attention in different locations in space (whether we are searching for something or just taking things in), and why damage to one of these pathways leads people to ignore half of space.
+-   **Dopamine and Reward:** Why do we get bored with things so quickly? Because our dopamine system is constantly adapting to everything we know, and only gives us rewards when something new or different occurs. We\'ll see how this all happens through interacting brain systems that drive phasic dopamine release.
+-   **Episodic memory:** How can damage to a small part of our brain cause amnesia? We\'ll see how in a model that replicates the structure of the hippocampus. This model provides insight into why the rest of the brain isn\'t well-suited to take on the job of forming new episodic memories.
+-   **Reading:** What causes dyslexia, and why do people who have it vary so much in their struggles with reading? We\'ll explore these issues in a network that learns to read and pronounce nearly 3,000 English words, and generalizes to novel nonwords (e.g., "mave" or "nust") just like people do. We\'ll see why damaging the network in different ways simulates various forms of dyslexia.
+-   **Meaning:** [\"A rose is a rose is a rose.\"](http://en.wikipedia.org/wiki/Rose_is_a_rose_is_a_rose_is_a_rose) But how do we know what a rose is in the first place? We\'ll explore this through a network that "reads" every paragraph in a textbook, and acquires a surprisingly good semantic understanding by noting which words tend to be used together or in similar contexts.
+-   **Task directed behavior:** How do we stay focused on tasks that we need to get done or things that we need to pay attention to, in the face of an ever-growing number of distractions (like email, text messages, and tweets)? We\'ll explore this issue through a network that simulates the "executive" part of the brain, the prefrontal cortex. We will see how this area is uniquely-suited to protect us from distraction, and how this can change with age.
 
-Here's a longer-form PlantUML example:
+## The Computational Approach
 
-~~~ {.plantuml title="4-way handshake"}
-@startuml
-client->server: FIN
-server->client: ACK
-server->client: FIN
-client->server: ACK
-@enduml
-~~~
+An important feature of our journey through the brain is that we use the vehicle of *computer models* to understand cognitive neuroscience (i.e., *Computational Cognitive Neuroscience*). These computer models enrich the learning experience in important ways \-- we routinely hear from our students that they didn\'t really understand anything until they pulled up the computer model and played around with it for a few hours. Being able to manipulate and visualize the brain using a powerful 3D graphical interface brings abstract concepts to life, and enables many experiments to be conducted easily, cleanly, and safely in the comfort of your own laptop. This stuff is fun, like a video game \-- think \"sim brain\", as in the popular \"sim city\" game from a few years ago.
 
-Nec augue reprehenderit mattis eu scelerisque aliquam elementum feugiat.
-Aliquam eget malesuada. Suscipit odio risus. Id neque quam neque tortor amet.
-Integer mauris consectetuer. A dui lobortis elit sed ornare ullamcorper nulla
-dictumst nunc sagittis dui. Sed maecenas rutrum in dolor etiam vestibulum
-montes pulvinar. Vel interdum nulla. A eius integer eleifend urna rerum
-accumsan elementum nulla. Aenean diam accusamus imperdiet condimentum cursus.
-Interdum venenatis turpis. Integer sed fermentum. Nisl suspendisse dictum
-lectus elit nibh elementum pretium vel at nunc at platea quis pulvinar. Et at
-mi. Mi eleifend neque a in aliquam. Etiam nunc turpis. Primis vestibulum massa
-auctor luctus ullamcorper. Tempus sollicitudin vitae. Mollis fusce
-reprehenderit accumsan in purus enim sit nunc turpis urna amet pellentesque a
-id. Nec rhoncus molestiae velit tellus fusce. Magna scelerisque enim. Morbi
-nec eget. Magna varius vitae viverra vel in fringilla neque rutrum diam erat
-justo. Nostrud magna leo. Pretium suspendisse scelerisque.
+At a more serious level, the use of computer models to understand how the brain works has been a critical contributor to scientific progress in this area over the past few decades. A key advantage of computer modeling is its ability to wrestle with complexity that often proves daunting to otherwise unaided human understanding. How could we possibly hope to understand how billions of neurons interacting with 10\'s of thousands of other neurons produce complex human cognition, just by talking in vague verbal terms, or simple paper diagrams? Certainly, nobody questions the need to use computer models in climate modeling, to make accurate predictions and understand how the many complex factors interact with each other. The situation is only more dire in cognitive neuroscience.
 
-+++
+Nevertheless, in all fields where computer models are used, there is a fundamental distrust of the models. They are themselves complex, created by people, and have no necessary relationship to the real system in question. How do we know these models aren\'t just completely made-up fantasies? The answer seems simple: the models must be constrained by data at as many levels as possible, and they must generate predictions that can then be tested empirically. In what follows, we discuss different approaches that people might take to this challenge \-- this is intended to give a sense of the scientific approach behind the work described in this book \-- as a student this is perhaps not so relevant, but it might help give some perspective on how science really works.
 
-Mus libero tellus ac dui magna suspendisse vel pellentesque. Erat scelerisque
-sapien. Tristique sapien eleifend id risus vel. Facilisis scelerisque donec
-con mattis id ut quis eros. Natoque at libero.
+In an ideal world, one might imagine that the neurons in the neural model would be mirror images of those in the actual brain, replicating as much detail as is possible given the technical limitations for obtaining the necessary details. They would be connected exactly as they are in the real brain. And they would produce detailed behaviors that replicate exactly how the organism in question behaves across a wide range of different situations. Then you would feel confident that your model is sufficiently \"real\" to trust some of its predictions.
 
-Platea maecenas vitae ac nisl id. Porttitor libero placerat et vel lobortis in
-suspendisse duis. At scelerisque mauris. Enim wisi dapibus. Lobortis
-vestibulum pulvinar dictumst sed wisi id malesuada sodales.
+But even if this were technically feasible, you might wonder whether the resulting system would be any more comprehensible than the brain itself! In other words, we would only have succeeded in transporting the fundamental mysteries from the brain into our model, without developing any actual understanding about how the thing really works. From this perspective, the most important thing is to develop *the simplest possible model that captures the most possible data* \-- this is basically the principle of *Ockham\'s razor*, which is widely regarded as a central principle for all scientific theorizing.
 
-Non convallis aliquam urna quam amet. Metus orci elit. Mattis mauris malesuada
-vitae elementum dolor. Et erat integer sed malesuada eu. Eget penatibus
-faucibus sit magna dolor aliquet sem eu rutrum dui ut. Id consequat aenean.
-Nunc pede felis et integer mi. Facilisis posuere ultrices. Lorem nibh sodales.
-Vivamus amet eu nunc porta quis nunc tellus ut. Morbi tristique accumsan.
-Ipsum pellentesque velit. Auctor dapibus aliquip dui eget nec erat mauris est.
-Quis et parturient condimentum wisi amet ac nec lectus. Sed vulputate semper.
-Justo nascetur orci convallis libero ipsum faucibus molestie libero. Ante
-justo proin. Amet a tortor. Vestibulum platea erat. Id ipsum tempus eleifend
-totam mi. In sapien non amet elementum faucibus scelerisque commodo donec.
-Malesuada hac imperdiet. Molestie at dolor. Curabitur sagittis rutrum. Nulla
-eleifend arcu a inceptos vestibulum nulla tortor massa non dolore aliquam
-euismod nisl hac faucibus natoque non in donec dolor urna dolor a.
+In some cases, it is easy to apply this razor to cut away unnecessary detail. Certainly many biological properties of neurons are irrelevant for their core information processing function (e.g., cellular processes that are common to all biological cells, not just neurons). But often it comes down to a judgment call about what phenomena you regard as being important, which will vary depending on the scientific questions being addressed with the model.
 
-Luctus ligula possimus. Bibendum orci vestibulum ligula mauris egestas.
-Blandit dictum pede. Nec amet arcu ornare nullam eleifend taciti recusandae
-aliquet. Arcu leo phasellus. Quam arcu id. Fusce dignissim id turpis ante
-quisque. Vulputate nascetur ac. Ut vitae fringilla. Mauris massa integer
-porttitor imperdiet nunc massa platea maecenas. Nulla elementum sed. Malesuada
-pellentesque wisi mollis ut porttitor. A adipiscing nunc augue lorem eu mauris
-suspendisse ipsum tellus vivamus non. Aliquam est sodales. Ipsum auctor ipsum
-tempus tincidunt urna tellus autem eget. Modi non nunc. Eu ultrices mauris
-ipsum elit tellus wisi tempus et. Congue risus dignissim feugiat in
-pellentesque. Risus interdum et. Sed dignissim dignissimos pretium libero vel
-mauris neque pharetra. Id vitae id. Elementum lorem ligula. Urna mattis eget
-mauris ut ut. Non ut tellus. Maecenas nibh eu arcu elit nonummy. Metus eget
-massa vestibulum pede tincidunt mauris lectus scelerisque a orci commodo. In
-felis taciti nulla in est. Sit in gravida. Elit felis nonummy. Dolor ipsum
-eget. Ac metus inceptos. Id vel duis non morbi quam. Donec at eget nulla massa
-amet. Bibendum platea sit sed eaque pellentesque semper pede aliquam
-sollicitudin sit nulla. Vel sollicitudin wisi eu massa quis in lectus erat.
-Tincidunt mollis tortor. Rhoncus posuere sociosqu ut sed sit. Felis ipsum sed.
-Eros luctus tempus et eget lorem rutrum aliquam mi. Nec id sed volutpat sit
-tellus lectus vel vel. Condimentum arcu consectetuer. Wisi con congue eros
-urna fames elementum tellus quis. Ornare varius ante. Tempus leo sed lectus in
-sed erat expedita quisque lorem placerat nunc. Velit erat quam posuere aliquam
-lobortis sit eget et. Aliquam nec non et a elit donec maecenas in. Phasellus
-amet imperdiet in ipsum sem. Eleifend id magna urna morbi tempus nec dolor
-elit. Augue aliquam lectus. Eu lectus velit. Magna sed justo. Vulputate lacus
-duis pellentesque dolor consectetuer. Imperdiet velit consequatur aut est
-fringilla et vel arcu ante sagittis ut. Magna vestibulum enim. Nunc porttitor
-eros sed feugiat est. Magna ipsum justo in est at aenean nibh maecenas pretium
-mauris ac. Suscipit nonummy elementum. Ut ac ac. Suscipit vel ligula eu ante
-curabitur. Dolor vitae cupiditate. Eget vestibulum felis. Morbi odio sodales
-sit ac quam. Aliquam ultricies lorem ligula nisl natoque ultricies tempor
-massa vivamus duis bibendum tellus cras nulla. Nulla nec lectus sagittis
-ligula massa. Duis maecenas nec. Id reiciendis justo adipiscing sit aliquet.
-Elementum metus pede ut facilisis vitae facilisi arcu sed. Dui iaculis wisi
-donec lectus hendrerit. Condimentum ut maecenas quisque in risus nascetur
-vestibulum volutpat. Nibh augue sociosqu eget eros sagittis pede lacus
-vestibulum.
+The approach taken for the models in this book is to find some kind of happy (or unhappy) middle ground between biological detail and cognitive functionality. This middle ground is unhappy to the extent that researchers concerned with either end of this continuum are dissatisfied with the level of the models. Biologists will worry that our neurons and networks are overly simplified. Cognitive psychologists will be concerned that our models are too biologically detailed, and they can make much simpler models that capture the same cognitive phenomena. We who relish this \"golden middle\" ground are happy when we\'ve achieved important simplifications on the neural side, while still capturing important cognitive phenomena. This level of modeling explores how consideration of neural mechanisms inform the workings of the mind, and reciprocally, how cognitive and computational constraints afford a richer understanding of the problems these mechanisms evolved to solve. It can thus make predictions for how a cognitive phenomenon (e.g., memory interference) is affected by changes at the neural level (due to disease, pharmacology, genetics, or similarly due to changes in the cognitive task parameters). The model can then be tested, falsified and refined. In this sense, a model of cognitive neuroscience is just like any other \'theory\', except that it is explicitly specified and formalized, forcing the modeler to be accountable for their theory if/when the data don\'t match up. Conversely, models can sometimes show that when an existing theory is faced with challenging data, the theory may hold up after all due to a particular dynamic that may not be considered from verbal theorizing.
+
+Ultimately, it comes down to aesthetic or personality-driven factors, which cause different people to prefer different overall strategies to computer modeling. Each of these different approaches has value, and science would not progress without them, so it is fortunate that people vary in their personalities so different people end up doing different things. Some people value simplicity, elegance, and cleanliness most highly \-- these people will tend to favor abstract mathematical (e.g., Bayesian) cognitive models. Other people value biological detail above all else, and don\'t feel very comfortable straying beyond the most firmly established facts \-- they will prefer to make highly elaborated individual neuron models incorporating everything that is known. To live in the middle, you need to be willing to take some risks, and value most highly the process of *emergence*, where complex phenomena can be shown to emerge from simpler underlying mechanisms. The criteria for success here are a bit murkier and subjective \-- basically it boils down to whether the model is sufficiently simple to be comprehensible, but not so simple as to make its behavior trivial or otherwise so fully transparent that it doesn\'t seem to be doing you any good in the first place. One last note on this issue is that the different levels of models are not mutually exclusive. Each of the low level biophysical and high level cognitive models have made enormous contributions to understanding and analysis in their respective domains (much of which is a basis for further simplification or elaboration in the book). In fact, much ground can be (and to some extent already has been) gained by attempts to understand one level of modeling in terms of the other. At the end of the day, linking from molecule to mind spans multiple levels of analysis, and like studying the laws of particle physics to planetary motion, require multiple formal tools.
+
+## Emergent Phenomena
+
+What makes something a satisfying scientific explanation? A satisfying answer is that you can explain a seemingly complex phenomenon in terms of simpler underlying mechanisms, that interact in specific ways. The classic scientific process of *reductionism* plays a critical role here, where the complex system is reduced to simpler parts. However, one also needs to go in the opposite, oft-neglected direction, *reconstructionism*, where the complex system is actually reconstructed from these simpler parts. Often the only way to practically achieve this reconstruction is through computational modeling. The result is an attempt to capture the essence of emergence.
+
+Emergence can be illustrated in a very simple physical system, two interacting gears, as shown in . It is not mysterious or magical. On the other hand, it really is. You can make the gears out of any kind of sufficiently hard material, and they will still work. There might be subtle factors like friction and durability that vary. But over a wide range, it doesn\'t matter what the gears are made from. Thus, there is a level of *transcendence* that occurs with emergence, where the behavior of the more complex interacting system does not depend on many of the detailed properties of the lower level parts. In effect, the interaction itself is what matters, and the parts are mere place holders. Of course, they have to be there, and meet some basic criteria, but they are nevertheless replaceable.
+
+Taking this example into the domain of interest here, does this mean that we can switch out our biological neurons for artificial ones, and everything should still function the same, *as long as we capture the essential interactions in the right way?* Some of us believe this to be the case, and that when we finally manage to put enough neurons in the right configuration into a big computer simulation, the resulting brain will support consciousness and everything else, just like the ones in our own heads. One interesting further question arises: how important are all the interactions between our physical bodies and the physical environment? There is good reason to believe that this is critical. Thus, we\'ll have to put this brain in a robot. Or perhaps more challengingly, in a virtual environment in a virtual reality, still stuck inside the computer. It will be fascinating to ponder this question on your journey through the simulated brain\...
+
+## Why Should We Care about the Brain?
+
+One of the things you\'ll discover on this journey is that *Computational Cognitive Neuroscience is hard*. There is a lot of material at multiple levels to master. We get into details of ion channels in neurons, names of pathways in different parts of the brain, effects of lesions to different brain areas, and patterns of neural activity, on top of all the details about behavioral paradigms and reaction time patterns. Wouldn\'t it just be a lot simpler if we could ignore all these brain details, and just focus on what we *really* care about \-- how does cognition itself work? By way of analogy, we don\'t need to know much of anything about how computer hardware works to program in Visual Basic or Python, for example. Vastly different kinds of hardware can all run the same programming languages and software. Can\'t we just focus on the *software* of the mind and ignore the *hardware*?
+
+Exactly this argument has been promulgated in many different forms over the years, and indeed has a bit of a resurgence recently in the form of abstract Bayesian models of cognition. David Marr was perhaps the most influential in arguing that one can somewhat independently examine cognition at three different levels:
+
+-   **Computational** \-- what computations are being performed? What information is being processed?
+-   **Algorithmic** \-- how are these computations being performed, in terms of a sequence of information processing steps?
+-   **Implementational** \-- how does the hardware actually implement these algorithms?
+
+This way of dividing up the problem has been used to argue that one can safely ignore the implementation (i.e., the brain), and focus on the computational and algorithmic levels, because, like in a computer, the hardware really doesn\'t matter so much.
+
+However, the key oversight of this approach is that the reason hardware doesn\'t matter in standard computers is that they are all specifically designed to be functionally equivalent in the first place! Sure, there are lots of different details, but they are all implementing a basic serial Von Neumann architecture. What if the brain has a vastly different architecture, which makes some algorithms and computations work extremely efficiently, while it cannot even support others? Then the implementational level would matter a great deal.
+
+There is every reason to believe that this is the case. The brain is *not* at all like a general purpose computational device. Instead, it is really a custom piece of hardware that implements a very specific set of computations in massive parallelism across its 20 billion neurons. In this respect, it is much more like the specialized graphics processing units (GPU\'s) in modern computers, which are custom designed to efficiently carry out in massive parallelism the specific computations necessary to render complex 3D graphics. More generally, the field of computer science is discovering that parallel computation is exceptionally difficult to program, and one has to completely rethink the algorithms and computations to obtain efficient parallel computation. Thus, the hardware of the brain matters a huge amount, and provides many important clues as to what kind of algorithms and computations are being performed.
+
+Historically, the \"ignore the brain\" approaches have taken an interesting trajectory. In the 1960\'s through the early 1990\'s, the dominant approach was to assume that the brain actually operates much like a standard computer, and researchers tended to use concepts like logic and symbolic propositions in their cognitive models. Since then, a more statistical metaphor has become popular, with the Bayesian probabilistic framework being widely used in particular. This is an advance in many respects, as it emphasizes the graded nature of information processing in the brain (e.g., integrating various graded probabilities to arrive at an overall estimate of the likelihood of some event), as contrasted with hard symbols and logic, which didn\'t seem to be a particularly good fit with the way that most of cognition actually operates. However, the actual mathematics of Bayesian probability computations are not a particularly good fit to how the brain operates at the neural level, and much of this research operates without much consideration for how the brain actually functions. Instead, a version of Marr\'s computational level is adopted, by assuming that whatever the brain is doing, it must be at least close to optimal, and Bayesian models can often tell us how to optimally combine uncertain pieces of information. Regardless of the validity of this optimality assumption, it is definitely useful to know what the optimal computations are for given problems, so this approach certainly has a lot of value in general. However, optimality is typically conditional on a number of assumptions, and it is often difficult to decide among these different assumptions.
+
+If you really want to know for sure how the brain is actually producing cognition, clearly you need to know how the brain actually functions. Yes, this is hard. But it is not impossible, and the state of neuroscience these days is such that there is a wealth of useful information to inform all manner of insights into how the brain actually works. It is like working on a jigsaw puzzle \-- the easiest puzzles are full of distinctive textures and junk everywhere, so you can really see when the pieces fit together (). The rich tableau of neuroscience data provides all this distinctive junk to constrain the process of puzzling together cognition. In contrast, abstract, purely cognitive models are like a jigsaw puzzle with only a big featureless blue sky (). You only have the logical constraints of the piece shapes, which are all highly similar and difficult to discriminate. It takes forever.
+
+A couple of the most satisfying instances of all the pieces coming together to complete a puzzle include:
+
+-   The detailed biology of the hippocampus, including high levels of inhibition and broad diffuse connectivity, fit together with its unique role in rapidly learning new episodic information, and the remarkable data from patient HM who had his hippocampus resected to prevent intractable epilepsy. Through computational models in the [Memory Chapter](CCNBook/Memory "wikilink"), we can see that these biological details produce high levels of *pattern separation* which keep memories highly distinct, and thus enable rapid learning without creating catastrophic levels of interference.
+-   The detailed biology of the connections between dopamine, basal ganglia, and prefrontal cortex fit together with the computational requirements for making decisions based on prior reward history, and learning what information is important to hold on to, versus what can be ignored. Computational models in the [Executive Function Chapter](CCNBook/Executive "wikilink") show that the dopamine system can exhibit a kind of time travel needed to translate later utility into an earlier decision of what information to maintain, and those in the [Motor Chapter](CCNBook/Motor "wikilink") show that the effects of dopamine on the basal ganglia circuitry are just right to facilitate decision making based on both positive and negative outcomes. And the interaction between the basal ganglia and the prefrontal cortex enables basal ganglia decisions to influence what is maintained and acted upon in the prefrontal cortex. There are a lot of pieces here, but the fact that they all fit together so well into a functional model \-- and that many aspects of them have withstood the test of direct experimentation \-- makes it that much more likely that this is really what is going on.
+
+## How to Read this Book
+
+This book is intended to accommodate many different levels of background and interests. The main chapters are relatively short, and provide a high-level introduction to the major themes. There will be an increasing number of detailed subsections added over time, to support more advanced treatment of specific issues. The ability to support these multiple levels of readers is a major advantage of the wiki format. We also encourage usage of this material as an adjunct for other courses on related topics. The simulation models can be used by themselves in many different courses.
+
+Due to the complexity and interconnected nature of the material (mirroring the brain itself), it may be useful to revisit earlier chapters after having read later chapters. Also, we strongly recommend reading the [Brain Areas](CCNBook/BrainAreas "wikilink") chapter *now*, and then re-reading it in its regular sequence after having made it all the way through Part I. It provides a nice high-level summary of functional brain organization, that bridges the two parts of the book, and gives an overall roadmap of the content we\'ll be covering. Some of it won\'t make as much sense until after you\'ve read Part I, but doing a quick first read now will provide a lot of useful perspective.
+
+## External Resources
+
+-   [Gary Cottrell\'s solicited compilation of important computational modeling papers](http://cseweb.ucsd.edu/users/gary/CogSciLiterature.html)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 #
 # Build script. Uses doit: http://pydoit.org/
@@ -510,13 +510,13 @@ def _check_pandoc():
     if (version is None) or (len(version) < 3):
         raise Exception('Unable to determine pandoc version.')
 
-    version = [int(v) for v in version]
-    if (version[0] < 2) or (version[2] < 4):
-        raise Exception(
-            'Pandoc version is {0}. Version 2.0.4 or newer is required.'.format(
-                '.'.join([str(i) for i in version])
-            )
-        )
+    # version = [int(v) for v in version]
+    # if (version[0] < 2) or (version[2] < 4):
+    #     raise Exception(
+    #         'Pandoc version is {0}. Version 2.0.4 or newer is required.'.format(
+    #             '.'.join([str(i) for i in version])
+    #         )
+    #     )
 
 # ---------------------------------------------------------------------------
 # Main

@@ -1,6 +1,10 @@
-# About the Author
+# About the Authors
 
-![](book/author.png)
+Randall C. O'Reilly and Yuko Munakata are Professors of Psychology and Neuroscience at the University of Colorado Boulder.
 
-Joe Horrid has spent 30 years acting full-time in local dinner theater
-productions, eking out a modest living aided by the free dinners.
+Michael J. Frank is Professor at Brown University.
+
+Thomas E. Hazy is a Senior Research Associate at the University of Colorado Boulder.
+
+Many others have contributed to this text.
+

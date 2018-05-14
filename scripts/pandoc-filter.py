@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 
 # ---------------------------------------------------------------------------
-# Copyright © 2017 Brian M. Clapper
+# Copyright (C) 2017 Brian M. Clapper
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software

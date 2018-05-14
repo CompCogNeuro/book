@@ -1,21 +1,20 @@
 copyright:
-  owner: Joe Horrid
-  year: 2017
+  owner: "Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E. Hazy, and Contributors"
+  year: 2018
 
-title: "My Life in the Theater"
-subtitle: "That's the way it goes"
+title: "Computational Cognitive Neuroscience"
 
-publisher: Horrid Enterprises, Ltd.
+publisher: "Open Textbook, freely available"
 
 # Whether or not to enable PlantUML. You must install PlantUML, and the
 # "plantuml" command must be in your path, if you enable this feature.
 #
 # Default, if not specified: false
-use_plantuml: true
+use_plantuml: false
 
 # Whether PDF generation uses Weasy Print (true) or LaTeX (false). Defaults to
 # false (LaTeX).
-use_weasyprint: true
+use_weasyprint: false
 
 # Set to the language in which the book is written. This is especially
 # useful when generating PDF with weasyprint, because it affects how
@@ -24,7 +23,11 @@ use_weasyprint: true
 
 # Multiple authors are permitted.
 author:
-- Joe Horrid
+- "Randall C. O'Reilly"
+- Yuko Munakata
+- Michael J. Frank
+- Thomas E. Hazy
+- Contributors
 
 # Book identifier is optional.
 #identifier:
