@@ -1,0 +1,24 @@
+#!/bin/bash
+
+IMAGE=ebook-template
+VERSION=1.0
+
+if ! [ -z "$http_proxy" ]; then
+        BUILD_ARG_HTTP="--build-arg http_proxy=$http_proxy"
+fi
+
+if ! [ -z "$https_proxy" ]; then
+        BUILD_ARG_HTTPS="--build-arg https_proxy=$https_proxy"
+fi
+
+if [ $(docker images -q "${IMAGE}:${VERSION}" | wc -l) -eq 0 ]; then
+  echo "Building docker image, please wait"
+  docker build \
+    ${BUILD_ARG_HTTP} \
+    ${BUILD_ARG_HTTPS} \
+    -t ${IMAGE}:${VERSION} docker
+fi
+
+docker run -it --rm --name ebook \
+  -v $(pwd):/home/user/book \
+  ${IMAGE}:${VERSION} ./build $@

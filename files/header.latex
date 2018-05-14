@@ -1,0 +1,10 @@
+\setlength{\parindent}{2.0em}
+\setlength{\parskip}{0.25em}
+
+\providecommand{\subtitle}[1]{%
+  \usepackage{titling}
+  \posttitle{%
+    \par\large\it#1\end{center}}
+}
+
+

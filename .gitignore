@@ -1,0 +1,11 @@
+*.iml
+/.idea
+/tmp
+book.epub
+book.json
+book.html
+book.docx
+book.pdf
+book.latex
+doit-db.json
+__pycache__

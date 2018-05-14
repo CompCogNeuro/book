@@ -1,0 +1,96 @@
+html {
+    hyphens: auto;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.25em;
+}
+
+div.book_section {
+    margin-top: 3em;
+}
+
+div#section_dedication {
+    border-bottom: 1px solid #aaa;
+    width: 100%;
+}
+/*
+  Classic paragraph: First line indented, no vertical space between paragraphs.
+*/
+p {
+    text-indent: +2em;
+    text-align: justify;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+img.plantuml {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div.left p {
+    margin-top: 1em;
+    text-indent: 0;
+    text-align: left;
+}
+
+div.center p {
+    margin-top: 1em;
+    text-indent: 0;
+    text-align: center;
+}
+
+div.right p {
+    margin-top: 1em;
+    text-indent: 0;
+    text-align: right;
+}
+
+div.sep {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 200%;
+}
+
+h1 {
+    display: block;
+    page-break-before: always;
+}
+
+h1.title {
+    text-align: center;
+}
+
+h1.subtitle {
+    font-style: italic;
+    text-align: center;
+}
+
+h2.author {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+div.figure {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div#cover-image {
+    width: 100%;
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid #aaa;
+}
+
+div#cover-image img {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

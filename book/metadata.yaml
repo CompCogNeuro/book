@@ -1,0 +1,43 @@
+copyright:
+  owner: Joe Horrid
+  year: 2017
+
+title: "My Life in the Theater"
+subtitle: "That's the way it goes"
+
+publisher: Horrid Enterprises, Ltd.
+
+# Whether or not to enable PlantUML. You must install PlantUML, and the
+# "plantuml" command must be in your path, if you enable this feature.
+#
+# Default, if not specified: false
+use_plantuml: true
+
+# Whether PDF generation uses Weasy Print (true) or LaTeX (false). Defaults to
+# false (LaTeX).
+use_weasyprint: true
+
+# Set to the language in which the book is written. This is especially
+# useful when generating PDF with weasyprint, because it affects how
+# hyphenation is handled. (When using weasyprint, automatic hyphenation is
+# supported for any language that Pyphen supports.)
+
+# Multiple authors are permitted.
+author:
+- Joe Horrid
+
+# Book identifier is optional.
+#identifier:
+#  scheme: ISBN # or DOI
+#  text: 123456789X
+
+# The language and variant in which the book is written.
+language: en-US
+
+# See https://wiki.mobileread.com/wiki/Genre
+genre: reference
+
+# Set this option if you need to change the paper size. Default is "letter".
+# "A4" is also valid.
+
+#papersize: letter

@@ -1,0 +1,5 @@
+<dc:rights>Copyright &#xa9; ${copyright_year} ${copyright_owner}</dc:rights>
+<dc:language>${language}</dc:language>
+<dc:publisher>${publisher}</dc:publisher>
+<dc:subject>${genre}</dc:subject>
+<dc:identifier id="BookId" opf:scheme="${identifier_scheme}">${identifier}</dc:identifier>
