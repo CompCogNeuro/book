@@ -1,4 +1,6 @@
-Copyright © 2017 Brian M. Clapper
+Text is Copyright per book/copyright.md
+
+Book generation scripts etc Copyright (c) 2017 Brian M. Clapper
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
