@@ -1,4 +1,4 @@
 doit==0.30.3
 panflute==1.10.6
-PyYAML==3.12
+PyYAML==5.1
 grizzled-python==1.1.0
