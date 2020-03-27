@@ -44,3 +44,10 @@ genre: reference
 # "A4" is also valid.
 
 #papersize: letter
+
+papersize: letter
+
+urlcolor: "blue"
+
+link-citations: true
+

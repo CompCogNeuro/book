@@ -1,12 +1,13 @@
 references:
-- id: Marr82
-  type: book
+- id: Marr77
+  type: article-journal
   author:
   - family: Marr
     given: David
   issued:
-  - year: 1982
-  title: Vision
-  publisher: Freeman
-  publisher-place: New York
-
+  - year: 1977
+    month: 1
+  title: Artificial IntelligenceA Personal View
+  container-title: Artificial Intelligence
+  page: 37-48
+...
