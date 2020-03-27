@@ -51,3 +51,6 @@ urlcolor: "blue"
 
 link-citations: true
 
+# align display equations on the left
+classoption: fleqn
+
