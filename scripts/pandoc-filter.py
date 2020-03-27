@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 # ---------------------------------------------------------------------------
-# Copyright (C) 2017 Brian M. Clapper
+# Copyright © 2017-2019 Brian M. Clapper
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -29,6 +29,7 @@ import sys
 from panflute import *
 import os
 from itertools import dropwhile, takewhile
+from typing import Pattern, Match, Any, List, Generic, TypeVar, Optional
 
 # Need the lib module. Make sure it can be found.
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
@@ -90,36 +91,42 @@ DOCX_JUSTIFICATION_STYLES = {
 # Helper classes
 # ---------------------------------------------------------------------------
 
-class DataHolder:
-    '''
+T = TypeVar('T')
+
+
+class DataHolder(Generic[T]):
+    """
     Allows for assign-and-test. See
     http://code.activestate.com/recipes/66061-assign-and-test/
-    '''
-    def __init__(self, value=None):
+    """
+    def __init__(self, value: Optional[T] = None):
         self.value = value
 
-    def set(self, value):
+    def set(self, value: Optional[T]) -> Optional[T]:
         self.value = value
         return value
 
-    def get(self):
+    def get(self) -> Optional[T]:
         return self.value
 
+
 # ---------------------------------------------------------------------------
+# Helper Functions
 # ---------------------------------------------------------------------------
 
-def debug(msg):
-    '''
+def debug(message: str) -> None:
+    """
     Dump a debug message to stderr.
 
     Parameters:
 
-    msg: The message to print
-    '''
-    sys.stderr.write(msg + "\n")
+    message: The message to print
+    """
+    print(message, file=sys.stderr)
 
-def matches_text(elem, text):
-    '''
+
+def matches_text(elem: Element,  text: str) -> bool:
+    """
     Convenience function to see if an element is a Str element and matches
     the specified text.
 
@@ -129,11 +136,12 @@ def matches_text(elem, text):
     text: The string to match against
 
     Returns: True on match, False otherwise
-    '''
+    """
     return isinstance(elem, Str) and elem.text == text
 
-def matches_pattern(elem, regex):
-    '''
+
+def matches_pattern(elem: Element, regex: Pattern) -> Match:
+    """
     Convenience function to see if an element is a Str element and matches
     the specified regular expression.
 
@@ -143,11 +151,12 @@ def matches_pattern(elem, regex):
     regex: The compiled regular expression against which to match
 
     Returns: The re.Match object on match, None otherwise
-    '''
+    """
     return regex.match(elem.text) if isinstance(elem, Str) else None
 
-def paragraph_starts_with_child(elem, string):
-    '''
+
+def paragraph_starts_with_child(elem: Element, string: str) -> bool:
+    """
     Determine whether the first non-line break element in a paragraph is a
     Str element that matches the specified string. Skips leading LineBreak
     nodes.
@@ -159,7 +168,7 @@ def paragraph_starts_with_child(elem, string):
 
     Returns: True on match, False otherwise. Also returns false if the
     passed AST element is not a Para object.
-    '''
+    """
     if not isinstance(elem, Para):
         return False
 
@@ -174,8 +183,9 @@ def paragraph_starts_with_child(elem, string):
 
     return False
 
-def paragraph_contains_child(elem, string):
-    '''
+
+def paragraph_contains_child(elem: Element, string: str) -> bool:
+    """
     Determine whether the any AST element a paragraph is a Str element that
     matches the specified string.
 
@@ -186,12 +196,13 @@ def paragraph_contains_child(elem, string):
 
     Returns: True on match, False otherwise. Also returns false if the
     passed AST element is not a Para object.
-    '''
+    """
     return (isinstance(elem, Para) and
             any(matches_text(x, string) for x in elem.content))
 
-def is_epub(format):
-    '''
+
+def is_epub(format: str) -> bool:
+    """
     Convenience function that tests whether the output format is ePub. Useful
     because Pandoc currently supports two ePub output formats.
 
@@ -200,11 +211,12 @@ def is_epub(format):
     format: the document output format
 
     Returns: True if the output format is an ePub format, False otherwise.
-    '''
+    """
     return format.startswith('epub')
 
-def justify(elem, format, token):
-    '''
+
+def justify(elem: Element, format: str, token: str) -> Element:
+    """
     Workhorse method to justify an element (left, center, or right).
     Handles all the hairy logic necessary to get the job done.
 
@@ -217,7 +229,7 @@ def justify(elem, format, token):
                  key.
 
     Returns: the adjusted element
-    '''
+    """
     def drop(child):
         return isinstance(child, LineBreak) or matches_text(child, token)
 
@@ -250,8 +262,9 @@ def justify(elem, format, token):
     else:
         return Div(Para(*leading_line_skips), Para(*children))
 
-def left_justify_paragraph(elem, format):
-    '''
+
+def left_justify_paragraph(elem: Element, format: str) -> Element:
+    """
     Left-justify the specified element.
 
     Parameters:
@@ -260,11 +273,12 @@ def left_justify_paragraph(elem, format):
     format: The output format
 
     Returns: the possibly updated element
-    '''
+    """
     return justify(elem, format, LEFT_JUSTIFY)
 
-def center_paragraph(elem, format):
-    '''
+
+def center_paragraph(elem: Element, format: str) -> Element:
+    """
     Center the specified element.
 
     Parameters:
@@ -273,11 +287,12 @@ def center_paragraph(elem, format):
     format: The output format
 
     Returns: the possibly updated element
-    '''
+    """
     return justify(elem, format, CENTER_JUSTIFY)
 
-def right_justify_paragraph(elem, format):
-    '''
+
+def right_justify_paragraph(elem: Element, format: str) -> Element:
+    """
     Right-justify the specified element.
 
     Parameters:
@@ -286,11 +301,12 @@ def right_justify_paragraph(elem, format):
     format: The output format
 
     Returns: the possibly updated element
-    '''
+    """
     return justify(elem, format, RIGHT_JUSTIFY)
 
-def section_sep(elem, format):
-    '''
+
+def section_sep(elem: Element, format: str) -> Element:
+    """
     Convert the specified element into a section separator.
 
     Parameters:
@@ -299,7 +315,7 @@ def section_sep(elem, format):
     format: The output format
 
     Returns: the possibly updated element
-    '''
+    """
     sep = "• • •"
     if (format == 'html') or is_epub(format):
         return RawBlock(f'<div class="sep">{sep}</div>')
@@ -314,8 +330,9 @@ def section_sep(elem, format):
     else:
         return elem
 
-def substitute_any_metadata(elem, doc):
-    '''
+
+def substitute_any_metadata(elem: Element, doc: Any) -> Element:
+    """
     Checks a string to determine whether it matches one of the SIMPLE_PATTERNS
     metadata keys, updating the element by substituting the appropriate
     metadata value, if found.
@@ -326,7 +343,7 @@ def substitute_any_metadata(elem, doc):
     doc:  the Document object
 
     Returns: the possibly updated element
-    '''
+    """
     assert isinstance(elem, Str)
 
     for pat, meta_key in SIMPLE_PATTERNS:
@@ -337,8 +354,9 @@ def substitute_any_metadata(elem, doc):
 
     return elem
 
-def newpage(format):
-    '''
+
+def newpage(format: str) -> List[Element]:
+    """
     Return the appropriate sequence to force a new page, if supported by the
     output format.
 
@@ -347,7 +365,7 @@ def newpage(format):
     format: the output format
 
     Returns: the sequence of elements to force a new page, or []
-    '''
+    """
     if format == 'latex':
         return [RawBlock(r'\newpage', format)]
     elif is_epub(format):
@@ -357,19 +375,21 @@ def newpage(format):
     else:
         return []
 
-def prepare(doc):
-    '''
+
+def prepare(doc: Doc):
+    """
     Filter initialization.
 
     Parameters:
 
     doc: the Document object
-    '''
+    """
     # Validate the metadata
     validate_metadata(doc.get_metadata())
 
-def transform(elem, doc):
-    '''
+
+def transform(elem: Element, doc: Doc) -> Element:
+    """
     The guts of the filter.
 
     Parameters:
@@ -378,7 +398,7 @@ def transform(elem, doc):
     doc:   The Document object
 
     :return: the possibly updated element
-    '''
+    """
     data = DataHolder()
     if isinstance(elem, Header) and elem.level == 1:
         new_elem = elem
@@ -427,8 +447,10 @@ def transform(elem, doc):
     else:
         return elem
 
-def main(doc=None):
+
+def main(doc: Optional[Doc] = None):
     return run_filter(transform, prepare=prepare, doc=doc)
+
 
 if __name__ == "__main__":
     main()

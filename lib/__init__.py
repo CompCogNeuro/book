@@ -1,5 +1,5 @@
 # ---------------------------------------------------------------------------
-# Copyright © 2017 Brian M. Clapper
+# Copyright © 2017-2019 Brian M. Clapper
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -28,6 +28,7 @@ import re
 from textwrap import TextWrapper
 from glob import glob
 import codecs
+from typing import Any, Sequence, Dict, Mapping, Generator, Union, TextIO
 
 try:
     _columns = int(os.getenv('COLUMNS', '80'))
@@ -39,8 +40,8 @@ _alert_wrapper = TextWrapper(width=_columns - 1,
                              subsequent_indent=' ' * len(_ALERT_PREFIX))
 
 
-def import_from_file(path, module_name):
-    '''
+def import_from_file(path: str, module_name: str) -> Any:
+    """
     Import a file as a module.
 
     Parameters:
@@ -48,25 +49,35 @@ def import_from_file(path, module_name):
     - module_name: the name to assign the module_from_spec
 
     Returns: the module object
-    '''
+    """
     spec = importlib.util.spec_from_file_location(module_name, path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     sys.modules[module_name] = mod
     return mod
 
+@contextmanager
+def open_file(path: str,
+              mode: str = 'r',
+              encoding='utf-8') -> Generator[TextIO, None, None]:
+    """
+    Convenient front-end to codecs.open
+    """
+    with codecs.open(path, mode=mode, encoding=encoding) as f:
+        yield f
 
-def find_local_images(markdown_files):
+
+def find_local_images(markdown_files: Sequence[str]) -> Sequence[str]:
     from urllib.parse import urlparse
-    IMAGE_PAT = re.compile(r'^\s*!\[.*\]\(([^\)]+)\).*$')
+    image_pat = re.compile(r'^\s*!\[.*\]\(([^\)]+)\).*$')
 
     images = []
     for f in markdown_files:
         if not os.path.exists(f):
             continue
-        with open(f) as md:
+        with open_file(f, mode='r') as md:
             for line in md.readlines():
-                m = IMAGE_PAT.match(line)
+                m = image_pat.match(line)
                 if not m:
                     continue
                 p = urlparse(m.group(1))
@@ -77,15 +88,15 @@ def find_local_images(markdown_files):
     return images
 
 
-def file_or_default(path, default):
-    '''
+def file_or_default(path: str, default: str) -> str:
+    """
     Return `path` if it exists, or `default` if not.
 
     Parameters:
 
     path:    path to file to test
     default: default file
-    '''
+    """
     if os.path.isfile(path):
         return path
 
@@ -95,8 +106,8 @@ def file_or_default(path, default):
     return default
 
 
-def maybe_file(path):
-    '''
+def maybe_file(path: str) -> Sequence[str]:
+    """
     Intended to be used when creating a list of files, this function
     determines whether a file exists, returning the file name in a list if
     so, and returning an empty list if not.
@@ -104,82 +115,89 @@ def maybe_file(path):
     Parameters:
 
     path: the path to test
-    '''
+    """
     if os.path.exists(path):
         return [path]
     else:
         return []
 
 
-def alert(message):
-    '''
+def alert(message: str) -> None:
+    """
     Issue an alert message, which is prefixed and word-wrapped.
 
     :param message:
     :return:
-    '''
-    sys.stderr.write(_alert_wrapper.fill(f'{_ALERT_PREFIX}{message}') + '\n')
+    """
+    print(_alert_wrapper.fill(f'{_ALERT_PREFIX}{message}'), file=sys.stderr)
 
 
-def msg(message):
-    '''
+def msg(message: str) -> None:
+    """
     Display a message on standard error. Automatically adds a newline.
+    I could just use print(), but this approach allows for adding a prefix
+    later, if I feel like it.
 
     Parameters:
 
     message: the message to display
-    '''
-    sys.stderr.write(f'{message}\n')
+    """
+    print(message, file=sys.stderr)
 
 
-def abort(message):
-    '''
+def abort(message: str) -> None:
+    """
     Aborts with a message.
 
     Parameters:
 
     message: the message
-    '''
+    """
     msg(message)
-    raise Exception(message)
+    sys.exit(1)
 
 
-def sh(command):
-    '''
+def sh(command: str) -> None:
+    """
     Runs a shell command, exiting if the command fails.
 
     Parameters:
 
     command: the command to run
-    '''
+    """
+    import subprocess
     msg(command)
-    if os.system(command) != 0:
-        sys.exit(1)
+    try:
+        rc = subprocess.call(command, shell=True)
+        if rc < 0:
+            abort(f'Command aborted by signal {-rc}')
+    except OSError as e:
+        abort(f'Command failed: {e}')
 
 
-def load_metadata(metadata_file):
-    '''
+def load_metadata(metadata_file: str) -> Dict[str, Any]:
+    """
     Loads a YAML metadata file, returning the loaded dictionary.
 
     Parameters:
 
     metadata_file; path to the file to load
-    '''
+    """
     if os.path.exists(metadata_file):
-        with open(metadata_file) as f:
+        with open_file(metadata_file, mode='r') as f:
             s = ''.join([s for s in f if not s.startswith('---')])
-            metadata = yaml.load(s)
+            metadata = yaml.load(s, Loader=yaml.FullLoader)
     else:
         metadata = {}
 
     return metadata
 
 
-def validate_metadata(dict_like):
-    '''
+def validate_metadata(dict_like: Mapping[str, Any]) -> None:
+    """
     Validates metadata that's been loaded into a dictionary-like object.
     Throws an exception if a required key is missing.
-    '''
+    """
     for key in ('title', 'author', 'copyright.owner', 'copyright.year',
                 'publisher', 'language', 'genre'):
         # Drill through composite keys.
@@ -194,14 +212,14 @@ def validate_metadata(dict_like):
             abort(f'Missing required "{key}" in metadata.')
 
 
-def _valid_dir(directory):
+def _valid_dir(directory: str) -> bool:
     return (directory not in ('.', '..')) and (len(directory) > 0)
 
 
 @contextmanager
-def ensure_dir(directory
-               , autoremove=False):
-    '''
+def ensure_dir(directory: str,
+               autoremove: bool = False) -> Generator[None, None, None]:
+    """
     Run a block in the context of a directory that is created if it doesn't
     exist.
 
@@ -209,7 +227,7 @@ def ensure_dir(directory
 
     dir:   the directory
     remove: if True, remove the directory when the "with" block finishes.
-    '''
+    """
     try:
         if _valid_dir(directory):
             os.makedirs(directory, exist_ok=True)
@@ -221,15 +239,16 @@ def ensure_dir(directory
 
 
 @contextmanager
-def target_dir_for(file, autoremove=False):
-    '''
+def target_dir_for(file: str,
+                   autoremove: bool = False) -> Generator[None, None, None]:
+    """
     Context manager that ensures that the parent directory of a file exists.
 
     Parameters:
 
     file:   the file
     remove: if True, remove the directory when the "with" block finishes.
-    '''
+    """
     directory = os.path.dirname(file)
     try:
         if _valid_dir(directory):
@@ -242,8 +261,11 @@ def target_dir_for(file, autoremove=False):
 
 
 @contextmanager
-def preprocess_markdown(tmp_dir, files, divs=False):
-    '''
+def preprocess_markdown(
+        tmp_dir: str,
+        files: Sequence[str],
+        divs: bool = False) -> Generator[Sequence[str], None, None]:
+    """
     Content manager that preprocesses the Markdown files, adding some content
     and producing new, individual files.
 
@@ -256,7 +278,7 @@ def preprocess_markdown(tmp_dir, files, divs=False):
               useful for HTML.
 
     Yields the paths to the generated files
-    '''
+    """
     file_without_dashes = re.compile(r'^[^a-z]*([a-z]+).*$')
 
     directory = os.path.join(tmp_dir, 'preprocessed')
@@ -264,7 +286,7 @@ def preprocess_markdown(tmp_dir, files, divs=False):
     generated = [t for f, t in from_to]
     with ensure_dir(directory, autoremove=True):
         for f, temp in from_to:
-            with open(temp, "w") as t:
+            with open_file(temp, mode="w") as t:
                 basefile, ext = os.path.splitext(os.path.basename(f))
                 m = file_without_dashes.match(basefile)
                 if m:
@@ -275,8 +297,8 @@ def preprocess_markdown(tmp_dir, files, divs=False):
                 # Added classes to each section. Can be used in CSS.
                 if divs and ext == ".md":
                     t.write(f'<div class="book_section" id="section_{cls}">\n')
-                with open(f) as input:
-                    for line in input.readlines():
+                with open_file(f, mode='r') as input_file:
+                    for line in input_file.readlines():
                         t.write(f"{line.rstrip()}\n")
                 # Force a newline after each file.
                 t.write("\n")
@@ -286,13 +308,13 @@ def preprocess_markdown(tmp_dir, files, divs=False):
         yield generated
 
 
-def rm_rf(paths, silent=False):
-    '''
+def rm_rf(paths: Union[str, Sequence[str]], silent: bool = False) -> None:
+    """
     Recursively remove one or more files.
 
     paths - a list or tuple of paths, or a string of one path
     silent - whether or not to make noise about what's going on
-    '''
+    """
     def do_rm(path):
         if os.path.isdir(path):
             if not silent:
@@ -311,40 +333,40 @@ def rm_rf(paths, silent=False):
         raise TaskError('rm_f() expects a list, a tuple or a string.')
 
 
-def find_in_path(command):
-    '''
+def find_in_path(command: str) -> str:
+    """
     Find a command in the path, or bail.
 
     :param command:  the command to find
     :return: the location. Throws an exception otherwise.
-    '''
+    """
     path = [p for p in os.getenv('PATH', '').split(os.pathsep) if len(p) > 0]
     for d in path:
         p = os.path.join(d, command)
         if os.path.isfile(p) and os.access(p, os.X_OK):
             return p
     else:
-        raise OSError("""Can't find "{0}" in PATH.""".format(command))
+        raise OSError(f"""Can't find "{command}" in PATH.""")
 
 
-def mkdirp(dir):
-    '''
+def mkdirp(directory: str) -> None:
+    """
     Equivalent of "mkdir -p".
 
-    :param dir: The directory to be created, along with any intervening
-                parent directories that don't exist.
-    '''
-    if not os.path.exists(dir):
-        os.makedirs(dir)
+    :param directory: The directory to be created, along with any intervening
+                      parent directories that don't exist.
+    """
+    if not os.path.exists(directory):
+        os.makedirs(directory)
 
 
-def rm_f(paths, silent=False):
-    '''
+def rm_f(paths: Union[Sequence[str], str], silent: bool = False) -> None:
+    """
     Remove one or more files.
 
     paths - a list or tuple of paths, or a string of one path
     silent - whether or not to make noise about what's going on
-    '''
+    """
     def do_rm(path):
         if not silent:
             msg(f"rm -f {path}")
@@ -360,8 +382,9 @@ def rm_f(paths, silent=False):
         from doit import TaskError
         raise TaskError('rm_f() expects a list, a tuple or a string.')
 
-def fix_epub(epub, book_title, temp_dir):
-    '''
+
+def fix_epub(epub: str, book_title: str, temp_dir: str) -> None:
+    """
     Make some adjustments to the generated tables of contents in the ePub,
     removing empty elements and removing items matching the book title.
 
@@ -370,7 +393,7 @@ def fix_epub(epub, book_title, temp_dir):
     epub:       The path to the epub file
     book_title: The book title
     temp_dir:   Temporary directory to use for unpacking
-    '''
+    """
     from zipfile import ZipFile, ZIP_DEFLATED
     from xml.dom import minidom
     from grizzled.os import working_directory
@@ -378,7 +401,7 @@ def fix_epub(epub, book_title, temp_dir):
     rm_rf(temp_dir, silent=True)
 
     def zip_add(zf, path, zippath):
-        '''Swiped from zipfile module.'''
+        """Swiped from zipfile module."""
         if os.path.isfile(path):
             zf.write(path, zippath, ZIP_DEFLATED)
         elif os.path.isdir(path):
@@ -387,7 +410,6 @@ def fix_epub(epub, book_title, temp_dir):
             for nm in os.listdir(path):
                 zip_add(zf,
                         os.path.join(path, nm), os.path.join(zippath, nm))
-
 
     def unpack_epub():
         # Assumes pwd is *not* unpack directory.
@@ -420,14 +442,14 @@ def fix_epub(epub, book_title, temp_dir):
             text = s if s else None
         return text
 
-    def fix_toc_ncx(toc):
+    def fix_toc_ncx(table_of_contents):
         # Assumes pwd *is* unpack directory
-        msg(f'.. Reading table of contents file "{toc}".')
-        with open(toc) as f:
+        msg(f'.. Reading table of contents file "{table_of_contents}".')
+        with open_file(table_of_contents) as f:
             toc_xml = f.read()
 
         msg('.. Adjusting table of contents.')
-        with minidom.parse(toc) as dom:
+        with minidom.parseString(toc_xml) as dom:
             nav_map = dom.getElementsByTagName('navMap')
             if not nav_map:
                 abort('Malformed table of contents: No <navMap>.')
@@ -450,17 +472,17 @@ def fix_epub(epub, book_title, temp_dir):
             strip_text_children(nav_map)
 
             # Write it out.
-            with open(toc, 'w') as f:
+            with open_file(toc, mode='w') as f:
                 dom.writexml(f)
 
-    def fix_nav_xhtml(toc):
+    def fix_nav_xhtml(table_of_contents):
         # Assumes pwd *is* unpack directory
-        msg(f'.. Reading table of contents file "{toc}".')
-        with open(toc) as f:
+        msg(f'.. Reading table of contents file "{table_of_contents}".')
+        with open_file(table_of_contents) as f:
             toc_xml = f.read()
 
         msg('.. Adjusting table of contents.')
-        with minidom.parse(toc) as dom:
+        with minidom.parseString(toc_xml) as dom:
             navs = dom.getElementsByTagName('nav')
             nav = None
             for n in navs:
@@ -498,7 +520,7 @@ def fix_epub(epub, book_title, temp_dir):
             strip_text_children(ol)
 
             # Write it out.
-            with open(toc, 'w') as f:
+            with open_file(toc, mode='w') as f:
                 dom.writexml(f)
 
     def fix_chapter_files():
@@ -506,9 +528,9 @@ def fix_epub(epub, book_title, temp_dir):
         title_pat = re.compile(r'^(.*<title>).*(</title>).*$')
 
         def fix_chapter_file(path, title):
-            with codecs.open(path, encoding='UTF-8') as f:
+            with open_file(path) as f:
                 lines = [l.rstrip() for l in f.readlines()]
-            with open(path, 'w', encoding='UTF-8') as f:
+            with open_file(path, mode='w') as f:
                 for line in lines:
                     m = title_pat.match(line)
                     if m:
@@ -523,9 +545,11 @@ def fix_epub(epub, book_title, temp_dir):
         unpack_epub()
         with ensure_dir(temp_dir):
             with working_directory(temp_dir):
-
-                for toc, func in ((os.path.join('EPUB', 'toc.ncx'), fix_toc_ncx),
-                                  (os.path.join('EPUB', 'nav.xhtml'), fix_nav_xhtml)):
+                paths_and_funcs = (
+                    (os.path.join('EPUB', 'toc.ncx'), fix_toc_ncx),
+                    (os.path.join('EPUB', 'nav.xhtml'), fix_nav_xhtml),
+                )
+                for toc, func in paths_and_funcs:
                     if not os.path.exists(toc):
                         msg(f'.. No {toc} file. Skipping it.')
                         continue

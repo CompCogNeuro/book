@@ -3,7 +3,7 @@
 #
 # Build script. Uses doit: http://pydoit.org/
 # ---------------------------------------------------------------------------
-# Copyright © 2017 Brian M. Clapper
+# Copyright © 2017-2019 Brian M. Clapper
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -31,7 +31,7 @@ from lib import *
 # Constants
 # ---------------------------------------------------------------------------
 
-VERSION = "0.7.0"
+VERSION = "0.8.0"
 
 BOOK_SRC_DIR = 'book'
 TMP_DIR  = 'tmp'
@@ -507,16 +507,16 @@ def _check_pandoc():
             version = m.group(1).split('.')
             break
 
-    if (version is None) or (len(version) < 3):
+    if (version is None) or (len(version) < 2):
         raise Exception('Unable to determine pandoc version.')
 
-    # version = [int(v) for v in version]
-    # if (version[0] < 2) or (version[2] < 4):
-    #     raise Exception(
-    #         'Pandoc version is {0}. Version 2.0.4 or newer is required.'.format(
-    #             '.'.join([str(i) for i in version])
-    #         )
-    #     )
+    version = tuple(int(v) for v in version)
+    if version[0:2] < (2, 7):
+        raise Exception(
+            'Pandoc version is {0}. Version 2.0.4 or newer is required.'.format(
+                '.'.join([str(i) for i in version])
+            )
+        )
 
 # ---------------------------------------------------------------------------
 # Main

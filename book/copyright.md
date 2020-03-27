@@ -12,7 +12,5 @@ quotations embodied in critical reviews and certain other noncommercial uses
 permitted by copyright law. For permission requests, write to the publisher,
 addressed “Attention: Book Permissions,” at the address below.
 
-{<} Maybe put your organization's address here.
-
-{<} www.example.com
+{<} ccnlab.org
 

@@ -1,0 +1,22 @@
+[
+  {
+    "author": [
+      {
+        "family": "Marr",
+        "given": "David"
+      }
+    ],
+    "id": "Marr82",
+    "issued": {
+      "date-parts": [
+        [
+          1982
+        ]
+      ]
+    },
+    "publisher": "Freeman",
+    "publisher-place": "New York",
+    "title": "Vision",
+    "type": "book"
+  }
+]

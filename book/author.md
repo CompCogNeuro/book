@@ -1,6 +1,6 @@
 # About the Authors
 
-Randall C. O'Reilly and Yuko Munakata are Professors of Psychology and Neuroscience at the University of Colorado Boulder.
+Randall C. O'Reilly and Yuko Munakata are Professors of Psychology and Neuroscience at the University of California Davis, and this text was written while at the University of Colorado Boulder.
 
 Michael J. Frank is Professor at Brown University.
 
