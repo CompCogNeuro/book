@@ -1,190 +1,4 @@
 references:
-- id: QuirogaReddyKreimanEtAl05
-  type: article-journal
-  author:
-  - family: Quiroga
-    given: R. Quian
-  - family: Reddy
-    given: L.
-  - family: Kreiman
-    given: G.
-  - family: Koch
-    given: C.
-  - family: Fried
-    given: I.
-  issued:
-  - year: 2005
-    month: 6
-  title: Invariant visual representation by single neurons in the human brain
-  container-title: Nature
-  page: 1102-1107
-  volume: '435'
-  issue: '7045'
-  abstract: It takes a fraction of a second to recognize a person or an object even
-    when seen under strikingly different conditions. How such a robust, high-level
-    representation is achieved by neurons in the human brain is still unclear1,2,3,4,5,6.
-    In monkeys, neurons in the upper stages of the ventral visual pathway respond
-    to complex images such as faces and objects and show some degree of invariance
-    to metric properties such as the stimulus size, position and viewing angle2,4,7,8,9,10,11,12.
-    We have previously shown that neurons in the human medial temporal lobe (MTL)
-    fire selectively to images of faces, animals, objects or scenes13,14. Here we
-    report on a remarkable subset of MTL neurons that are selectively activated by
-    strikingly different pictures of given individuals, landmarks or objects and in
-    some cases even by letter strings with their names. These results suggest an invariant,
-    sparse and explicit code, which might be important in the transformation of complex
-    visual percepts into long-term and more abstract memories.
-  DOI: 10.1038/nature03687
-  ISSN: 1476-4687
-
-- id: HaxbyGobbiniFureyEtAl01
-  type: article-journal
-  author:
-  - family: Haxby
-    given: J. V.
-  - family: Gobbini
-    given: M. I.
-  - family: Furey
-    given: M. L.
-  - family: Ishai
-    given: A.
-  - family: Schouten
-    given: J. L.
-  - family: Pietrini
-    given: P.
-  issued:
-  - year: 2001
-    month: 9
-  title: Distributed and overlapping representations of faces and objects in ventral
-    temporal cortex.
-  container-title: Science (New York, N.Y.)
-  page: 2425-2429
-  volume: '293'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
-
-- id: CooperIntratorBlaisEtAl04
-  type: book
-  author:
-  - family: Cooper
-    given: L. N.
-  - family: Intrator
-    given: N.
-  - family: Blais
-    given: B. S.
-  - family: Shouval
-    given: H.
-  issued:
-  - year: 2004
-  title: Theory of Cortical Plasticity.
-  publisher: World Scientific
-  publisher-place: New Jersey
-
-- id: OReillyWyatteRohrlich14
-  type: article-journal
-  author:
-  - family: O’Reilly
-    given: R. C.
-  - family: Wyatte
-    given: Dean
-  - family: Rohrlich
-    given: John
-  issued:
-  - year: 2014
-    month: 7
-  accessed:
-  - year: 2015
-    month: 5
-    day: 15
-  title: Learning Through Time in the Thalamocortical Loops
-  container-title: arXiv:1407.3432 \[q-bio\]
-  abstract: 'We present a comprehensive, novel framework for understanding how the
-    neocortex, including the thalamocortical loops through the deep layers, can support
-    a temporal context representation in the service of predictive learning. Many
-    have argued that predictive learning provides a compelling, powerful source of
-    learning signals to drive the development of human intelligence: if we constantly
-    predict what will happen next, and learn based on the discrepancies from our predictions
-    (error-driven learning), then we can learn to improve our predictions by developing
-    internal representations that capture the regularities of the environment (e.g.,
-    physical laws governing the time-evolution of object motions). Our version of
-    this idea builds upon existing work with simple recurrent networks (SRN’s), which
-    have a discretely-updated temporal context representations that are a direct copy
-    of the prior internal state representation. We argue that this discretization
-    of temporal context updating has a number of important computational and functional
-    advantages, and further show how the strong alpha-frequency (10hz, 100ms cycle
-    time) oscillations in the posterior neocortex could reflect this temporal context
-    updating. We examine a wide range of data from biology to behavior through the
-    lens of this LeabraTI model, and find that it provides a unified account of a
-    number of otherwise disconnected findings, all of which converge to support this
-    new model of neocortical learning and processing. We describe an implemented model
-    showing how predictive learning of tumbling object trajectories can facilitate
-    object recognition with cluttered backgrounds.'
-  URL: http://arxiv.org/abs/1407.3432
-
-- id: LorinczKekesiJuhaszEtAl09
-  type: article-journal
-  author:
-  - family: Lorincz
-    given: Magor L
-  - family: Kekesi
-    given: Katalin A
-  - family: Juhasz
-    given: Gabor
-  - family: Crunelli
-    given: Vincenzo
-  - family: Hughes
-    given: Stuart W
-  issued:
-  - year: 2009
-    month: 9
-  title: Temporal framing of thalamic relay-mode firing by phasic inhibition during
-    the alpha rhythm.
-  container-title: Neuron
-  page: 683-696
-  volume: '63'
-  issue: '5'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/19755110
-
-- id: LimMcKeeWoloszynEtAl15
-  type: article-journal
-  author:
-  - family: Lim
-    given: Sukbin
-  - family: McKee
-    given: Jillian L.
-  - family: Woloszyn
-    given: Luke
-  - family: Amit
-    given: Yali
-  - family: Freedman
-    given: David J.
-  - family: Sheinberg
-    given: David L.
-  - family: Brunel
-    given: Nicolas
-  issued:
-  - year: 2015
-    month: 12
-  title: Inferring learning rules from distributions of firing rates in cortical neurons
-  container-title: Nature Neuroscience
-  page: 1804-1810
-  volume: '18'
-  issue: '12'
-  abstract: Information about external stimuli is thought to be stored in cortical
-    circuits through experience-dependent modifications of synaptic connectivity.
-    These modifications of network connectivity should lead to changes in neuronal
-    activity as a particular stimulus is repeatedly encountered. Here we ask what
-    plasticity rules are consistent with the differences in the statistics of the
-    visual response to novel and familiar stimuli in inferior temporal cortex, an
-    area underlying visual object recognition. We introduce a method that allows one
-    to infer the dependence of the presumptive learning rule on postsynaptic firing
-    rate, and we show that the inferred learning rule exhibits depression for low
-    postsynaptic rates and potentiation for high rates. The threshold separating depression
-    from potentiation is strongly correlated with both mean and s.d. of the firing
-    rate distribution. Finally, we show that network models implementing a rule extracted
-    from data show stable learning dynamics and lead to sparser representations of
-    stimuli.
-  DOI: 10.1038/nn.4158
-  ISSN: 1097-6256
-
 - id: UrakuboHondaFroemkeEtAl08
   type: article-journal
   author:
@@ -206,121 +20,6 @@ references:
   volume: '28'
   issue: '13'
   URL: http://www.ncbi.nlm.nih.gov/pubmed/18367598
-
-- id: KachergisWyatteOReillyEtAl14
-  type: article-journal
-  author:
-  - family: Kachergis
-    given: George
-  - family: Wyatte
-    given: Dean
-  - family: O’Reilly
-    given: R. C.
-  - family: Kleijn
-    given: Roy
-    dropping-particle: de
-  - family: Hommel
-    given: Bernhard
-  issued:
-  - year: 2014
-    month: 5
-  title: A continuous-time neural model for sequential action
-  container-title: 'Philosophical Transactions of the Royal Society B: Biological
-    Sciences'
-  page: '20130623'
-  volume: '369'
-  issue: '1655'
-  abstract: Action selection, planning and execution are continuous processes that
-    evolve over time, responding to perceptual feedback as well as evolving top-down
-    constraints. Existing models of routine sequential action (e.g. coffee- or pancake-making)
-    generally
-  DOI: 10.1098/rstb.2013.0623
-  ISSN: 0962-8436, 1471-2970
-  PMID: '25267830'
-
-- id: BuffaloFriesLandmanEtAl11
-  type: article-journal
-  author:
-  - family: Buffalo
-    given: Elizabeth A
-  - family: Fries
-    given: Pascal
-  - family: Landman
-    given: Rogier
-  - family: Buschman
-    given: Timothy J
-  - family: Desimone
-    given: Robert
-  issued:
-  - year: 2011
-    month: 7
-  title: Laminar differences in gamma and alpha coherence in the ventral stream.
-  container-title: Proceedings of the National Academy of Sciences of the United States
-    of America
-  page: 11262-11267
-  volume: '108'
-  issue: '27'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/21690410
-
-- id: FranceschettiGuatteoPanzicaEtAl95
-  type: article-journal
-  author:
-  - family: Franceschetti
-    given: S
-  - family: Guatteo
-    given: E
-  - family: Panzica
-    given: F
-  - family: Sancini
-    given: G
-  - family: Wanke
-    given: E
-  - family: Avanzini
-    given: G
-  issued:
-  - year: 1995
-    month: 10
-  title: 'Ionic mechanisms underlying burst firing in pyramidal neurons: Intracellular
-    study in rat sensorimotor cortex.'
-  title-short: Ionic mechanisms underlying burst firing in pyramidal neurons
-  container-title: Brain Research
-  page: 127-139
-  volume: '696'
-  issue: '12'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/8574660
-
-- id: LuczakBarthoHarris13
-  type: article-journal
-  author:
-  - family: Luczak
-    given: Artur
-  - family: Bartho
-    given: Peter
-  - family: Harris
-    given: Kenneth D.
-  issued:
-  - year: 2013
-    month: 1
-  title: Gating of sensory input by spontaneous cortical activity.
-  container-title: The Journal of Neuroscience
-  page: 1684-1695
-  volume: '33'
-  issue: '4'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/23345241
-
-- id: WidrowHoff60
-  type: paper-conference
-  author:
-  - family: Widrow
-    given: B.
-  - family: Hoff
-    given: M. E.
-  issued:
-  - year: 1960
-  title: Adaptive Switching Circuits
-  container-title: Institute of Radio Engineers, Western Electronic Show and Convention,
-    Convention Record, Part 4
-  page: 96-104
 
 - id: OReillyWyatteRohrlich17
   type: article-journal
@@ -365,6 +64,352 @@ references:
     accounts for a wide range of data, and makes many testable predictions.'
   URL: http://arxiv.org/abs/1709.04654
 
+- id: KachergisWyatteOReillyEtAl14
+  type: article-journal
+  author:
+  - family: Kachergis
+    given: George
+  - family: Wyatte
+    given: Dean
+  - family: O’Reilly
+    given: R. C.
+  - family: Kleijn
+    given: Roy
+    dropping-particle: de
+  - family: Hommel
+    given: Bernhard
+  issued:
+  - year: 2014
+    month: 5
+  title: A continuous-time neural model for sequential action
+  container-title: 'Philosophical Transactions of the Royal Society B: Biological
+    Sciences'
+  page: '20130623'
+  volume: '369'
+  issue: '1655'
+  abstract: Action selection, planning and execution are continuous processes that
+    evolve over time, responding to perceptual feedback as well as evolving top-down
+    constraints. Existing models of routine sequential action (e.g. coffee- or pancake-making)
+    generally
+  DOI: 10.1098/rstb.2013.0623
+  ISSN: 0962-8436, 1471-2970
+  PMID: '25267830'
+
+- id: RumelhartHintonWilliams86
+  type: article-journal
+  author:
+  - family: Rumelhart
+    given: D. E.
+  - family: Hinton
+    given: G. E.
+  - family: Williams
+    given: R. J.
+  issued:
+  - year: 1986
+    month: 1
+  title: Learning representations by back-propagating errors
+  container-title: Nature
+  page: 533-536
+  volume: '323'
+  issue: '9'
+
+- id: LorinczKekesiJuhaszEtAl09
+  type: article-journal
+  author:
+  - family: Lorincz
+    given: Magor L
+  - family: Kekesi
+    given: Katalin A
+  - family: Juhasz
+    given: Gabor
+  - family: Crunelli
+    given: Vincenzo
+  - family: Hughes
+    given: Stuart W
+  issued:
+  - year: 2009
+    month: 9
+  title: Temporal framing of thalamic relay-mode firing by phasic inhibition during
+    the alpha rhythm.
+  container-title: Neuron
+  page: 683-696
+  volume: '63'
+  issue: '5'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/19755110
+
+- id: FranceschettiGuatteoPanzicaEtAl95
+  type: article-journal
+  author:
+  - family: Franceschetti
+    given: S
+  - family: Guatteo
+    given: E
+  - family: Panzica
+    given: F
+  - family: Sancini
+    given: G
+  - family: Wanke
+    given: E
+  - family: Avanzini
+    given: G
+  issued:
+  - year: 1995
+    month: 10
+  title: 'Ionic mechanisms underlying burst firing in pyramidal neurons: Intracellular
+    study in rat sensorimotor cortex.'
+  title-short: Ionic mechanisms underlying burst firing in pyramidal neurons
+  container-title: Brain Research
+  page: 127-139
+  volume: '696'
+  issue: '12'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8574660
+
+- id: Marr77
+  type: article-journal
+  author:
+  - family: Marr
+    given: David
+  issued:
+  - year: 1977
+    month: 1
+  title: Artificial IntelligenceA Personal View
+  container-title: Artificial Intelligence
+  page: 37-48
+
+- id: HaxbyGobbiniFureyEtAl01
+  type: article-journal
+  author:
+  - family: Haxby
+    given: J. V.
+  - family: Gobbini
+    given: M. I.
+  - family: Furey
+    given: M. L.
+  - family: Ishai
+    given: A.
+  - family: Schouten
+    given: J. L.
+  - family: Pietrini
+    given: P.
+  issued:
+  - year: 2001
+    month: 9
+  title: Distributed and overlapping representations of faces and objects in ventral
+    temporal cortex.
+  container-title: Science (New York, N.Y.)
+  page: 2425-2429
+  volume: '293'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
+
+- id: QuirogaReddyKreimanEtAl05
+  type: article-journal
+  author:
+  - family: Quiroga
+    given: R. Quian
+  - family: Reddy
+    given: L.
+  - family: Kreiman
+    given: G.
+  - family: Koch
+    given: C.
+  - family: Fried
+    given: I.
+  issued:
+  - year: 2005
+    month: 6
+  title: Invariant visual representation by single neurons in the human brain
+  container-title: Nature
+  page: 1102-1107
+  volume: '435'
+  issue: '7045'
+  abstract: It takes a fraction of a second to recognize a person or an object even
+    when seen under strikingly different conditions. How such a robust, high-level
+    representation is achieved by neurons in the human brain is still unclear1,2,3,4,5,6.
+    In monkeys, neurons in the upper stages of the ventral visual pathway respond
+    to complex images such as faces and objects and show some degree of invariance
+    to metric properties such as the stimulus size, position and viewing angle2,4,7,8,9,10,11,12.
+    We have previously shown that neurons in the human medial temporal lobe (MTL)
+    fire selectively to images of faces, animals, objects or scenes13,14. Here we
+    report on a remarkable subset of MTL neurons that are selectively activated by
+    strikingly different pictures of given individuals, landmarks or objects and in
+    some cases even by letter strings with their names. These results suggest an invariant,
+    sparse and explicit code, which might be important in the transformation of complex
+    visual percepts into long-term and more abstract memories.
+  DOI: 10.1038/nature03687
+  ISSN: 1476-4687
+
+- id: ShouvalWangWittenberg10
+  type: article-journal
+  author:
+  - family: Shouval
+    given: Harel Z.
+  - family: Wang
+    given: Samuel S.-H.
+  - family: Wittenberg
+    given: Gayle M.
+  issued:
+  - year: 2010
+  title: 'Spike timing dependent plasticity: A consequence of more fundamental learning
+    rules.'
+  title-short: Spike timing dependent plasticity
+  container-title: Frontiers in Computational Neuroscience
+  volume: '4'
+  issue: '19'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/20725599
+
+- id: BienenstockCooperMunro82
+  type: article-journal
+  author:
+  - family: Bienenstock
+    given: Elie L.
+  - family: Cooper
+    given: Leon N.
+  - family: Munro
+    given: Paul W.
+  issued:
+  - year: 1982
+    month: 3
+  title: 'Theory for the development of neuron selectivity: Orientation specificity
+    and binocular interaction in visual cortex.'
+  title-short: Theory for the development of neuron selectivity
+  container-title: The Journal of Neuroscience
+  page: 32-48
+  volume: '2'
+  issue: '2'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/7054394
+
+- id: BuffaloFriesLandmanEtAl11
+  type: article-journal
+  author:
+  - family: Buffalo
+    given: Elizabeth A
+  - family: Fries
+    given: Pascal
+  - family: Landman
+    given: Rogier
+  - family: Buschman
+    given: Timothy J
+  - family: Desimone
+    given: Robert
+  issued:
+  - year: 2011
+    month: 7
+  title: Laminar differences in gamma and alpha coherence in the ventral stream.
+  container-title: Proceedings of the National Academy of Sciences of the United States
+    of America
+  page: 11262-11267
+  volume: '108'
+  issue: '27'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21690410
+
+- id: NormanNewmanDetreEtAl06
+  type: article-journal
+  author:
+  - family: Norman
+    given: Kenneth A.
+  - family: Newman
+    given: Ehren
+  - family: Detre
+    given: Greg
+  - family: Polyn
+    given: Sean
+  issued:
+  - year: 2006
+  accessed:
+  - year: 2015
+    month: 4
+    day: 12
+  title: How inhibitory oscillations can train neural networks and punish competitors
+  container-title: Neural computation
+  page: 1577-1610
+  volume: '18'
+  issue: '7'
+  URL: http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1577
+
+- id: RitvoTurk-BrowneNorman19
+  type: article-journal
+  author:
+  - family: Ritvo
+    given: Victoria J. H.
+  - family: Turk-Browne
+    given: Nicholas B.
+  - family: Norman
+    given: Kenneth A.
+  issued:
+  - year: 2019
+    month: 9
+  title: 'Nonmonotonic Plasticity: How Memory Retrieval Drives Learning'
+  title-short: Nonmonotonic Plasticity
+  container-title: Trends in Cognitive Sciences
+  page: 726-742
+  volume: '23'
+  issue: '9'
+  abstract: What are the principles that govern whether neural representations move
+    apart (differentiate) or together (integrate) as a function of learning? According
+    to supervised learning models that are trained to predict outcomes in the world,
+    integration should occur when two stimuli predict the same outcome. Numerous findings
+    support this, but paradoxically some recent fMRI studies have found that pairing
+    different stimuli with the same associate causes differentiation, not integration.
+    To explain these and related findings, we argue that supervised learning needs
+    to be supplemented with unsupervised learning that is driven by spreading activation
+    in a U-shaped way, such that inactive memories are not modified, moderate activation
+    of memories causes weakening (leading to differentiation), and higher activation
+    causes strengthening (leading to integration).
+  DOI: 10.1016/j.tics.2019.06.007
+  ISSN: 1364-6613
+
+- id: CooperIntratorBlaisEtAl04
+  type: book
+  author:
+  - family: Cooper
+    given: L. N.
+  - family: Intrator
+    given: N.
+  - family: Blais
+    given: B. S.
+  - family: Shouval
+    given: H.
+  issued:
+  - year: 2004
+  title: Theory of Cortical Plasticity.
+  publisher: World Scientific
+  publisher-place: New Jersey
+
+- id: KirkwoodRioultBear96
+  type: article-journal
+  author:
+  - family: Kirkwood
+    given: A.
+  - family: Rioult
+    given: M. G.
+  - family: Bear
+    given: M. F.
+  issued:
+  - year: 1996
+    month: 1
+  title: Experience-Dependent Modification of Synaptic Plasticity in Visual Cortex.
+  container-title: Nature
+  page: 526-528
+  volume: '381'
+  issue: '6582'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8632826
+
+- id: OReillyMunakata00
+  type: book
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Munakata
+    given: Y.
+  issued:
+  - year: 2000
+    month: 1
+  title: 'Computational Explorations in Cognitive Neuroscience: Understanding the
+    Mind by Simulating the Brain'
+  title-short: Computational Explorations in Cognitive Neuroscience
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+
 - id: BretteGerstner05
   type: article-journal
   author:
@@ -397,21 +442,47 @@ references:
   ISSN: 0022-3077, 1522-1598
   PMID: '16014787'
 
-- id: OReillyMunakata00
-  type: book
+- id: BiPoo98
+  type: article-journal
   author:
-  - family: O’Reilly
-    given: R. C.
-  - family: Munakata
-    given: Y.
+  - family: Bi
+    given: Guo-qiang
+  - family: Poo
+    given: Mu-ming
   issued:
-  - year: 2000
+  - year: 1998
+    month: 12
+  accessed:
+  - year: 2016
     month: 1
-  title: 'Computational Explorations in Cognitive Neuroscience: Understanding the
-    Mind by Simulating the Brain'
-  title-short: Computational Explorations in Cognitive Neuroscience
-  publisher: MIT Press
-  publisher-place: Cambridge, MA
+    day: 27
+  title: 'Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike
+    Timing, Synaptic Strength, and Postsynaptic Cell Type'
+  title-short: Synaptic Modifications in Cultured Hippocampal Neurons
+  container-title: The Journal of Neuroscience
+  page: 10464-10472
+  volume: '18'
+  issue: '24'
+  abstract: In cultures of dissociated rat hippocampal neurons, persistent potentiation
+    and depression of glutamatergic synapses were induced by correlated spiking of
+    presynaptic and postsynaptic neurons. The relative timing between the presynaptic
+    and postsynaptic spiking determined the direction and the extent of synaptic changes.
+    Repetitive postsynaptic spiking within a time window of 20 msec after presynaptic
+    activation resulted in long-term potentiation (LTP), whereas postsynaptic spiking
+    within a window of 20 msec before the repetitive presynaptic activation led to
+    long-term depression (LTD). Significant LTP occurred only at synapses with relatively
+    low initial strength, whereas the extent of LTD did not show obvious dependence
+    on the initial synaptic strength. Both LTP and LTD depended on the activation
+    of NMDA receptors and were absent in cases in which the postsynaptic neurons were
+    GABAergic in nature. Blockade of L-type calcium channels with nimodipine abolished
+    the induction of LTD and reduced the extent of LTP. These results underscore the
+    importance of precise spike timing, synaptic strength, and postsynaptic cell type
+    in the activity-induced modification of central synapses and suggest that Hebb’s
+    rule may need to incorporate a quantitative consideration of spike timing that
+    reflects the narrow and asymmetric window for the induction of synaptic modification.
+  URL: http://www.jneurosci.org/content/18/24/10464
+  ISSN: 0270-6474, 1529-2401
+  PMID: '9852584'
 
 - id: AckleyHintonSejnowski85
   type: article-journal
@@ -431,57 +502,78 @@ references:
   volume: '9'
   issue: '1'
 
-- id: NormanNewmanDetreEtAl06
+- id: LuczakBarthoHarris13
   type: article-journal
   author:
-  - family: Norman
-    given: Kenneth A.
-  - family: Newman
-    given: Ehren
-  - family: Detre
-    given: Greg
-  - family: Polyn
-    given: Sean
+  - family: Luczak
+    given: Artur
+  - family: Bartho
+    given: Peter
+  - family: Harris
+    given: Kenneth D.
   issued:
-  - year: 2006
-  accessed:
+  - year: 2013
+    month: 1
+  title: Gating of sensory input by spontaneous cortical activity.
+  container-title: The Journal of Neuroscience
+  page: 1684-1695
+  volume: '33'
+  issue: '4'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/23345241
+
+- id: LimMcKeeWoloszynEtAl15
+  type: article-journal
+  author:
+  - family: Lim
+    given: Sukbin
+  - family: McKee
+    given: Jillian L.
+  - family: Woloszyn
+    given: Luke
+  - family: Amit
+    given: Yali
+  - family: Freedman
+    given: David J.
+  - family: Sheinberg
+    given: David L.
+  - family: Brunel
+    given: Nicolas
+  issued:
   - year: 2015
-    month: 4
-    day: 12
-  title: How inhibitory oscillations can train neural networks and punish competitors
-  container-title: Neural computation
-  page: 1577-1610
+    month: 12
+  title: Inferring learning rules from distributions of firing rates in cortical neurons
+  container-title: Nature Neuroscience
+  page: 1804-1810
   volume: '18'
-  issue: '7'
-  URL: http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1577
+  issue: '12'
+  abstract: Information about external stimuli is thought to be stored in cortical
+    circuits through experience-dependent modifications of synaptic connectivity.
+    These modifications of network connectivity should lead to changes in neuronal
+    activity as a particular stimulus is repeatedly encountered. Here we ask what
+    plasticity rules are consistent with the differences in the statistics of the
+    visual response to novel and familiar stimuli in inferior temporal cortex, an
+    area underlying visual object recognition. We introduce a method that allows one
+    to infer the dependence of the presumptive learning rule on postsynaptic firing
+    rate, and we show that the inferred learning rule exhibits depression for low
+    postsynaptic rates and potentiation for high rates. The threshold separating depression
+    from potentiation is strongly correlated with both mean and s.d. of the firing
+    rate distribution. Finally, we show that network models implementing a rule extracted
+    from data show stable learning dynamics and lead to sparser representations of
+    stimuli.
+  DOI: 10.1038/nn.4158
+  ISSN: 1097-6256
 
-- id: RumelhartHintonWilliams86
-  type: article-journal
+- id: WidrowHoff60
+  type: paper-conference
   author:
-  - family: Rumelhart
-    given: D. E.
-  - family: Hinton
-    given: G. E.
-  - family: Williams
-    given: R. J.
+  - family: Widrow
+    given: B.
+  - family: Hoff
+    given: M. E.
   issued:
-  - year: 1986
-    month: 1
-  title: Learning representations by back-propagating errors
-  container-title: Nature
-  page: 533-536
-  volume: '323'
-  issue: '9'
-
-- id: Marr77
-  type: article-journal
-  author:
-  - family: Marr
-    given: David
-  issued:
-  - year: 1977
-    month: 1
-  title: Artificial IntelligenceA Personal View
-  container-title: Artificial Intelligence
-  page: 37-48
+  - year: 1960
+  title: Adaptive Switching Circuits
+  container-title: Institute of Radio Engineers, Western Electronic Show and Convention,
+    Convention Record, Part 4
+  page: 96-104
 ...
