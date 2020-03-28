@@ -1,4 +1,66 @@
 references:
+- id: HaxbyGobbiniFureyEtAl01
+  type: article-journal
+  author:
+  - family: Haxby
+    given: J. V.
+  - family: Gobbini
+    given: M. I.
+  - family: Furey
+    given: M. L.
+  - family: Ishai
+    given: A.
+  - family: Schouten
+    given: J. L.
+  - family: Pietrini
+    given: P.
+  issued:
+  - year: 2001
+    month: 9
+  title: Distributed and overlapping representations of faces and objects in ventral
+    temporal cortex.
+  container-title: Science (New York, N.Y.)
+  page: 2425-2429
+  volume: '293'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
+
+- id: QuirogaReddyKreimanEtAl05
+  type: article-journal
+  author:
+  - family: Quiroga
+    given: R. Quian
+  - family: Reddy
+    given: L.
+  - family: Kreiman
+    given: G.
+  - family: Koch
+    given: C.
+  - family: Fried
+    given: I.
+  issued:
+  - year: 2005
+    month: 6
+  title: Invariant visual representation by single neurons in the human brain
+  container-title: Nature
+  page: 1102-1107
+  volume: '435'
+  issue: '7045'
+  abstract: It takes a fraction of a second to recognize a person or an object even
+    when seen under strikingly different conditions. How such a robust, high-level
+    representation is achieved by neurons in the human brain is still unclear1,2,3,4,5,6.
+    In monkeys, neurons in the upper stages of the ventral visual pathway respond
+    to complex images such as faces and objects and show some degree of invariance
+    to metric properties such as the stimulus size, position and viewing angle2,4,7,8,9,10,11,12.
+    We have previously shown that neurons in the human medial temporal lobe (MTL)
+    fire selectively to images of faces, animals, objects or scenes13,14. Here we
+    report on a remarkable subset of MTL neurons that are selectively activated by
+    strikingly different pictures of given individuals, landmarks or objects and in
+    some cases even by letter strings with their names. These results suggest an invariant,
+    sparse and explicit code, which might be important in the transformation of complex
+    visual percepts into long-term and more abstract memories.
+  DOI: 10.1038/nature03687
+  ISSN: 1476-4687
+
 - id: Marr77
   type: article-journal
   author:

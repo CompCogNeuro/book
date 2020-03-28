@@ -1,4 +1,4 @@
-# Neuron
+# Chapter 2: The Neuron
 
 One major reason the brain can be so plastic and learn to do so many different things, is that it is made up of a highly-sculptable form of *silly putty*: billions of individual neurons that are densely interconnected with each other, and capable of shaping what they do by changing these patterns of interconnections. The brain is like a massive LEGO set, where each of the individual pieces is quite simple (like a single LEGO piece), and all the power comes from the nearly infinite ways that these simple pieces can be recombined to do different things.
 
@@ -117,17 +117,22 @@ $V_m(t)$ is the current value of $Vm$, which is updated from value on the previo
 The above two equations are the essence of what we need to be able to simulate a neuron on a computer! It tells us how the membrane potential changes as a function of the inhibitory, leak and excitatory inputs -- given specific numbers for these input conductances, and a starting $Vm$ value, we can then **iteratively** compute the new $Vm$ value according to the above equations, and this will accurately reflect how a real neuron would respond to similar such inputs!
 
 To summarize, here's a single version of the above equations that does everything:
-$$ V_m(t) = V_m(t-1) + dt_{vm} \left[ g_e (E_e-V_m) + g_i (E_i-V_m) + g_l (E_l-V_m) \right] $$
+$$
+\begin{aligned}
+V_m(t) = & V_m(t-1) + dt_{vm} \\
+ & \left[ g_e (E_e-V_m) + g_i (E_i-V_m) + g_l (E_l-V_m) \right]
+\end{aligned}
+$$
 
 For those of you who noticed the issue with the minus sign above, or are curious how all of this relates to **Ohm's law** and the process of diffusion, please see the Chapter Appendix section *Electrophysiology of the Neuron*. If you're happy enough with where we've come, feel free to move along to finding out how we compute these input conductances, and what we then do with the $Vm$ value to drive the output signal of the neuron.
 
 #### Computing Input Conductances
 
 The excitatory and inhibitory input conductances represent the total number of ion channels of each type that are currently open and thus allowing ions to flow. In real neurons, these conductances are typically measured in nanosiemens (nS), which is $10^{-9}$ siemens (a very small number -- neurons are very tiny). Typically, neuroscientists divide these conductances into two components:
-$$ \bar{g} $$
-("g-bar") -- a constant value that determines the **maximum conductance** that would occur if every ion channel were to be open, and:
-$$ g\left(t\right) $$
-a dynamically changing variable that indicates at the present moment, what fraction of the total number of ion channels are currently open (goes between 0 and 1).
+
+* $\bar{g}$ ("g-bar") -- a constant value that determines the **maximum conductance** that would occur if every ion channel were to be open, and:
+
+* $g\left(t\right)$ -- a dynamically changing variable that indicates at the present moment, what fraction of the total number of ion channels are currently open (goes between 0 and 1).
 
 Thus, the total conductances of interest are written as:
 
@@ -265,7 +270,6 @@ This causes the actual final rate code activation output at the current time *t*
 
 ### Summary of Neuron Equations and Normalized Parameters
 
-
 **Table 2.1:** The parameters used in our simulations are normalized using the above conversion factors so that the typical values that arise in a simulation fall within the 0..1 normalized range. For example, the membrane potential is represented in the range between 0 and 2 where 0 corresponds to -100mV and 2 corresponds to +100mV and 1 is thus 0mV (and most membrane potential values stay within 0-1 in this scale). The biological values given are the default values for the AdEx model. Other biological values can be input using the BioParams button on the LeabraUnitSpec, which automatically converts them to normalized values.
 
 Table 2.1 shows the normalized values of the parameters used in our simulations. We use these normalized values instead of the normal biological parameters so that everything fits naturally within a 0..1 range, thereby simplifying many practical aspects of working with the simulations.
@@ -300,7 +304,7 @@ Now that you can see how the individual neuron integrates a given excitatory sig
 
 You can run this simulation in the `detect` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
 
-# Appendix
+## Appendix
 
 There are a number of optional in-depth topics here in this Chapter Appendix.
 
@@ -318,18 +322,18 @@ There are a number of optional in-depth topics here in this Chapter Appendix.
 
 * **Linear Algebra View of a Neuron:** how to understand the neuron from the perspective of linear algebra.
 
-## Neuron Biology
+### Neuron Biology
 
-## Neuron Electrophysiology
+### Neuron Electrophysiology
 
-## Net Input Detail
+### Net Input Detail
 
-## Adaptive Exponential Spiking Model
+### Adaptive Exponential Spiking Model
 
-## Temporal Dynamics
+### Temporal Dynamics
 
-## Sigmoidal Unit Activation Function
+### Sigmoidal Unit Activation Function
 
-## Bayesian Optimal Detector
+### Bayesian Optimal Detector
 
-## Linear Algebra View of a Neuron
+### Linear Algebra View of a Neuron
