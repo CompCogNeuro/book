@@ -337,3 +337,4 @@ There are a number of optional in-depth topics here in this Chapter Appendix.
 ### Bayesian Optimal Detector
 
 ### Linear Algebra View of a Neuron
+

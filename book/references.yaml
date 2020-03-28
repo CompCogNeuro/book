@@ -1,29 +1,4 @@
 references:
-- id: HaxbyGobbiniFureyEtAl01
-  type: article-journal
-  author:
-  - family: Haxby
-    given: J. V.
-  - family: Gobbini
-    given: M. I.
-  - family: Furey
-    given: M. L.
-  - family: Ishai
-    given: A.
-  - family: Schouten
-    given: J. L.
-  - family: Pietrini
-    given: P.
-  issued:
-  - year: 2001
-    month: 9
-  title: Distributed and overlapping representations of faces and objects in ventral
-    temporal cortex.
-  container-title: Science (New York, N.Y.)
-  page: 2425-2429
-  volume: '293'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
-
 - id: QuirogaReddyKreimanEtAl05
   type: article-journal
   author:
@@ -61,17 +36,334 @@ references:
   DOI: 10.1038/nature03687
   ISSN: 1476-4687
 
-- id: Marr77
+- id: HaxbyGobbiniFureyEtAl01
   type: article-journal
   author:
-  - family: Marr
-    given: David
+  - family: Haxby
+    given: J. V.
+  - family: Gobbini
+    given: M. I.
+  - family: Furey
+    given: M. L.
+  - family: Ishai
+    given: A.
+  - family: Schouten
+    given: J. L.
+  - family: Pietrini
+    given: P.
   issued:
-  - year: 1977
+  - year: 2001
+    month: 9
+  title: Distributed and overlapping representations of faces and objects in ventral
+    temporal cortex.
+  container-title: Science (New York, N.Y.)
+  page: 2425-2429
+  volume: '293'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
+
+- id: CooperIntratorBlaisEtAl04
+  type: book
+  author:
+  - family: Cooper
+    given: L. N.
+  - family: Intrator
+    given: N.
+  - family: Blais
+    given: B. S.
+  - family: Shouval
+    given: H.
+  issued:
+  - year: 2004
+  title: Theory of Cortical Plasticity.
+  publisher: World Scientific
+  publisher-place: New Jersey
+
+- id: OReillyWyatteRohrlich14
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Wyatte
+    given: Dean
+  - family: Rohrlich
+    given: John
+  issued:
+  - year: 2014
+    month: 7
+  accessed:
+  - year: 2015
+    month: 5
+    day: 15
+  title: Learning Through Time in the Thalamocortical Loops
+  container-title: arXiv:1407.3432 \[q-bio\]
+  abstract: 'We present a comprehensive, novel framework for understanding how the
+    neocortex, including the thalamocortical loops through the deep layers, can support
+    a temporal context representation in the service of predictive learning. Many
+    have argued that predictive learning provides a compelling, powerful source of
+    learning signals to drive the development of human intelligence: if we constantly
+    predict what will happen next, and learn based on the discrepancies from our predictions
+    (error-driven learning), then we can learn to improve our predictions by developing
+    internal representations that capture the regularities of the environment (e.g.,
+    physical laws governing the time-evolution of object motions). Our version of
+    this idea builds upon existing work with simple recurrent networks (SRN’s), which
+    have a discretely-updated temporal context representations that are a direct copy
+    of the prior internal state representation. We argue that this discretization
+    of temporal context updating has a number of important computational and functional
+    advantages, and further show how the strong alpha-frequency (10hz, 100ms cycle
+    time) oscillations in the posterior neocortex could reflect this temporal context
+    updating. We examine a wide range of data from biology to behavior through the
+    lens of this LeabraTI model, and find that it provides a unified account of a
+    number of otherwise disconnected findings, all of which converge to support this
+    new model of neocortical learning and processing. We describe an implemented model
+    showing how predictive learning of tumbling object trajectories can facilitate
+    object recognition with cluttered backgrounds.'
+  URL: http://arxiv.org/abs/1407.3432
+
+- id: LorinczKekesiJuhaszEtAl09
+  type: article-journal
+  author:
+  - family: Lorincz
+    given: Magor L
+  - family: Kekesi
+    given: Katalin A
+  - family: Juhasz
+    given: Gabor
+  - family: Crunelli
+    given: Vincenzo
+  - family: Hughes
+    given: Stuart W
+  issued:
+  - year: 2009
+    month: 9
+  title: Temporal framing of thalamic relay-mode firing by phasic inhibition during
+    the alpha rhythm.
+  container-title: Neuron
+  page: 683-696
+  volume: '63'
+  issue: '5'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/19755110
+
+- id: LimMcKeeWoloszynEtAl15
+  type: article-journal
+  author:
+  - family: Lim
+    given: Sukbin
+  - family: McKee
+    given: Jillian L.
+  - family: Woloszyn
+    given: Luke
+  - family: Amit
+    given: Yali
+  - family: Freedman
+    given: David J.
+  - family: Sheinberg
+    given: David L.
+  - family: Brunel
+    given: Nicolas
+  issued:
+  - year: 2015
+    month: 12
+  title: Inferring learning rules from distributions of firing rates in cortical neurons
+  container-title: Nature Neuroscience
+  page: 1804-1810
+  volume: '18'
+  issue: '12'
+  abstract: Information about external stimuli is thought to be stored in cortical
+    circuits through experience-dependent modifications of synaptic connectivity.
+    These modifications of network connectivity should lead to changes in neuronal
+    activity as a particular stimulus is repeatedly encountered. Here we ask what
+    plasticity rules are consistent with the differences in the statistics of the
+    visual response to novel and familiar stimuli in inferior temporal cortex, an
+    area underlying visual object recognition. We introduce a method that allows one
+    to infer the dependence of the presumptive learning rule on postsynaptic firing
+    rate, and we show that the inferred learning rule exhibits depression for low
+    postsynaptic rates and potentiation for high rates. The threshold separating depression
+    from potentiation is strongly correlated with both mean and s.d. of the firing
+    rate distribution. Finally, we show that network models implementing a rule extracted
+    from data show stable learning dynamics and lead to sparser representations of
+    stimuli.
+  DOI: 10.1038/nn.4158
+  ISSN: 1097-6256
+
+- id: UrakuboHondaFroemkeEtAl08
+  type: article-journal
+  author:
+  - family: Urakubo
+    given: Hidetoshi
+  - family: Honda
+    given: Minoru
+  - family: Froemke
+    given: Robert C.
+  - family: Kuroda
+    given: Shinya
+  issued:
+  - year: 2008
+    month: 3
+  title: Requirement of an allosteric kinetics of NMDA receptors for spike timing-dependent
+    plasticity.
+  container-title: The Journal of Neuroscience
+  page: 3310-3323
+  volume: '28'
+  issue: '13'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/18367598
+
+- id: KachergisWyatteOReillyEtAl14
+  type: article-journal
+  author:
+  - family: Kachergis
+    given: George
+  - family: Wyatte
+    given: Dean
+  - family: O’Reilly
+    given: R. C.
+  - family: Kleijn
+    given: Roy
+    dropping-particle: de
+  - family: Hommel
+    given: Bernhard
+  issued:
+  - year: 2014
+    month: 5
+  title: A continuous-time neural model for sequential action
+  container-title: 'Philosophical Transactions of the Royal Society B: Biological
+    Sciences'
+  page: '20130623'
+  volume: '369'
+  issue: '1655'
+  abstract: Action selection, planning and execution are continuous processes that
+    evolve over time, responding to perceptual feedback as well as evolving top-down
+    constraints. Existing models of routine sequential action (e.g. coffee- or pancake-making)
+    generally
+  DOI: 10.1098/rstb.2013.0623
+  ISSN: 0962-8436, 1471-2970
+  PMID: '25267830'
+
+- id: BuffaloFriesLandmanEtAl11
+  type: article-journal
+  author:
+  - family: Buffalo
+    given: Elizabeth A
+  - family: Fries
+    given: Pascal
+  - family: Landman
+    given: Rogier
+  - family: Buschman
+    given: Timothy J
+  - family: Desimone
+    given: Robert
+  issued:
+  - year: 2011
+    month: 7
+  title: Laminar differences in gamma and alpha coherence in the ventral stream.
+  container-title: Proceedings of the National Academy of Sciences of the United States
+    of America
+  page: 11262-11267
+  volume: '108'
+  issue: '27'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21690410
+
+- id: FranceschettiGuatteoPanzicaEtAl95
+  type: article-journal
+  author:
+  - family: Franceschetti
+    given: S
+  - family: Guatteo
+    given: E
+  - family: Panzica
+    given: F
+  - family: Sancini
+    given: G
+  - family: Wanke
+    given: E
+  - family: Avanzini
+    given: G
+  issued:
+  - year: 1995
+    month: 10
+  title: 'Ionic mechanisms underlying burst firing in pyramidal neurons: Intracellular
+    study in rat sensorimotor cortex.'
+  title-short: Ionic mechanisms underlying burst firing in pyramidal neurons
+  container-title: Brain Research
+  page: 127-139
+  volume: '696'
+  issue: '12'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8574660
+
+- id: LuczakBarthoHarris13
+  type: article-journal
+  author:
+  - family: Luczak
+    given: Artur
+  - family: Bartho
+    given: Peter
+  - family: Harris
+    given: Kenneth D.
+  issued:
+  - year: 2013
     month: 1
-  title: Artificial IntelligenceA Personal View
-  container-title: Artificial Intelligence
-  page: 37-48
+  title: Gating of sensory input by spontaneous cortical activity.
+  container-title: The Journal of Neuroscience
+  page: 1684-1695
+  volume: '33'
+  issue: '4'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/23345241
+
+- id: WidrowHoff60
+  type: paper-conference
+  author:
+  - family: Widrow
+    given: B.
+  - family: Hoff
+    given: M. E.
+  issued:
+  - year: 1960
+  title: Adaptive Switching Circuits
+  container-title: Institute of Radio Engineers, Western Electronic Show and Convention,
+    Convention Record, Part 4
+  page: 96-104
+
+- id: OReillyWyatteRohrlich17
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Wyatte
+    given: Dean R.
+  - family: Rohrlich
+    given: John
+  issued:
+  - year: 2017
+    month: 9
+  accessed:
+  - year: 2017
+    month: 9
+    day: 15
+  title: 'Deep predictive learning: A comprehensive model of three visual streams'
+  title-short: Deep Predictive Learning
+  container-title: arXiv:1709.04654 \[q-bio\]
+  abstract: 'How does the neocortex learn and develop the foundations of all our high-level
+    cognitive abilities? We present a comprehensive framework spanning biological,
+    computational, and cognitive levels, with a clear theoretical continuity between
+    levels, providing a coherent answer directly supported by extensive data at each
+    level. Learning is based on making predictions about what the senses will report
+    at 100 msec (alpha frequency) intervals, and adapting synaptic weights to improve
+    prediction accuracy. The pulvinar nucleus of the thalamus serves as a projection
+    screen upon which predictions are generated, through deep-layer 6 corticothalamic
+    inputs from multiple brain areas and levels of abstraction. The sparse driving
+    inputs from layer 5 intrinsic bursting neurons provide the target signal, and
+    the temporal difference between it and the prediction reverberates throughout
+    the cortex, driving synaptic changes that approximate error backpropagation, using
+    only local activation signals in equations derived directly from a detailed biophysical
+    model. In vision, predictive learning requires a carefully-organized developmental
+    progression and anatomical organization of three pathways (What, Where, and What
+    \* Where), according to two central principles: top-down input from compact, high-level,
+    abstract representations is essential for accurate prediction of low-level sensory
+    inputs; and the collective, low-level prediction error must be progressively and
+    opportunistically partitioned to enable extraction of separable factors that drive
+    the learning of further high-level abstractions. Our model self-organized systematic
+    invariant object representations of 100 different objects from simple movies,
+    accounts for a wide range of data, and makes many testable predictions.'
+  URL: http://arxiv.org/abs/1709.04654
 
 - id: BretteGerstner05
   type: article-journal
@@ -104,4 +396,92 @@ references:
   DOI: 10.1152/jn.00686.2005
   ISSN: 0022-3077, 1522-1598
   PMID: '16014787'
+
+- id: OReillyMunakata00
+  type: book
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Munakata
+    given: Y.
+  issued:
+  - year: 2000
+    month: 1
+  title: 'Computational Explorations in Cognitive Neuroscience: Understanding the
+    Mind by Simulating the Brain'
+  title-short: Computational Explorations in Cognitive Neuroscience
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+
+- id: AckleyHintonSejnowski85
+  type: article-journal
+  author:
+  - family: Ackley
+    given: David H.
+  - family: Hinton
+    given: G. E.
+  - family: Sejnowski
+    given: T. J.
+  issued:
+  - year: 1985
+    month: 12
+  title: A learning algorithm for Boltzmann machines
+  container-title: Cognitive Science
+  page: 147-169
+  volume: '9'
+  issue: '1'
+
+- id: NormanNewmanDetreEtAl06
+  type: article-journal
+  author:
+  - family: Norman
+    given: Kenneth A.
+  - family: Newman
+    given: Ehren
+  - family: Detre
+    given: Greg
+  - family: Polyn
+    given: Sean
+  issued:
+  - year: 2006
+  accessed:
+  - year: 2015
+    month: 4
+    day: 12
+  title: How inhibitory oscillations can train neural networks and punish competitors
+  container-title: Neural computation
+  page: 1577-1610
+  volume: '18'
+  issue: '7'
+  URL: http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1577
+
+- id: RumelhartHintonWilliams86
+  type: article-journal
+  author:
+  - family: Rumelhart
+    given: D. E.
+  - family: Hinton
+    given: G. E.
+  - family: Williams
+    given: R. J.
+  issued:
+  - year: 1986
+    month: 1
+  title: Learning representations by back-propagating errors
+  container-title: Nature
+  page: 533-536
+  volume: '323'
+  issue: '9'
+
+- id: Marr77
+  type: article-journal
+  author:
+  - family: Marr
+    given: David
+  issued:
+  - year: 1977
+    month: 1
+  title: Artificial IntelligenceA Personal View
+  container-title: Artificial Intelligence
+  page: 37-48
 ...
