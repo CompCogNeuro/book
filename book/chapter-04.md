@@ -303,15 +303,15 @@ Here are all the sub-topics within the Learning chapter, collected in one place 
     
 * Full set of Leabra equations on *emergent* [leabra](https://github.com/emer/leabra) site.
 
-## Detailed Biology of Learning
+### Detailed Biology of Learning
     
-## Hebbian Learning
+### Hebbian Learning
     
-## STDP
+### STDP
 
-## Backpropagation
+### Backpropagation
     
-## Implementational Details
+### Implementational Details
     
-## Leabra Details
+### Leabra Details
 
