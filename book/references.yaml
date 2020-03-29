@@ -1,655 +1,30 @@
 references:
-- id: KravitzFreezeParkerEtAl10
+- id: CavanaghWieckiCohenEtAl11
   type: article-journal
   author:
-  - family: Kravitz
-    given: Alexxai
-  - family: Freeze
-    given: Benjamin
-  - family: Parker
-    given: Philip
-  - family: Kay
-    given: Kenneth
-  - family: Thwin
-    given: Myo
-  - family: Deisseroth
-    given: Karl
-  - family: Kreitzer
-    given: Anatol
-  issued:
-  - year: 2010
-    month: 7
-  title: Regulation of {}P{}arkinsonian motor behaviours by optogenetic control of
-    basal ganglia circuitry
-  container-title: Nature
-  page: 622-626
-  volume: '466'
-  issue: '7306'
-  URL: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature09159.html
-
-- id: OReillyWyatteRohrlich17
-  type: article-journal
-  author:
-  - family: O’Reilly
-    given: R. C.
-  - family: Wyatte
-    given: Dean R.
-  - family: Rohrlich
-    given: John
-  issued:
-  - year: 2017
-    month: 9
-  accessed:
-  - year: 2017
-    month: 9
-    day: 15
-  title: 'Deep predictive learning: A comprehensive model of three visual streams'
-  title-short: Deep Predictive Learning
-  container-title: arXiv:1709.04654 \[q-bio\]
-  abstract: 'How does the neocortex learn and develop the foundations of all our high-level
-    cognitive abilities? We present a comprehensive framework spanning biological,
-    computational, and cognitive levels, with a clear theoretical continuity between
-    levels, providing a coherent answer directly supported by extensive data at each
-    level. Learning is based on making predictions about what the senses will report
-    at 100 msec (alpha frequency) intervals, and adapting synaptic weights to improve
-    prediction accuracy. The pulvinar nucleus of the thalamus serves as a projection
-    screen upon which predictions are generated, through deep-layer 6 corticothalamic
-    inputs from multiple brain areas and levels of abstraction. The sparse driving
-    inputs from layer 5 intrinsic bursting neurons provide the target signal, and
-    the temporal difference between it and the prediction reverberates throughout
-    the cortex, driving synaptic changes that approximate error backpropagation, using
-    only local activation signals in equations derived directly from a detailed biophysical
-    model. In vision, predictive learning requires a carefully-organized developmental
-    progression and anatomical organization of three pathways (What, Where, and What
-    \* Where), according to two central principles: top-down input from compact, high-level,
-    abstract representations is essential for accurate prediction of low-level sensory
-    inputs; and the collective, low-level prediction error must be progressively and
-    opportunistically partitioned to enable extraction of separable factors that drive
-    the learning of further high-level abstractions. Our model self-organized systematic
-    invariant object representations of 100 different objects from simple movies,
-    accounts for a wide range of data, and makes many testable predictions.'
-  URL: http://arxiv.org/abs/1709.04654
-
-- id: SuttonBarto98
-  type: book
-  author:
-  - family: Sutton
-    given: R. S.
-  - family: Barto
-    given: A. G.
-  issued:
-  - year: 1998
-    month: 1
-  title: 'Reinforcement Learning: An Introduction.'
-  title-short: Reinforcement Learning
-  publisher: MIT Press
-  publisher-place: Cambridge, MA
-  URL: http://www.cs.ualberta.ca/ sutton/book/ebook/the-book.html
-
-- id: CoxFrankLarcherEtAl15
-  type: article-journal
-  author:
-  - family: Cox
-    given: Sylvia M. L.
-  - family: Frank
-    given: Michael J.
-  - family: Larcher
-    given: Kevin
-  - family: Fellows
-    given: Lesley K.
-  - family: Clark
-    given: Crystal A.
-  - family: Leyton
-    given: Marco
-  - family: Dagher
-    given: Alain
-  issued:
-  - year: 2015
-    month: 4
-  title: Striatal D1 and D2 signaling differentially predict learning from positive
-    and negative outcomes
-  container-title: NeuroImage
-  page: 95-101
-  volume: '109'
-  abstract: The extent to which we learn from positive and negative outcomes of decisions
-    is modulated by the neurotransmitter dopamine. Dopamine neurons burst fire in
-    response to unexpected rewards and pause following negative outcomes. This dual
-    signaling mechanism is hypothesized to drive both approach and avoidance behavior.
-    Here we test a prediction deriving from a computational reinforcement learning
-    model, in which approach is mediated via activation of the direct cortico-striatal
-    pathway due to striatal D1 receptor stimulation, while avoidance occurs via disinhibition
-    of indirect pathway striatal neurons secondary to a reduction of D2 receptor stimulation.
-    Using positron emission tomography with two separate radioligands, we demonstrate
-    that individual differences in human approach and avoidance learning are predicted
-    by variability in striatal D1 and D2 receptor binding, respectively. Moreover,
-    transient dopamine precursor depletion improved learning from negative outcomes.
-    These findings support a bidirectional modulatory role for striatal dopamine in
-    reward and avoidance learning via segregated D1 and D2 cortico-striatal pathways.
-  DOI: 10.1016/j.neuroimage.2014.12.070
-  ISSN: 1053-8119
-
-- id: McCloskeyCohen89
-  type: chapter
-  author:
-  - family: McCloskey
-    given: M.
+  - family: Cavanagh
+    given: James F
+  - family: Wiecki
+    given: Thomas V
   - family: Cohen
-    given: N. J.
-  editor:
-  - family: Bower
-    given: G. H.
-  issued:
-  - year: 1989
-    month: 1
-  title: 'Catastrophic Interference in Connectionist Networks: The Sequential Learning
-    Problem'
-  title-short: Catastrophic Interference in Connectionist Networks
-  container-title: The Psychology of Learning and Motivation, Vol. 24
-  publisher: Academic Press
-  publisher-place: San Diego, CA
-  page: 109-164
-
-- id: FrankOReillyCurran06
-  type: article-journal
-  author:
-  - family: Frank
-    given: Michael J.
-  - family: O’Reilly
-    given: R. C.
-  - family: Curran
-    given: Tim
-  issued:
-  - year: 2006
-    month: 8
-  title: 'When memory fails, intuition reigns: Midazolam enhances implicit inference
-    in humans.'
-  title-short: When memory fails, intuition reigns
-  container-title: 'Psychological science : a journal of the American Psychological
-    Society / APS'
-  page: 700-707
-  volume: '17'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/16913953
-
-- id: LuczakBarthoHarris13
-  type: article-journal
-  author:
-  - family: Luczak
-    given: Artur
-  - family: Bartho
-    given: Peter
-  - family: Harris
-    given: Kenneth D.
-  issued:
-  - year: 2013
-    month: 1
-  title: Gating of sensory input by spontaneous cortical activity.
-  container-title: The Journal of Neuroscience
-  page: 1684-1695
-  volume: '33'
-  issue: '4'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/23345241
-
-- id: RumelhartHintonWilliams86
-  type: article-journal
-  author:
-  - family: Rumelhart
-    given: D. E.
-  - family: Hinton
-    given: G. E.
-  - family: Williams
-    given: R. J.
-  issued:
-  - year: 1986
-    month: 1
-  title: Learning representations by back-propagating errors
-  container-title: Nature
-  page: 533-536
-  volume: '323'
-  issue: '9'
-
-- id: Frank05
-  type: article-journal
-  author:
-  - family: Frank
-    given: M. J.
-  issued:
-  - year: 2005
-    month: 1
-  title: 'When and when not to use your subthalamic nucleus: Lessons from a computational
-    model of the basal ganglia.'
-  title-short: When and when not to use your subthalamic nucleus
-  container-title: 'Modelling Natural Action Selection: Proceedings of an International
-    Workshop'
-  page: 53-60
-
-- id: McClellandMcNaughtonOReilly95
-  type: article-journal
-  author:
-  - family: McClelland
-    given: J. L.
-  - family: McNaughton
-    given: B. L.
-  - family: O’Reilly
-    given: R. C.
-  issued:
-  - year: 1995
-    month: 8
-  title: 'Why There Are Complementary Learning Systems in the Hippocampus and Neocortex:
-    Insights from the Successes and Failures of Connectionist Models of Learning and
-    Memory.'
-  title-short: Why There Are Complementary Learning Systems in the Hippocampus and
-    Neocortex
-  container-title: Psychological Review
-  page: 419-457
-  volume: '102'
-  issue: '3'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/7624455
-
-- id: SeidenbergMcClelland89
-  type: article-journal
-  author:
-  - family: Seidenberg
-    given: M. S.
-  - family: McClelland
-    given: J. L.
-  issued:
-  - year: 1989
-    month: 11
-  title: A distributed, developmental model of word recognition and naming.
-  container-title: Psychological review
-  page: 523-568
-  volume: '96'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/2798649
-
-- id: Albus71
-  type: article-journal
-  author:
-  - family: Albus
-    given: James S.
-  issued:
-  - year: 1971
-    month: 2
-  title: A theory of cerebellar function
-  container-title: Mathematical Biosciences
-  page: 25-61
-  volume: '10'
-  issue: 1-2
-  URL: http://www.sciencedirect.com/science/article/B6VHX-45F52M2-J8/2/bba55f65c1bf9b826444584ec64ee6c3
-
-- id: ShouvalWangWittenberg10
-  type: article-journal
-  author:
-  - family: Shouval
-    given: Harel Z.
-  - family: Wang
-    given: Samuel S.-H.
-  - family: Wittenberg
-    given: Gayle M.
-  issued:
-  - year: 2010
-  title: 'Spike timing dependent plasticity: A consequence of more fundamental learning
-    rules.'
-  title-short: Spike timing dependent plasticity
-  container-title: Frontiers in Computational Neuroscience
-  volume: '4'
-  issue: '19'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/20725599
-
-- id: FellemanVanEssen91
-  type: article-journal
-  author:
-  - family: Felleman
-    given: D. J.
-  - family: Van Essen
-    given: D. C.
-  issued:
-  - year: 1991
-    month: 1
-  title: Distributed Hierarchical Processing in the Primate Cerebral Cortex
-  container-title: Cerebral Cortex
-  page: 1-47
-  volume: '1'
-  issue: '1'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/1822724
-
-- id: KravitzSaleemBakerEtAl11
-  type: article-journal
-  author:
-  - family: Kravitz
-    given: Dwight J.
-  - family: Saleem
-    given: Kadharbatcha S.
-  - family: Baker
-    given: Chris I.
-  - family: Mishkin
-    given: Mortimer
-  issued:
-  - year: 2011
-    month: 4
-  title: A new neural framework for visuospatial processing
-  container-title: Nature Reviews Neuroscience
-  page: 217-230
-  volume: '12'
-  issue: '4'
-  abstract: The division of cortical visual processing into distinct dorsal and ventral
-    streams is a key framework that has guided visual neuroscience. The characterization
-    of the ventral stream as a ’What’ pathway is relatively uncontroversial, but the
-    nature of dorsal stream processing is less clear. Originally proposed as mediating
-    spatial perception (’Where’), more recent accounts suggest it primarily serves
-    non-conscious visually guided action (’How’). Here, we identify three pathways
-    emerging from the dorsal stream that consist of projections to the prefrontal
-    and premotor cortices, and a major projection to the medial temporal lobe that
-    courses both directly and indirectly through the posterior cingulate and retrosplenial
-    cortices. These three pathways support both conscious and non-conscious visuospatial
-    processing, including spatial working memory, visually guided action and navigation,
-    respectively.
-  DOI: 10.1038/nrn3008
-  ISSN: 1471-003X
-
-- id: KobatakeTanaka94
-  type: article-journal
-  author:
-  - family: Kobatake
-    given: E.
-  - family: Tanaka
-    given: K.
-  issued:
-  - year: 1994
-    month: 1
-  title: Neuronal selectivities to complex object features in the ventral visual pathway
-  container-title: Journal of Neurophysiology
-  page: 856-867
-  volume: '71'
-  issue: '3'
-
-- id: Frank06
-  type: article-journal
-  author:
-  - family: Frank
-    given: Michael J.
-  issued:
-  - year: 2006
-    month: 10
-  title: 'Hold your horses: A dynamic computational role for the subthalamic nucleus
-    in decision making.'
-  title-short: Hold your horses
-  container-title: Neural Networks
-  page: 1120-1136
-  volume: '19'
-  issue: '8'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/16945502
-
-- id: OReillyFrankHazyEtAl07
-  type: article-journal
-  author:
-  - family: O’Reilly
-    given: R. C.
-  - family: Frank
-    given: Michael J.
-  - family: Hazy
-    given: Thomas E.
-  - family: Watz
-    given: Brandon
-  issued:
-  - year: 2007
-  title: 'PVLV: The primary value and learned value Pavlovian learning algorithm.'
-  title-short: PVLV
-  container-title: Behavioral Neuroscience
-  page: 31-49
-  volume: '121'
-  issue: '1'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/17324049
-
-- id: LeutgebLeutgebMoserEtAl07
-  type: article-journal
-  author:
-  - family: Leutgeb
-    given: J. K.
-  - family: Leutgeb
-    given: S.
-  - family: Moser
-    given: M.
-  - family: Moser
-    given: E.
-  issued:
-  - year: 2007
-    month: 2
-  title: Pattern Separation in the Dentate Gyrus and CA3 of the Hippocampus
-  container-title: Science
-  page: 961-966
-  volume: '315'
-  issue: '5814'
-  URL: http://www.sciencemag.org/cgi/content/abstract/315/5814/961
-
-- id: CooperIntratorBlaisEtAl04
-  type: book
-  author:
-  - family: Cooper
-    given: L. N.
-  - family: Intrator
-    given: N.
-  - family: Blais
-    given: B. S.
-  - family: Shouval
-    given: H.
-  issued:
-  - year: 2004
-  title: Theory of Cortical Plasticity.
-  publisher: World Scientific
-  publisher-place: New Jersey
-
-- id: OReillyMcClelland94
-  type: article-journal
-  author:
-  - family: O’Reilly
-    given: R. C.
-  - family: McClelland
-    given: J. L.
-  issued:
-  - year: 1994
-    month: 1
-  title: 'Hippocampal Conjunctive Encoding, Storage, and Recall: Avoiding a Tradeoff'
-  title-short: Hippocampal Conjunctive Encoding, Storage, and Recall
-  container-title: Hippocampus
-  page: 661-682
-  volume: '4'
-  issue: '6'
-
-- id: FrankFossella11
-  type: article-journal
-  author:
+    given: Michael X
+  - family: Figueroa
+    given: Christina M
+  - family: Samanta
+    given: Johan
+  - family: Sherman
+    given: Scott J
   - family: Frank
     given: Michael J
-  - family: Fossella
-    given: John A
   issued:
   - year: 2011
-    month: 1
-  title: Neurogenetics and pharmacology of learning, motivation, and cognition.
-  container-title: Neuropsychopharmacology
-  volume: '36'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/20631684
-
-- id: HasselmoBodelonWyble02
-  type: article-journal
-  author:
-  - family: Hasselmo
-    given: Michael E.
-  - family: Bodelon
-    given: Clara
-  - family: Wyble
-    given: Bradley P.
-  issued:
-  - year: 2002
-    month: 4
-  title: 'A proposed function for hippocampal theta rhythm: Separate phases of encoding
-    and retrieval enhance reversal of prior learning.'
-  title-short: A proposed function for hippocampal theta rhythm
-  container-title: Neural Computation
-  page: 793-818
+    month: 9
+  title: Subthalamic nucleus stimulation reverses mediofrontal influence over decision
+    threshold.
+  container-title: Nature neuroscience
+  page: 1462-1467
   volume: '14'
-  issue: '4'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11936962
-
-- id: CollinsFrank14
-  type: article-journal
-  author:
-  - family: Collins
-    given: Anne G. E.
-  - family: Frank
-    given: Michael J.
-  issued:
-  - year: 2014
-    month: 7
-  title: 'Opponent actor learning (OpAL): Modeling interactive effects of striatal
-    dopamine on reinforcement learning and choice incentive.'
-  title-short: Opponent actor learning (OpAL)
-  container-title: Psychological Review
-  page: 337-366
-  volume: '121'
-  issue: '3'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/25090423
-
-- id: BiPoo98
-  type: article-journal
-  author:
-  - family: Bi
-    given: Guo-qiang
-  - family: Poo
-    given: Mu-ming
-  issued:
-  - year: 1998
-    month: 12
-  accessed:
-  - year: 2016
-    month: 1
-    day: 27
-  title: 'Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike
-    Timing, Synaptic Strength, and Postsynaptic Cell Type'
-  title-short: Synaptic Modifications in Cultured Hippocampal Neurons
-  container-title: The Journal of Neuroscience
-  page: 10464-10472
-  volume: '18'
-  issue: '24'
-  abstract: In cultures of dissociated rat hippocampal neurons, persistent potentiation
-    and depression of glutamatergic synapses were induced by correlated spiking of
-    presynaptic and postsynaptic neurons. The relative timing between the presynaptic
-    and postsynaptic spiking determined the direction and the extent of synaptic changes.
-    Repetitive postsynaptic spiking within a time window of 20 msec after presynaptic
-    activation resulted in long-term potentiation (LTP), whereas postsynaptic spiking
-    within a window of 20 msec before the repetitive presynaptic activation led to
-    long-term depression (LTD). Significant LTP occurred only at synapses with relatively
-    low initial strength, whereas the extent of LTD did not show obvious dependence
-    on the initial synaptic strength. Both LTP and LTD depended on the activation
-    of NMDA receptors and were absent in cases in which the postsynaptic neurons were
-    GABAergic in nature. Blockade of L-type calcium channels with nimodipine abolished
-    the induction of LTD and reduced the extent of LTP. These results underscore the
-    importance of precise spike timing, synaptic strength, and postsynaptic cell type
-    in the activity-induced modification of central synapses and suggest that Hebb’s
-    rule may need to incorporate a quantitative consideration of spike timing that
-    reflects the narrow and asymmetric window for the induction of synaptic modification.
-  URL: http://www.jneurosci.org/content/18/24/10464
-  ISSN: 0270-6474, 1529-2401
-  PMID: '9852584'
-
-- id: RanganathRitchey12
-  type: article-journal
-  author:
-  - family: Ranganath
-    given: Charan
-  - family: Ritchey
-    given: Maureen
-  issued:
-  - year: 2012
-    month: 10
-  title: Two cortical systems for memory-guided behaviour.
-  container-title: Nature Reviews Neuroscience
-  page: 713-726
-  volume: '13'
-  issue: '10'
-  abstract: Although the perirhinal cortex (PRC), parahippocampal cortex (PHC) and
-    retrosplenial cortex (RSC) have an essential role in memory, the precise functions
-    of these areas are poorly understood. Here, we review the anatomical and functional
-    characteristics of these areas based on studies in humans, monkeys and rats. Our
-    Review suggests that the PRC and PHCRSC are core components of two separate large-scale
-    cortical networks that are dissociable by neuroanatomy, susceptibility to disease
-    and function. These networks not only support different types of memory but also
-    appear to support different aspects of cognition.
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/22992647
-
-- id: MontagueDayanSejnowski96
-  type: article-journal
-  author:
-  - family: Montague
-    given: P. Read
-  - family: Dayan
-    given: Peter
-  - family: Sejnowski
-    given: Terrence J.
-  issued:
-  - year: 1996
-    month: 1
-  title: A framework for mesencephalic dopamine systems based on predictive Hebbian
-    learning.
-  container-title: Journal of Neuroscience
-  page: 1936-1947
-  volume: '16'
-  issue: '5'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/8774460
-
-- id: Marr71
-  type: article-journal
-  author:
-  - family: Marr
-    given: D.
-  issued:
-  - year: 1971
-    month: 7
-  title: 'Simple Memory: A Theory for Archicortex'
-  title-short: Simple Memory
-  container-title: 'Philosophical Transactions of the Royal Society of London B: Biological
-    Sciences'
-  page: 23-81
-  volume: '262'
-  issue: '841'
-  abstract: It is proposed that the most important characteristic of archicortex is
-    its ability to perform a simple kind of memorizing task. It is shown that rather
-    general numerical constraints roughly determine the dimensions of memorizing models
-    for the mammalian brain, and from these is derived a general model for archicortex.
-    The addition of further constraints leads to the notion of a simple representation,
-    which is a way of translating a great deal of information into the firing of about
-    200 out of a population of 10$<$latex$>\$\sphat$5\$$<$/latex$>$ cells. It is shown
-    that if about 10$<$latex$>\$\sphat$5\$$<$/latex$>$ simple representations are
-    stored in such a population of cells, very little information about a single learnt
-    event is necessary to provoke its recall. A detailed numerical examination is
-    made of a particular example of this kind of memory, and various general conclusions
-    are drawn from the analysis. The insight gained from these models is used to derive
-    theories for various archicortical areas. A functional interpretation is given
-    of the cells and synapses of the area entorhinalis, the prcsubiculum, the prosubiculum,
-    the cornu ammonis and the fascia dentata. Many predictions are made, a substantial
-    number of which must be true if the theory is correct. A general functional classification
-    of typical archicortical cells is proposed.
-  DOI: 10.1098/rstb.1971.0078
-  ISSN: 0080-4622
-  PMID: '4399412'
-
-- id: PinkerPrince88
-  type: article-journal
-  author:
-  - family: Pinker
-    given: S.
-  - family: Prince
-    given: A.
-  issued:
-  - year: 1988
-    month: 4
-  title: 'On language and connectionism: Analysis of a parallel distributed processing
-    model of language acquisition.'
-  title-short: On language and connectionism
-  container-title: Cognition
-  page: 73-193
-  volume: '28'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/2450717
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21946325
 
 - id: PlautMcClellandSeidenbergEtAl96
   type: article-journal
@@ -673,258 +48,77 @@ references:
   volume: '103'
   URL: http://www.ncbi.nlm.nih.gov/pubmed/8650300
 
-- id: OlshausenField96
+- id: HasselmoBodelonWyble02
   type: article-journal
   author:
-  - family: Olshausen
-    given: B. A.
-  - family: Field
-    given: D. J.
+  - family: Hasselmo
+    given: Michael E.
+  - family: Bodelon
+    given: Clara
+  - family: Wyble
+    given: Bradley P.
   issued:
-  - year: 1996
-    month: 7
-  title: Emergence of simple-cell receptive field properties by learning a sparse
-    code for natural images.
-  container-title: Nature
-  page: '607'
-  volume: '381'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/8637596
-
-- id: HirshmanPassannanteArndt01
-  type: article-journal
-  author:
-  - family: Hirshman
-    given: E.
-  - family: Passannante
-    given: A.
-  - family: Arndt
-    given: J.
-  issued:
-  - year: 2001
-    month: 9
-  title: Midazolam amnesia and conceptual processing in implicit memory.
-  container-title: Journal of experimental psychology. General
-  page: 453-465
-  volume: '130'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11561920
-
-- id: BretteGerstner05
-  type: article-journal
-  author:
-  - family: Brette
-    given: Romain
-  - family: Gerstner
-    given: Wulfram
-  issued:
-  - year: 2005
-    month: 11
-  title: Adaptive exponential integrate-and-fire model as an effective description
-    of neuronal activity
-  container-title: Journal of Neurophysiology
-  page: 3637-3642
-  volume: '94'
-  issue: '5'
-  abstract: We introduce a two-dimensional integrate-and-fire model that combines
-    an exponential spike mechanism with an adaptation equation, based on recent theoretical
-    findings. We describe a systematic method to estimate its parameters with simple
-    electrophysiological protocols (current-clamp injection of pulses and ramps) and
-    apply it to a detailed conductance-based model of a regular spiking neuron. Our
-    simple model predicts correctly the timing of 96% of the spikes ($\pm$2 ms) of
-    the detailed model in response to injection of noisy synaptic conductances. The
-    model is especially reliable in high-conductance states, typical of cortical activity
-    in vivo, in which intrinsic conductances were found to have a reduced role in
-    shaping spike trains. These results are promising because this simple model has
-    enough expressive power to reproduce qualitatively several electrophysiological
-    classes described in vitro.
-  DOI: 10.1152/jn.00686.2005
-  ISSN: 0022-3077, 1522-1598
-  PMID: '16014787'
-
-- id: HaxbyGobbiniFureyEtAl01
-  type: article-journal
-  author:
-  - family: Haxby
-    given: J. V.
-  - family: Gobbini
-    given: M. I.
-  - family: Furey
-    given: M. L.
-  - family: Ishai
-    given: A.
-  - family: Schouten
-    given: J. L.
-  - family: Pietrini
-    given: P.
-  issued:
-  - year: 2001
-    month: 9
-  title: Distributed and overlapping representations of faces and objects in ventral
-    temporal cortex.
-  container-title: Science (New York, N.Y.)
-  page: 2425-2429
-  volume: '293'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
-
-- id: LorinczKekesiJuhaszEtAl09
-  type: article-journal
-  author:
-  - family: Lorincz
-    given: Magor L
-  - family: Kekesi
-    given: Katalin A
-  - family: Juhasz
-    given: Gabor
-  - family: Crunelli
-    given: Vincenzo
-  - family: Hughes
-    given: Stuart W
-  issued:
-  - year: 2009
-    month: 9
-  title: Temporal framing of thalamic relay-mode firing by phasic inhibition during
-    the alpha rhythm.
-  container-title: Neuron
-  page: 683-696
-  volume: '63'
-  issue: '5'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/19755110
-
-- id: PlautShallice93
-  type: article-journal
-  author:
-  - family: Plaut
-    given: David C.
-  - family: Shallice
-    given: Tim
-  issued:
-  - year: 1993
-    month: 1
-  title: 'Deep dyslexia: A case study of connectionist neuropsychology'
-  title-short: Deep dyslexia
-  container-title: Cognitive Neuropsychology
-  page: 377-500
-  volume: '10'
-  issue: '5'
-
-- id: CoslettSaffran91
-  type: article-journal
-  author:
-  - family: Coslett
-    given: H. B.
-  - family: Saffran
-    given: E.
-  issued:
-  - year: 1991
-    month: 1
-  title: Simultanagnosia. To see but not two see.
-  container-title: Brain
-  page: 1523-1545
-  volume: '114'
-
-- id: HikosakaTakikawaKawagoe00
-  type: article-journal
-  author:
-  - family: Hikosaka
-    given: O.
-  - family: Takikawa
-    given: Y.
-  - family: Kawagoe
-    given: R.
-  issued:
-  - year: 2000
-    month: 7
-  title: Role of the basal ganglia in the control of purposive saccadic eye movements.
-  container-title: Physiological Reviews
-  page: 953-978
-  volume: '80'
-  issue: '3'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/10893428
-
-- id: Marr77
-  type: article-journal
-  author:
-  - family: Marr
-    given: David
-  issued:
-  - year: 1977
-    month: 1
-  title: Artificial IntelligenceA Personal View
-  container-title: Artificial Intelligence
-  page: 37-48
-
-- id: AckleyHintonSejnowski85
-  type: article-journal
-  author:
-  - family: Ackley
-    given: David H.
-  - family: Hinton
-    given: G. E.
-  - family: Sejnowski
-    given: T. J.
-  issued:
-  - year: 1985
-    month: 12
-  title: A learning algorithm for Boltzmann machines
-  container-title: Cognitive Science
-  page: 147-169
-  volume: '9'
-  issue: '1'
-
-- id: NormanNewmanDetreEtAl06
-  type: article-journal
-  author:
-  - family: Norman
-    given: Kenneth A.
-  - family: Newman
-    given: Ehren
-  - family: Detre
-    given: Greg
-  - family: Polyn
-    given: Sean
-  issued:
-  - year: 2006
-  accessed:
-  - year: 2015
+  - year: 2002
     month: 4
-    day: 12
-  title: How inhibitory oscillations can train neural networks and punish competitors
-  container-title: Neural computation
-  page: 1577-1610
-  volume: '18'
-  issue: '7'
-  URL: http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1577
+  title: 'A proposed function for hippocampal theta rhythm: Separate phases of encoding
+    and retrieval enhance reversal of prior learning.'
+  title-short: A proposed function for hippocampal theta rhythm
+  container-title: Neural Computation
+  page: 793-818
+  volume: '14'
+  issue: '4'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11936962
 
-- id: RitvoTurk-BrowneNorman19
+- id: Jordan89
+  type: chapter
+  author:
+  - family: Jordan
+    given: M. I.
+  editor:
+  - family: Elman
+    given: J. L.
+  - family: Rumelhart
+    given: D. E.
+  issued:
+  - year: 1989
+    month: 1
+  title: 'Serial Order: A Parallel, Distributed Processing Approach'
+  title-short: Serial Order
+  container-title: 'Advances in Connectionist Theory: Speech'
+  publisher: Lawrence Erlbaum Associates
+  publisher-place: Hillsdale, NJ
+
+- id: CollinsFrank16a
   type: article-journal
   author:
-  - family: Ritvo
-    given: Victoria J. H.
-  - family: Turk-Browne
-    given: Nicholas B.
-  - family: Norman
-    given: Kenneth A.
+  - family: Collins
+    given: Anne Gabrielle Eva
+  - family: Frank
+    given: Michael Joshua
   issued:
-  - year: 2019
-    month: 9
-  title: 'Nonmonotonic Plasticity: How Memory Retrieval Drives Learning'
-  title-short: Nonmonotonic Plasticity
-  container-title: Trends in Cognitive Sciences
-  page: 726-742
-  volume: '23'
-  issue: '9'
-  abstract: What are the principles that govern whether neural representations move
-    apart (differentiate) or together (integrate) as a function of learning? According
-    to supervised learning models that are trained to predict outcomes in the world,
-    integration should occur when two stimuli predict the same outcome. Numerous findings
-    support this, but paradoxically some recent fMRI studies have found that pairing
-    different stimuli with the same associate causes differentiation, not integration.
-    To explain these and related findings, we argue that supervised learning needs
-    to be supplemented with unsupervised learning that is driven by spreading activation
-    in a U-shaped way, such that inactive memories are not modified, moderate activation
-    of memories causes weakening (leading to differentiation), and higher activation
-    causes strengthening (leading to integration).
-  DOI: 10.1016/j.tics.2019.06.007
-  ISSN: 1364-6613
+  - year: 2016
+    month: 7
+  title: Neural signature of hierarchically structured expectations predicts clustering
+    and transfer of rule sets in reinforcement learning
+  container-title: Cognition
+  page: 160-169
+  volume: '152'
+  abstract: Often the world is structured such that distinct sensory contexts signify
+    the same abstract rule set. Learning from feedback thus informs us not only about
+    the value of stimulus-action associations but also about which rule set applies.
+    Hierarchical clustering models suggest that learners discover structure in the
+    environment, clustering distinct sensory events into a single latent rule set.
+    Such structure enables a learner to transfer any newly acquired information to
+    other contexts linked to the same rule set, and facilitates re-use of learned
+    knowledge in novel contexts. Here, we show that humans exhibit this transfer,
+    generalization and clustering during learning. Trial-by-trial model-based analysis
+    of EEG signals revealed that subjects’ reward expectations incorporated this hierarchical
+    structure; these structured neural signals were predictive of behavioral transfer
+    and clustering. These results further our understanding of how humans learn and
+    generalize flexibly by building abstract, behaviorally relevant representations
+    of the complex, high-dimensional sensory environment.
+  DOI: 10.1016/j.cognition.2016.04.002
+  ISSN: 0010-0277
 
 - id: MarkovVezoliChameauEtAl14
   type: article-journal
@@ -991,56 +185,220 @@ references:
   PMCID: PMC4255240
   PMID: '23983048'
 
-- id: GoodaleMilner92
+- id: LeutgebLeutgebMoserEtAl07
   type: article-journal
   author:
-  - family: Goodale
-    given: Melvyn A.
-  - family: Milner
-    given: A. David.
+  - family: Leutgeb
+    given: J. K.
+  - family: Leutgeb
+    given: S.
+  - family: Moser
+    given: M.
+  - family: Moser
+    given: E.
   issued:
-  - year: 1992
-    month: 1
-  title: Separate visual pathways for perception and action
-  container-title: Trends in Neurosciences
-  page: 20-25
-  volume: '15'
-  issue: '1'
+  - year: 2007
+    month: 2
+  title: Pattern Separation in the Dentate Gyrus and CA3 of the Hippocampus
+  container-title: Science
+  page: 961-966
+  volume: '315'
+  issue: '5814'
+  URL: http://www.sciencemag.org/cgi/content/abstract/315/5814/961
 
-- id: NormanOReilly03
+- id: ShenFlajoletGreengardEtAl08
   type: article-journal
   author:
-  - family: Norman
-    given: Kenneth A.
+  - family: Shen
+    given: Weixing
+  - family: Flajolet
+    given: Marc
+  - family: Greengard
+    given: Paul
+  - family: Surmeier
+    given: D. James
+  issued:
+  - year: 2008
+    month: 8
+  title: Dichotomous dopaminergic control of striatal synaptic plasticity.
+  container-title: Science
+  page: 848-851
+  volume: '321'
+  issue: '5890'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/18687967
+
+- id: RescorlaWagner72
+  type: chapter
+  author:
+  - family: Rescorla
+    given: R. A.
+  - family: Wagner
+    given: A. R.
+  editor:
+  - family: Black
+    given: A. H.
+  - family: Prokasy
+    given: W. F.
+  issued:
+  - year: 1972
+    month: 1
+  title: 'A theory of Pavlovian conditioning: Variation in the effectiveness of reinforcement
+    and non-reinforcement'
+  title-short: A theory of Pavlovian conditioning
+  container-title: 'Classical Conditioning II: Theory and Research'
+  publisher: Appleton-Century-Crofts
+  publisher-place: New York
+  page: 64-99
+
+- id: HazyFrankOReilly06
+  type: article-journal
+  author:
+  - family: Hazy
+    given: T. E.
+  - family: Frank
+    given: M. J.
   - family: O’Reilly
     given: R. C.
   issued:
-  - year: 2003
-    month: 11
-  title: 'Modeling hippocampal and neocortical contributions to recognition memory:
-    A complementary-learning-systems approach.'
-  title-short: Modeling hippocampal and neocortical contributions to recognition memory
-  container-title: Psychological Review
-  page: 611-646
-  volume: '110'
-  issue: '4'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/14599236
+  - year: 2006
+    month: 4
+  title: 'Banishing the homunculus: Making working memory work.'
+  title-short: Banishing the homunculus
+  container-title: Neuroscience
+  page: 105-118
+  volume: '139'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/16343792
 
-- id: McClelland00
+- id: Frank05
   type: article-journal
   author:
-  - family: McClelland
-    given: J L
+  - family: Frank
+    given: M. J.
   issued:
-  - year: 2000
-    month: 10
-  title: 'The basis of hyperspecificity in autism: A preliminary suggestion based
-    on properties of neural nets.'
-  title-short: The basis of hyperspecificity in autism
-  container-title: Journal of autism and developmental disorders
-  page: 497-502
-  volume: '30'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/11098891
+  - year: 2005
+    month: 1
+  title: 'When and when not to use your subthalamic nucleus: Lessons from a computational
+    model of the basal ganglia.'
+  title-short: When and when not to use your subthalamic nucleus
+  container-title: 'Modelling Natural Action Selection: Proceedings of an International
+    Workshop'
+  page: 53-60
+
+- id: HirshmanPassannanteArndt01
+  type: article-journal
+  author:
+  - family: Hirshman
+    given: E.
+  - family: Passannante
+    given: A.
+  - family: Arndt
+    given: J.
+  issued:
+  - year: 2001
+    month: 9
+  title: Midazolam amnesia and conceptual processing in implicit memory.
+  container-title: Journal of experimental psychology. General
+  page: 453-465
+  volume: '130'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11561920
+
+- id: BienenstockCooperMunro82
+  type: article-journal
+  author:
+  - family: Bienenstock
+    given: Elie L.
+  - family: Cooper
+    given: Leon N.
+  - family: Munro
+    given: Paul W.
+  issued:
+  - year: 1982
+    month: 3
+  title: 'Theory for the development of neuron selectivity: Orientation specificity
+    and binocular interaction in visual cortex.'
+  title-short: Theory for the development of neuron selectivity
+  container-title: The Journal of Neuroscience
+  page: 32-48
+  volume: '2'
+  issue: '2'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/7054394
+
+- id: Piaget54
+  type: book
+  author:
+  - family: Piaget
+    given: J.
+  issued:
+  - year: 1954
+    month: 1
+  title: The construction of reality in the child
+  publisher: Basic Books
+  publisher-place: New York
+
+- id: OReillyFrankHazyEtAl07
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Frank
+    given: Michael J.
+  - family: Hazy
+    given: Thomas E.
+  - family: Watz
+    given: Brandon
+  issued:
+  - year: 2007
+  title: 'PVLV: The primary value and learned value Pavlovian learning algorithm.'
+  title-short: PVLV
+  container-title: Behavioral Neuroscience
+  page: 31-49
+  volume: '121'
+  issue: '1'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/17324049
+
+- id: FrankBadre12
+  type: article-journal
+  author:
+  - family: Frank
+    given: Michael J.
+  - family: Badre
+    given: David
+  issued:
+  - year: 2012
+    month: 3
+  title: 'Mechanisms of hierarchical reinforcement learning in corticostriatal circuits
+    1: Computational analysis.'
+  title-short: Mechanisms of hierarchical reinforcement learning in corticostriatal
+    circuits 1
+  container-title: Cerebral Cortex
+  page: 509-526
+  volume: '22'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21693490
+
+- id: LorinczKekesiJuhaszEtAl09
+  type: article-journal
+  author:
+  - family: Lorincz
+    given: Magor L
+  - family: Kekesi
+    given: Katalin A
+  - family: Juhasz
+    given: Gabor
+  - family: Crunelli
+    given: Vincenzo
+  - family: Hughes
+    given: Stuart W
+  issued:
+  - year: 2009
+    month: 9
+  title: Temporal framing of thalamic relay-mode firing by phasic inhibition during
+    the alpha rhythm.
+  container-title: Neuron
+  page: 683-696
+  volume: '63'
+  issue: '5'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/19755110
 
 - id: LimMcKeeWoloszynEtAl15
   type: article-journal
@@ -1084,6 +442,238 @@ references:
   DOI: 10.1038/nn.4158
   ISSN: 1097-6256
 
+- id: BoschHayashi12
+  type: article-journal
+  author:
+  - family: Bosch
+    given: Miquel
+  - family: Hayashi
+    given: Yasunori
+  issued:
+  - year: 2012
+    month: 6
+  title: Structural plasticity of dendritic spines
+  container-title: Current Opinion in Neurobiology
+  collection-title: Synaptic structure and function
+  page: 383-388
+  volume: '22'
+  issue: '3'
+  abstract: Dendritic spines are small mushroom-like protrusions arising from neurons
+    where most excitatory synapses reside. Their peculiar shape suggests that spines
+    can serve as an autonomous postsynaptic compartment that isolates chemical and
+    electrical signaling. How neuronal activity modifies the morphology of the spine
+    and how these modifications affect synaptic transmission and plasticity are intriguing
+    issues. Indeed, the induction of long-term potentiation (LTP) or depression (LTD)
+    is associated with the enlargement or shrinkage of the spine, respectively. This
+    structural plasticity is mainly controlled by actin filaments, the principal cytoskeletal
+    component of the spine. Here we review the pioneering microscopic studies examining
+    the structural plasticity of spines and propose how changes in actin treadmilling
+    might regulate spine morphology.
+  DOI: 10.1016/j.conb.2011.09.002
+  ISSN: 0959-4388
+
+- id: CooperIntratorBlaisEtAl04
+  type: book
+  author:
+  - family: Cooper
+    given: L. N.
+  - family: Intrator
+    given: N.
+  - family: Blais
+    given: B. S.
+  - family: Shouval
+    given: H.
+  issued:
+  - year: 2004
+  title: Theory of Cortical Plasticity.
+  publisher: World Scientific
+  publisher-place: New Jersey
+
+- id: StJohnMcClelland90
+  type: article-journal
+  author:
+  - family: St John
+    given: M. F.
+  - family: McClelland
+    given: J. L.
+  issued:
+  - year: 1990
+    month: 1
+  title: Learning and Applying Contextual Constraints in Sentence Comprehension
+  container-title: Artificial Intelligence
+  page: 217-257
+  volume: '46'
+
+- id: NormanOReilly03
+  type: article-journal
+  author:
+  - family: Norman
+    given: Kenneth A.
+  - family: O’Reilly
+    given: R. C.
+  issued:
+  - year: 2003
+    month: 11
+  title: 'Modeling hippocampal and neocortical contributions to recognition memory:
+    A complementary-learning-systems approach.'
+  title-short: Modeling hippocampal and neocortical contributions to recognition memory
+  container-title: Psychological Review
+  page: 611-646
+  volume: '110'
+  issue: '4'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/14599236
+
+- id: MontagueDayanSejnowski96
+  type: article-journal
+  author:
+  - family: Montague
+    given: P. Read
+  - family: Dayan
+    given: Peter
+  - family: Sejnowski
+    given: Terrence J.
+  issued:
+  - year: 1996
+    month: 1
+  title: A framework for mesencephalic dopamine systems based on predictive Hebbian
+    learning.
+  container-title: Journal of Neuroscience
+  page: 1936-1947
+  volume: '16'
+  issue: '5'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8774460
+
+- id: KravitzTyeKreitzer12
+  type: article-journal
+  author:
+  - family: Kravitz
+    given: Alexxai V.
+  - family: Tye
+    given: Lynne D.
+  - family: Kreitzer
+    given: Anatol C.
+  issued:
+  - year: 2012
+    month: 4
+  title: Distinct roles for direct and indirect pathway striatal neurons in reinforcement.
+  container-title: Nature Neuroscience
+  page: 816-818
+  volume: '15'
+  issue: '6'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/22544310
+
+- id: Elman90
+  type: article-journal
+  author:
+  - family: Elman
+    given: J. L.
+  issued:
+  - year: 1990
+    month: 1
+  title: Finding Structure In Time
+  container-title: Cognitive Science
+  page: 179-211
+  volume: '14'
+  issue: '2'
+
+- id: OReillyFrank06
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Frank
+    given: Michael J.
+  issued:
+  - year: 2006
+  title: 'Making working memory work: A computational model of learning in the prefrontal
+    cortex and basal ganglia.'
+  title-short: Making working memory work
+  container-title: Neural Computation
+  page: 283-328
+  volume: '18'
+  issue: '2'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/16378516
+
+- id: Marr71
+  type: article-journal
+  author:
+  - family: Marr
+    given: D.
+  issued:
+  - year: 1971
+    month: 7
+  title: 'Simple Memory: A Theory for Archicortex'
+  title-short: Simple Memory
+  container-title: 'Philosophical Transactions of the Royal Society of London B: Biological
+    Sciences'
+  page: 23-81
+  volume: '262'
+  issue: '841'
+  abstract: It is proposed that the most important characteristic of archicortex is
+    its ability to perform a simple kind of memorizing task. It is shown that rather
+    general numerical constraints roughly determine the dimensions of memorizing models
+    for the mammalian brain, and from these is derived a general model for archicortex.
+    The addition of further constraints leads to the notion of a simple representation,
+    which is a way of translating a great deal of information into the firing of about
+    200 out of a population of 10$<$latex$>\$\sphat$5\$$<$/latex$>$ cells. It is shown
+    that if about 10$<$latex$>\$\sphat$5\$$<$/latex$>$ simple representations are
+    stored in such a population of cells, very little information about a single learnt
+    event is necessary to provoke its recall. A detailed numerical examination is
+    made of a particular example of this kind of memory, and various general conclusions
+    are drawn from the analysis. The insight gained from these models is used to derive
+    theories for various archicortical areas. A functional interpretation is given
+    of the cells and synapses of the area entorhinalis, the prcsubiculum, the prosubiculum,
+    the cornu ammonis and the fascia dentata. Many predictions are made, a substantial
+    number of which must be true if the theory is correct. A general functional classification
+    of typical archicortical cells is proposed.
+  DOI: 10.1098/rstb.1971.0078
+  ISSN: 0080-4622
+  PMID: '4399412'
+
+- id: OReilly10
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  issued:
+  - year: 2010
+    month: 8
+  title: The What and How of prefrontal cortical organization
+  container-title: Trends in Neurosciences
+  page: 355-361
+  volume: '33'
+  issue: '8'
+  abstract: How is the prefrontal cortex (PFC) organized such that it is capable of
+    making people more flexible and in control of their behavior? Is there any systematic
+    organization across the many diverse areas that comprise the PFC, or is it uniquely
+    adaptive such that no fixed representational structure can develop? Going against
+    the current tide, this paper argues that there is indeed a systematic organization
+    across PFC areas, with an important functional distinction between ventral and
+    dorsal regions characterized as processing What versus How information, respectively.
+    This distinction has implications for the rostro-caudal and medial–lateral axes
+    of organization as well. The resulting large-scale functional map of PFC could
+    prove useful in integrating diverse data, and in generating novel predictions.
+  DOI: 10.1016/j.tins.2010.05.002
+  ISSN: 0166-2236
+
+- id: AckleyHintonSejnowski85
+  type: article-journal
+  author:
+  - family: Ackley
+    given: David H.
+  - family: Hinton
+    given: G. E.
+  - family: Sejnowski
+    given: T. J.
+  issued:
+  - year: 1985
+    month: 12
+  title: A learning algorithm for Boltzmann machines
+  container-title: Cognitive Science
+  page: 147-169
+  volume: '9'
+  issue: '1'
+
 - id: WidrowHoff60
   type: paper-conference
   author:
@@ -1098,218 +688,29 @@ references:
     Convention Record, Part 4
   page: 96-104
 
-- id: UngerleiderMishkin82
-  type: chapter
-  author:
-  - family: Ungerleider
-    given: L. G.
-  - family: Mishkin
-    given: M.
-  editor:
-  - family: Ingle
-    given: D. J.
-  - family: Goodale
-    given: M. A.
-  - family: Mansfield
-    given: R. J. W.
-  issued:
-  - year: 1982
-    month: 1
-  title: Two Cortical Visual Systems
-  container-title: The Analysis of Visual Behavior
-  publisher: MIT Press
-  publisher-place: Cambridge, MA
-  page: 549-586
-
-- id: Posner80
+- id: BuffaloFriesLandmanEtAl11
   type: article-journal
   author:
-  - family: Posner
-    given: M. I.
+  - family: Buffalo
+    given: Elizabeth A
+  - family: Fries
+    given: Pascal
+  - family: Landman
+    given: Rogier
+  - family: Buschman
+    given: Timothy J
+  - family: Desimone
+    given: Robert
   issued:
-  - year: 1980
-    month: 1
-  title: Orienting of Attention
-  container-title: Quarterly Journal of Experimental Psychology
-  page: 3-25
-  volume: '32'
-  issue: '1'
-
-- id: ShenFlajoletGreengardEtAl08
-  type: article-journal
-  author:
-  - family: Shen
-    given: Weixing
-  - family: Flajolet
-    given: Marc
-  - family: Greengard
-    given: Paul
-  - family: Surmeier
-    given: D. James
-  issued:
-  - year: 2008
-    month: 8
-  title: Dichotomous dopaminergic control of striatal synaptic plasticity.
-  container-title: Science
-  page: 848-851
-  volume: '321'
-  issue: '5890'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/18687967
-
-- id: SchultzDayanMontague97
-  type: article-journal
-  author:
-  - family: Schultz
-    given: W.
-  - family: Dayan
-    given: P.
-  - family: Montague
-    given: P. R.
-  issued:
-  - year: 1997
-    month: 3
-  title: A neural substrate of prediction and reward.
-  container-title: Science
-  page: 1593-1599
-  volume: '275'
-  issue: '5306'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/9054347
-
-- id: MollickHazyKruegerEtAlInPress
-  type: article-journal
-  author:
-  - family: Mollick
-    given: Jessica A.
-  - family: Hazy
-    given: Thomas E.
-  - family: Krueger
-    given: Kai A.
-  - family: Nair
-    given: Ananta
-  - family: Mackie
-    given: Prescott
-  - family: Herd
-    given: Seth A.
-  - family: O’Reilly
-    given: R. C.
-  title: A systems-neuroscience model of phasic dopamine
-  abstract: We describe a neurobiologically informed computational model of the phasic
-    dopamine signal- ing system that can account for a wider range of phenomena than
-    simpler reward prediction error (RPE) accounts. The central feature of this PVLV
-    framework is the distinction between a Primary Value (PV) system for anticipating
-    the onset of primary rewards (USs), and a Learned Value (LV) system for learning
-    about stimuli associated with such rewards (CSs). The LV system corresponds to
-    the amygdala and its ability to drive phasic dopamine bursting in midbrain dopamine
-    areas, while the PV system represents the ventral striatum (principally the nucleus
-    accumbens, NAc), which drives shunting inhibition of dopamine for expected USs
-    (via direct inhibitory projections) and phasic pausing for expected USs (via the
-    lateral habenula, LHb). We show how our model can account for a range of data
-    supporting the separability of these systems, including the non-zero- sum nature
-    of CS and US firing, and individual differences in CS-based learning (sign-tracking)
-    vs. US-based learning (goal-tracking). A critical feature of both systems is the
-    use of opponent- processing pathways that represent the competing strengths of
-    the evidence in favor and opposed to specific USs, and we show how these pathways
-    can explain a range of important data dissociat- ing the processes involved in
-    acquisition vs. extinction conditioning, including rapid reaquisition, reinstatement,
-    and renewal. Furthermore, this opponent structure is critical for being able to
-    ac- count for the full range of conditioned inhibition phenomena, and the surprisingly
-    closely-related paradigm of second-order conditioning. Finally, we show how additional
-    separable pathways rep- resenting aversive USs, which largely mirror those for
-    appetitive USs, also have some important differences from the positive valence
-    case, which allow the model to account for several important phenomena in aversive
-    conditioning. Overall, the ability to account for all of these phenomena strongly
-    constrains the form of the model, which thus provides a well-validated framework
-    for understanding phasic dopamine signaling.
-
-- id: QuirogaReddyKreimanEtAl05
-  type: article-journal
-  author:
-  - family: Quiroga
-    given: R. Quian
-  - family: Reddy
-    given: L.
-  - family: Kreiman
-    given: G.
-  - family: Koch
-    given: C.
-  - family: Fried
-    given: I.
-  issued:
-  - year: 2005
-    month: 6
-  title: Invariant visual representation by single neurons in the human brain
-  container-title: Nature
-  page: 1102-1107
-  volume: '435'
-  issue: '7045'
-  abstract: It takes a fraction of a second to recognize a person or an object even
-    when seen under strikingly different conditions. How such a robust, high-level
-    representation is achieved by neurons in the human brain is still unclear1,2,3,4,5,6.
-    In monkeys, neurons in the upper stages of the ventral visual pathway respond
-    to complex images such as faces and objects and show some degree of invariance
-    to metric properties such as the stimulus size, position and viewing angle2,4,7,8,9,10,11,12.
-    We have previously shown that neurons in the human medial temporal lobe (MTL)
-    fire selectively to images of faces, animals, objects or scenes13,14. Here we
-    report on a remarkable subset of MTL neurons that are selectively activated by
-    strikingly different pictures of given individuals, landmarks or objects and in
-    some cases even by letter strings with their names. These results suggest an invariant,
-    sparse and explicit code, which might be important in the transformation of complex
-    visual percepts into long-term and more abstract memories.
-  DOI: 10.1038/nature03687
-  ISSN: 1476-4687
-
-- id: LandauerDumais97
-  type: article-journal
-  author:
-  - family: Landauer
-    given: Thomas K.
-  - family: Dumais
-    given: Susan T.
-  issued:
-  - year: 1997
-    month: 1
-  title: 'A Solution to Plato’s Problem: The Latent Semantic Analysis Theory Of Acquisition,
-    Induction, and Representation of Knowledge.'
-  title-short: A Solution to Plato’s Problem
-  container-title: Psychological Review
-  page: 211-240
-  volume: '104'
-
-- id: SuttonBarto81
-  type: article-journal
-  author:
-  - family: Sutton
-    given: R. S.
-  - family: Barto
-    given: A. G.
-  issued:
-  - year: 1981
-    month: 12
-  title: 'Toward a modern theory of adaptive networks: Expectation and prediction.'
-  title-short: Toward a modern theory of adaptive networks
-  container-title: Psychological Review
-  page: 135-170
-  volume: '88'
-  issue: '2'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/7291377
-
-- id: KetzMorkondaOReilly13
-  type: article-journal
-  author:
-  - family: Ketz
-    given: Nicholas
-  - family: Morkonda
-    given: Srinimisha G
-  - family: O’Reilly
-    given: R. C
-  issued:
-  - year: 2013
-    month: 6
-  title: Theta coordinated error-driven learning in the hippocampus.
-  container-title: PLoS Computational Biology
-  page: e1003067
-  volume: '9'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/23762019
+  - year: 2011
+    month: 7
+  title: Laminar differences in gamma and alpha coherence in the ventral stream.
+  container-title: Proceedings of the National Academy of Sciences of the United States
+    of America
+  page: 11262-11267
+  volume: '108'
+  issue: '27'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21690410
 
 - id: FrankSeebergerOReilly04
   type: article-journal
@@ -1331,25 +732,57 @@ references:
   issue: '5703'
   URL: https://www.ncbi.nlm.nih.gov/pubmed/15528409
 
-- id: MarshallHelgadottirMolleEtAl06
+- id: OReillyMcClelland94
   type: article-journal
   author:
-  - family: Marshall
-    given: Lisa
-  - family: Helgadóttir
-    given: Halla
-  - family: Mölle
-    given: Matthias
-  - family: Born
-    given: Jan
+  - family: O’Reilly
+    given: R. C.
+  - family: McClelland
+    given: J. L.
   issued:
-  - year: 2006
-    month: 11
-  title: Boosting slow oscillations during sleep potentiates memory.
-  container-title: Nature
-  volume: '444'
-  issue: '7119'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/17086200
+  - year: 1994
+    month: 1
+  title: 'Hippocampal Conjunctive Encoding, Storage, and Recall: Avoiding a Tradeoff'
+  title-short: Hippocampal Conjunctive Encoding, Storage, and Recall
+  container-title: Hippocampus
+  page: 661-682
+  volume: '4'
+  issue: '6'
+
+- id: PlautShallice93
+  type: article-journal
+  author:
+  - family: Plaut
+    given: David C.
+  - family: Shallice
+    given: Tim
+  issued:
+  - year: 1993
+    month: 1
+  title: 'Deep dyslexia: A case study of connectionist neuropsychology'
+  title-short: Deep dyslexia
+  container-title: Cognitive Neuropsychology
+  page: 377-500
+  volume: '10'
+  issue: '5'
+
+- id: KubotaNiki71
+  type: article-journal
+  author:
+  - family: Kubota
+    given: K.
+  - family: Niki
+    given: H.
+  issued:
+  - year: 1971
+    month: 9
+  title: Prefrontal cortical unit activity and delayed alternation performance in
+    monkeys.
+  container-title: Journal of Neurophysiology
+  page: 337-347
+  volume: '34'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/4997822
 
 - id: KachergisWyatteOReillyEtAl14
   type: article-journal
@@ -1382,6 +815,188 @@ references:
   ISSN: 0962-8436, 1471-2970
   PMID: '25267830'
 
+- id: OReillyMunakata00
+  type: book
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Munakata
+    given: Y.
+  issued:
+  - year: 2000
+    month: 1
+  title: 'Computational Explorations in Cognitive Neuroscience: Understanding the
+    Mind by Simulating the Brain'
+  title-short: Computational Explorations in Cognitive Neuroscience
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+
+- id: FellemanVanEssen91
+  type: article-journal
+  author:
+  - family: Felleman
+    given: D. J.
+  - family: Van Essen
+    given: D. C.
+  issued:
+  - year: 1991
+    month: 1
+  title: Distributed Hierarchical Processing in the Primate Cerebral Cortex
+  container-title: Cerebral Cortex
+  page: 1-47
+  volume: '1'
+  issue: '1'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/1822724
+
+- id: Posner80
+  type: article-journal
+  author:
+  - family: Posner
+    given: M. I.
+  issued:
+  - year: 1980
+    month: 1
+  title: Orienting of Attention
+  container-title: Quarterly Journal of Experimental Psychology
+  page: 3-25
+  volume: '32'
+  issue: '1'
+
+- id: Marr69
+  type: article-journal
+  author:
+  - family: Marr
+    given: D.
+  issued:
+  - year: 1969
+    month: 1
+  title: A theory of cerebellar cortex
+  container-title: Journal of Physiology (London)
+  page: 437-470
+  volume: '202'
+
+- id: LandauerDumais97
+  type: article-journal
+  author:
+  - family: Landauer
+    given: Thomas K.
+  - family: Dumais
+    given: Susan T.
+  issued:
+  - year: 1997
+    month: 1
+  title: 'A Solution to Plato’s Problem: The Latent Semantic Analysis Theory Of Acquisition,
+    Induction, and Representation of Knowledge.'
+  title-short: A Solution to Plato’s Problem
+  container-title: Psychological Review
+  page: 211-240
+  volume: '104'
+
+- id: Albus71
+  type: article-journal
+  author:
+  - family: Albus
+    given: James S.
+  issued:
+  - year: 1971
+    month: 2
+  title: A theory of cerebellar function
+  container-title: Mathematical Biosciences
+  page: 25-61
+  volume: '10'
+  issue: 1-2
+  URL: http://www.sciencedirect.com/science/article/B6VHX-45F52M2-J8/2/bba55f65c1bf9b826444584ec64ee6c3
+
+- id: LuczakBarthoHarris13
+  type: article-journal
+  author:
+  - family: Luczak
+    given: Artur
+  - family: Bartho
+    given: Peter
+  - family: Harris
+    given: Kenneth D.
+  issued:
+  - year: 2013
+    month: 1
+  title: Gating of sensory input by spontaneous cortical activity.
+  container-title: The Journal of Neuroscience
+  page: 1684-1695
+  volume: '33'
+  issue: '4'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/23345241
+
+- id: SuttonBarto98
+  type: book
+  author:
+  - family: Sutton
+    given: R. S.
+  - family: Barto
+    given: A. G.
+  issued:
+  - year: 1998
+    month: 1
+  title: 'Reinforcement Learning: An Introduction.'
+  title-short: Reinforcement Learning
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+  URL: http://www.cs.ualberta.ca/ sutton/book/ebook/the-book.html
+
+- id: OlshausenField96
+  type: article-journal
+  author:
+  - family: Olshausen
+    given: B. A.
+  - family: Field
+    given: D. J.
+  issued:
+  - year: 1996
+    month: 7
+  title: Emergence of simple-cell receptive field properties by learning a sparse
+    code for natural images.
+  container-title: Nature
+  page: '607'
+  volume: '381'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8637596
+
+- id: HazyFrankOReilly10
+  type: article-journal
+  author:
+  - family: Hazy
+    given: Thomas E.
+  - family: Frank
+    given: Michael J.
+  - family: O’Reilly
+    given: R. C.
+  issued:
+  - year: 2010
+    month: 4
+  title: Neural mechanisms of acquired phasic dopamine responses in learning.
+  container-title: Neuroscience and Biobehavioral Reviews
+  page: 701-720
+  volume: '34'
+  issue: '5'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/19944716
+
+- id: LevittLewisYoshiokaEtAl93
+  type: article-journal
+  author:
+  - family: Levitt
+    given: J. B.
+  - family: Lewis
+    given: D. A.
+  - family: Yoshioka
+    given: T.
+  - family: Lund
+    given: J. S.
+  issued:
+  - year: 1993
+  title: Topography of Pyramidal Neuron Intrinsic Connections in Macaque Monkey Prefrontal
+    Cortex (Areas 9 & 46)
+  container-title: Journal of Comparative Neurology
+  page: 360-376
+  volume: '338'
+
 - id: Mink96
   type: article-journal
   author:
@@ -1413,6 +1028,143 @@ references:
     competing motor programs results in slow movements, abnormal postures and involuntary
     muscle activity.
   URL: http://www.ncbi.nlm.nih.gov/pubmed/9004351
+
+- id: CollinsFrank14
+  type: article-journal
+  author:
+  - family: Collins
+    given: Anne G. E.
+  - family: Frank
+    given: Michael J.
+  issued:
+  - year: 2014
+    month: 7
+  title: 'Opponent actor learning (OpAL): Modeling interactive effects of striatal
+    dopamine on reinforcement learning and choice incentive.'
+  title-short: Opponent actor learning (OpAL)
+  container-title: Psychological Review
+  page: 337-366
+  volume: '121'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/25090423
+
+- id: KravitzSaleemBakerEtAl11
+  type: article-journal
+  author:
+  - family: Kravitz
+    given: Dwight J.
+  - family: Saleem
+    given: Kadharbatcha S.
+  - family: Baker
+    given: Chris I.
+  - family: Mishkin
+    given: Mortimer
+  issued:
+  - year: 2011
+    month: 4
+  title: A new neural framework for visuospatial processing
+  container-title: Nature Reviews Neuroscience
+  page: 217-230
+  volume: '12'
+  issue: '4'
+  abstract: The division of cortical visual processing into distinct dorsal and ventral
+    streams is a key framework that has guided visual neuroscience. The characterization
+    of the ventral stream as a ’What’ pathway is relatively uncontroversial, but the
+    nature of dorsal stream processing is less clear. Originally proposed as mediating
+    spatial perception (’Where’), more recent accounts suggest it primarily serves
+    non-conscious visually guided action (’How’). Here, we identify three pathways
+    emerging from the dorsal stream that consist of projections to the prefrontal
+    and premotor cortices, and a major projection to the medial temporal lobe that
+    courses both directly and indirectly through the posterior cingulate and retrosplenial
+    cortices. These three pathways support both conscious and non-conscious visuospatial
+    processing, including spatial working memory, visually guided action and navigation,
+    respectively.
+  DOI: 10.1038/nrn3008
+  ISSN: 1471-003X
+
+- id: CleeremansMcClelland91
+  type: article-journal
+  author:
+  - family: Cleeremans
+    given: A.
+  - family: McClelland
+    given: J. L.
+  issued:
+  - year: 1991
+    month: 1
+  title: Learning the structure of event sequences
+  container-title: 'Journal of Experimental Psychology: General'
+  page: 235-253
+  volume: '120'
+
+- id: BretteGerstner05
+  type: article-journal
+  author:
+  - family: Brette
+    given: Romain
+  - family: Gerstner
+    given: Wulfram
+  issued:
+  - year: 2005
+    month: 11
+  title: Adaptive exponential integrate-and-fire model as an effective description
+    of neuronal activity
+  container-title: Journal of Neurophysiology
+  page: 3637-3642
+  volume: '94'
+  issue: '5'
+  abstract: We introduce a two-dimensional integrate-and-fire model that combines
+    an exponential spike mechanism with an adaptation equation, based on recent theoretical
+    findings. We describe a systematic method to estimate its parameters with simple
+    electrophysiological protocols (current-clamp injection of pulses and ramps) and
+    apply it to a detailed conductance-based model of a regular spiking neuron. Our
+    simple model predicts correctly the timing of 96% of the spikes ($\pm$2 ms) of
+    the detailed model in response to injection of noisy synaptic conductances. The
+    model is especially reliable in high-conductance states, typical of cortical activity
+    in vivo, in which intrinsic conductances were found to have a reduced role in
+    shaping spike trains. These results are promising because this simple model has
+    enough expressive power to reproduce qualitatively several electrophysiological
+    classes described in vitro.
+  DOI: 10.1152/jn.00686.2005
+  ISSN: 0022-3077, 1522-1598
+  PMID: '16014787'
+
+- id: UrakuboHondaFroemkeEtAl08
+  type: article-journal
+  author:
+  - family: Urakubo
+    given: Hidetoshi
+  - family: Honda
+    given: Minoru
+  - family: Froemke
+    given: Robert C.
+  - family: Kuroda
+    given: Shinya
+  issued:
+  - year: 2008
+    month: 3
+  title: Requirement of an allosteric kinetics of NMDA receptors for spike timing-dependent
+    plasticity.
+  container-title: The Journal of Neuroscience
+  page: 3310-3323
+  volume: '28'
+  issue: '13'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/18367598
+
+- id: CoslettSaffran91
+  type: article-journal
+  author:
+  - family: Coslett
+    given: H. B.
+  - family: Saffran
+    given: E.
+  issued:
+  - year: 1991
+    month: 1
+  title: Simultanagnosia. To see but not two see.
+  container-title: Brain
+  page: 1523-1545
+  volume: '114'
 
 - id: ZalocuskyRamakrishnanLernerEtAl16
   type: article-journal
@@ -1462,45 +1214,6 @@ references:
   DOI: 10.1038/nature17400
   ISSN: 0028-0836
 
-- id: RescorlaWagner72
-  type: chapter
-  author:
-  - family: Rescorla
-    given: R. A.
-  - family: Wagner
-    given: A. R.
-  editor:
-  - family: Black
-    given: A. H.
-  - family: Prokasy
-    given: W. F.
-  issued:
-  - year: 1972
-    month: 1
-  title: 'A theory of Pavlovian conditioning: Variation in the effectiveness of reinforcement
-    and non-reinforcement'
-  title-short: A theory of Pavlovian conditioning
-  container-title: 'Classical Conditioning II: Theory and Research'
-  publisher: Appleton-Century-Crofts
-  publisher-place: New York
-  page: 64-99
-
-- id: BarnesUnderwood60
-  type: article-journal
-  author:
-  - family: Barnes
-    given: J. M.
-  - family: Underwood
-    given: B. J.
-  issued:
-  - year: 1960
-    month: 12
-  title: Fate of first-list associations in transfer theory.
-  container-title: Journal of experimental psychology
-  page: 97-105
-  volume: '58'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/13796886
-
 - id: MinskyPapert69
   type: book
   author:
@@ -1515,103 +1228,125 @@ references:
   publisher: MIT Press
   publisher-place: Cambridge, MA
 
-- id: KirkwoodRioultBear96
+- id: KetzMorkondaOReilly13
   type: article-journal
   author:
-  - family: Kirkwood
-    given: A.
-  - family: Rioult
-    given: M. G.
-  - family: Bear
-    given: M. F.
+  - family: Ketz
+    given: Nicholas
+  - family: Morkonda
+    given: Srinimisha G
+  - family: O’Reilly
+    given: R. C
   issued:
-  - year: 1996
-    month: 1
-  title: Experience-Dependent Modification of Synaptic Plasticity in Visual Cortex.
-  container-title: Nature
-  page: 526-528
-  volume: '381'
-  issue: '6582'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/8632826
+  - year: 2013
+    month: 6
+  title: Theta coordinated error-driven learning in the hippocampus.
+  container-title: PLoS Computational Biology
+  page: e1003067
+  volume: '9'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/23762019
 
-- id: StJohnMcClelland90
+- id: CohenDunbarMcClelland90
   type: article-journal
   author:
-  - family: St John
-    given: M. F.
+  - family: Cohen
+    given: J. D.
+  - family: Dunbar
+    given: K.
   - family: McClelland
     given: J. L.
   issued:
   - year: 1990
     month: 1
-  title: Learning and Applying Contextual Constraints in Sentence Comprehension
-  container-title: Artificial Intelligence
-  page: 217-257
-  volume: '46'
+  title: 'On the Control of Automatic Processes: A Parallel Distributed Processing
+    Model of the Stroop Effect'
+  title-short: On the Control of Automatic Processes
+  container-title: Psychological Review
+  page: 332-361
+  volume: '97'
+  issue: '3'
 
-- id: Marr69
+- id: CollinsFrank13
   type: article-journal
   author:
-  - family: Marr
-    given: D.
+  - family: Collins
+    given: Anne G. E.
+  - family: Frank
+    given: Michael J.
   issued:
-  - year: 1969
+  - year: 2013
     month: 1
-  title: A theory of cerebellar cortex
-  container-title: Journal of Physiology (London)
-  page: 437-470
-  volume: '202'
+  title: 'Cognitive control over learning: Creating, clustering, and generalizing
+    task-set structure.'
+  title-short: Cognitive control over learning
+  container-title: Psychological Review
+  page: 190-229
+  volume: '120'
+  issue: '1'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/23356780
 
-- id: BuffaloFriesLandmanEtAl11
+- id: SeidenbergMcClelland89
   type: article-journal
   author:
-  - family: Buffalo
-    given: Elizabeth A
-  - family: Fries
-    given: Pascal
-  - family: Landman
-    given: Rogier
-  - family: Buschman
-    given: Timothy J
-  - family: Desimone
-    given: Robert
+  - family: Seidenberg
+    given: M. S.
+  - family: McClelland
+    given: J. L.
   issued:
-  - year: 2011
-    month: 7
-  title: Laminar differences in gamma and alpha coherence in the ventral stream.
-  container-title: Proceedings of the National Academy of Sciences of the United States
-    of America
-  page: 11262-11267
-  volume: '108'
-  issue: '27'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/21690410
+  - year: 1989
+    month: 11
+  title: A distributed, developmental model of word recognition and naming.
+  container-title: Psychological review
+  page: 523-568
+  volume: '96'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/2798649
 
-- id: FranceschettiGuatteoPanzicaEtAl95
+- id: Fukushima80
   type: article-journal
   author:
-  - family: Franceschetti
-    given: S
-  - family: Guatteo
-    given: E
-  - family: Panzica
-    given: F
-  - family: Sancini
-    given: G
-  - family: Wanke
-    given: E
-  - family: Avanzini
-    given: G
+  - family: Fukushima
+    given: Kunihiko
   issued:
-  - year: 1995
-    month: 10
-  title: 'Ionic mechanisms underlying burst firing in pyramidal neurons: Intracellular
-    study in rat sensorimotor cortex.'
-  title-short: Ionic mechanisms underlying burst firing in pyramidal neurons
-  container-title: Brain Research
-  page: 127-139
-  volume: '696'
-  issue: '12'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/8574660
+  - year: 1980
+    month: 4
+  title: 'Neocognitron: A self-organizing neural network model for a mechanism of
+    pattern recognition unaffected by shift in position'
+  title-short: Neocognitron
+  container-title: Biological Cybernetics
+  page: 193-202
+  volume: '36'
+  issue: '4'
+  URL: http://dx.doi.org/10.1007/BF00344251
+
+- id: Shallice88
+  type: book
+  author:
+  - family: Shallice
+    given: T.
+  issued:
+  - year: 1988
+    month: 1
+  title: From Neuropsychology to Mental Structure
+  publisher: Cambridge University Press
+  publisher-place: New York
+
+- id: PinkerPrince88
+  type: article-journal
+  author:
+  - family: Pinker
+    given: S.
+  - family: Prince
+    given: A.
+  issued:
+  - year: 1988
+    month: 4
+  title: 'On language and connectionism: Analysis of a parallel distributed processing
+    model of language acquisition.'
+  title-short: On language and connectionism
+  container-title: Cognition
+  page: 73-193
+  volume: '28'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/2450717
 
 - id: HikidaKimuraWadaEtAl10
   type: article-journal
@@ -1634,102 +1369,227 @@ references:
   page: 896-907
   volume: '66'
 
-- id: UrakuboHondaFroemkeEtAl08
+- id: SchultzDayanMontague97
   type: article-journal
   author:
-  - family: Urakubo
-    given: Hidetoshi
-  - family: Honda
-    given: Minoru
-  - family: Froemke
-    given: Robert C.
-  - family: Kuroda
-    given: Shinya
+  - family: Schultz
+    given: W.
+  - family: Dayan
+    given: P.
+  - family: Montague
+    given: P. R.
   issued:
-  - year: 2008
+  - year: 1997
     month: 3
-  title: Requirement of an allosteric kinetics of NMDA receptors for spike timing-dependent
-    plasticity.
-  container-title: The Journal of Neuroscience
-  page: 3310-3323
-  volume: '28'
-  issue: '13'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/18367598
+  title: A neural substrate of prediction and reward.
+  container-title: Science
+  page: 1593-1599
+  volume: '275'
+  issue: '5306'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/9054347
 
-- id: BienenstockCooperMunro82
+- id: MarshallHelgadottirMolleEtAl06
   type: article-journal
   author:
-  - family: Bienenstock
-    given: Elie L.
-  - family: Cooper
-    given: Leon N.
-  - family: Munro
-    given: Paul W.
+  - family: Marshall
+    given: Lisa
+  - family: Helgadóttir
+    given: Halla
+  - family: Mölle
+    given: Matthias
+  - family: Born
+    given: Jan
   issued:
-  - year: 1982
-    month: 3
-  title: 'Theory for the development of neuron selectivity: Orientation specificity
-    and binocular interaction in visual cortex.'
-  title-short: Theory for the development of neuron selectivity
-  container-title: The Journal of Neuroscience
-  page: 32-48
-  volume: '2'
-  issue: '2'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/7054394
+  - year: 2006
+    month: 11
+  title: Boosting slow oscillations during sleep potentiates memory.
+  container-title: Nature
+  volume: '444'
+  issue: '7119'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/17086200
 
-- id: OReillyMunakata00
-  type: book
+- id: ShouvalWangWittenberg10
+  type: article-journal
   author:
-  - family: O’Reilly
-    given: R. C.
+  - family: Shouval
+    given: Harel Z.
+  - family: Wang
+    given: Samuel S.-H.
+  - family: Wittenberg
+    given: Gayle M.
+  issued:
+  - year: 2010
+  title: 'Spike timing dependent plasticity: A consequence of more fundamental learning
+    rules.'
+  title-short: Spike timing dependent plasticity
+  container-title: Frontiers in Computational Neuroscience
+  volume: '4'
+  issue: '19'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/20725599
+
+- id: Munakata98
+  type: article-journal
+  author:
   - family: Munakata
     given: Y.
   issued:
-  - year: 2000
+  - year: 1998
     month: 1
-  title: 'Computational Explorations in Cognitive Neuroscience: Understanding the
-    Mind by Simulating the Brain'
-  title-short: Computational Explorations in Cognitive Neuroscience
-  publisher: MIT Press
-  publisher-place: Cambridge, MA
+  title: 'Infant Perseveration: Rethinking data, theory, and the role of modelling'
+  title-short: Infant Perseveration
+  container-title: Developmental Science
+  page: 205-212
+  volume: '1'
 
-- id: Fukushima80
+- id: FusterAlexander71
   type: article-journal
   author:
-  - family: Fukushima
-    given: Kunihiko
+  - family: Fuster
+    given: J. M.
+  - family: Alexander
+    given: G. E.
   issued:
-  - year: 1980
-    month: 4
-  title: 'Neocognitron: A self-organizing neural network model for a mechanism of
-    pattern recognition unaffected by shift in position'
-  title-short: Neocognitron
-  container-title: Biological Cybernetics
-  page: 193-202
-  volume: '36'
-  issue: '4'
-  URL: http://dx.doi.org/10.1007/BF00344251
+  - year: 1971
+    month: 1
+  title: Neuron activity related to short-term memory
+  container-title: Science
+  page: 652-654
+  volume: '173'
 
-- id: KravitzTyeKreitzer12
+- id: SuttonBarto81
+  type: article-journal
+  author:
+  - family: Sutton
+    given: R. S.
+  - family: Barto
+    given: A. G.
+  issued:
+  - year: 1981
+    month: 12
+  title: 'Toward a modern theory of adaptive networks: Expectation and prediction.'
+  title-short: Toward a modern theory of adaptive networks
+  container-title: Psychological Review
+  page: 135-170
+  volume: '88'
+  issue: '2'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/7291377
+
+- id: ReynoldsOReilly09
+  type: article-journal
+  author:
+  - family: Reynolds
+    given: Jeremy R.
+  - family: O’Reilly
+    given: R. C.
+  issued:
+  - year: 2009
+    month: 12
+  title: Developing PFC representations using reinforcement learning.
+  container-title: Cognition
+  page: 281-292
+  volume: '113'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/19591977
+
+- id: RitvoTurk-BrowneNorman19
+  type: article-journal
+  author:
+  - family: Ritvo
+    given: Victoria J. H.
+  - family: Turk-Browne
+    given: Nicholas B.
+  - family: Norman
+    given: Kenneth A.
+  issued:
+  - year: 2019
+    month: 9
+  title: 'Nonmonotonic Plasticity: How Memory Retrieval Drives Learning'
+  title-short: Nonmonotonic Plasticity
+  container-title: Trends in Cognitive Sciences
+  page: 726-742
+  volume: '23'
+  issue: '9'
+  abstract: What are the principles that govern whether neural representations move
+    apart (differentiate) or together (integrate) as a function of learning? According
+    to supervised learning models that are trained to predict outcomes in the world,
+    integration should occur when two stimuli predict the same outcome. Numerous findings
+    support this, but paradoxically some recent fMRI studies have found that pairing
+    different stimuli with the same associate causes differentiation, not integration.
+    To explain these and related findings, we argue that supervised learning needs
+    to be supplemented with unsupervised learning that is driven by spreading activation
+    in a U-shaped way, such that inactive memories are not modified, moderate activation
+    of memories causes weakening (leading to differentiation), and higher activation
+    causes strengthening (leading to integration).
+  DOI: 10.1016/j.tics.2019.06.007
+  ISSN: 1364-6613
+
+- id: KravitzFreezeParkerEtAl10
   type: article-journal
   author:
   - family: Kravitz
-    given: Alexxai V.
-  - family: Tye
-    given: Lynne D.
+    given: Alexxai
+  - family: Freeze
+    given: Benjamin
+  - family: Parker
+    given: Philip
+  - family: Kay
+    given: Kenneth
+  - family: Thwin
+    given: Myo
+  - family: Deisseroth
+    given: Karl
   - family: Kreitzer
-    given: Anatol C.
+    given: Anatol
   issued:
-  - year: 2012
-    month: 4
-  title: Distinct roles for direct and indirect pathway striatal neurons in reinforcement.
-  container-title: Nature Neuroscience
-  page: 816-818
-  volume: '15'
-  issue: '6'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/22544310
+  - year: 2010
+    month: 7
+  title: Regulation of {}P{}arkinsonian motor behaviours by optogenetic control of
+    basal ganglia circuitry
+  container-title: Nature
+  page: 622-626
+  volume: '466'
+  issue: '7306'
+  URL: http://www.nature.com/nature/journal/vaop/ncurrent/full/nature09159.html
 
-- id: HazyFrankOReilly10
+- id: UngerleiderMishkin82
+  type: chapter
+  author:
+  - family: Ungerleider
+    given: L. G.
+  - family: Mishkin
+    given: M.
+  editor:
+  - family: Ingle
+    given: D. J.
+  - family: Goodale
+    given: M. A.
+  - family: Mansfield
+    given: R. J. W.
+  issued:
+  - year: 1982
+    month: 1
+  title: Two Cortical Visual Systems
+  container-title: The Analysis of Visual Behavior
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+  page: 549-586
+
+- id: KobatakeTanaka94
+  type: article-journal
+  author:
+  - family: Kobatake
+    given: E.
+  - family: Tanaka
+    given: K.
+  issued:
+  - year: 1994
+    month: 1
+  title: Neuronal selectivities to complex object features in the ventral visual pathway
+  container-title: Journal of Neurophysiology
+  page: 856-867
+  volume: '71'
+  issue: '3'
+
+- id: HazyFrankOReilly07
   type: article-journal
   author:
   - family: Hazy
@@ -1739,14 +1599,46 @@ references:
   - family: O’Reilly
     given: R. C.
   issued:
-  - year: 2010
-    month: 4
-  title: Neural mechanisms of acquired phasic dopamine responses in learning.
-  container-title: Neuroscience and Biobehavioral Reviews
-  page: 701-720
-  volume: '34'
-  issue: '5'
-  URL: http://www.ncbi.nlm.nih.gov/pubmed/19944716
+  - year: 2007
+    month: 8
+  title: 'Towards an executive without a homunculus: Computational models of the prefrontal
+    cortex/basal ganglia system.'
+  title-short: Towards an executive without a homunculus
+  container-title: Philosophical Transactions of the Royal Society of London. Series
+    B, Biological Sciences
+  page: 1601-1613
+  volume: '362'
+  issue: '1485'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/17428778
+
+- id: Marr77
+  type: article-journal
+  author:
+  - family: Marr
+    given: David
+  issued:
+  - year: 1977
+    month: 1
+  title: Artificial IntelligenceA Personal View
+  container-title: Artificial Intelligence
+  page: 37-48
+
+- id: Frank06
+  type: article-journal
+  author:
+  - family: Frank
+    given: Michael J.
+  issued:
+  - year: 2006
+    month: 10
+  title: 'Hold your horses: A dynamic computational role for the subthalamic nucleus
+    in decision making.'
+  title-short: Hold your horses
+  container-title: Neural Networks
+  page: 1120-1136
+  volume: '19'
+  issue: '8'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/16945502
 
 - id: LismanGrace05
   type: article-journal
@@ -1776,4 +1668,683 @@ references:
     and learning. These findings sup- port a model whereby the hippocampal-VTA loop
     regulates the entry of information into long-term memory.
   URL: http://www.ncbi.nlm.nih.gov/pubmed/15924857
+
+- id: FranceschettiGuatteoPanzicaEtAl95
+  type: article-journal
+  author:
+  - family: Franceschetti
+    given: S
+  - family: Guatteo
+    given: E
+  - family: Panzica
+    given: F
+  - family: Sancini
+    given: G
+  - family: Wanke
+    given: E
+  - family: Avanzini
+    given: G
+  issued:
+  - year: 1995
+    month: 10
+  title: 'Ionic mechanisms underlying burst firing in pyramidal neurons: Intracellular
+    study in rat sensorimotor cortex.'
+  title-short: Ionic mechanisms underlying burst firing in pyramidal neurons
+  container-title: Brain Research
+  page: 127-139
+  volume: '696'
+  issue: '12'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8574660
+
+- id: RedondoMorris11
+  type: article-journal
+  author:
+  - family: Redondo
+    given: Roger L.
+  - family: Morris
+    given: Richard G. M.
+  issued:
+  - year: 2011
+    month: 1
+  title: 'Making memories last: The synaptic tagging and capture hypothesis'
+  title-short: Making memories last
+  container-title: Nature Reviews Neuroscience
+  page: 17-30
+  volume: '12'
+  issue: '1'
+  abstract: The synaptic tagging and capture hypothesis of protein synthesis-dependent
+    long-term potentiation asserts that the induction of synaptic potentiation creates
+    only the potential for a lasting change in synaptic efficacy, but not the commitment
+    to such a change. Other neural activity, before or after induction, can also determine
+    whether persistent change occurs. Recent findings, leading us to revise the original
+    hypothesis, indicate that the induction of a local, synapse-specific ’tagged’
+    state and the expression of long-term potentiation are dissociable. Additional
+    observations suggest that there are major differences in the mechanisms of functional
+    and structural plasticity. These advances call for a revised theory that incorporates
+    the specific molecular and structural processes involved. Addressing the physiological
+    relevance of previous in vitro findings, new behavioural studies have experimentally
+    translated the hypothesis to learning and the consolidation of newly formed memories.
+  DOI: 10.1038/nrn2963
+  ISSN: 1471-003X
+
+- id: Stroop35
+  type: article-journal
+  author:
+  - family: Stroop
+    given: J. R.
+  issued:
+  - year: 1935
+    month: 1
+  title: Studies of interference in serial verbal reactions.
+  container-title: Journal of Experimental Psychology
+  page: 643-662
+  volume: '18'
+
+- id: HaxbyGobbiniFureyEtAl01
+  type: article-journal
+  author:
+  - family: Haxby
+    given: J. V.
+  - family: Gobbini
+    given: M. I.
+  - family: Furey
+    given: M. L.
+  - family: Ishai
+    given: A.
+  - family: Schouten
+    given: J. L.
+  - family: Pietrini
+    given: P.
+  issued:
+  - year: 2001
+    month: 9
+  title: Distributed and overlapping representations of faces and objects in ventral
+    temporal cortex.
+  container-title: Science (New York, N.Y.)
+  page: 2425-2429
+  volume: '293'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11577229
+
+- id: McCloskeyCohen89
+  type: chapter
+  author:
+  - family: McCloskey
+    given: M.
+  - family: Cohen
+    given: N. J.
+  editor:
+  - family: Bower
+    given: G. H.
+  issued:
+  - year: 1989
+    month: 1
+  title: 'Catastrophic Interference in Connectionist Networks: The Sequential Learning
+    Problem'
+  title-short: Catastrophic Interference in Connectionist Networks
+  container-title: The Psychology of Learning and Motivation, Vol. 24
+  publisher: Academic Press
+  publisher-place: San Diego, CA
+  page: 109-164
+
+- id: PattersonNestorRogers07
+  type: article-journal
+  author:
+  - family: Patterson
+    given: K.
+  - family: Nestor
+    given: P. J.
+  - family: Rogers
+    given: T. T.
+  issued:
+  - year: 2007
+    month: 12
+  title: 'Where do you know what you know?: The representation of semantic knowledge
+    in the human brain.'
+  title-short: Where do you know what you know?
+  container-title: Nature reviews
+  page: 976-987
+  volume: '8'
+  issue: '12'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/18026167
+
+- id: BadreFrank12
+  type: article-journal
+  author:
+  - family: Badre
+    given: David
+  - family: Frank
+    given: Michael J
+  issued:
+  - year: 2012
+    month: 3
+  title: 'Mechanisms of hierarchical reinforcement learning in cortico-striatal circuits
+    2: Evidence from FMRI.'
+  title-short: Mechanisms of hierarchical reinforcement learning in cortico-striatal
+    circuits 2
+  container-title: Cerebral cortex
+  volume: '22'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/21693491
+
+- id: McClellandMcNaughtonOReilly95
+  type: article-journal
+  author:
+  - family: McClelland
+    given: J. L.
+  - family: McNaughton
+    given: B. L.
+  - family: O’Reilly
+    given: R. C.
+  issued:
+  - year: 1995
+    month: 8
+  title: 'Why There Are Complementary Learning Systems in the Hippocampus and Neocortex:
+    Insights from the Successes and Failures of Connectionist Models of Learning and
+    Memory.'
+  title-short: Why There Are Complementary Learning Systems in the Hippocampus and
+    Neocortex
+  container-title: Psychological Review
+  page: 419-457
+  volume: '102'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/7624455
+
+- id: HikosakaTakikawaKawagoe00
+  type: article-journal
+  author:
+  - family: Hikosaka
+    given: O.
+  - family: Takikawa
+    given: Y.
+  - family: Kawagoe
+    given: R.
+  issued:
+  - year: 2000
+    month: 7
+  title: Role of the basal ganglia in the control of purposive saccadic eye movements.
+  container-title: Physiological Reviews
+  page: 953-978
+  volume: '80'
+  issue: '3'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/10893428
+
+- id: RanganathRitchey12
+  type: article-journal
+  author:
+  - family: Ranganath
+    given: Charan
+  - family: Ritchey
+    given: Maureen
+  issued:
+  - year: 2012
+    month: 10
+  title: Two cortical systems for memory-guided behaviour.
+  container-title: Nature Reviews Neuroscience
+  page: 713-726
+  volume: '13'
+  issue: '10'
+  abstract: Although the perirhinal cortex (PRC), parahippocampal cortex (PHC) and
+    retrosplenial cortex (RSC) have an essential role in memory, the precise functions
+    of these areas are poorly understood. Here, we review the anatomical and functional
+    characteristics of these areas based on studies in humans, monkeys and rats. Our
+    Review suggests that the PRC and PHCRSC are core components of two separate large-scale
+    cortical networks that are dissociable by neuroanatomy, susceptibility to disease
+    and function. These networks not only support different types of memory but also
+    appear to support different aspects of cognition.
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/22992647
+
+- id: BarnesUnderwood60
+  type: article-journal
+  author:
+  - family: Barnes
+    given: J. M.
+  - family: Underwood
+    given: B. J.
+  issued:
+  - year: 1960
+    month: 12
+  title: Fate of first-list associations in transfer theory.
+  container-title: Journal of experimental psychology
+  page: 97-105
+  volume: '58'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/13796886
+
+- id: FrankOReillyCurran06
+  type: article-journal
+  author:
+  - family: Frank
+    given: Michael J.
+  - family: O’Reilly
+    given: R. C.
+  - family: Curran
+    given: Tim
+  issued:
+  - year: 2006
+    month: 8
+  title: 'When memory fails, intuition reigns: Midazolam enhances implicit inference
+    in humans.'
+  title-short: When memory fails, intuition reigns
+  container-title: 'Psychological science : a journal of the American Psychological
+    Society / APS'
+  page: 700-707
+  volume: '17'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/16913953
+
+- id: Rohde02
+  type: thesis
+  author:
+  - family: Rohde
+    given: Douglas L. T.
+  issued:
+  - year: 2002
+    month: 1
+  title: A Connectionist Model of Sentence Comprehension and Production
+  publisher: Computer Science Department, Carnegie Mellon University, Pittsburgh,
+    PA
+  genre: PhD thesis
+
+- id: FrankFossella11
+  type: article-journal
+  author:
+  - family: Frank
+    given: Michael J
+  - family: Fossella
+    given: John A
+  issued:
+  - year: 2011
+    month: 1
+  title: Neurogenetics and pharmacology of learning, motivation, and cognition.
+  container-title: Neuropsychopharmacology
+  volume: '36'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/20631684
+
+- id: MollickHazyKruegerEtAlInPress
+  type: article-journal
+  author:
+  - family: Mollick
+    given: Jessica A.
+  - family: Hazy
+    given: Thomas E.
+  - family: Krueger
+    given: Kai A.
+  - family: Nair
+    given: Ananta
+  - family: Mackie
+    given: Prescott
+  - family: Herd
+    given: Seth A.
+  - family: O’Reilly
+    given: R. C.
+  title: A systems-neuroscience model of phasic dopamine
+  abstract: We describe a neurobiologically informed computational model of the phasic
+    dopamine signal- ing system that can account for a wider range of phenomena than
+    simpler reward prediction error (RPE) accounts. The central feature of this PVLV
+    framework is the distinction between a Primary Value (PV) system for anticipating
+    the onset of primary rewards (USs), and a Learned Value (LV) system for learning
+    about stimuli associated with such rewards (CSs). The LV system corresponds to
+    the amygdala and its ability to drive phasic dopamine bursting in midbrain dopamine
+    areas, while the PV system represents the ventral striatum (principally the nucleus
+    accumbens, NAc), which drives shunting inhibition of dopamine for expected USs
+    (via direct inhibitory projections) and phasic pausing for expected USs (via the
+    lateral habenula, LHb). We show how our model can account for a range of data
+    supporting the separability of these systems, including the non-zero- sum nature
+    of CS and US firing, and individual differences in CS-based learning (sign-tracking)
+    vs. US-based learning (goal-tracking). A critical feature of both systems is the
+    use of opponent- processing pathways that represent the competing strengths of
+    the evidence in favor and opposed to specific USs, and we show how these pathways
+    can explain a range of important data dissociat- ing the processes involved in
+    acquisition vs. extinction conditioning, including rapid reaquisition, reinstatement,
+    and renewal. Furthermore, this opponent structure is critical for being able to
+    ac- count for the full range of conditioned inhibition phenomena, and the surprisingly
+    closely-related paradigm of second-order conditioning. Finally, we show how additional
+    separable pathways rep- resenting aversive USs, which largely mirror those for
+    appetitive USs, also have some important differences from the positive valence
+    case, which allow the model to account for several important phenomena in aversive
+    conditioning. Overall, the ability to account for all of these phenomena strongly
+    constrains the form of the model, which thus provides a well-validated framework
+    for understanding phasic dopamine signaling.
+
+- id: Baddeley86
+  type: book
+  author:
+  - family: Baddeley
+    given: A. D.
+  issued:
+  - year: 1986
+    month: 12
+  title: Working Memory
+  publisher: Oxford University Press
+
+- id: KirkwoodRioultBear96
+  type: article-journal
+  author:
+  - family: Kirkwood
+    given: A.
+  - family: Rioult
+    given: M. G.
+  - family: Bear
+    given: M. F.
+  issued:
+  - year: 1996
+    month: 1
+  title: Experience-Dependent Modification of Synaptic Plasticity in Visual Cortex.
+  container-title: Nature
+  page: 526-528
+  volume: '381'
+  issue: '6582'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/8632826
+
+- id: CoxFrankLarcherEtAl15
+  type: article-journal
+  author:
+  - family: Cox
+    given: Sylvia M. L.
+  - family: Frank
+    given: Michael J.
+  - family: Larcher
+    given: Kevin
+  - family: Fellows
+    given: Lesley K.
+  - family: Clark
+    given: Crystal A.
+  - family: Leyton
+    given: Marco
+  - family: Dagher
+    given: Alain
+  issued:
+  - year: 2015
+    month: 4
+  title: Striatal D1 and D2 signaling differentially predict learning from positive
+    and negative outcomes
+  container-title: NeuroImage
+  page: 95-101
+  volume: '109'
+  abstract: The extent to which we learn from positive and negative outcomes of decisions
+    is modulated by the neurotransmitter dopamine. Dopamine neurons burst fire in
+    response to unexpected rewards and pause following negative outcomes. This dual
+    signaling mechanism is hypothesized to drive both approach and avoidance behavior.
+    Here we test a prediction deriving from a computational reinforcement learning
+    model, in which approach is mediated via activation of the direct cortico-striatal
+    pathway due to striatal D1 receptor stimulation, while avoidance occurs via disinhibition
+    of indirect pathway striatal neurons secondary to a reduction of D2 receptor stimulation.
+    Using positron emission tomography with two separate radioligands, we demonstrate
+    that individual differences in human approach and avoidance learning are predicted
+    by variability in striatal D1 and D2 receptor binding, respectively. Moreover,
+    transient dopamine precursor depletion improved learning from negative outcomes.
+    These findings support a bidirectional modulatory role for striatal dopamine in
+    reward and avoidance learning via segregated D1 and D2 cortico-striatal pathways.
+  DOI: 10.1016/j.neuroimage.2014.12.070
+  ISSN: 1053-8119
+
+- id: Rudy15
+  type: article-journal
+  author:
+  - family: Rudy
+    given: Jerry W.
+  issued:
+  - year: 2015
+    month: 9
+  title: 'Variation in the persistence of memory: An interplay between actin dynamics
+    and AMPA receptors'
+  title-short: Variation in the persistence of memory
+  container-title: Brain Research
+  collection-title: 'Brain and Memory: Old Arguments and New Perspectives'
+  page: 29-37
+  volume: '1621'
+  abstract: 'William James noted that memories could persist from minutes to weeks.
+    This essay attempts to explain this variation by situating the explanation in
+    the biochemistry of dendritic spines. Two outcomes are critical to generate the
+    synaptic basis of memory: (1) the actin cytoskeleton in the spine must be degraded
+    to permit (2) additional AMPA receptors (GluA1s) to enter new “hot spots” in the
+    postsynaptic density. These initial outcomes can support short-lasting memories.
+    The threshold for these events is low but the underlying synaptic changes cannot
+    resist the endocytic processes that remove the added AMPA receptors. For the memory
+    to persist the degraded actin cytoskeleton must be rebuilt and the vacated “hot
+    spots” refilled with GluA2 receptors. A primary claim is that it is the stabilization
+    of an enlarged actin cytoskeleton that is the target outcome that consolidates
+    the synaptic basis of memory (see Lynch et al., 2007). The stabilized actin cytoskeleton
+    has properties that enable it to garner the synaptic proteins it needs to self
+    sustain the potentiated state and to benefit from activation of memory modulation
+    systems.article is part of a Special Issue entitled Brain and Memory.'
+  DOI: 10.1016/j.brainres.2014.12.009
+  ISSN: 0006-8993
+
+- id: BiPoo98
+  type: article-journal
+  author:
+  - family: Bi
+    given: Guo-qiang
+  - family: Poo
+    given: Mu-ming
+  issued:
+  - year: 1998
+    month: 12
+  accessed:
+  - year: 2016
+    month: 1
+    day: 27
+  title: 'Synaptic Modifications in Cultured Hippocampal Neurons: Dependence on Spike
+    Timing, Synaptic Strength, and Postsynaptic Cell Type'
+  title-short: Synaptic Modifications in Cultured Hippocampal Neurons
+  container-title: The Journal of Neuroscience
+  page: 10464-10472
+  volume: '18'
+  issue: '24'
+  abstract: In cultures of dissociated rat hippocampal neurons, persistent potentiation
+    and depression of glutamatergic synapses were induced by correlated spiking of
+    presynaptic and postsynaptic neurons. The relative timing between the presynaptic
+    and postsynaptic spiking determined the direction and the extent of synaptic changes.
+    Repetitive postsynaptic spiking within a time window of 20 msec after presynaptic
+    activation resulted in long-term potentiation (LTP), whereas postsynaptic spiking
+    within a window of 20 msec before the repetitive presynaptic activation led to
+    long-term depression (LTD). Significant LTP occurred only at synapses with relatively
+    low initial strength, whereas the extent of LTD did not show obvious dependence
+    on the initial synaptic strength. Both LTP and LTD depended on the activation
+    of NMDA receptors and were absent in cases in which the postsynaptic neurons were
+    GABAergic in nature. Blockade of L-type calcium channels with nimodipine abolished
+    the induction of LTD and reduced the extent of LTP. These results underscore the
+    importance of precise spike timing, synaptic strength, and postsynaptic cell type
+    in the activity-induced modification of central synapses and suggest that Hebb’s
+    rule may need to incorporate a quantitative consideration of spike timing that
+    reflects the narrow and asymmetric window for the induction of synaptic modification.
+  URL: http://www.jneurosci.org/content/18/24/10464
+  ISSN: 0270-6474, 1529-2401
+  PMID: '9852584'
+
+- id: OReillyWyatteRohrlich17
+  type: article-journal
+  author:
+  - family: O’Reilly
+    given: R. C.
+  - family: Wyatte
+    given: Dean R.
+  - family: Rohrlich
+    given: John
+  issued:
+  - year: 2017
+    month: 9
+  accessed:
+  - year: 2017
+    month: 9
+    day: 15
+  title: 'Deep predictive learning: A comprehensive model of three visual streams'
+  title-short: Deep Predictive Learning
+  container-title: arXiv:1709.04654 \[q-bio\]
+  abstract: 'How does the neocortex learn and develop the foundations of all our high-level
+    cognitive abilities? We present a comprehensive framework spanning biological,
+    computational, and cognitive levels, with a clear theoretical continuity between
+    levels, providing a coherent answer directly supported by extensive data at each
+    level. Learning is based on making predictions about what the senses will report
+    at 100 msec (alpha frequency) intervals, and adapting synaptic weights to improve
+    prediction accuracy. The pulvinar nucleus of the thalamus serves as a projection
+    screen upon which predictions are generated, through deep-layer 6 corticothalamic
+    inputs from multiple brain areas and levels of abstraction. The sparse driving
+    inputs from layer 5 intrinsic bursting neurons provide the target signal, and
+    the temporal difference between it and the prediction reverberates throughout
+    the cortex, driving synaptic changes that approximate error backpropagation, using
+    only local activation signals in equations derived directly from a detailed biophysical
+    model. In vision, predictive learning requires a carefully-organized developmental
+    progression and anatomical organization of three pathways (What, Where, and What
+    \* Where), according to two central principles: top-down input from compact, high-level,
+    abstract representations is essential for accurate prediction of low-level sensory
+    inputs; and the collective, low-level prediction error must be progressively and
+    opportunistically partitioned to enable extraction of separable factors that drive
+    the learning of further high-level abstractions. Our model self-organized systematic
+    invariant object representations of 100 different objects from simple movies,
+    accounts for a wide range of data, and makes many testable predictions.'
+  URL: http://arxiv.org/abs/1709.04654
+
+- id: Allport85
+  type: chapter
+  author:
+  - family: Allport
+    given: D. A.
+  editor:
+  - family: Newman
+    given: S. K.
+  - family: Epstein
+    given: R.
+  issued:
+  - year: 1985
+    month: 12
+  title: Distributed Memory, Modular Systems and Dysphasia
+  container-title: Current Perspectives in Dysphasia
+  publisher: Churchill Livingstone
+  publisher-place: Edinburgh
+
+- id: RumelhartHintonWilliams86
+  type: article-journal
+  author:
+  - family: Rumelhart
+    given: D. E.
+  - family: Hinton
+    given: G. E.
+  - family: Williams
+    given: R. J.
+  issued:
+  - year: 1986
+    month: 1
+  title: Learning representations by back-propagating errors
+  container-title: Nature
+  page: 533-536
+  volume: '323'
+  issue: '9'
+
+- id: McClelland00
+  type: article-journal
+  author:
+  - family: McClelland
+    given: J L
+  issued:
+  - year: 2000
+    month: 10
+  title: 'The basis of hyperspecificity in autism: A preliminary suggestion based
+    on properties of neural nets.'
+  title-short: The basis of hyperspecificity in autism
+  container-title: Journal of autism and developmental disorders
+  page: 497-502
+  volume: '30'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/11098891
+
+- id: GoodaleMilner92
+  type: article-journal
+  author:
+  - family: Goodale
+    given: Melvyn A.
+  - family: Milner
+    given: A. David.
+  issued:
+  - year: 1992
+    month: 1
+  title: Separate visual pathways for perception and action
+  container-title: Trends in Neurosciences
+  page: 20-25
+  volume: '15'
+  issue: '1'
+
+- id: AronBehrensSmithEtAl07
+  type: article-journal
+  author:
+  - family: Aron
+    given: Adam R.
+  - family: Behrens
+    given: Tim E.
+  - family: Smith
+    given: Steve
+  - family: Frank
+    given: Michael J.
+  - family: Poldrack
+    given: Russell A.
+  issued:
+  - year: 2007
+    month: 4
+  title: Triangulating a cognitive control network using diffusion-weighted magnetic
+    resonance imaging (MRI) and functional MRI.
+  container-title: 'The Journal of neuroscience : the official journal of the Society
+    for Neuroscience'
+  page: 3743-3752
+  volume: '27'
+  issue: '14'
+  URL: http://www.ncbi.nlm.nih.gov/pubmed/17409238
+
+- id: QuirogaReddyKreimanEtAl05
+  type: article-journal
+  author:
+  - family: Quiroga
+    given: R. Quian
+  - family: Reddy
+    given: L.
+  - family: Kreiman
+    given: G.
+  - family: Koch
+    given: C.
+  - family: Fried
+    given: I.
+  issued:
+  - year: 2005
+    month: 6
+  title: Invariant visual representation by single neurons in the human brain
+  container-title: Nature
+  page: 1102-1107
+  volume: '435'
+  issue: '7045'
+  abstract: It takes a fraction of a second to recognize a person or an object even
+    when seen under strikingly different conditions. How such a robust, high-level
+    representation is achieved by neurons in the human brain is still unclear1,2,3,4,5,6.
+    In monkeys, neurons in the upper stages of the ventral visual pathway respond
+    to complex images such as faces and objects and show some degree of invariance
+    to metric properties such as the stimulus size, position and viewing angle2,4,7,8,9,10,11,12.
+    We have previously shown that neurons in the human medial temporal lobe (MTL)
+    fire selectively to images of faces, animals, objects or scenes13,14. Here we
+    report on a remarkable subset of MTL neurons that are selectively activated by
+    strikingly different pictures of given individuals, landmarks or objects and in
+    some cases even by letter strings with their names. These results suggest an invariant,
+    sparse and explicit code, which might be important in the transformation of complex
+    visual percepts into long-term and more abstract memories.
+  DOI: 10.1038/nature03687
+  ISSN: 1476-4687
+
+- id: NormanNewmanDetreEtAl06
+  type: article-journal
+  author:
+  - family: Norman
+    given: Kenneth A.
+  - family: Newman
+    given: Ehren
+  - family: Detre
+    given: Greg
+  - family: Polyn
+    given: Sean
+  issued:
+  - year: 2006
+  accessed:
+  - year: 2015
+    month: 4
+    day: 12
+  title: How inhibitory oscillations can train neural networks and punish competitors
+  container-title: Neural computation
+  page: 1577-1610
+  volume: '18'
+  issue: '7'
+  URL: http://www.mitpressjournals.org/doi/abs/10.1162/neco.2006.18.7.1577
 ...
