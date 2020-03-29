@@ -12,7 +12,7 @@ As usual, we begin with a basic foundation in biology: the gross anatomy of the 
 
 Figure 5.1 shows the "gross" (actually quite beautiful and amazing!) anatomy of the brain. The outer portion is the "wrinkled sheet" (upon which our thoughts rest) of the **neocortex**, showing all of the major lobes. This is where most of our complex cognitive function occurs, and what we have been focusing on to this point in the text. The rest of the brain lives inside the neocortex, with some important areas shown in the figure. These are generally referred to as **subcortical** brain areas, and we include some of them in our computational models, including:
 
-* **Hippocampus** -- this brain area is actually an "ancient" form of cortex called "archicortex", and we'll see in the *Learning and Memory* Chapter how it plays a critical role in learning new "everyday" memories about events and facts (called *episodic* memories).
+* **Hippocampus** -- this brain area is actually an "ancient" form of cortex called "archicortex", and we'll see in the *Memory* Chapter how it plays a critical role in learning new "everyday" memories about events and facts (called *episodic* memories).
     
 * **Amygdala** -- this brain area is important for recognizing emotionally salient stimuli, and alerting the rest of the brain about them. We'll explore it in the *Motor Control and Reinforcement Learning* Chapter, where it plays an important role in reinforcing motor (and cognitive) actions based on reward (and punishment).
     
@@ -99,7 +99,7 @@ In the *Motor Control and Reinforcement Learning* Chapter, we will see how dopam
 
 Interestingly, all of these "low level" motor control systems end up being co-opted by "higher level" executive function systems (e.g., the prefrontal cortex), so although some don't think of motor control as a particularly cognitive domain, it actually provides a solid foundation for understanding some of the highest levels of cognitive function!
 
-## Learning and Memory: Temporal Cortex and the Hippocampus
+## Memory: Temporal Cortex and the Hippocampus
 
 When you think of memory, probably things like "what did I have for dinner last night?" and "how can I remember people's names better?" tend to come to mind. These represent just one category of memory, however. Indeed, memory is ubiquitous in neural networks -- every synapse has the capacity for storing memory, and any given "memory" requires the coordinated actions of millions of such synapses to encode and retrieve. There are many taxonomies of memory, but really the only one you need to know is identical to the functional organization of the brain being provided here. Memory is embedded in every brain area, and the nature of that memory is intimately tied up with what that area does. Motor cortex learns motor memories. Parietal cortex learns things like motor skills -- how to hit a baseball (hint: keep your eye on the ball -- parietal cortex needs visual input!).
 
