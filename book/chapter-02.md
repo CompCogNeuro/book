@@ -316,25 +316,182 @@ There are a number of optional in-depth topics here in this Chapter Appendix.
 
 * **Temporal Dynamics:** longer time-scale temporal dynamics of neurons (adaptation and hysteresis currents, and synaptic depression).
 
-* **Sigmoidal Unit Activation Function:** -- a more abstract formalism for simulating the behavior of neurons, used in more abstract neural network models (e.g., backpropagation models).
-
 * **Bayesian Optimal Detector:** how the equilibrium membrane potential represents a Bayesian optimal way of integrating the different inputs to the neuron.
 
 * **Linear Algebra View of a Neuron:** how to understand the neuron from the perspective of linear algebra.
 
 ### Neuron Biology
 
+This optional section provides more biological details about the neuron.  It is recommended for a fuller understanding of the biological basis of the computational models used in the book, but is not strictly necessary for understanding the functional operation of individual neurons.
+
+![**Figure 2.8:** Tracing of a cortical pyramidal neuron.](figures/fig_cortical_neuron.png){ width=20% }
+
+Figure 2.8 shows a tracing of a typical excitatory neuron in the cortex called a **pyramidal neuron**, which is the primary type that we simulate in our models.  The major elements of dendrites, cell body, and axon as discussed in the main chapter are shown.  Note that the dendrites have small **spines** on them -- these are where the axons from sending neurons synapse, forming connections between neurons.
+
+![**Figure 2.9:** Electron microscope image of a synapse.  The arrows indicate synaptic release sites, where neurotransmitter is released to the receiving neuron.  The small circles are synaptic vesicles, which contain the neurotransmitter.](figures/fig_synapse_em.jpg){ width=50% }
+
+![**Figure 2.10:** Schematic of a synapse, showing presynaptic terminal button which releases neurotransmitter (NT) into the synaptic cleft.  The NT binds to postsynaptic receptors, causing ion channels to open (e.g., Sodium or Na+ ions for excitatory AMPA channels), and thus activating the receiving neuron.  Metabotropic receptors such as mGluR do no open to allow ions to flow (as ionotropic ones do), and instead they trigger second-messenger cascades of reactions that can affect learning and other processes in the postsynaptic cell.](figures/fig_synapse.png){ width=40% }
+
+Figure 2.9 shows a high-resolution image of a synapse, while Figure 2.10 shows a schematic with all of the major elements of the synaptic signaling cascade represented.  The primary behavior of a synapse is for an action potential to trigger release of neurotransmitter (NT) from the **presynaptic terminal button**, and this NT then binds to postsynaptic receptors that open to allow ions to flow, and thus communicating a signal to the postsynaptic neuron.  In the predominant case of **excitatory AMPA-receptor** activation by the NT **glutamate**, the AMPA channels open to allow Sodium (Na+) ions to enter the postsynaptic neuron, which then have the effect of increasing the membrane potential and thus exciting the neuron.  This excitatory input is called an **excitatory postsynaptic potential or EPSP**.
+
+The other major types of postsynaptic receptors are:
+* **NMDA**, which is involved in learning and allows Calcium ions to flow (Ca++) -- we will discuss these receptors in more detail in the [[CCNBook/Learning|Learning chapter]]. 
+* **mGluR**, which is also involved in learning and also possibly active maintenance of information in working memory -- these receptors do not pass ions, and instead affect complex chemical processes in the postsynaptic cell.
+
+Inhibitory synapses arising from inhibitory interneurons release GABA NT, and the corresponding GABA receptors on the receiving neurons open to allow Chloride (CL-) ions to flow, producing a net negative or inhibitory effect on the postsynaptic cell (called an **inhibitory postsynaptic potential or IPSP**).
+
+Importantly, the biology shows that synapses in the cortex can either be excitatory or inhibitory, but not both.  This has implications for our computational models as we explore in the *Networks* Chapter.
+
 ### Neuron Electrophysiology
+
+This optional section provides a full treatment of the electrophysiology of the neuron -- how differential concentrations of individual ions lead to the electrical dynamics of the neuron.
+
+First, some basic facts of electricity.  Electrons and protons, which together make up atoms (along with neutrons), have electrical charge (the electron is negative, and the proton is positive).  An **ion** is an atom where these positive and negative charges are out of balance, so that it carries a **net charge**.  Because the brain carries its own salt-water ocean around with it, the primary ions of interest are:
+
+* **sodium (Na+)** which has a net positive charge.
+* **chloride (Cl-)** which has a net negative charge.
+* **potassium (K+)** which has a net positive charge.
+* **calcium (Ca++)** which has ''two'' net positive charges.
+
+![**Figure 2.11:** Basic principles of electricity: when there is an imbalance of positive and negative charged ions, these ions will flow so as to cancel out this imbalance.  The flow of ions is called a current **I**, driven by the potential (level of imbalance) **V** with the conductance **G** (e.g., size of the opening between the two chambers) determining how quickly the ions can flow.](figures/fig_electricity.png){ width=30% }
+
+As we noted in the main chapter, these ions tend to flow under the influence of an electrical potential (voltage), driven by the basic principle that **opposite charges attract and like charges repel**.  If there is an area with more positive charge than negative charge (i.e., and **electrical potential**), then any negative charges nearby will be drawn into this area (creating an electrical **current**), thus nullifying that imbalance, and restoring everything to a neutral potential. Figure 2.11 shows a simple diagram of this dynamic.  The **conductance** is effectively how wide the opening or path is between the imbalanced charges, which determines how quickly the current can flow.
+
+**Ohm's law** formalizes the situation mathematically:
+$$I = G V$$
+(i.e., current = conductance times potential).
+
+![**Figure 2.12:** Diffusion is the other major force at work in neurons -- it causes each ion individually to balance out its concentration uniformly across space (i.e., on both sides of the chamber).  Concentration imbalances can then cause ions to flow, creating a current, just like electrical potential forces.](figures/fig_diffusion.png){ width=30% }
+
+The other major force at work in the neuron is **diffusion**, which causes individual ions to move around until they are uniformly distributed across space (Figure 2.12).  Interestingly, the diffusion force originates from random movements of the ions driven by heat -- ions are constantly bumping around through space, with a mean velocity proportional to the temperature of the environment they're in.  This constant motion creates the diffusion force as a result of the inevitable increase in **entropy** of a system -- the maximum entropy state is where each ion is uniformly distributed, and this is in effect what the diffusion force represents.  The key difference between the diffusion and electrical force is:
+
+* Diffusion operates individually on each ion, regardless of its charge compared to other ions etc -- each ion is driven by the diffusion force to spread itself uniformly around.  In contrast, electrical forces ignore the identity of the ion, and only care about the net electrical charge.  From electricity's perspective, Na+ and K+ are effectively equivalent.
+
+It is this critical difference between diffusion and electrical forces that causes different ions to have different driving potentials, and thus exert different influences over the neuron.
+
+![**Figure 2.13:** Major ions and their relative concentrations inside and outside the neuron (indicated by the size of the circles).  These relative concentration differences give rise to the different driving potentials for different ions, and thus determine their net effect on the neuron (whether they pull it "up" for excitation or "down" for inhibition).](figures/fig_ions.png){ width=50% }
+
+Figure 2.13 shows the situation inside and outside the neuron for the major ion types.  The concentration imbalances all stem from a steady **sodium pump** that pumps Na+ ions out of the cell.  This creates an imbalance in electrical charge, such that the inside of the neuron is more negative (missing all those Na+ ions) and the outside is more positive (has an excess of these Na+ ions).  This negative net charge (i.e., **negative resting potential**) of about -70mV pushes the negative Cl- ions outside the cell as well (equivalently, they are drawn to the positive charge outside the cell), creating a concentration imbalance in chloride as well.  Similarly, the K+ ions are drawn ''into'' the cell by the extra negative charge within, creating an opposite concentration imbalance for the potassium ions.
+
+All of these concentration imbalances create a strong diffusion force, where these ions are trying to distribute themselves more uniformly.  But this diffusion force is counteracted by the electrical force, and when the neuron is at rest, it achieves an **equilibrium** state where the electrical and diffusion forces exactly balance and cancel each other out.   Another name for the diving potential for an ion (i.e., which direction it pulls the cell's membrane potential) is the **equilibrium potential** -- the electrical potential at which the diffusion and electrical forces exactly balance.  
+
+As shown in Figure 2.13, the Cl- and K+ ions have driving potentials that are essentially equivalent to the resting potential, -70mV.  This means that when the cell's membrane potential is at this -70mV, there is no net current across the membrane for these ions -- everything will basically stay put.
+
+Mathematically, we can capture this phenomenon using the same equation we derived from the tug-of-war analogy:
+$$ I = G (E-V) $$
+Notice that this is just a simple modification of Ohm's law -- the E value (the driving potential) "corrects" Ohm's law to take into account any concentration imbalances and the diffusion forces that they engender.  If there are no concentration imbalances, then E = 0, and you get Ohm's law (modulo a minus sign that we'll deal with later).
+
+If we plug an E value of -70mV into this equation, then we see that the current is 0 when V = -70mV.  This is the definition of an equilibrium state.  No net current.
+
+Now consider the Na+ ion.  Both the negative potential inside the neuron, and the concentration imbalance, drive this ion to want to move into the cell.  Thus, at the resting potential of -70mV, the current for this ion will be quite high if it is allowed to flow into the cell.  Indeed, it will not stop coming into the cell until the membrane potential gets all the way up to +55mV or so.  This equilibrium or driving potential for Na+ is positive, because it would take a significant positive potential to force the Na+ ions back out against their concentration difference.
+
+The bottom line of all this is that synaptic channels that allow Na+ ions to flow will cause Na+ to flow *into* the neuron, and thereby excite the receiving neuron.  In effect, the sodium pump "winds up" the neuron by creating these concentration imbalances, and thus the potential for excitation to come into the cell against a default background of the negative resting potential.
+
+Finally, when excitatory inputs do cause the membrane potential to increase, this has the effect of drawing more Cl- ions back into the cell, creating an inhibitory pull back to the -70mV resting value, and similarly it pushes K+ ions out of the cell, which also makes the inside of the cell more negative, and has a net inhibitory effect.  The Cl- ions only flow when inhibitory GABA channels are open, and the K+ ions flow all the time through the always-open leak channels.
 
 ### Net Input Detail
 
-### Adaptive Exponential Spiking Model
+Here we describe in full detail how the excitatory conductance $Ge$ or *net input* to the neuron is computed, taking into account differences across different sources of input to a given neuron.  In the main chapter, the core computation is summarized, as an average of the weights times sending activations:
+$$ g_e(t) = \frac{1}{n} \sum_i x_i w_i $$
+where *n* is the total number of channels, and $x_i$ is the **activity** of a particular sending neuron indexed by the subscript *i*, and $w_i$ is the **synaptic weight strength** that connects sending neuron *i* to the receiving neuron.
+
+The overall goal of the more elaborate net input calculation described here, which is what is actually used in the *emergent* software, is to ensure that inputs from different layers having different overall levels of activity have a similar impact on the receiving neuron in terms of overall magnitude of net input, while also allowing for the strength of these different inputs to be manipulated in ways that continue to work functionally.  For example, a "localist" input layer may have only one unit active out of 100 (1%) whereas a hidden layer may have 25% activity (e.g., 25 out of 100) -- this vast difference in overall activity level would make these layers have very disparate influence on a receiving layer if not otherwise compensated for.  Terminologically, we refer to the set of connections from a given sending layer as a **projection**.
+
+The full equation for the net input is as follows, which contains a double sum, first over the different projections, indexed by the letter *k*, and then within that by the receiving connections for each projection, indexed by the letter *i* (where these are understood to vary according to the outer projection loop):
+$$ g_e(t) = \sum_k \left[ s_k \left(\frac{r_k}{\sum_p r_p}\right) \frac{1}{\alpha_k} \frac{1}{n_k} \sum_i \left( x_i w_i \right) \right] $$
+The factors in this equation are:
+* $s_k$ = absolute scaling parameter (set at the user's discretion) for the projection, represented by `WtScale.Abs` parameter in the LeabraConSpec in *emergent*.
+* $r_k$ = relative scaling parameter for the projection, which is always normalized by the sum of the relative parameters for all the other projections, which is what makes it relative -- the total is constant and one can only alter the relative contributions -- represented by `WtScale.Rel` in *emergent*.
+* $\alpha_k$ = effective expected activity level for the sending layer, computed as described below, which serves to equalize projections regardless of differences in expected activity levels.
+$$n_k$$ = number of connections within this projection
+
+The equations for computing the effective expected activity level $\alpha_k$ are based on the integer counts of numbers of expected active inputs on a given projection -- this takes into account both the sending layer expected activation, and the number of connections being received.  For example, consider a projection from a layer having 1% activity (1 out of 100 units active), with only a single incoming connection from that layer.   Even though the odds of this single incoming connection having an active sending unit are 1% on average, *some* receiving unit in the layer is highly likely to be getting that 1 sending unit active.  Thus, we use the "highest expected activity level" on the layer, which is 1, rather than the average expected sending probability, which is 1%.
+
+Specifically, the equations, using pseudo-programming variables with longer names instead of obscure mathematical symbols, are:
+
+* `alpha_k = MIN(%_activity * n_recv_cons + sem_extra, r_max_act_n)`
+
+    + `%_activity` = % expected activity on sending layer
+    + `n_recv_cons` = number of receiving connections in projection
+    + `sem_extra` = standard error of the mean (SEM) extra buffer, set to 2 by default -- this makes it the highest expected activity level by including effectively 4 SEM's above the mean, where the real SEM depends on `%_activity` and is a maximum of .5 when `%_activity` = .5.
+    + `r_max_act_n = MIN(n_recv_cons, %_activity * n_units_in_layer)` = hard upper limit maximum on number of active inputs -- can't be any more than either the number of connections we receive, or the total number of active units in the layer
+
+See the [emer/leabra](https://github.com/emer/leabra) README docs for more detailed information about parameters, monitoring the actual relative net input contributions from different projections, etc.
 
 ### Temporal Dynamics
 
-### Sigmoidal Unit Activation Function
-
 ### Bayesian Optimal Detector
+
+This optional section shows how the equilibrium membrane potential equation, derived based on the biology of the neuron, can also be understood in terms of Bayesian hypothesis testing [@HintonSejnowski83; @McClelland98]. In this framework, one is comparing different hypotheses in the face of relevant data, which is analogous to how the detector is testing whether the signal it is looking for is present ($h$), or not ($\bar{h}$).  The probability of $h$ given the current input data $d$ (which is written as $P(h|d)$) is a simple ratio function of two other functions of the relationship between the hypotheses and the data (written here as $f(h,d)$ and $f(\bar{h},d)$):
+$$ P(h|d) = \frac{f(h,d)}{f(h,d) + f(\bar{h},d)} $$
+Thus, the resulting probability is just a function of how strong the support for the detection hypothesis $h$ is over the support for the *null hypothesis* $\bar{h}$.  This ratio function may be familiar to some psychologists as the **Luce choice ratio** used in mathematical psychology models for a number of years.
+
+![**Figure 2.14:** Simple example data to compute probabilities from, for line detecto -- just add up number of cases where a given condition is true, and divide by the total number of cases (24): **a** $P(h=1) = 12/24 = .5$.  **b** $P(d=1 1 0) = 3/24 = .125.$ $$c** $P(h=1, d=1 1 0) = 2/24 = .0833.$](figures/fig_vert_line_detector_probs.png){ width=75% }
+
+To have a concrete example to work with, consider a detector that receives inputs from three sources, such that when a vertical line is present (which is what it is trying to detect), all three sources are likely to be activated (Figure 2.14).  The hypothesis $h$ is thus that a vertical line is actually present in the world, and $\bar{h}$ is that it is not. $h$ and $\bar{h}$ are *mutually exclusive* alternatives: their summed probability is always 1. There are three basic probabilities that we are interested in that can be computed directly from the world state table -- you just add up the number of cases where a given situation is true, and divide by the total number of cases (with explicit and complete data, probability computations are just accounting):
+
+* The probability that the hypothesis $h$ is true, or $P(h=1)$ or just $P(h)$ for short = 12/24 or .5.
+
+* The probability of the current input data, e.g., $d=1 1 0$, which is $P(d=1 1 0)$ or $P(d)$ for short = 3/24 (.125) because it occurs 1 time when the hypothesis is false, and 2 times when it is true.
+
+* The *intersection* of the first two, known as the *joint probability* of the hypothesis *and* the data, written $P(h=1, d=1 1 0)$ or $P(h,d)$, which is 2/24 (.083).
+
+The joint probability tells us how often two different states co-occur compared to all other possible states, but we really just want to know how often the hypothesis is true *when we receive the particular input data* we just got.  This is the **conditional probability** of the hypothesis given the data, which is written as $P(h|d)$, and is defined as follows:
+$$ P(h | d) = \frac{P(h, d)}{P(d)} $$
+
+So, in our example where we got $d=1 1 0$, we want to know:
+$$ P(h=1 | d=1 1 0) = \frac{P(h=1, d=1 1 0)}{P(d=1 1 0)} $$
+which is (2/24) / (3/24), or .67 according to our table.  Thus, matching our intuitions, this tells us that having 2 out of 3 inputs active indicates that it is more likely than not that the hypothesis of a vertical line being present is true.  The basic information about how well correlated this input data and the hypothesis are comes from the joint probability in the numerator, but the denominator is critical for *scoping* this information to the appropriate context (cases where the particular input data actually occurred).
+
+The above equation is what we want the detector to solve, and if we had a table like the one in Figure 2.14, then we have just seen that this equation is easy to solve.  However, having such a table is nearly impossible in the real world, and that is the problem that Bayesian math helps to solve, by flipping around the conditional probability the other way, using what is called the **likelihood**:
+$$ P(d | h) = \frac{P(h, d)}{P(h)} $$
+
+It is a little bit strange to think about computing the probability of the *data*, which is, after all, just what was given to you by your inputs (or your experiment), based on your hypothesis, which is the thing you aren't so sure about!  However, think of it instead as how likely you would have *predicted* the data based on the assumptions of your hypothesis.  In other words, the likelihood computes how well the data fit with the hypothesis.  
+
+Mathematically, the likelihood depends on the same joint probability of the hypothesis and the data, we used before, but it is *scoped* in a different way.  This time, we scope by all the cases where the hypothesis was true, and determine what fraction of this total had the particular input data state:
+$$ P(d=1 1 0 | h=1) = \frac{P(h=1, d=1 1 0)}{P(h=1)} $$
+which is (2/24) / (12/24) or .167.  Thus, one would expect to receive this data .167 of the time when the hypothesis is true, which tells you how likely it is you would predict getting this data knowing only that the hypothesis is true.
+
+The main advantage of a likelihood function is that we can often compute it directly as a function of the way our hypothesis is specified, without requiring that we actually know the joint probability $P(h,d)$ (i.e., without requiring a table of all possible events and their frequencies).  Assuming that we have a likelihood function that can be computed directly, **Bayes formula** is just a simple bit of algebra that eliminates the need for the joint probability:
+$$ P(h, d) = P(d | h) P(h) $$
+such that:
+$$ P(h|d) = \frac{P(d|h) P(h)}{P(d)} $$
+It allows you to write $P(h|d)$, which is called the *posterior* in Bayesian terminology, in terms of the likelihood times the *prior*, which is what $P(h)$ is called.  The prior indicates how likely the hypothesis is to be true without having seen any data at all --- some hypotheses are just more plausible (true more often) than others, and this can be reflected in this term.  Priors are often used to favor *simpler* hypotheses as more likely, but this is not necessary.  In our application here, the prior terms will end up being constants, which can actually be measured (at least approximately) from the underlying biology.
+
+The last barrier to actually using Bayes formula is the denominator $P(d)$, which requires somehow knowing how likely this data is compared to any other.  Conveniently, we can replace $P(d)$ with an expression involving only likelihood and prior terms if we make use of the null hypothesis $\bar{h}$. Because the hypothesis and null hypothesis are mutually exclusive and sum to 1, we can write the probability of the data in terms of the part of it that overlaps with the hypothesis plus the part that overlaps with the null hypothesis:
+$$ P(d) = P(h,d) + P(\bar{h},d) $$
+In Figure 2.14, this amounts to computing $P(d)$ in the top and bottom halves separately, and then adding these results to get the overall result:
+$$ P(d) = P(d|h) P(h) + P(d|\bar{h}) P(\bar{h}) $$
+which can then be substituted into Bayes formula, resulting in:
+$$ P(h|d) = \frac{P(d|h) P(h)}{P(d|h) P(h) + P(d|\bar{h}) P(\bar{h})} $$
+
+This is now an expression that is strictly in terms of just the likelihoods and priors for the two hypotheses!  Furthermore, it is this is the same equation that we showed at the outset, with $f(h,d) = P(d|h) P(h)$ and $f(\bar{h},d) = P(d|\bar{h}) P(\bar{h})$. It has a very simple $\frac{h}{h+\bar{h}}$ form, which reflects a *balancing* of the likelihood in favor of the hypothesis with that against it.  It is this form that the biological properties of the neuron implement.  You can use the table in Figure 2.14 to verify that this equation gives the same results (.67) as we got using the joint probability directly.
+
+The reason we cannot use something like the table in Figure 2.14 in the real world is that it quickly becomes intractably large due to the huge number of different unique combinations of input states.  For example, if the inputs are binary (which is not actually true for neurons, so it's even worse), the table requires $2^{n+1}$ entries for $n$ inputs, with the extra factor of two (accounting for the +1 in the exponent) reflecting the fact that all possibilities must be considered twice, once under each hypothesis.  This is roughly $1.1 x 10^{301}$ for just 1,000 inputs (and our calculator gives $Inf$ as a result if we plug in a conservative guess of 5,000 inputs for a cortical neuron).
+
+In lieu of the real data, we have to fall back on coming up with plausible ways of directly computing the likelihood terms.  One plausible assumption for a detector is that the likelihood is directly (linearly) proportional to the number of inputs that match what the detector is trying to detect, with a linear factor to specify to what extent each input source is representative of the hypothesis.  These parameters are just our standard weight parameters $w$.  Together with the linear proportionality assumption, this gives a likelihood function that is a normalized linear function of the weighted inputs:
+$$ P(d|h) = \frac{1}{z} \sum_i d_i w_i $$
+where $d_i$ is the value of one input source $i$ (e.g., $d_i = 1$ if that source detected something, and 0 otherwise), and the normalizing term $\frac{1}{z}$ ensures that the result is a valid probability between 0 and 1.  
+
+The fact that we are *defining* probabilities, not *measuring* them, makes these probabilities *subjective*, as compared to frequencies of objectively measurable events in the world.  Nevertheless, the Bayesian math ensures that you're integrating the relevant information in the mathematically correct way, at least.
+
+To proceed, one could define the following likelihood function:
+$$ P(d|h) = \frac{1}{12} \sum_i x_i w_i $$
+and similarly for the null hypothesis, which is effectively the negation:
+$$ P(d|\bar{h}) = \frac{1}{12} \sum_i (1 - x_i) w_i $$
+If you plug these into the Bayesian equation, together with the simple assumption that the prior probabilities are equal, $P(h) = P(\bar{h}) = .5$, you get the same results we got from the table.
+
+Finally, we compare the equilibrium membrane potential equation:
+$$ V_m = \frac{g_e \bar{g}_e E_e + g_i \bar{g}_i E_i + \bar{g}_l E_l} {g_e \bar{g}_e + g_i \bar{g}_i + \bar{g}_l} $$
+ot the Bayesian formula, where the excitatory input plays the role of the likelihood or support for the hypothesis, and the inhibitory input and leak current both play the role of support for null hypotheses.  Because we have considered only one null hypothesis in the preceding analysis (though it is easy to extend it to two), we will just ignore the leak current for the time being, so that the inhibitory input will play the role of the null hypothesis.
+
+Interestingly, the reversal potentials have to be 0's and 1's to fit the numerical values of probabilities, such that excitatory input drives the potential toward 1 (i.e., $E_e = 1$), and that the inhibitory (and leak) currents drive the potential toward 0 (i.e., $E_i = E_l = 0$).  
+$$ V_m \approx P(h|d)\frac{g_e \bar{g}_e}{g_e \bar{g}_e + g_i \bar{g}_i} $$
+$$ V_m \approx \frac{P(d|h) P(h)}{P(d|h) P(h) + P(d|\bar{h}) P(\bar{h})}  $$
+
+The full equation for $V_m$ with the leak current can be interpreted as reflecting the case where there are two different (and independent) null hypotheses, represented by inhibition and leak.  As we will see in more detail in the *Network* Chapter, inhibition dynamically changes as a function of the activation of other units in the network, whereas leak is a constant that sets a basic minimum standard against which the detection hypothesis is compared.  Thus, each of these can be seen as supporting a different kind of null hypothesis.
+
+Taken together, this analysis provides a satisfying computational-level interpretation of the biological activation mechanism, and assures us that the neuron is integrating its information in a way that makes good statistical sense. 
 
 ### Linear Algebra View of a Neuron
 
