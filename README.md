@@ -7,11 +7,13 @@ This version is written in markdown format, and converted into various other end
 
 # Formats
 
-* [PDF](https://github.com/CompCogNeuro/ed4/blob/master/ccnbook_ed4.pdf)
+Please use the following links to download the formatted version of the book:
 
-* [HTML](https://github.com/CompCogNeuro/ed4/blob/master/ccnbook_ed4.html)
+* [PDF](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.pdf) -- best for printing
 
-* [ePub](https://github.com/CompCogNeuro/ed4/blob/master/ccnbook_ed4.epub) -- opens in e.g., Mac iBooks
+* [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) -- single big HTML file
+
+* [ePub](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- opens in e.g., Mac iBooks
 
 A Kindle version will be available shortly, and we're also working on printed & bound versions as well.
 
@@ -44,9 +46,7 @@ BibTeX:
 
 # TODO
 
-* and all the sims questions and points info in sims, also do release there and add links to release directly.
-
-* and add links here to released textbook versions!
+* and all the sims questions and points info in sims.
 
 * ch7: fix bg description of da learning -- kinda buried
 * ch7: update PVLV to latest bvPVLV version -- use pvlv readme?
