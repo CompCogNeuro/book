@@ -1,7 +1,6 @@
 # Computational Cognitive Neuroscience, Fourth Edition
 
-This is the 4th edition of the online, freely available textbook, originally written in MediaWiki:
-https://grey.colorado.edu/CompCogNeuro/index.php/CCNBook/Main
+This is the 4th edition of the online, freely available textbook, originally written in MediaWiki and hosted on [grey.colorado.edu]([https://grey.colorado.edu/CompCogNeuro/index.php/CCNBook/Main)
 
 This version is written in markdown format, and converted into various other end-user formats using [pandoc](https://pandoc.org/index.html) with the assistance of the https://github.com/bmc/ebook-template python script.
 
@@ -16,6 +15,12 @@ Please use the following links to download the formatted version of the book:
 * [ePub](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- opens in e.g., Mac iBooks
 
 A Kindle version will be available shortly, and we're also working on printed & bound versions as well.
+
+# Simulation Exercises
+
+The simulation exercises that go with the book are available on this same repository in github: https://github.com/CompCogNeuro/sims
+
+These are updated with the new Go / Python version of *emergent*: https://github.com/emer/emergent
 
 # Citation
 
