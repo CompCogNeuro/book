@@ -31,7 +31,7 @@ author:
 
 # Book identifier is optional.
 #identifier:
-#  scheme: ISBN # or DOI
+scheme: ISBN 9798633570106
 #  text: 123456789X
 
 # The language and variant in which the book is written.

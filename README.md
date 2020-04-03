@@ -10,11 +10,11 @@ Please use the following links to download the formatted version of the book:
 
 * [PDF](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.pdf) -- best for printing
 
-* [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) -- single big HTML file
-
 * [ePub](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- opens in e.g., Mac iBooks
 
-A Kindle version will be available shortly, and we're also working on printed & bound versions as well.
+* [Kindle / MOBI](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- you can email this to yourself at your amazon kindle account to get it on your device, or also get it (for $2.99 -- lowest price posible) at: `(still uploading...)`
+
+* [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) -- single big HTML file
 
 # Simulation Exercises
 

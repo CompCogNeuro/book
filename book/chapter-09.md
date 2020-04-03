@@ -110,17 +110,6 @@ One compelling demonstration of the importance of spatial invariance in reading 
 
 Clearly this is more effortful than properly spelled text, but the ability to read it at all indicates that just extracting individual letters in an invariant manner goes a long way.
 
-| Nonword Set               | ss Model | PMSP  | People |
-|---------------------------|----------|-------|--------|
-| Glushko regulars          | 95.3     | 97.7  | 93.8   |
-| Glushko exceptions raw    | 79.0     | 72.1  | 78.3   |
-| Glushko exceptions alt OK | 97.6     | 100.0 | 95.9   |
-| McCann & Besner ctrls     | 85.9     | 85.0  | 88.6   |
-| McCann & Besner homoph    | 92.3     | n/a   | 94.3   |
-| Taraban & McClelland      | 97.9     | n/a   | 100.0  |
-
-Table: **Table 9.1** Comparison of nonword reading performance for our spelling-to-sound model (ss Model), the PMSP model, and data from people, across a range of different nonword datasets as described in the text. Our model performs comparably to people, after learning on nearly 3,000 English monosyllabic words.
-
 To test the performance of this object-recognition based approach, we ran it through a set of different standard sets of nonwords, several of which were also used to test the PMSP model. The results are shown in Table 9.1.
 
 * **Glushko regulars** -- nonwords constructed to match strong regularities, for example *nust*, which is completely regular (e.g., *must*, *bust*, *trust*, etc).
@@ -132,6 +121,17 @@ To test the performance of this object-recognition based approach, we ran it thr
 * **Taraban & McClelland** -- has frequency matched regular and exception nonwords, for example *poes* (like high frequency words *goes* or *does*), and *mose*, like lower frequency *pose* or *lose*.
 
 The results indicate that the model does a remarkably good job of capturing the performance of people's performance on these nonword reading sets. This suggests that the model is capable of learning the appropriate regularities and subregularities that are present in the statistics of English pronunciation.
+
+| Nonword Set               | ss Model | PMSP  | People |
+|---------------------------|----------|-------|--------|
+| Glushko regulars          | 95.3     | 97.7  | 93.8   |
+| Glushko exceptions raw    | 79.0     | 72.1  | 78.3   |
+| Glushko exceptions alt OK | 97.6     | 100.0 | 95.9   |
+| McCann & Besner ctrls     | 85.9     | 85.0  | 88.6   |
+| McCann & Besner homoph    | 92.3     | n/a   | 94.3   |
+| Taraban & McClelland      | 97.9     | n/a   | 100.0  |
+
+Table: **Table 9.1** Comparison of nonword reading performance for our spelling-to-sound model (ss Model), the PMSP model, and data from people, across a range of different nonword datasets as described in the text. Our model performs comparably to people, after learning on nearly 3,000 English monosyllabic words.
 
 ### Exploration
 
