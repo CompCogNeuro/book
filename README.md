@@ -18,9 +18,13 @@ Please use the following links to download the formatted version of the book:
 
 # Simulation Exercises
 
-The simulation exercises that go with the book are available on this same repository in github: https://github.com/CompCogNeuro/sims
+The simulation exercises that go with the book are available under this same organization in github, in the `sims` repository: https://github.com/CompCogNeuro/sims
 
 These are updated with the new Go / Python version of *emergent*: https://github.com/emer/emergent
+
+# Lecture Videos
+
+Thanks to Covid-19, video lectures by O'Reilly @ UC Davis are being recorded: [YouTube Playlist](https://www.youtube.com/playlist?list=PLu02O8xRZn7xtNx03Rlq6xMRdYcQgEpar)
 
 # Citation
 
@@ -50,8 +54,6 @@ BibTeX:
 
 
 # TODO
-
-* and all the sims questions and points info in sims.
 
 * ch7: fix bg description of da learning -- kinda buried
 * ch7: update PVLV to latest bvPVLV version -- use pvlv readme?
