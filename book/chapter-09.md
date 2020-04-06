@@ -1,3 +1,7 @@
+---
+bibfile: ccnlab.bib
+---
+
 # Chapter 9: Language
 
 Language involves almost every part of the brain, as covered in other chapters in the text:

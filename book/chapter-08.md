@@ -1,3 +1,7 @@
+---
+bibfile: ccnlab.bib
+---
+
 # Chapter 8: Memory
 
 When you think of memory, you probably think of **episodic memory** -- memory for specific episodes or events. Maybe you can remember some special times from childhood (birthdays, family trips, etc), or some traumatic times (ever get lost in a supermarket, or get left behind on a hike or other family outing?). Probably you can remember what you had for dinner last night, and who you ate with? Although this aspect of memory is the most salient for us, it is just one of many different types of memory.

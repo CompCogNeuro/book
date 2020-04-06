@@ -1,3 +1,7 @@
+---
+bibfile: ccnlab.bib
+---
+
 # Chapter 3: Networks
 
 In this chapter, we build upon the previous *Neuron* Chapter to understand how networks of detectors can produce emergent behavior that is more than the sum of their simple neural constituents. We focus on the networks of the **neocortex** ("new cortex", often just referred to as "cortex"), which is the evolutionarily most recent, outer portion of the brain where most of advanced cognitive functions take place. There are three major categories of emergent network phenomena:

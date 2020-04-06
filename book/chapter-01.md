@@ -1,3 +1,7 @@
+---
+bibfile: ccnlab.bib
+---
+
 # Chapter 1: Introduction
 
 You are about to embark on one of the most fascinating scientific journeys possible: inside your own brain! We start this journey by understanding what individual **neurons** (Chapter 2) in your neocortex do with the roughly 10,000 synaptic input signals that they receive from other neurons. The **neocortex** is the most evolutionarily recent part of the brain, which is also most enlarged in humans, and is where most of your thinking takes place. The numbers of neurons and synapses between neurons in the neocortex are astounding: roughly 20 billion neurons, each of which is interconnected with roughly 10,000 others. That is several times more neurons than people on earth. And each neuron is far more social than we are as people -- estimates of the size of stable human social networks are only around 150-200 people, compared to the 10,000 for neurons.
