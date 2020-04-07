@@ -12,7 +12,7 @@ Please use the following links to download the formatted version of the book:
 
 * [ePub](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- opens in e.g., Mac iBooks
 
-* [Kindle / MOBI](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) -- you can email this to yourself at your amazon kindle account to get it on your device, or also get it (for $2.99 -- lowest price possible) at: [Amazon.com](https://www.amazon.com//dp/B007H9YWAG) -- they also have an on-demand paperback print version for $7.99.
+* [Kindle / MOBI](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.mobi) -- you can email this to yourself at your amazon kindle account to get it on your device, or also get it (for $2.99 -- lowest price possible) at: [Amazon.com](https://www.amazon.com//dp/B007H9YWAG) -- they also have an on-demand paperback print version for $27.99.
 
 * [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) -- single big HTML file -- NOTE: this does not display all of the math correctly, so you should use one of the other formats above for Chapters 2 and 4.
 
