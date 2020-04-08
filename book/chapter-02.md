@@ -275,8 +275,8 @@ As you can see in Figure 2.10 (Noise=0), the basic XX1 function is not smooth at
 Biologically, this convolution process reflects the fact that neurons experience a large amount of noise (random fluctuations in the inputs and membrane potential), so that even if they are slightly below the firing threshold, a random fluctuation can sometimes push it over threshold and generate a spike. Thus, the spiking rate around the threshold is smooth, not sharp as in the plain XX1 function.
 
 For completeness sake, and strictly for the mathematically inclined, here is the equation for the convolution operation:
-$$ y^*(x) = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2 \pi} \sigma} e^{-z^2/(2 \sigma^2)} y(z-x) dz $$
-where $y(z-x)$ is the XX1 function applied to the $z-x$ input instead of just $x$. In practice, a finite kernel of width $3 \sigma$ on either side of $x$ is used in the numerical convolution.
+$$ y^*(x) = \int_{z = -\infty}^{\infty} \frac{1}{\sqrt{2 \pi} \sigma} e^{-z^2/(2 \sigma^2)} y(x-z) dz $$
+where $y(x-z)$ is the XX1 function applied to the $x-z$ input instead of just $x$. In practice, a finite kernel of width $3 \sigma$ on either side of $x$ is used in the numerical convolution.
 
 After convolution, the XX1 function (Figure 2.10) approximates the average firing rate of many neuronal models with discrete spiking, including AdEx (Figure 2.9). A mathematical explanation is in the Chapter Appendix section *Frequency-Current Curve*.
 
