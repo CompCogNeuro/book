@@ -93,10 +93,10 @@ And because we don't know anything for certain, all of these value terms are rea
 $$ \hat{V}(t) = r(t) + \gamma \hat{V}(t+1) $$
 
 So this equation tells us what our estimate at the current time *t* should be, in terms of the future estimate at time t+1. Next, we subtract V-hat from both sides, which gives us an expression that is another way of expressing the above equality -- that the difference between these terms should be equal to zero:
-$$ 0 = \left( r(t) + \hat{V}(t+1) \right) - \hat{V}(t) $$
+$$ 0 = \left( r(t) + \gamma \hat{V}(t+1) \right) - \hat{V}(t) $$
 
 This is mathematically stating the point that TD tries to keep the estimates consistent over time -- their difference should be zero. But as we are learning our V-hat estimates, this difference will *not* be zero, and in fact, the extent to which it is not zero is the extent to which there is a reward prediction error:
-$$ \delta = \left( r(t) + \hat{V}(t+1) \right) - \hat{V}(t) $$
+$$ \delta = \left( r(t) + \gamma \hat{V}(t+1) \right) - \hat{V}(t) $$
 If you compare this to the equation with *f* in it above, you can see that:
 $$ f = \gamma \hat{V}(t+1) $$
 and otherwise everything else is the same, except we've clarified the time dependence of all the variables, and our reward expectation is now a "value expectation" instead (replacing the r-hat with a V-hat). Also, as with Rescorla-Wagner, the delta value here drives learning of the value expectations.
