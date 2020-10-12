@@ -16,6 +16,8 @@ Please use the following links to download the formatted version of the book:
 
 * [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) --- single big HTML file --- NOTE: this does not display all of the math correctly, so you should use one of the other formats above for Chapters 2 and 4.
 
+Note: if you click on `book` and the individual `.md` files in there (which is the raw source for the text), you can read the text but the figure captions will not show up, and there will be a `{ width }` styling tag after figures.
+
 # Simulation Exercises
 
 The simulation exercises that go with the book are available under this same organization in github, in the `sims` repository: https://github.com/CompCogNeuro/sims

@@ -154,7 +154,7 @@ COMMON_PANDOC_OPTS = (
     f"-f {INPUT_FORMAT} {HASKELL_OPTS} -F {PANDOC_FILTER}" +
     (" -F pandoc-citeproc" if uses_references else "") +
     (f" -F {PLANTUML_FILTER}" if uses_plantuml else "") +
-    (" --standalone")
+    (" --standalone") + (" --resource-path=.:book")
 )
 NON_LATEX_PANDOC_OPTS = f"{COMMON_PANDOC_OPTS} "
 LATEX_PANDOC_OPTS = (f"{COMMON_PANDOC_OPTS} --template={LATEX_TEMPLATE} " +

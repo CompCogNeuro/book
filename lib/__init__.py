@@ -83,7 +83,10 @@ def find_local_images(markdown_files: Sequence[str]) -> Sequence[str]:
                 p = urlparse(m.group(1))
                 if p.scheme:
                     continue
-                images.append(m.group(1))
+                ifnm = m.group(1)
+                if ifnm[:3] == '../':
+                    ifnm = ifnm[3:]
+                images.append(ifnm)
 
     return images
 
