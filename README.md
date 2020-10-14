@@ -1,8 +1,10 @@
 # Computational Cognitive Neuroscience, Fourth Edition
 
-This is the 4th edition of the online, freely available textbook, originally written in MediaWiki and hosted on [grey.colorado.edu]([https://grey.colorado.edu/CompCogNeuro/index.php/CCNBook/Main)
+This is the 4th edition of the online, freely available textbook, providing a complete, self-contained introduction to the field of **Computational Cognitive Neuroscience**, where computer models of the brain are used to understand a wide range of cognitive functions, including perception, attention, motor control, learning, memory, language, and executive function.
 
-This version is written in markdown format, and converted into various other end-user formats using [pandoc](https://pandoc.org/index.html) with the assistance of the https://github.com/bmc/ebook-template python script.
+The first part of this textbook develops a coherent set of computational and neural principles that capture the behavior
+
+Web page: [CompCogNeuro.org](https://CompCogNeuro.org)
 
 # Formats
 
@@ -56,6 +58,11 @@ BibTeX:
 
 * Brown (Frank): http://ski.clps.brown.edu/cogsim.html
 
+# Source
+
+This is the 4th edition of the online, freely available textbook, originally written in MediaWiki and hosted on [grey.colorado.edu]([https://grey.colorado.edu/CompCogNeuro/index.php/CCNBook/Main)
+
+This version is written in markdown format, and converted into various other end-user formats using [pandoc](https://pandoc.org/index.html) with the assistance of the https://github.com/bmc/ebook-template python script.
 
 # TODO
 
