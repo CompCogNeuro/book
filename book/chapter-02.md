@@ -14,7 +14,7 @@ Our goal in this chapter is to understand how the neuron receives input signals 
 
 **Math warning:** This chapter and the Learning Chapter (Chapter 4) are the only two in the entire book with significant amounts of math, because these two chapters develop the core equations that power our neural simulations. We have separated the conceptual from the mathematical content, and those with an aversion to math can get by without understanding all the details. So, don't be put off or overwhelmed by the math here --- just focus on the core conceptual ideas and get what you can out of the math (even if it is not much, you'll be OK)!
 
-![**Figure 2.1:** Trace of a simulated neuron spiking action potentials in response to an excitatory input --- the blue **Vm** membrane potential (voltage of the neuron) increases (driven by the excitatory net input, **Ge**) until it reaches threshold (around .5), at which point a purple **Spike** (action potential) is triggered, which then resets the membrane potential back to its starting value (.3) and the process continues. The spike is communicated other neurons, and the overall rate of spiking (tracked by the green **Act** value) is proportional to the level of excitatory net input (relative to other opposing factors such as inhibition --- the balance of all these factors is reflected in the net current **Inet**, in red). You can produce this graph and manipulate all the relevant parameters in the `neuron` exploration for this chapter.](../figures/fig_neuron_spiking.png){ width=75% }
+![**Figure 2.1:** Trace of a simulated neuron spiking action potentials in response to an excitatory input --- the blue **Vm** membrane potential (voltage of the neuron) increases (driven by the excitatory net input, **Ge**) until it reaches threshold (around .5), at which point a purple **Spike** (action potential) is triggered, which then resets the membrane potential back to its starting value (.3) and the process continues. The spike is communicated to other neurons, and the overall rate of spiking (tracked by the green **Act** value) is proportional to the level of excitatory net input (relative to other opposing factors such as inhibition --- the balance of all these factors is reflected in the net current **Inet**, in red). You can produce this graph and manipulate all the relevant parameters in the `neuron` exploration for this chapter.](../figures/fig_neuron_spiking.png){ width=75% }
 
 ## Basic Biology of a Neuron as Detector
 
@@ -46,15 +46,15 @@ Figure 2.3 shows a tracing of a typical excitatory neuron in the cortex called a
 
 ![**Figure 2.4:** Electron microscope image of a synapse.  The arrows indicate synaptic release sites, where neurotransmitter is released to the receiving neuron.  The small circles are synaptic vesicles, which contain the neurotransmitter.](../figures/fig_synapse_em.jpg){ width=50% }
 
-![**Figure 2.5:** Schematic of a synapse, showing presynaptic terminal button which releases neurotransmitter (NT) into the synaptic cleft.  The NT binds to postsynaptic receptors, causing ion channels to open (e.g., Sodium or Na+ ions for excitatory AMPA channels), and thus activating the receiving neuron.  Metabotropic receptors such as mGluR do no open to allow ions to flow (as ionotropic ones do), and instead they trigger second-messenger cascades of reactions that can affect learning and other processes in the postsynaptic cell.](../figures/fig_synapse.png){ width=40% }
+![**Figure 2.5:** Schematic of a synapse, showing presynaptic terminal button which releases neurotransmitter (NT) into the synaptic cleft.  The NT binds to postsynaptic receptors, causing ion channels to open (e.g., Sodium or Na⁺ ions for excitatory AMPA channels), and thus activating the receiving neuron.  Metabotropic receptors such as mGluR do not open to allow ions to flow (as ionotropic ones do), and instead they trigger second-messenger cascades of reactions that can affect learning and other processes in the postsynaptic cell.](../figures/fig_synapse.png){ width=40% }
 
-Figure 2.4 shows a high-resolution image of a synapse, while Figure 2.5 shows a schematic with all of the major elements of the synaptic signaling cascade represented.  The primary behavior of a synapse is for an action potential to trigger release of neurotransmitter (NT) from the **presynaptic terminal button**, and this NT then binds to postsynaptic receptors that open to allow ions to flow, and thus communicating a signal to the postsynaptic neuron.  In the predominant case of **excitatory AMPA-receptor** activation by the NT **glutamate**, the AMPA channels open to allow Sodium (Na+) ions to enter the postsynaptic neuron, which then have the effect of increasing the membrane potential and thus exciting the neuron.  This excitatory input is called an **excitatory postsynaptic potential or EPSP**.
+Figure 2.4 shows a high-resolution image of a synapse, while Figure 2.5 shows a schematic with all of the major elements of the synaptic signaling cascade represented.  The primary behavior of a synapse is for an action potential to trigger release of neurotransmitter (NT) from the **presynaptic terminal button**, and this NT then binds to postsynaptic receptors that open to allow ions to flow, and thus communicating a signal to the postsynaptic neuron.  In the predominant case of **excitatory AMPA-receptor** activation by the NT **glutamate**, the AMPA channels open to allow Sodium (Na⁺) ions to enter the postsynaptic neuron, which then have the effect of increasing the membrane potential and thus exciting the neuron.  This excitatory input is called an **excitatory postsynaptic potential or EPSP**.
 
 The other major types of postsynaptic receptors are:
-* **NMDA**, which is involved in learning and allows Calcium ions to flow (Ca++) --- we will discuss these receptors in more detail in the [[CCNBook/Learning|Learning chapter]]. 
+* **NMDA**, which is involved in learning and allows Calcium (Ca⁺⁺) ions to flow --- we will discuss these receptors in more detail in Chapter 4 (Learning).
 * **mGluR**, which is also involved in learning and also possibly active maintenance of information in working memory --- these receptors do not pass ions, and instead affect complex chemical processes in the postsynaptic cell.
 
-Inhibitory synapses arising from inhibitory interneurons release GABA NT, and the corresponding GABA receptors on the receiving neurons open to allow Chloride (CL-) ions to flow, producing a net negative or inhibitory effect on the postsynaptic cell (called an **inhibitory postsynaptic potential or IPSP**).
+Inhibitory synapses arising from inhibitory interneurons release GABA NT, and the corresponding GABA receptors on the receiving neurons open to allow Chloride (Cl⁻) ions to flow, producing a net negative or inhibitory effect on the postsynaptic cell (called an **inhibitory postsynaptic potential or IPSP**).
 
 Importantly, the biology shows that synapses in the cortex can either be excitatory or inhibitory, but not both.  This has implications for our computational models as we explore in the *Networks* Chapter.
 
@@ -64,13 +64,13 @@ Importantly, the biology shows that synapses in the cortex can either be excitat
 
 The process of integrating the three different types of input signals (excitation, inhibition, leak) lies at the heart of neural computation. This section provides a conceptual, intuitive understanding of this process, and how it relates to the underlying electrical properties of neurons. Later, we'll see how to translate this process into mathematical equations that can actually be simulated on the computer.
 
-The integration process can be understood in terms of a **tug-of-war** (Figure 2.6). This tug-of-war takes place in the space of **electrical potentials** that exist in the neuron relative to the surrounding extracellular medium in which neurons live (interestingly, this medium, and the insides of neurons and other cells as well, is basically salt water with sodium (Na+), chloride (Cl-) and other ions floating around --- we carry our remote evolutionary environment around within us at all times). The core function of a neuron can be understood entirely in electrical terms: voltages (electrical potentials) and currents (flow of electrically charged ions in and out of the neuron through tiny pores called **ion channels**).
+The integration process can be understood in terms of a **tug-of-war** (Figure 2.6). This tug-of-war takes place in the space of **electrical potentials** that exist in the neuron relative to the surrounding extracellular medium in which neurons live (interestingly, this medium, and the insides of neurons and other cells as well, is basically salt water with sodium (Na⁺), chloride (Cl⁻) and other ions floating around --- we carry our remote evolutionary environment around within us at all times). The core function of a neuron can be understood entirely in electrical terms: voltages (electrical potentials) and currents (flow of electrically charged ions in and out of the neuron through tiny pores called **ion channels**).
 
 To see how this works, let's just consider excitation versus inhibition (inhibition and leak are effectively the same for our purposes at this time). The key point is that **the integration process reflects the relative strength of excitation versus inhibition** --- if excitation is stronger than inhibition, then the neuron's electrical potential (voltage) increases, perhaps to the point of getting over threshold and firing an output action potential. If inhibition is stronger, then the neuron's electrical potential decreases, and thus moves further away from getting over the threshold for firing.
 
 Before we consider specific cases, let's introduce some obscure terminology that neuroscientists use to label the various actors in our tug-of-war drama (going from left to right in the Figure):
 
-*  $g_i$ --- the **inhibitory conductance** (*g* is the symbol for a conductance, and *i* indicates inhibition) --- this is the total strength of the inhibitory input (i.e., how strong the inhibitory guy is tugging), and plays a major role in determining how strong of an inhibitory current there is. This corresponds biologically to the proportion of inhibitory ion channels that are currently open and allowing inhibitory ions to flow (these are **chloride** or **Cl-** ions in the case of GABA **inhibition**, and **potassium** or **K+** ions in the case of **leak** currents). For electricity buffs, the conductance is the inverse of resistance --- most people find conductance more intuitive than resistance, so we'll stick with it.
+*  $g_i$ --- the **inhibitory conductance** (*g* is the symbol for a conductance, and *i* indicates inhibition) --- this is the total strength of the inhibitory input (i.e., how strong the inhibitory guy is tugging), and plays a major role in determining how strong of an inhibitory current there is. This corresponds biologically to the proportion of inhibitory ion channels that are currently open and allowing inhibitory ions to flow (these are **chloride** or **Cl⁻** ions in the case of GABA **inhibition**, and **potassium** or **K⁺** ions in the case of **leak** currents). For electricity buffs, the conductance is the inverse of resistance --- most people find conductance more intuitive than resistance, so we'll stick with it.
 
 * $E_i$ --- the **inhibitory driving potential** --- in the tug-of-war metaphor, this just amounts to where the inhibitory guy happens to be standing relative to the electrical potential scale that operates within the neuron. Typically, this value is around -75mV where **mV** stands for **millivolts** --- one thousandth (1/1,000) of a volt. These are very small electrical potentials for very small neurons.
 
@@ -80,7 +80,7 @@ Before we consider specific cases, let's introduce some obscure terminology that
 
 * $E_e$ --- the **excitatory driving potential** --- this is where the excitatory guy is standing in the electrical potential space (typically around 0 mV).
 
-* $g_e$ --- the **excitatory conductance** --- this is the total strength of the excitatory input, reflecting the proportion of excitatory ion channels that are open (these channels pass **sodium** or **Na+** ions --- our deepest thoughts are all just salt water moving around).
+* $g_e$ --- the **excitatory conductance** --- this is the total strength of the excitatory input, reflecting the proportion of excitatory ion channels that are open (these channels pass **sodium** (Na⁺) ions --- our deepest thoughts are all just salt water moving around).
 
 ![**Figure 2.7:** Specific cases in the tug-of-war scenario.](../figures/fig_vm_as_tug_of_war_cases.png){ width=%75 }
 
@@ -88,11 +88,11 @@ Figure 2.7 shows specific cases in the tug-of-war scenario. In the first case, t
 
 In the next case (b), the excitation is as strong as the inhibition, and this means that it can pull the membrane potential up to about the middle of the range. Because the firing threshold is toward the lower-end of the range, this is enough to get over threshold and fire a spike! The neuron will now communicate its signal to other neurons, and contribute to the overall flow of information in the brain's network.
 
-The last case (c) is particularly interesting, because it illustrates that the integration process is fundamentally **relative** --- what matters is how strong excitation is *relative* to the inhibition. If both are overall weaker, then neurons can still get over firing threshold. Can you think of any real-world example where this might be important? Consider the neurons in your visual system, which can experience huge variation in the overall amount of light coming into them depending on what you're looking at (e.g., compare snowboarding on a bright sunny day versus walking through thick woods after sunset). It turns out that the total amount of light coming into the visual system drives both a "background" level of inhibition, in addition to the amount of excitation that visual neurons experience. Thus, when it's bright, neurons get greater amounts of both excitation and inhibition compared to when it is dark. *This enables the neurons to remain in their sensitive range for detecting things* despite large differences in overall input levels.
+The last case (c) is particularly interesting, because it illustrates that the integration process is fundamentally **relative** --- what matters is how strong excitation is *relative* to the inhibition. If both are overall weaker, then neurons can still get over firing threshold. Can you think of any real-world example where this might be important? Consider the neurons in your visual system, which can experience huge variation in the overall amount of light coming into them depending on what you're looking at (e.g., compare snowboarding on a bright sunny day versus walking through thick woods after sunset). It turns out that the total amount of light coming into the visual system drives a "background" level of inhibition, in addition to the amount of excitation that visual neurons experience. Thus, when it's bright, neurons get greater amounts of both excitation and inhibition compared to when it is dark. *This enables the neurons to remain in their sensitive range for detecting things* despite large differences in overall input levels.
 
 ## Computing Activation Output
 
-The membrane potential $Vm$ is not communicated directly to other neurons --- instead it is subjected to a **threshold** and only the strongest levels of excitation are then communicated, resulting in a much more efficient and compact encoding of information in the brain. In human terms, neurons are sensitive to "TMI" (too much information) constraints, also known as "Gricean Maxims" [wikipedia link](http://en.wikipedia.org/wiki/Cooperative_principle) --- e.g., only communicate relevant, important information.
+The membrane potential $Vm$ is not communicated directly to other neurons --- instead it is subjected to a **threshold** and only the strongest levels of excitation are then communicated, resulting in a much more efficient and compact encoding of information in the brain. In human terms, neurons avoid sharing "TMI" (too much information), and instead communicate only relevant, important information, as if they were following ["Gricean maxims"](https://en.wikipedia.org/wiki/Cooperative_principle).
 
 Actual neurons in the Neocortex compute discrete **spikes** or **action potentials**, which are very brief ( $< 1$ ms) and trigger the release of neurotransmitter that then drives the excitation or inhibition of the neurons they are sending to. After the spike, the membrane potential $Vm$ is reset back to a low value (at or even below the resting potential), and it must then climb back up again to the level of the threshold before another spike can occur. This process results in different *rates of spiking* associated with different levels of excitation --- it is clear from eletrophysiological recordings of neurons all over the neocortex that this **spike rate** information is highly informative about behaviorally and cognitively relevant information. There remains considerable debate about the degree to which more precise differences in spike timing contain additional useful information.
 
@@ -222,9 +222,9 @@ To compute discrete action potential spiking behavior from the neural equations 
 if (Vm > Theta) then: y = 1; Vm = Vm_r; else y = 0
 ```
 
-where y is the activation output value of the neuron, and $Vm_r$ is the *reset potential* that the membrane potential is reset to after a spike is triggered. Biologically, there are special potassium (K+) channels that bring the membrane potential back down after a spike.
+where y is the activation output value of the neuron, and $Vm_r$ is the *reset potential* that the membrane potential is reset to after a spike is triggered. Biologically, there are special potassium (K⁺) channels that bring the membrane potential back down after a spike.
 
-This simplest of spiking models is not *quite* sufficient to account for the detailed spiking behavior of actual cortical neurons. However, a slightly more complex model can account for actual spiking data with great accuracy (as shown by Gerstner and colleagues [@BretteGerstner05], and winning several international competitions even!). This model is known as the *Adaptive Exponential* or AdEx model ([Scholarpedia Article on AdEx](https://www.scholarpedia.org/article/Adaptive_exponential_integrate-and-fire_model). We typically use this AdEx model when simulating discrete spiking, although the simpler model described above is also still an option. The critical feature of the AdEx model is that the effective firing threshold adapts over time, as a function of the excitation coming into the cell, and its recent firing history. The net result is a phenomenon called **spike rate adaptation**, where the rate of spiking tends to decrease over time for otherwise static input levels. Otherwise, however, the AdEx model is identical to the one described above.
+This simplest of spiking models is not *quite* sufficient to account for the detailed spiking behavior of actual cortical neurons. However, a slightly more complex model can account for actual spiking data with great accuracy (as shown by Gerstner and colleagues [@BretteGerstner05], even winning several international competitions!). This model is known as the *Adaptive Exponential* or AdEx model ([Scholarpedia Article on AdEx](http://www.scholarpedia.org/article/Adaptive_exponential_integrate-and-fire_model). We typically use this AdEx model when simulating discrete spiking, although the simpler model described above is also still an option. The critical feature of the AdEx model is that the effective firing threshold adapts over time, as a function of the excitation coming into the cell, and its recent firing history. The net result is a phenomenon called **spike rate adaptation**, where the rate of spiking tends to decrease over time for otherwise static input levels. Otherwise, however, the AdEx model is identical to the one described above.
 
 #### Rate Code Approximation to Spiking
 
@@ -301,7 +301,7 @@ This causes the actual final rate code activation output at the current time *t*
 | ErevI (inhib)  | -75mV          | 0.25     | | ErevE (excite)  | 0mV             | 1          |
 | $\theta$ (Thr) | -50mV          | 0.5      | | SpikeThr        | 20mV            | 1.2        |
 
-Table: **Table 2.1:** The parameters used in our simulations are normalized using the above conversion factors so that the typical values that arise in a simulation fall within the 0..1 normalized range. For example, the membrane potential is represented in the range between 0 and 2 where 0 corresponds to -100mV and 2 corresponds to +100mV and 1 is thus 0mV (and most membrane potential values stay within 0-1 in this scale). The biological values given are the default values for the AdEx model. 
+Table: **Table 2.1:** The parameters used in our simulations are normalized using the above conversion factors so that the typical values that arise in a simulation fall within the 0..1 normalized range. For example, the membrane potential is represented in the range between 0 and 2 where 0 corresponds to -100mV and 2 corresponds to +100mV and 1 is thus 0mV (and most membrane potential values stay within 0-1 in this scale). The biological values given are the default values for the AdEx model.
 
 Table 2.1 shows the normalized values of the parameters used in our simulations. We use these normalized values instead of the normal biological parameters so that everything fits naturally within a 0..1 range, thereby simplifying many practical aspects of working with the simulations.
 
@@ -352,7 +352,7 @@ There are a number of optional in-depth topics here in this Chapter Appendix.
 
 * **Frequency-Current Curve:** Derives an explanation for why the XX1 function approximates discrete spiking (courtesy of Sergio Verduzco-Flores).
 
-* **Sodium-Gated Potassium Channels for Adaptation (kNa Adapt):** describes how sodium that comes in during spiking 
+* **Sodium-Gated Potassium Channels for Adaptation (kNa Adapt):** describes how sodium that comes in during spiking drives membrane potential back down.
 
 * **Bayesian Optimal Detector:** how the equilibrium membrane potential represents a Bayesian optimal way of integrating the different inputs to the neuron.
 
@@ -362,10 +362,10 @@ This optional section provides a full treatment of the electrophysiology of the 
 
 First, some basic facts of electricity.  Electrons and protons, which together make up atoms (along with neutrons), have electrical charge (the electron is negative, and the proton is positive).  An **ion** is an atom where these positive and negative charges are out of balance, so that it carries a **net charge**.  Because the brain carries its own salt-water ocean around with it, the primary ions of interest are:
 
-* **sodium (Na+)** which has a net positive charge.
-* **chloride (Cl-)** which has a net negative charge.
-* **potassium (K+)** which has a net positive charge.
-* **calcium (Ca++)** which has ''two'' net positive charges.
+* **sodium (Na⁺)** which has a net positive charge.
+* **chloride (Cl⁻)** which has a net negative charge.
+* **potassium (K⁺)** which has a net positive charge.
+* **calcium (Ca⁺⁺)** which has ''two'' net positive charges.
 
 ![**Figure 2.11:** Basic principles of electricity: when there is an imbalance of positive and negative charged ions, these ions will flow so as to cancel out this imbalance.  The flow of ions is called a current **I**, driven by the potential (level of imbalance) **V** with the conductance **G** (e.g., size of the opening between the two chambers) determining how quickly the ions can flow.](../figures/fig_electricity.png){ width=30% }
 
@@ -379,17 +379,17 @@ $$I = G V$$
 
 The other major force at work in the neuron is **diffusion**, which causes individual ions to move around until they are uniformly distributed across space (Figure 2.12).  Interestingly, the diffusion force originates from random movements of the ions driven by heat --- ions are constantly bumping around through space, with a mean velocity proportional to the temperature of the environment they're in.  This constant motion creates the diffusion force as a result of the inevitable increase in **entropy** of a system --- the maximum entropy state is where each ion is uniformly distributed, and this is in effect what the diffusion force represents.  The key difference between the diffusion and electrical force is:
 
-* Diffusion operates individually on each ion, regardless of its charge compared to other ions etc --- each ion is driven by the diffusion force to spread itself uniformly around.  In contrast, electrical forces ignore the identity of the ion, and only care about the net electrical charge.  From electricity's perspective, Na+ and K+ are effectively equivalent.
+* Diffusion operates individually on each ion, regardless of its charge compared to other ions etc --- each ion is driven by the diffusion force to spread itself uniformly around.  In contrast, electrical forces ignore the identity of the ion, and only care about the net electrical charge.  From electricity's perspective, Na⁺ and K⁺ are effectively equivalent.
 
 It is this critical difference between diffusion and electrical forces that causes different ions to have different driving potentials, and thus exert different influences over the neuron.
 
 ![**Figure 2.13:** Major ions and their relative concentrations inside and outside the neuron (indicated by the size of the circles).  These relative concentration differences give rise to the different driving potentials for different ions, and thus determine their net effect on the neuron (whether they pull it "up" for excitation or "down" for inhibition).](../figures/fig_ions.png){ width=50% }
 
-Figure 2.13 shows the situation inside and outside the neuron for the major ion types.  The concentration imbalances all stem from a steady **sodium pump** that pumps Na+ ions out of the cell.  This creates an imbalance in electrical charge, such that the inside of the neuron is more negative (missing all those Na+ ions) and the outside is more positive (has an excess of these Na+ ions).  This negative net charge (i.e., **negative resting potential**) of about -70mV pushes the negative Cl- ions outside the cell as well (equivalently, they are drawn to the positive charge outside the cell), creating a concentration imbalance in chloride as well.  Similarly, the K+ ions are drawn ''into'' the cell by the extra negative charge within, creating an opposite concentration imbalance for the potassium ions.
+Figure 2.13 shows the situation inside and outside the neuron for the major ion types.  The concentration imbalances all stem from a steady **sodium pump** that pumps Na⁺ ions out of the cell.  This creates an imbalance in electrical charge, such that the inside of the neuron is more negative (missing all those Na⁺ ions) and the outside is more positive (has an excess of these Na⁺ ions).  This negative net charge (i.e., **negative resting potential**) of about -70mV pushes the negative Cl⁻ ions outside the cell as well (equivalently, they are drawn to the positive charge outside the cell), creating a concentration imbalance in chloride as well.  Similarly, the K⁺ ions are drawn ''into'' the cell by the extra negative charge within, creating an opposite concentration imbalance for the potassium ions.
 
-All of these concentration imbalances create a strong diffusion force, where these ions are trying to distribute themselves more uniformly.  But this diffusion force is counteracted by the electrical force, and when the neuron is at rest, it achieves an **equilibrium** state where the electrical and diffusion forces exactly balance and cancel each other out.   Another name for the diving potential for an ion (i.e., which direction it pulls the cell's membrane potential) is the **equilibrium potential** --- the electrical potential at which the diffusion and electrical forces exactly balance.  
+All of these concentration imbalances create a strong diffusion force, where these ions are trying to distribute themselves more uniformly.  But this diffusion force is counteracted by the electrical force, and when the neuron is at rest, it achieves an **equilibrium** state where the electrical and diffusion forces exactly balance and cancel each other out.   Another name for the diving potential for an ion (i.e., which direction it pulls the cell's membrane potential) is the **equilibrium potential** --- the electrical potential at which the diffusion and electrical forces exactly balance.
 
-As shown in Figure 2.13, the Cl- and K+ ions have driving potentials that are essentially equivalent to the resting potential, -70mV.  This means that when the cell's membrane potential is at this -70mV, there is no net current across the membrane for these ions --- everything will basically stay put.
+As shown in Figure 2.13, the Cl⁻ and K⁺ ions have driving potentials that are essentially equivalent to the resting potential, -70mV.  This means that when the cell's membrane potential is at this -70mV, there is no net current across the membrane for these ions --- everything will basically stay put.
 
 Mathematically, we can capture this phenomenon using the same equation we derived from the tug-of-war analogy:
 $$ I = G (E-V) $$
@@ -397,11 +397,11 @@ Notice that this is just a simple modification of Ohm's law --- the E value (the
 
 If we plug an E value of -70mV into this equation, then we see that the current is 0 when V = -70mV.  This is the definition of an equilibrium state.  No net current.
 
-Now consider the Na+ ion.  Both the negative potential inside the neuron, and the concentration imbalance, drive this ion to want to move into the cell.  Thus, at the resting potential of -70mV, the current for this ion will be quite high if it is allowed to flow into the cell.  Indeed, it will not stop coming into the cell until the membrane potential gets all the way up to +55mV or so.  This equilibrium or driving potential for Na+ is positive, because it would take a significant positive potential to force the Na+ ions back out against their concentration difference.
+Now consider the Na⁺ ion.  Both the negative potential inside the neuron, and the concentration imbalance, drive this ion to want to move into the cell.  Thus, at the resting potential of -70mV, the current for this ion will be quite high if it is allowed to flow into the cell.  Indeed, it will not stop coming into the cell until the membrane potential gets all the way up to +55mV or so.  This equilibrium or driving potential for Na⁺ is positive, because it would take a significant positive potential to force the Na⁺ ions back out against their concentration difference.
 
-The bottom line of all this is that synaptic channels that allow Na+ ions to flow will cause Na+ to flow *into* the neuron, and thereby excite the receiving neuron.  In effect, the sodium pump "winds up" the neuron by creating these concentration imbalances, and thus the potential for excitation to come into the cell against a default background of the negative resting potential.
+The bottom line of all this is that synaptic channels that allow Na⁺ ions to flow will cause Na⁺ to flow *into* the neuron, and thereby excite the receiving neuron.  In effect, the sodium pump "winds up" the neuron by creating these concentration imbalances, and thus the potential for excitation to come into the cell against a default background of the negative resting potential.
 
-Finally, when excitatory inputs do cause the membrane potential to increase, this has the effect of drawing more Cl- ions back into the cell, creating an inhibitory pull back to the -70mV resting value, and similarly it pushes K+ ions out of the cell, which also makes the inside of the cell more negative, and has a net inhibitory effect.  The Cl- ions only flow when inhibitory GABA channels are open, and the K+ ions flow all the time through the always-open leak channels.
+Finally, when excitatory inputs do cause the membrane potential to increase, this has the effect of drawing more Cl⁻ ions back into the cell, creating an inhibitory pull back to the -70mV resting value, and similarly it pushes K⁺ ions out of the cell, which also makes the inside of the cell more negative, and has a net inhibitory effect.  The Cl⁻ ions only flow when inhibitory GABA channels are open, and the K⁺ ions flow all the time through the always-open leak channels.
 
 ### Net Input Detail
 
@@ -451,7 +451,7 @@ $$ 0 = g_e E_e - g_e V_m + g_i E_i - g_i V_m + g_l E_l - g_l V_m $$
 solve for Vm: (gather Vm terms on other side)
 $$ g_e V_m + g_i V_m + g_l V_m = g_e E_e + g_i E_i + g_l E_l $$
 solve for Vm: (get only one Vm guy, then divide each side by g's to get..)
-$$ V_m (g_e + g_i + g_l ) = g_e E_e + g_i E_i + g_l E_l $$   
+$$ V_m (g_e + g_i + g_l ) = g_e E_e + g_i E_i + g_l E_l $$
 solution!
 $$ V_m = \frac{g_e E_e + g_i E_i + g_l E_l}{g_e + g_i + g_l} $$
 
@@ -496,7 +496,7 @@ solve for g_e:
 $$ \Theta (g_e^{\Theta} + g_i + g_l) = g_e^{\Theta} E_e + g_i E_i + g_l E_l - \omega $$
 (multiply both sides by g's), then solve for g_e:
 $$ \Theta g_e^{\Theta} = g_e^{\Theta} E_e + g_i E_i + g_l E_l  - \Theta g_i - \Theta g_l - \omega $$ (bring non-g_e's back to other side), then solve for g_e:
-$$ g_e^{\Theta} \Theta - g_e^{\Theta} E_e  = g_i (E_i - \Theta) + g_l (E_l  - \Theta) - \omega $$ (bring other g_e over and consolidate other side, then divide both sides to isolate g_e to get), 
+$$ g_e^{\Theta} \Theta - g_e^{\Theta} E_e  = g_i (E_i - \Theta) + g_l (E_l  - \Theta) - \omega $$ (bring other g_e over and consolidate other side, then divide both sides to isolate g_e to get),
 solution:
 $$ g_e^{\Theta} = \frac{g_i (E_i - \Theta) + g_l (E_l  - \Theta) - \omega}{\Theta - E_e} $$
 
@@ -519,7 +519,7 @@ Excitatory inputs to the neuron will increase the conductance $g_e$, leading to 
 Rewrite the Vm equation:
 $$ C_m \frac{d V_m}{dt} = -(g_e+g_i+g_l)V_m +(g_e E_e + g_i E_i + g_l E_l). $$
 $$ \frac{d V_m}{dt} = -AV_m + B $$
-where 
+where
 $$ A=(g_e+g_i+g_l)/C_m, B=(g_e E_e + g_i E_i + g_l E_l)/C_m. $$
 
 This is a first-order linear differential equation, which can be solved using various methods. We will assume that all conductances are constant and solve the differential equation using separation of variables. An additional assumption is that at $V_m(0)=V_r$ with $V_r$ being the reset potential.
@@ -541,7 +541,7 @@ Find the time to reach the threshold. Let $T$ be the time required to go from th
 $$ \Theta = \left(V_r - \frac{B}{A} \right)e^{-AT} + \frac{B}{A} . $$
 Solving for $T$ we have:
 $$ T = (1/A) ln \left(\frac{Vr - (B/A)}{\Theta - (B/A)} \right) . $$
-$$ f = \frac{1}{T} = \frac{A}{ln \left(\frac{Vr - (B/A)}{\Theta - (B/A)} \right)}. $$ 
+$$ f = \frac{1}{T} = \frac{A}{ln \left(\frac{Vr - (B/A)}{\Theta - (B/A)} \right)}. $$
 
 It is simple to see that the function $f$ just obtained is asymptotically linear. Notice that the term:
 $$ B/A = \frac{(g_e E_e + g_i E_i + g_l E_l)}{(g_e + g_i + g_l)} $$
@@ -620,7 +620,7 @@ which is (2/24) / (3/24), or .67 according to our table.  Thus, matching our int
 The above equation is what we want the detector to solve, and if we had a table like the one in Figure 2.14, then we have just seen that this equation is easy to solve.  However, having such a table is nearly impossible in the real world, and that is the problem that Bayesian math helps to solve, by flipping around the conditional probability the other way, using what is called the **likelihood**:
 $$ P(d | h) = \frac{P(h, d)}{P(h)} $$
 
-It is a little bit strange to think about computing the probability of the *data*, which is, after all, just what was given to you by your inputs (or your experiment), based on your hypothesis, which is the thing you aren't so sure about!  However, think of it instead as how likely you would have *predicted* the data based on the assumptions of your hypothesis.  In other words, the likelihood computes how well the data fit with the hypothesis.  
+It is a little bit strange to think about computing the probability of the *data*, which is, after all, just what was given to you by your inputs (or your experiment), based on your hypothesis, which is the thing you aren't so sure about!  However, think of it instead as how likely you would have *predicted* the data based on the assumptions of your hypothesis.  In other words, the likelihood computes how well the data fit with the hypothesis.
 
 Mathematically, the likelihood depends on the same joint probability of the hypothesis and the data, we used before, but it is *scoped* in a different way.  This time, we scope by all the cases where the hypothesis was true, and determine what fraction of this total had the particular input data state:
 $$ P(d=1 1 0 | h=1) = \frac{P(h=1, d=1 1 0)}{P(h=1)} $$
@@ -645,7 +645,7 @@ The reason we cannot use something like the table in Figure 2.14 in the real wor
 
 In lieu of the real data, we have to fall back on coming up with plausible ways of directly computing the likelihood terms.  One plausible assumption for a detector is that the likelihood is directly (linearly) proportional to the number of inputs that match what the detector is trying to detect, with a linear factor to specify to what extent each input source is representative of the hypothesis.  These parameters are just our standard weight parameters $w$.  Together with the linear proportionality assumption, this gives a likelihood function that is a normalized linear function of the weighted inputs:
 $$ P(d|h) = \frac{1}{z} \sum_i d_i w_i $$
-where $d_i$ is the value of one input source $i$ (e.g., $d_i = 1$ if that source detected something, and 0 otherwise), and the normalizing term $\frac{1}{z}$ ensures that the result is a valid probability between 0 and 1.  
+where $d_i$ is the value of one input source $i$ (e.g., $d_i = 1$ if that source detected something, and 0 otherwise), and the normalizing term $\frac{1}{z}$ ensures that the result is a valid probability between 0 and 1.
 
 The fact that we are *defining* probabilities, not *measuring* them, makes these probabilities *subjective*, as compared to frequencies of objectively measurable events in the world.  Nevertheless, the Bayesian math ensures that you're integrating the relevant information in the mathematically correct way, at least.
 
@@ -659,12 +659,12 @@ Finally, we compare the equilibrium membrane potential equation:
 $$ V_m = \frac{g_e \bar{g}_e E_e + g_i \bar{g}_i E_i + \bar{g}_l E_l} {g_e \bar{g}_e + g_i \bar{g}_i + \bar{g}_l} $$
 ot the Bayesian formula, where the excitatory input plays the role of the likelihood or support for the hypothesis, and the inhibitory input and leak current both play the role of support for null hypotheses.  Because we have considered only one null hypothesis in the preceding analysis (though it is easy to extend it to two), we will just ignore the leak current for the time being, so that the inhibitory input will play the role of the null hypothesis.
 
-Interestingly, the reversal potentials have to be 0's and 1's to fit the numerical values of probabilities, such that excitatory input drives the potential toward 1 (i.e., $E_e = 1$), and that the inhibitory (and leak) currents drive the potential toward 0 (i.e., $E_i = E_l = 0$).  
+Interestingly, the reversal potentials have to be 0's and 1's to fit the numerical values of probabilities, such that excitatory input drives the potential toward 1 (i.e., $E_e = 1$), and that the inhibitory (and leak) currents drive the potential toward 0 (i.e., $E_i = E_l = 0$).
 $$ V_m \approx P(h|d)\frac{g_e \bar{g}_e}{g_e \bar{g}_e + g_i \bar{g}_i} $$
 $$ V_m \approx \frac{P(d|h) P(h)}{P(d|h) P(h) + P(d|\bar{h}) P(\bar{h})}  $$
 
 The full equation for $V_m$ with the leak current can be interpreted as reflecting the case where there are two different (and independent) null hypotheses, represented by inhibition and leak.  As we will see in more detail in the *Network* Chapter, inhibition dynamically changes as a function of the activation of other units in the network, whereas leak is a constant that sets a basic minimum standard against which the detection hypothesis is compared.  Thus, each of these can be seen as supporting a different kind of null hypothesis.
 
-Taken together, this analysis provides a satisfying computational-level interpretation of the biological activation mechanism, and assures us that the neuron is integrating its information in a way that makes good statistical sense. 
+Taken together, this analysis provides a satisfying computational-level interpretation of the biological activation mechanism, and assures us that the neuron is integrating its information in a way that makes good statistical sense.
 
 
