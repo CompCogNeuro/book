@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Part I: Chapter 2: The Neuron
+# Part I: The Neuron {#sec:ch-neuron}
 
 One major reason the brain can be so plastic and learn to do so many different things, is that it is made up of a highly-sculptable form of *silly putty*: billions of individual neurons that are densely interconnected with each other, and capable of shaping what they do by changing these patterns of interconnections. The brain is like a massive LEGO set, where each of the individual pieces is quite simple (like a single LEGO piece), and all the power comes from the nearly infinite ways that these simple pieces can be recombined to do different things.
 
@@ -46,15 +46,16 @@ Figure 2.3 shows a tracing of a typical excitatory neuron in the cortex called a
 
 ![**Figure 2.4:** Electron microscope image of a synapse.  The arrows indicate synaptic release sites, where neurotransmitter is released to the receiving neuron.  The small circles are synaptic vesicles, which contain the neurotransmitter.](../figures/fig_synapse_em.jpg){ width=50% }
 
-![**Figure 2.5:** Schematic of a synapse, showing presynaptic terminal button which releases neurotransmitter (NT) into the synaptic cleft.  The NT binds to postsynaptic receptors, causing ion channels to open (e.g., Sodium or Na⁺ ions for excitatory AMPA channels), and thus activating the receiving neuron.  Metabotropic receptors such as mGluR do not open to allow ions to flow (as ionotropic ones do), and instead they trigger second-messenger cascades of reactions that can affect learning and other processes in the postsynaptic cell.](../figures/fig_synapse.png){ width=40% }
+![**Figure 2.5:** Schematic of a synapse, showing presynaptic terminal button which releases neurotransmitter (NT) into the synaptic cleft.  The NT binds to postsynaptic receptors, causing ion channels to open (e.g., Sodium or $Na^+$ ions for excitatory AMPA channels), and thus activating the receiving neuron.  Metabotropic receptors such as mGluR do not open to allow ions to flow (as ionotropic ones do), and instead they trigger second-messenger cascades of reactions that can affect learning and other processes in the postsynaptic cell.](../figures/fig_synapse.png){ width=40% }
 
-Figure 2.4 shows a high-resolution image of a synapse, while Figure 2.5 shows a schematic with all of the major elements of the synaptic signaling cascade represented.  The primary behavior of a synapse is for an action potential to trigger release of neurotransmitter (NT) from the **presynaptic terminal button**, and this NT then binds to postsynaptic receptors that open to allow ions to flow, and thus communicating a signal to the postsynaptic neuron.  In the predominant case of **excitatory AMPA-receptor** activation by the NT **glutamate**, the AMPA channels open to allow Sodium (Na⁺) ions to enter the postsynaptic neuron, which then have the effect of increasing the membrane potential and thus exciting the neuron.  This excitatory input is called an **excitatory postsynaptic potential or EPSP**.
+Figure 2.4 shows a high-resolution image of a synapse, while Figure 2.5 shows a schematic with all of the major elements of the synaptic signaling cascade represented.  The primary behavior of a synapse is for an action potential to trigger release of neurotransmitter (NT) from the **presynaptic terminal button**, and this NT then binds to postsynaptic receptors that open to allow ions to flow, and thus communicating a signal to the postsynaptic neuron.  In the predominant case of **excitatory AMPA-receptor** activation by the NT **glutamate**, the AMPA channels open to allow Sodium ($Na^+$) ions to enter the postsynaptic neuron, which then have the effect of increasing the membrane potential and thus exciting the neuron.  This excitatory input is called an **excitatory postsynaptic potential or EPSP**.
 
 The other major types of postsynaptic receptors are:
-* **NMDA**, which is involved in learning and allows Calcium (Ca⁺⁺) ions to flow --- we will discuss these receptors in more detail in Chapter 4 (Learning).
+
+* **NMDA**, which is involved in learning and allows Calcium ($Ca^{++}$) ions to flow --- we will discuss these receptors in more detail in Chapter 4 (Learning).
 * **mGluR**, which is also involved in learning and also possibly active maintenance of information in working memory --- these receptors do not pass ions, and instead affect complex chemical processes in the postsynaptic cell.
 
-Inhibitory synapses arising from inhibitory interneurons release GABA NT, and the corresponding GABA receptors on the receiving neurons open to allow Chloride (Cl⁻) ions to flow, producing a net negative or inhibitory effect on the postsynaptic cell (called an **inhibitory postsynaptic potential or IPSP**).
+Inhibitory synapses arising from inhibitory interneurons release GABA NT, and the corresponding GABA receptors on the receiving neurons open to allow Chloride ($Cl^-$) ions to flow, producing a net negative or inhibitory effect on the postsynaptic cell (called an **inhibitory postsynaptic potential or IPSP**).
 
 Importantly, the biology shows that synapses in the cortex can either be excitatory or inhibitory, but not both.  This has implications for our computational models as we explore in the *Networks* Chapter.
 
@@ -64,13 +65,13 @@ Importantly, the biology shows that synapses in the cortex can either be excitat
 
 The process of integrating the three different types of input signals (excitation, inhibition, leak) lies at the heart of neural computation. This section provides a conceptual, intuitive understanding of this process, and how it relates to the underlying electrical properties of neurons. Later, we'll see how to translate this process into mathematical equations that can actually be simulated on the computer.
 
-The integration process can be understood in terms of a **tug-of-war** (Figure 2.6). This tug-of-war takes place in the space of **electrical potentials** that exist in the neuron relative to the surrounding extracellular medium in which neurons live (interestingly, this medium, and the insides of neurons and other cells as well, is basically salt water with sodium (Na⁺), chloride (Cl⁻) and other ions floating around --- we carry our remote evolutionary environment around within us at all times). The core function of a neuron can be understood entirely in electrical terms: voltages (electrical potentials) and currents (flow of electrically charged ions in and out of the neuron through tiny pores called **ion channels**).
+The integration process can be understood in terms of a **tug-of-war** (Figure 2.6). This tug-of-war takes place in the space of **electrical potentials** that exist in the neuron relative to the surrounding extracellular medium in which neurons live (interestingly, this medium, and the insides of neurons and other cells as well, is basically salt water with sodium ($Na^+$), chloride ($Cl^-$) and other ions floating around --- we carry our remote evolutionary environment around within us at all times). The core function of a neuron can be understood entirely in electrical terms: voltages (electrical potentials) and currents (flow of electrically charged ions in and out of the neuron through tiny pores called **ion channels**).
 
 To see how this works, let's just consider excitation versus inhibition (inhibition and leak are effectively the same for our purposes at this time). The key point is that **the integration process reflects the relative strength of excitation versus inhibition** --- if excitation is stronger than inhibition, then the neuron's electrical potential (voltage) increases, perhaps to the point of getting over threshold and firing an output action potential. If inhibition is stronger, then the neuron's electrical potential decreases, and thus moves further away from getting over the threshold for firing.
 
 Before we consider specific cases, let's introduce some obscure terminology that neuroscientists use to label the various actors in our tug-of-war drama (going from left to right in the Figure):
 
-*  $g_i$ --- the **inhibitory conductance** (*g* is the symbol for a conductance, and *i* indicates inhibition) --- this is the total strength of the inhibitory input (i.e., how strong the inhibitory guy is tugging), and plays a major role in determining how strong of an inhibitory current there is. This corresponds biologically to the proportion of inhibitory ion channels that are currently open and allowing inhibitory ions to flow (these are **chloride** or **Cl⁻** ions in the case of GABA **inhibition**, and **potassium** or **K⁺** ions in the case of **leak** currents). For electricity buffs, the conductance is the inverse of resistance --- most people find conductance more intuitive than resistance, so we'll stick with it.
+*  $g_i$ --- the **inhibitory conductance** (*g* is the symbol for a conductance, and *i* indicates inhibition) --- this is the total strength of the inhibitory input (i.e., how strong the inhibitory guy is tugging), and plays a major role in determining how strong of an inhibitory current there is. This corresponds biologically to the proportion of inhibitory ion channels that are currently open and allowing inhibitory ions to flow (these are **chloride** or **$Cl^-$** ions in the case of GABA **inhibition**, and **potassium** or **$K^+$** ions in the case of **leak** currents). For electricity buffs, the conductance is the inverse of resistance --- most people find conductance more intuitive than resistance, so we'll stick with it.
 
 * $E_i$ --- the **inhibitory driving potential** --- in the tug-of-war metaphor, this just amounts to where the inhibitory guy happens to be standing relative to the electrical potential scale that operates within the neuron. Typically, this value is around -75mV where **mV** stands for **millivolts** --- one thousandth (1/1,000) of a volt. These are very small electrical potentials for very small neurons.
 
@@ -80,7 +81,7 @@ Before we consider specific cases, let's introduce some obscure terminology that
 
 * $E_e$ --- the **excitatory driving potential** --- this is where the excitatory guy is standing in the electrical potential space (typically around 0 mV).
 
-* $g_e$ --- the **excitatory conductance** --- this is the total strength of the excitatory input, reflecting the proportion of excitatory ion channels that are open (these channels pass **sodium** (Na⁺) ions --- our deepest thoughts are all just salt water moving around).
+* $g_e$ --- the **excitatory conductance** --- this is the total strength of the excitatory input, reflecting the proportion of excitatory ion channels that are open (these channels pass **sodium** ($Na^+$) ions --- our deepest thoughts are all just salt water moving around).
 
 ![**Figure 2.7:** Specific cases in the tug-of-war scenario.](../figures/fig_vm_as_tug_of_war_cases.png){ width=%75 }
 
@@ -222,7 +223,7 @@ To compute discrete action potential spiking behavior from the neural equations 
 if (Vm > Theta) then: y = 1; Vm = Vm_r; else y = 0
 ```
 
-where y is the activation output value of the neuron, and $Vm_r$ is the *reset potential* that the membrane potential is reset to after a spike is triggered. Biologically, there are special potassium (K⁺) channels that bring the membrane potential back down after a spike.
+where y is the activation output value of the neuron, and $Vm_r$ is the *reset potential* that the membrane potential is reset to after a spike is triggered. Biologically, there are special potassium ($K^+$) channels that bring the membrane potential back down after a spike.
 
 This simplest of spiking models is not *quite* sufficient to account for the detailed spiking behavior of actual cortical neurons. However, a slightly more complex model can account for actual spiking data with great accuracy (as shown by Gerstner and colleagues [@BretteGerstner05], even winning several international competitions!). This model is known as the *Adaptive Exponential* or AdEx model ([Scholarpedia Article on AdEx](http://www.scholarpedia.org/article/Adaptive_exponential_integrate-and-fire_model). We typically use this AdEx model when simulating discrete spiking, although the simpler model described above is also still an option. The critical feature of the AdEx model is that the effective firing threshold adapts over time, as a function of the excitation coming into the cell, and its recent firing history. The net result is a phenomenon called **spike rate adaptation**, where the rate of spiking tends to decrease over time for otherwise static input levels. Otherwise, however, the AdEx model is identical to the one described above.
 
@@ -362,10 +363,10 @@ This optional section provides a full treatment of the electrophysiology of the 
 
 First, some basic facts of electricity.  Electrons and protons, which together make up atoms (along with neutrons), have electrical charge (the electron is negative, and the proton is positive).  An **ion** is an atom where these positive and negative charges are out of balance, so that it carries a **net charge**.  Because the brain carries its own salt-water ocean around with it, the primary ions of interest are:
 
-* **sodium (Na⁺)** which has a net positive charge.
-* **chloride (Cl⁻)** which has a net negative charge.
-* **potassium (K⁺)** which has a net positive charge.
-* **calcium (Ca⁺⁺)** which has ''two'' net positive charges.
+* **sodium ($Na^+$)** which has a net positive charge.
+* **chloride ($Cl^-$)** which has a net negative charge.
+* **potassium ($K^+$)** which has a net positive charge.
+* **calcium ($Ca^{++}$)** which has ''two'' net positive charges.
 
 ![**Figure 2.11:** Basic principles of electricity: when there is an imbalance of positive and negative charged ions, these ions will flow so as to cancel out this imbalance.  The flow of ions is called a current **I**, driven by the potential (level of imbalance) **V** with the conductance **G** (e.g., size of the opening between the two chambers) determining how quickly the ions can flow.](../figures/fig_electricity.png){ width=30% }
 
@@ -379,17 +380,17 @@ $$I = G V$$
 
 The other major force at work in the neuron is **diffusion**, which causes individual ions to move around until they are uniformly distributed across space (Figure 2.12).  Interestingly, the diffusion force originates from random movements of the ions driven by heat --- ions are constantly bumping around through space, with a mean velocity proportional to the temperature of the environment they're in.  This constant motion creates the diffusion force as a result of the inevitable increase in **entropy** of a system --- the maximum entropy state is where each ion is uniformly distributed, and this is in effect what the diffusion force represents.  The key difference between the diffusion and electrical force is:
 
-* Diffusion operates individually on each ion, regardless of its charge compared to other ions etc --- each ion is driven by the diffusion force to spread itself uniformly around.  In contrast, electrical forces ignore the identity of the ion, and only care about the net electrical charge.  From electricity's perspective, Na⁺ and K⁺ are effectively equivalent.
+* Diffusion operates individually on each ion, regardless of its charge compared to other ions etc --- each ion is driven by the diffusion force to spread itself uniformly around.  In contrast, electrical forces ignore the identity of the ion, and only care about the net electrical charge.  From electricity's perspective, $Na^+$ and $K^+$ are effectively equivalent.
 
 It is this critical difference between diffusion and electrical forces that causes different ions to have different driving potentials, and thus exert different influences over the neuron.
 
 ![**Figure 2.13:** Major ions and their relative concentrations inside and outside the neuron (indicated by the size of the circles).  These relative concentration differences give rise to the different driving potentials for different ions, and thus determine their net effect on the neuron (whether they pull it "up" for excitation or "down" for inhibition).](../figures/fig_ions.png){ width=50% }
 
-Figure 2.13 shows the situation inside and outside the neuron for the major ion types.  The concentration imbalances all stem from a steady **sodium pump** that pumps Na⁺ ions out of the cell.  This creates an imbalance in electrical charge, such that the inside of the neuron is more negative (missing all those Na⁺ ions) and the outside is more positive (has an excess of these Na⁺ ions).  This negative net charge (i.e., **negative resting potential**) of about -70mV pushes the negative Cl⁻ ions outside the cell as well (equivalently, they are drawn to the positive charge outside the cell), creating a concentration imbalance in chloride as well.  Similarly, the K⁺ ions are drawn ''into'' the cell by the extra negative charge within, creating an opposite concentration imbalance for the potassium ions.
+Figure 2.13 shows the situation inside and outside the neuron for the major ion types.  The concentration imbalances all stem from a steady **sodium pump** that pumps $Na^+$ ions out of the cell.  This creates an imbalance in electrical charge, such that the inside of the neuron is more negative (missing all those $Na^+$ ions) and the outside is more positive (has an excess of these $Na^+$ ions).  This negative net charge (i.e., **negative resting potential**) of about -70mV pushes the negative $Cl^-$ ions outside the cell as well (equivalently, they are drawn to the positive charge outside the cell), creating a concentration imbalance in chloride as well.  Similarly, the $K^+$ ions are drawn ''into'' the cell by the extra negative charge within, creating an opposite concentration imbalance for the potassium ions.
 
 All of these concentration imbalances create a strong diffusion force, where these ions are trying to distribute themselves more uniformly.  But this diffusion force is counteracted by the electrical force, and when the neuron is at rest, it achieves an **equilibrium** state where the electrical and diffusion forces exactly balance and cancel each other out.   Another name for the diving potential for an ion (i.e., which direction it pulls the cell's membrane potential) is the **equilibrium potential** --- the electrical potential at which the diffusion and electrical forces exactly balance.
 
-As shown in Figure 2.13, the Cl⁻ and K⁺ ions have driving potentials that are essentially equivalent to the resting potential, -70mV.  This means that when the cell's membrane potential is at this -70mV, there is no net current across the membrane for these ions --- everything will basically stay put.
+As shown in Figure 2.13, the $Cl^-$ and $K^+$ ions have driving potentials that are essentially equivalent to the resting potential, -70mV.  This means that when the cell's membrane potential is at this -70mV, there is no net current across the membrane for these ions --- everything will basically stay put.
 
 Mathematically, we can capture this phenomenon using the same equation we derived from the tug-of-war analogy:
 $$ I = G (E-V) $$
@@ -397,11 +398,11 @@ Notice that this is just a simple modification of Ohm's law --- the E value (the
 
 If we plug an E value of -70mV into this equation, then we see that the current is 0 when V = -70mV.  This is the definition of an equilibrium state.  No net current.
 
-Now consider the Na⁺ ion.  Both the negative potential inside the neuron, and the concentration imbalance, drive this ion to want to move into the cell.  Thus, at the resting potential of -70mV, the current for this ion will be quite high if it is allowed to flow into the cell.  Indeed, it will not stop coming into the cell until the membrane potential gets all the way up to +55mV or so.  This equilibrium or driving potential for Na⁺ is positive, because it would take a significant positive potential to force the Na⁺ ions back out against their concentration difference.
+Now consider the $Na^+$ ion.  Both the negative potential inside the neuron, and the concentration imbalance, drive this ion to want to move into the cell.  Thus, at the resting potential of -70mV, the current for this ion will be quite high if it is allowed to flow into the cell.  Indeed, it will not stop coming into the cell until the membrane potential gets all the way up to +55mV or so.  This equilibrium or driving potential for $Na^+$ is positive, because it would take a significant positive potential to force the $Na^+$ ions back out against their concentration difference.
 
-The bottom line of all this is that synaptic channels that allow Na⁺ ions to flow will cause Na⁺ to flow *into* the neuron, and thereby excite the receiving neuron.  In effect, the sodium pump "winds up" the neuron by creating these concentration imbalances, and thus the potential for excitation to come into the cell against a default background of the negative resting potential.
+The bottom line of all this is that synaptic channels that allow $Na^+$ ions to flow will cause $Na^+$ to flow *into* the neuron, and thereby excite the receiving neuron.  In effect, the sodium pump "winds up" the neuron by creating these concentration imbalances, and thus the potential for excitation to come into the cell against a default background of the negative resting potential.
 
-Finally, when excitatory inputs do cause the membrane potential to increase, this has the effect of drawing more Cl⁻ ions back into the cell, creating an inhibitory pull back to the -70mV resting value, and similarly it pushes K⁺ ions out of the cell, which also makes the inside of the cell more negative, and has a net inhibitory effect.  The Cl⁻ ions only flow when inhibitory GABA channels are open, and the K⁺ ions flow all the time through the always-open leak channels.
+Finally, when excitatory inputs do cause the membrane potential to increase, this has the effect of drawing more $Cl^-$ ions back into the cell, creating an inhibitory pull back to the -70mV resting value, and similarly it pushes $K^+$ ions out of the cell, which also makes the inside of the cell more negative, and has a net inhibitory effect.  The $Cl^-$ ions only flow when inhibitory GABA channels are open, and the $K^+$ ions flow all the time through the always-open leak channels.
 
 ### Net Input Detail
 

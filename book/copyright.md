@@ -1,4 +1,5 @@
-#
+\newpage
+{<} \huge Copyright
 
 {<} This is an open-source textbook, hosted at: https://github.com/CompCogNeuro
 

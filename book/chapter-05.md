@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Part II: Chapter 5: Brain Areas
+# Part II: Brain Areas {#sec:ch-areas}
 
 In Part I of this book, we have developed a toolkit of basic neural mechanisms, going from the activation dynamics of individual neurons, to networks of neurons, and the learning mechanisms that configure them in both self-organizing and error-driven ways. At this start of Part II, we begin the transition to exploring a wide range of cognitive phenomena. As an important foundational step along this path, this chapter attempts to provide a big picture view of the overall functional organization of the brain, in a relatively non-controversial way that is roughly meant to correspond to what is generally agreed upon in the literature. This should help you understand at a broad level how different brain areas work together to perform different cognitive functions, and situate the more specific models in the subsequent chapters into a larger overall framework.
 

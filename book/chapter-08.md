@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Chapter 8: Memory
+# Memory {#sec:ch-memory}
 
 When you think of memory, you probably think of **episodic memory** --- memory for specific episodes or events. Maybe you can remember some special times from childhood (birthdays, family trips, etc), or some traumatic times (ever get lost in a supermarket, or get left behind on a hike or other family outing?). Probably you can remember what you had for dinner last night, and who you ate with? Although this aspect of memory is the most salient for us, it is just one of many different types of memory.
 
@@ -22,7 +22,7 @@ However, a tiny percentage of otherwise seemingly "normal" people have [Exceptio
 
 ![**Figure 8.1:** Data from humans (a) and a generic (cortical) neural network model (b) on the classic AB-AC list learning task, which generates considerable interference by re-pairing the A list items with new associates in the AC list after having first learned the AB list. People's performance on the AB items after learning the AC list definitely degrades (red line), but nowhere near as catastrophically as in the neural network model. Data reproduced from McCloskey and Cohen (1989).](../figures/fig_ab_ac_list.png){ width=75% }
 
-So what exactly makes the hippocampus such an exceptionally good episodic memory system? Our investigation begins with failure. Specifically, the failure of a "generic" cortical neural network model of the sort we've been exploring in this textbook to exhibit any kind of useful episodic memory ability. This failure was first documented by [@McCloskeyCohen89], using a generic backpropagation network trained on the AB-AC paired associate list learning task [@BarnesUnderwood60] (Figure 8.1). This task involves learning an initial list of arbitrary word pairs, called the *AB* list --- for example:
+So what exactly makes the hippocampus such an exceptionally good episodic memory system? Our investigation begins with failure. Specifically, the failure of a "generic" cortical neural network model of the sort we've been exploring in this textbook to exhibit any kind of useful episodic memory ability. This failure was first documented by [@McCloskeyCohen89], using a generic backpropagation network trained on the AB-AC paired associate list learning task [@BarnesUnderwood59] (Figure 8.1). This task involves learning an initial list of arbitrary word pairs, called the *AB* list --- for example:
 
 * locomotive - dishtowel
 * window - reason

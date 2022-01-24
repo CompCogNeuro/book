@@ -21,8 +21,8 @@ $endif$
 \footskip .75in
 \textheight 9in
 \usepackage[font=small]{caption}
-\DeclareCaptionLabelFormat{nolabel}{}
-\captionsetup{labelformat=nolabel}
+% \DeclareCaptionLabelFormat{nolabel}{}
+% \captionsetup{labelformat=nolabel}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -71,7 +71,7 @@ $endif$
 }{}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newenvironment{cslreferences}%
+\newenvironment{CSLReferences}%
   {\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
   {\par}
@@ -213,6 +213,13 @@ $if(dir)$
   \newenvironment{LTR}{\beginL}{\endL}
 \fi
 $endif$
+$if(glossary)$
+% note: note really useful b/c not supported across languages -- using hyperlinks instead
+\usepackage{glossaries}
+\makeglossaries
+}
+\include{glossary-defs}
+$endif$
 
 % set default figure placement to htbp
 \makeatletter
@@ -270,6 +277,11 @@ $if(lof)$
 $endif$
 $body$
 
+$if(glossary)$
+\section{Glossary}
+\printglossaries
+$endif$
+
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$
@@ -287,8 +299,10 @@ $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
 $endif$
+
 $for(include-after)$
 $include-after$
 
 $endfor$
 \end{document}
+

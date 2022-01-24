@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Chapter 7: Motor Control and Reinforcement Learning
+# Motor Control and Reinforcement Learning {#sec:ch-motor}
 
 The foundations of cognition are built upon the sensory-motor loop --- processing sensory inputs to determine which motor action to perform next. This is the most basic function of any nervous system. The human brain has a huge number of such loops, spanning the evolutionary timescale from the most primitive reflexes in the peripheral nervous system, up to the most abstract and inscrutable plans, such as the decision to apply to, and attend, graduate school, which probably involves the highest levels of processing in the prefrontal cortex (PFC) (or perhaps some basic level of insanity... who knows ;).
 

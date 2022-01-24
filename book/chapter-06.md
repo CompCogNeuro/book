@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Chapter 6: Perception and Attention
+# Perception and Attention {#sec:ch-percept}
 
 Perception is at once obvious and mysterious. It is so effortless to us that we have little appreciation for all the amazing computation that goes on under the hood. And yet we often use terms like "vision" as a metaphor for higher-level concepts (does the President have a vision or not?) --- perhaps this actually reflects a deep truth: that much of our higher-level cognitive abilities depend upon our perceptual processing systems for doing a lot of the hard work. Perception is not the mere act of seeing, but is leveraged whenever we imagine new ideas, solutions to hard problems, etc. Many of our most innovative scientists (e.g., Einstein, Richard Feynman) used visual reasoning processes to come up with their greatest insights. Einstein tried to visualize catching up to a speeding ray of light (in addition to trains stretching and contracting in interesting ways), and one of Feynman's major contributions was a means of visually diagramming complex mathematical operations in quantum physics.
 

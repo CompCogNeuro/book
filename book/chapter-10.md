@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Chapter 10: Executive Function
+# Executive Function {#sec:ch-exec}
 
 We have now reached the top of the cognitive neuroscience hierarchy: the "executive" level. In a business, an executive makes important decisions and plans, based on high-level information coming in from all the different divisions of the company, and with a strong consideration of "the bottom line." In a person, the executive level of processing, thought to occur primarily within the **prefrontal cortex (PFC)**, similarly receives high-level information from posterior cortical association areas, and is also directly interconnected with motivational and emotional areas that convey "the bottom line" forces that ultimately guide behavior. Although many of us walk around with the impression (delusion?) that our actions are based on rational thought and planning, instead it is highly likely that basic biological motivations and affective signals play a critical role in shaping what we do. At least, this is what the underlying biology of the PFC and associated brain areas suggests. And yet, it is also clear that the PFC is critical for supporting more abstract reasoning and planning abilities, including the ability to ignore distraction and other influences in the pursuit of a given goal. We will try to unravel the mystery of this seemingly contradictory coexistence of abilities in the PFC in this chapter.
 

@@ -45,6 +45,7 @@ BUILD_LIB  = 'lib/__init__.py'
 OUTPUT_BASENAME            = 'book'
 
 EPUB_METADATA              = os.path.join(TMP_DIR, 'epub-metadata.xml')
+HTML_METADATA              = os.path.join(FILES_DIR, 'html-metadata.yaml')
 LATEX_COVER_PAGE           = os.path.join(TMP_DIR, 'latex-title.latex')
 
 OUTPUT_HTML                = f'{OUTPUT_BASENAME}.html'
@@ -110,6 +111,7 @@ LATEX_TEMPLATE     = os.path.join(FILES_DIR, 'latex.template')
 REF_DOCX           = os.path.join(FILES_DIR, 'custom-reference.docx')
 PANDOC_FILTER      = os.path.join('scripts', 'pandoc-filter.py')
 PLANTUML_FILTER    = os.path.join('scripts', 'plantuml-filter.py')
+GLOSSARY_FILTER    = os.path.join('scripts', 'glossary-filter.lua')
 
 # Lists of dependencies, for ease of reference.
 BUILD_FILE_DEPS = [BUILD_FILE, BUILD_LIB]
@@ -152,19 +154,21 @@ INPUT_FORMAT = "markdown+{}".format('+'.join(PANDOC_EXTENSIONS))
 
 COMMON_PANDOC_OPTS = (
     f"-f {INPUT_FORMAT} {HASKELL_OPTS} -F {PANDOC_FILTER}" +
-    (" -F pandoc-citeproc" if uses_references else "") +
+    " -F pandoc-crossref" + (" --citeproc" if uses_references else "") +
     (f" -F {PLANTUML_FILTER}" if uses_plantuml else "") +
-    (" --standalone") + (" --resource-path=.:book")
+    (" --standalone") + (" --resource-path=.:book" + f' --lua-filter {GLOSSARY_FILTER}')
 )
 NON_LATEX_PANDOC_OPTS = f"{COMMON_PANDOC_OPTS} "
-LATEX_PANDOC_OPTS = (f"{COMMON_PANDOC_OPTS} --template={LATEX_TEMPLATE} " +
+LATEX_PANDOC_OPTS = (f"{COMMON_PANDOC_OPTS} --pdf-engine=xelatex --template={LATEX_TEMPLATE} " +
                      f"-t latex -H {LATEX_HEADER} -B {LATEX_COVER_PAGE} " +
-                     "--toc")
+                     "--toc ")
 HTML_PANDOC_OPTS = (f'{NON_LATEX_PANDOC_OPTS} -t html -B {HTML_BODY_INCLUDE} ' +
                     f'--self-contained --css={HTML_CSS} ' +
+					   f'--metadata-file={HTML_METADATA} ' +
                     f'-H {HTML_HEAD_INCLUDE}')
 EPUB_PANDOC_OPTS = (f'{NON_LATEX_PANDOC_OPTS} -t epub --toc ' +
                     f'--epub-chapter-level=1 --css={EPUB_CSS} ' +
+					   f'--metadata-file={HTML_METADATA} ' +
                     f'--epub-metadata={EPUB_METADATA} ' +
                     f'--epub-cover-image={COVER_IMAGE}')
 DOCX_PANDOC_OPTS = f'{NON_LATEX_PANDOC_OPTS} -t docx --reference-doc={REF_DOCX}'
@@ -179,7 +183,7 @@ HTML_PDF_PANDOC_OPTS = (f'{NON_LATEX_PANDOC_OPTS} -t html ' +
 
 DOIT_DB = 'doit-db.json'
 
-DEFAULT_TASKS = ['html', 'pdf', 'docx', 'epub']
+DEFAULT_TASKS = ['pdf', 'html', 'docx', 'epub']
 
 DOIT_CONFIG = {
     'default_tasks': DEFAULT_TASKS,

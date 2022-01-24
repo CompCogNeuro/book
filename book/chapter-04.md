@@ -2,7 +2,7 @@
 bibfile: ccnlab.bib
 ---
 
-# Chapter 4: Learning
+# Learning {#sec:ch-learn}
 
 How do we learn to read, do math, and play sports? Learning in a neural network amounts to the **modification of synaptic weights**, in response to the local activity patterns of the sending and receiving neurons. As emphasized in previous chapters, these synaptic weights are what determine what an individual neuron detects, and thus are *the* critical parameters for determining neuron and network behavior.
 

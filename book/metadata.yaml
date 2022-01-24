@@ -1,6 +1,12 @@
 copyright:
   owner: "Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E. Hazy, and Contributors"
   year: 2020
+  version: "v1.1.1"
+
+documentclass: book
+top-level-division: chapter
+chapters: true
+number-sections: true
 
 title: "Computational Cognitive Neuroscience"
 
@@ -53,4 +59,25 @@ link-citations: true
 
 # align display equations on the left
 classoption: fleqn
+
+# latex-only -- not useful
+glossary: false
+
+subparagraph: true
+
+# crossref options
+
+linkReferences: true
+# note: set in html-metadata
+# numberSections: false
+sectionDepth: 0
+
+figPrefix:
+- "Figure"
+- "Figures"
+
+secPrefix:
+- "Chapter"
+- "Chapters"
+
 
