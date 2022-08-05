@@ -67,6 +67,8 @@ The hippocampus introduces one critical innovation beyond what is present in the
 
 Against this backdrop of evolutionarily older systems, the neocortex represents a few important innovations. In terms of activation dynamics, it builds upon the attractor dynamic innovation from the hippocampus (appropriately so, given that hippocampus represents an ancient "proto" cortex), and adds to this a strong ability to develop representations that integrate across experiences to extract generalities, instead of always keeping everything separate all the time. The cost for this integration ability is that the system can now form the wrong kinds of generalizations, which might lead to bad overall behavior. But the advantages apparently outweigh the risks, by giving the system a strong ability to apply previous learning to novel situations. In terms of learning mechanisms, the neocortex employs a solid blend of all three major forms of learning, integrating the best of all the available learning signals into one system.
 
+Each chapter in the remainder of Part II focuses on a different cognitive function. Below we preview each chapter.
+
 ## Perception and Attention: What vs. Where
 
 ![**Figure 5.6:** Hierarchy of visual detectors of increasing complexity achieves sophisticated perceptual categorization, with the higher levels being able to recognize thousands of different objects, people, etc.](../figures/fig_category_hierarch_dist_reps.png){ width=100% }
