@@ -7,11 +7,11 @@ bibfile: ccnlab.bib
 Language involves almost every part of the brain, as covered in other chapters in the text:
 
 * *Perception and attention:* language requires the perception of words from auditory sound waves, and written text. Attention is critical for pulling out individual words on the page, and individual speakers in a crowded room. In this chapter, we see how a version of the object recognition model from the perception chapter can perform written word recognition, in a way that specifically leverages the spatial invariance property of this model.
-    
+
 * *Motor control*: Language production obviously requires motor output in the form of speech, writing, etc. Fluent speech depends on an intact cerebellum, and the basal ganglia have been implicated in a number of linguistic phenomena.
-    
+
 * *Learning and memory:* early word learning likely depends on episodic memory in the hippocampus, while longer-term memory for word meaning depends on slow integrated learning in the cortex. Memory for recent topics of discourse and reading (which can span months in the case of reading a novel) likely involves the hippocampus and sophisticated semantic representations in temporal cortex.
-    
+
 * *Executive Function:* language is a complex mental facility that depends critically on coordination and working memory from the prefrontal cortex (PFC) and basal ganglia --- for example encoding syntactic structures over time, pronoun binding, and other more transient forms of memory.
 
 One could conclude from this that language is not particularly special, and instead represents a natural specialization of *domain general* cognitive mechanisms. Of course, people have specialized articulatory apparatus for producing speech sounds, which are not shared by other primate species, but one could argue that everything on top of this is just language infecting pre-existing cognitive brain structures. Certainly reading and writing is too recent to have any evolutionary adaptations to support it (but it is also the least "natural" aspect of language, requiring explicit schooling, compared to the essentially automatic manner in which people absorb spoken language).
@@ -19,13 +19,13 @@ One could conclude from this that language is not particularly special, and inst
 But language is fundamentally different from any other cognitive activity in a number of important ways:
 
 * **Symbols** --- language requires thought to be reduced to a sequence of symbols, transported across space and time, to be reconstructed in the receiver's brain.
-    
+
 * **Syntax** --- language obeys complex abstract regularities in the ordering of words and letters/phonemes.
 
 * **Temporal extent and complexity** --- language can unfold over a very long time frame (e.g., Tolstoy's *War and Peace*), with a level of complexity and richness conveyed that far exceeds any naturally occurring experiences that might arise outside of the linguistic environment. If you ever find yourself watching a movie on an airplane without the sound, you'll appreciate that visual imagery represents the lesser half of most movie's content (the interesting ones anyway).
 
 * **Generativity** --- language is "infinite" in the sense that the number of different possible sentences that could be constructed is so large as to be effectively infinite. Language is routinely used to express new ideas. You may find some of those here.
-    
+
 * **Culture** --- much of our intelligence is imparted through cultural transmission, conveyed through language. Thus, language shapes cognition in the brain in profound ways.
 
 The "special" nature of language, and its dependence on domain-general mechanisms, represent two poles in the continuum of approaches taken by different researchers. Within this broad span, there is plenty of room for controversy and contradictory opinions. Noam Chomsky famously and influentially theorized that we are all born with an innate universal grammar, with language learning amounting to discovering the specific parameters of that language instance. On the other extreme, connectionist language modelers such as Jay McClelland argue that completely unstructured, generic neural mechanisms (e.g., backpropagation networks) are sufficient for explaining (at least some of) the special things about language.
@@ -58,9 +58,9 @@ There are still some controversies about the exact nature of damage required to 
 
 ![**Figure 9.2:** The different components of the vocal tract, which are important for producing the range of speech sounds that people can produce.](../figures/fig_vocal_tract.png){ width=40% }
 
-![**Figure 9.3:** Left panel: International Phonological Alphabet (IPA) for vowels, as a function of where the tongue is positioned (front vs. back, organized horizontally in figure), and the shape of the lips (vertical axis in figure) --- these two dimensions define a space of vowel sounds.  Right panel: Version of IPA vowel space with vowel labels used by PMSP and in our simulations --- these are all standard roman letters and thus easier to manipulate in computer programs. Only the subset present in English is used. ](../figures/fig_ipa_chart_vowels_ipa_pmsp.png){ width=75% }
+![**Figure 9.3:** Left panel: International Phonetic Alphabet (IPA) for vowels, as a function of where the tongue is positioned (front vs. back, organized horizontally in figure), and the shape of the lips (vertical axis in figure) --- these two dimensions define a space of vowel sounds.  Right panel: Version of IPA vowel space with vowel labels used by PMSP and in our simulations --- these are all standard roman letters and thus easier to manipulate in computer programs. Only the subset present in English is used. ](../figures/fig_ipa_chart_vowels_ipa_pmsp.png){ width=75% }
 
-![**Figure 9.4:** International Phonological Alphabet (IPA) for consonants, which are defined in terms of the location where the flow of air is restricted (place, organized horizontally in the table) and the manner in which it is restricted (plosive, fricative, etc, organized vertically).](../figures/fig_ipa_chart_consonants_simple.png){ width=100% }
+![**Figure 9.4:** International Phonetic Alphabet (IPA) for consonants, which are defined in terms of the location where the flow of air is restricted (place, organized horizontally in the table) and the manner in which it is restricted (plosive, fricative, etc, organized vertically).](../figures/fig_ipa_chart_consonants_simple.png){ width=100% }
 
 The vocal tract in people (Figure 9.2) is capable of producing a wide range of different speech sounds, by controlling the location and manner in which sound waves are blocked or allowed to pass. There are two basic categories of speech sounds: vowels and consonants. Vowels occur with unobstructed airflow (you can sing a vowel sound over an extended period), and differ in the location of the tongue and lips (Figure 9.3). For example, the long "E" vowel sound as in "seen" is produced with the tongue forward and the lips relatively closed. Consonants involve the blockage of airflow, in a variety of locations, and with a variety of different manners (Figure 9.4). The "s" consonant is a "fricative" (friction-like obstruction of the sound) with the tongue placed at the aveloar ridge. It is also unvoiced, which means that the vocal chords are not vibrating for it --- the "z" sound is just like an "s" except it is voiced.
 
@@ -72,14 +72,14 @@ We'll take advantage of these phonological features in the output of our detaile
 
 ![**Figure 9.5:** Triangle model of reading pathways: Visual word input (orthography) can produce speech output of the word either directly via projections to phonology (direct path), or indirectly via projections to semantics that encode the meanings of words. There is no single "lexicon" of words in this model --- word representations are instead distributed across these different pathways. Damage to different pathways can account for properties of acquired dyslexia.](../figures/fig_lang_paths.png){ width=40% }
 
-The first language model we explore simulates the major pathways involved in reading, according to the so-called *triangle model* (9.5) [@PlautShallice93]. This model provides a basic understanding of the functional roles of visual perception of written words (*orthography*), spoken motor output of word *phonology*, and *semantic* representations of word meaning in between. This set of language pathways is sufficient to simulate the processes involved in reading words aloud, and damage to these pathways can simulate the critical features of different types of acquired dyslexia. Acquired dyslexia, which results from strokes or other brain damage, is distinct from *developmental* dyslexia, which is the more common form that many people associate with the term *dyslexia* (which generically refers to any form of reading impairment).
+The first language model we explore simulates the major pathways involved in reading, according to the so-called *triangle model* (Figure 9.5) [@PlautShallice93]. This model provides a basic understanding of the functional roles of visual perception of written words (*orthography*), spoken motor output of word *phonology*, and *semantic* representations of word meaning in between. This set of language pathways is sufficient to simulate the processes involved in reading words aloud, and damage to these pathways can simulate the critical features of different types of acquired dyslexia. Acquired dyslexia, which results from strokes or other brain damage, is distinct from *developmental* dyslexia, which is the more common form that many people associate with the term *dyslexia* (which generically refers to any form of reading impairment).
 
 There are three major forms of acquired dyslexia that can be simulated with the model:
 
 * **Phonological** --- characterized by difficulty reading nonwords (e.g., "nust" or "mave"). This can be produced by damage to the direct pathway between orthography and phonology (there shouldn't be any activation in semantics for nonwords), such that people have difficulty mapping spelling to sound according to learned regularities that can be applied to nonwords. We'll explore this phenomenon in greater detail in the next simulation.
-    
+
 * **Deep** --- is a more severe form of phonological dyslexia, with the striking feature that people sometimes make semantic substitutions for words, pronouncing the word "orchestra" as "symphony" for example. There are also *visual* errors, so-named because they seem to reflect a misperception of the word inputs (e.g, reading the word "dog" as "dot"). Interestingly, we'll see how more significant damage to the direct pathway can give rise to this profile --- the semantic errors occur due to everything going through the semantic layer, such that related semantic representations can be activated. In the normal intact brain, the direct pathway provides the relevant constraints to produce the actual written word, but absent this constraint, an entirely different but semantically related word can be output.
-    
+
 * **Surface** --- here nonword reading is intact, but access to semantics is impaired (as in Wernicke's aphasia), strongly implicating a lesion in the semantics pathway. Interestingly, pronunciation of exception words (e.g., "yacht") is impaired. This suggests that people typically rely on the semantic pathway to "memorize" how to pronounce odd words like yacht, and the direct pathway is used more for pronouncing regular words.
 
 That these different forms of dyslexia can be reliably observed in different patients, and fit so well with expected patterns of reading deficits according to the triangle model, provides a strong source of support for the validity of the model. It would be even more compelling if the specific foci of damage associated with these different forms of dyslexia make sense anatomically according to the mapping of the triangle model onto brain areas.
@@ -96,13 +96,13 @@ We now zoom in on the direct pathway between visual word inputs (orthography) an
 
 English is a particularly difficult language from a pronunciation perspective, as anyone knows who has tried to acquire it as a second language. There are very few (if any) absolute rules. Everything is more of a *partial, context-dependent regularity*, which is also called a *subregularity*. For example, compare the pronunciation of the letter *i* in *mint* and *hint* (short *i* sound) to that in *mind* and *find* (long *I* sound). The final consonant (*t* vs. *d*) determines the pronunciation, and of course there are always exceptions such as *pint* (long *I* sound).
 
-One way to classify how strong a regularity is, is to count how many other letters the pronunciation depends upon. A complete exception like *pint* or *yacht* depends on *all* the letters in the word, while *mint* vs. *mind* depends on one other letter in the word (the final *t* or *d*). There are many silent letter examples, such as the final *e* in many words. A nice subregularity is the letter *m*, which depends on whether there is an *n* next to it, in which case it goes silent, as in *damn*, *column*, or *mnemonic*. Many other consonants can be silent with varying degrees of subregularity, including *b* (*debt*), *d* (*handsome*), *h* (*honest*), *l* (*halve*), *p* (*coup*), *r* (*iron*), *s* (*aisle*), *t* (*castle*), *w* (*sword*), and *z* (*rendezvous*).
+One way to classify how strong a regularity is, is to count how many other letters the pronunciation depends upon. A complete exception like *pint* or *yacht* depends on *all* the letters in the word, while *mint* vs. *mind* depends on one other letter in the word (the final *t* or *d*). There are many silent letter examples, such as the final *e* in many words. A nice subregularity is the letter *m*, which depends on whether there is an *n* next to it, in which case it goes silent, as in *damn*, *column*, or *mnemonic*. Many other consonants can be silent with varying degrees of subregularity, including *b* (*debt*), *d* (*handsome*), *h* (*honest*), *l* (*halve*), *p* (*coup*), *r* (*iron* in British English), *s* (*aisle*), *t* (*castle*), *w* (*sword*), and *z* (*rendezvous*).
 
 Another factor that determines how much context is required to pronounce a given letter is the preponderance of multi-letter groups like *th* (*think*), which have a particular regular pronunciation that differs from the individual letters separately. Other examples of these include: *sch* (*school*), *tch* (*batch*), *gh* (*ghost*), *ght* (*right*), *kn* (*knock*), *ph* (*photo*), *wh* (*what*). One of the most context sensitive set of letters is the *ough* group, as in *though, tough, cough, plough, through, nought*, where the pronunciation varies widely.
 
 So English is a mess. The constructed word *ghoti* is a famous example of how crazy it can get. It is pronounced "fish", where the *gh* is an *f* sound as in *tough*, *o* is an *i* sound as in *women*, and *ti* is a *sh* sound as in *nation*.
 
-For any system to be able to have any chance of producing correct pronunciation of English, it must be capable of taking into account a range of context around a given letter in a word, all the way up to the entire word itself. An influential early approach to simulating spelling to sound in a neural network [@SeidenbergMcClelland89] used a so-called *Wickelfeature* representation (named after Wayne Wickelgren), where the written letters were encoded in pairs of three. For example, the word "think" would be encoded as *thi*, *hin*, and *ink*. This is good for capturing context, but it is a bit rigid, and doesn't allow for the considerable amount of regularity in individual letters themselves (most of the time, an *m* is just an *m*). As a result, this model did not generalize very well to nonwords, where letters showed up in different company than in the real words used in training. A subsequent model by [@PlautMcClellandSeidenbergEtAl96] (hereafter *PMSP*) achieved good nonword generalization by representing input words through a hand-coded combination of individual letter units and useful multi-letter contexts (e.g., a *th* unit).
+For any system to be able to have any chance of producing correct pronunciation of English, it must be capable of taking into account a range of context around a given letter in a word, all the way up to the entire word itself. An influential early approach to simulating spelling to sound in a neural network [@SeidenbergMcClelland89] used a so-called *Wickelfeature* representation (named after Wayne Wickelgren), where the written letters were encoded in groups of three. For example, the word "think" would be encoded as *thi*, *hin*, and *ink*. This is good for capturing context, but it is a bit rigid, and doesn't allow for the considerable amount of regularity in individual letters themselves (most of the time, an *m* is just an *m*). As a result, this model did not generalize very well to nonwords, where letters showed up in different company than in the real words used in training. A subsequent model by [@PlautMcClellandSeidenbergEtAl96] (hereafter *PMSP*) achieved good nonword generalization by representing input words through a hand-coded combination of individual letter units and useful multi-letter contexts (e.g., a *th* unit).
 
 ![**Figure 9.7:** Word reading as a process of spatially invariant object recognition. Words show up in different locations in the input, and the next level up, equivalent to the V4 level in the object recognition model, extracts more complex combinations of letters, while also developing more invariant representations that integrate individual letters or multi-letter features over multiple different locations. The IT level representation then has a fully spatially invariant representation of the word (as a distributed representation integrating over individual letters and letter groups), which then provides a nice mapping to the phonological output.](../figures/fig_reading_model.png){ width=20% }
 
@@ -117,7 +117,7 @@ Clearly this is more effortful than properly spelled text, but the ability to re
 To test the performance of this object-recognition based approach, we ran it through a set of different standard sets of nonwords, several of which were also used to test the PMSP model. The results are shown in Table 9.1.
 
 * **Glushko regulars** --- nonwords constructed to match strong regularities, for example *nust*, which is completely regular (e.g., *must*, *bust*, *trust*, etc).
-    
+
 * **Glushko exceptions** --- nonwords that have similar English exceptions and conflicting regularities, such as *bint* (could be like *mint*, but also could be like *pint*). We score these items either according to the predominant regularity, or also including close exceptional cases (alt OK in the table).
 
 * **McCann & Besner ctrls** --- these are pseudo-homophones and matched controls, that sound like actual words, but are spelled in a novel way, for example *choyce* (pronounced like *choice*), and the matched control is *phoyce*.
@@ -206,7 +206,7 @@ The sentence gestalt (SG) model is trained on a very small toy world, consisting
 * Actions: *eat, drink, stir, spread, kiss, give, hit, throw, drive, rise*.
 
 * Objects: *spot* (the dog), *steak, soup, ice cream, crackers, jelly, iced tea, kool aid, spoon, knife, finger, rose, bat* (animal), *bat* (baseball), *ball* (sphere), *ball* (party), *bus, pitcher, fur*.
-    
+
 * Locations: *kitchen, living room, shed, park*.
 
 The semantic roles used to probe the network during training are: *agent, action, patient, instrument, co-agent, co-patient, location, adverb, recipient.*
@@ -218,11 +218,11 @@ The model is trained on randomly-generated sentences according to a semantic and
 * Active semantic: *The schoolgirl stirred the kool-aid with a spoon.* (kool-aid can only be the patient, not the agent of this sentence)
 
 * Active syntactic: *The busdriver gave the rose to the teacher.* (teacher could be either patient or agent --- word order syntax determines it).
-    
+
 * Passive semantic: *The jelly was spread by the busdriver with the knife.* (jelly can't be agent, so must be patient)
 
 * Passive syntactic: *The teacher was kissed by the busdriver.* vs. *The busdriver kissed the teacher.* (either teacher or busdriver could be agent, syntax alone determines which it is).
-    
+
 * Word ambiguity: *The busdriver threw the ball in the park.*, *The teacher threw the ball in the living room.* (ball is ambiguous, but semantically, busdriver throws balls in park, while teacher throws balls in living room)
 
 * Concept instantiation: *The teacher kissed someone.* (male). (teacher always kisses a male --- has model picked up on this?)
