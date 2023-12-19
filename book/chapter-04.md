@@ -523,10 +523,16 @@ As noted above, the original delta rule was published by [@WidrowHoff60], follow
 
 Then, roughly 26 years later, David Rumelhart and colleagues published a paper on the backpropagation learning algorithm, which extended the delta-rule style error-driven learning to networks with three or more layers. The addition of the extra layer(s) now allows such networks to solve XOR and any other kind of problem (there are [proofs](https://en.wikipedia.org/wiki/Universal_approximation_theorem) about the universality of the learning procedure). The problem is that above, we only considered how to change weights from a sending unit *y* to an output unit *z*, based on the error between the target *t* and actual output activity. But for multiple stages of hidden layers, how do we adjust the weights from the inputs to the hidden units?  Interestingly, the mathematics of this involves simply adding a few more steps to the chain rule. 
 
-The overall derivation is as follows. The goal is to again minimize the error (SSE) as a function of the weights, 
-$$ \Delta w_{ij} = -\frac{\partial SSE}{\partial w_{ij}} $$
+First, we define the _activation function_ in terms of $\eta_j$ as the _net input_ to unit $j$, i.e., the product of sending activity $x_i$ and weights:
+$$ \eta_j = \sum x_i w_{ij} $$
 
-TODO: I think we need to define SSE in terms of $ \eta $ before introducing a derivative that uses $ \eta $! Should it be $x$ instead?
+and then the unit activity is a function of this net input:
+$$ y_j = f(\eta_j) $$
+
+The goal is to again minimize the error (SSE) as a function of the weights, 
+$$ \Delta w_{ij} = -\frac{\partial SSE}{\partial w_{ij}} $$.
+
+The chain rule expansion of the basic activation function through hidden units $j$ and output units $k$ is thus:
 
 $$ = -\frac{\partial SSE}{\partial z_k} \frac{\partial z_k}{\partial \eta_k} \frac{\partial \eta_k}{\partial y_j} \frac{\partial y_j}{\partial \eta_j} \frac{\partial \eta_j}{\partial w_{ij}} $$
 
