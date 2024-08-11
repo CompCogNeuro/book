@@ -34,7 +34,7 @@ The Basal Ganglia (BG), which consists principally of the striatum (caudate, put
 
 The final major component of the executive control system consists of the substantia nigra pars compacta (SNc) and several other associated brain areas that together drive phasic dopamine neuromodulation of the BG, resulting in reinforcement learning of its gating actions. This system, summarized computationally using the PVLV model as described in the *Motor Control and Reinforcement Learning* Chapter, interacts with the active maintenance of information in PFC to be able to reinforce a gating signal in the BG that leads to subsequent good performance and reward later in time. This time-travel property of the phasic DA reinforcement learning is essential for training a system that maintains information over time.
 
-In the following subsections, we summarize the biological properties of each of these systems and their relevance to executive function. The prefrontal cortex basal ganglia working memory model (PBWM) then integrates all of these elements into a functioning computational model that can perform complex executive function tasks, as we explore in the remainder of the chapter.
+In the following subsections, we summarize the biological properties of each of these systems and their relevance to executive function. In a model of the A-not-B task, we'll explore how developing active maintenance abilities can explain otherwise puzzling behaviors of infants. We'll see how a model of the Stroop task captures a remarkably wide range of aspects of executive function (and dysfunction) in terms of robust active maintenance. To explore how the system can determine which information should be actively maintained, we'll turn to the prefrontal cortex basal ganglia working memory model (PBWM), which integrates basal ganglia and midbrain dopamine areas to perform complex executive function tasks.
 
 ### Robust Active Maintenance in the PFC
 
@@ -49,6 +49,16 @@ There are two primary biological mechanisms that enable PFC neurons to exhibit s
 *  **Recurrent excitatory connectivity:** Populations of PFC neurons have strong excitatory interconnections (Figure 9.4), such that neural firing reverberates back-and-forth among these interconnected neurons, resulting in sustained active firing. There are two types of such connections: 1) a *corticocortical loop* among pyramidal cells in the same PFC stripe, and; 2) a *corticothalamocortical loop* between lamina VI pyramidal cells in PFC and the thalamic relay cells that project to that particular group of cells.
 
 *  **Intrinsic excitatory maintenance currents:** At the synapses formed by both of the recurrent excitatory loops there are NMDA and metabotropic glutamate (mGluR) receptors that, once opened by high frequency activity, provide a longer time window of increased excitability so as to keep reverberant activity going. Recall from the *Learning* Chapter that the NMDA channel requires the neuron to be sufficiently depolarized to remove the Mg+ (magnesium) ions that otherwise block the channel. This activity-dependent nature of the NMDA channel makes it ideally suited to providing a "switched" or dynamically gated form of active maintenance --- only those neurons that have already been sufficiently activated will benefit from the increased excitation provided by these NMDA channels. This provides a "hook" for the basal ganglia system to control active maintenance: when the thalamic neurons are disinhibited via a BG gating action, the ensuing burst of activity enables a subset of PFC neurons to get over their NMDA Mg+ block thresholds, and thereby continue to fire robustly over time.
+
+### Development of PFC Active Memory Strength and the A-not-B Task
+
+The developmental process can provide important insights into various cognitive phenomena, often by making cognitive failures particularly stark and shedding light on the processes involved. A great example of this is the A-not-B task developed by pioneering developmental researcher Jean Piaget [@Piaget54]. An infant is repeated shown a toy hidden in one location (labeled *A*), and when the toy is then hidden in a different location (*B*), they continue to reach back to *A*. The behavior is striking --- the infant just saw the toy being hidden, tracking the experimenter's movements with great attention (typically novel, interesting toys are used). And yet they appear to forget all about this in a flash, reverting back to the previously established "habitual" behavior. Success on this task relies upon the development of dorsolateral prefrontal cortical regions [@Diamond90].
+
+The computational model we explore here [@Munakata98] shows how a range of behavioral phenomena, some of it quite subtle and complex, can be captured with a relatively simple model that shares much in common with the Stroop model we'll explore later in the chapter. Development in this model is operationalized simply as the strength of the reverberant excitatory connections among PFC neurons, which are the only mechanism for active maintenance in this simplified model. The "older" networks can hold onto information (like where a toy was just hidden) for a longer period of time due to their stronger recurrent connections, while information is much more fleeting in the "younger" networks with weaker recurrent connections.
+
+#### Exploration of Developing Active Maintenance
+
+To see how this all plays out, open the `a-not-b` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
 
 ### Functional Specialization Across PFC Areas
 
@@ -65,6 +75,24 @@ At the broadest level, the PFC areas can be divided along the major axes of medi
 The functional significance of the dorsal vs. ventral distinction has been considerably more controversial in the literature, but anatomically it is clear that dorsal PFC areas interconnect more with the dorsal pathway in the posterior cortex, while ventral PFC interconnects with the ventral posterior cortex pathway. As we saw in the *Perception* Chapter, the dorsal pathway in posterior cortex is specialized for perception-for-action (*How* processing): extracting perceptual signals to drive motor control, while the ventral pathway is specialized for perception-for-identification (*What* processing). This functional specialization in posterior cortex can be carried forward to the associated dorsal and ventral areas of PFC (Figure 9.6), such that **dorsal lateral PFC (DLPFC)** areas are particularly important for executive control over motor planning and the parietal cortex pathways that drive motor control, while **ventral lateral PFC (VLPFC)** areas are particularly important for control over the temporal lobe pathways that identify entities in the world, and also form rich semantic associations about these entities.
 
 On the medial side, the dorsal medial PFC is also known as the anterior cingulate cortex (ACC), which has been shown to encode the affective aspects of motor control variables (e.g., how much effort will an action take, what is its probability of success, how much conflict and uncertainty is there in selecting a response), which is consistent with a "hot how" functional specialization. Dorsomedial PFC areas also project to the subthalamic nucleus within the BG, and serve to delay motor responding to prevent impulsive choice under difficult response selection demands [@Frank06; @AronBehrensSmithEtAl07; @CavanaghWieckiCohenEtAl11]. The ventromedial areas of PFC (VMPFC) including the orbital frontal cortex (OFC) have been shown to encode the affective value of different sensory stimuli, consistent with the idea that they are the "hot what" areas. See [@OReilly10] for more discussion of the What/How functional specialization idea.
+
+### Top-down Cognitive Control from Sustained PFC Firing: The Stroop Model
+
+We now turn to perhaps the single most studied task used to test for executive function, the *Stroop task*, named after John Ridley Stroop, who first described the basic phenomenon [@Stroop35]. The computational model of this task, developed initially by [@CohenDunbarMcClelland90], has been applied (with appropriate change of labels) to a remarkably wide range of different phenomena. Thus, this deceptively simple task and model capture the most critical features of executive function.
+
+![**Figure 9.10:** The Stroop task requires either reading the word or naming the ink color of stimuli such as these. When there is a conflict between the word and the ink color, the word wins because reading is much more well-practiced. Top-down biasing (executive control) is required to overcome the dominance of word reading, by providing excitatory support for the weaker ink color naming pathway.](../figures/fig_stroop.png){ width=10% }
+
+![**Figure 9.11:** Typical data from neurologically intact participants on the Stroop task, showing differentially slowed performance on the conflict (incongruent) color naming condition. Damage to the PFC produces a differential impairment in this condition relative to the others, indicating that PFC is providing top-down excitatory biasing to support color naming.](../figures/fig_stroop_data.png){ width=40% }
+
+In the Stroop paradigm (Figure 9.10) subjects are presented with color words (e.g., "red", "green") one at a time and are required to either read the word (e.g., "red"), or name the color of the ink that the word is written in. Sometimes the word "red" appears in *green* ink, which represents the *incongruent* or *conflict* condition. The "Stroop effect" is that error rates and response times are larger for this incongruent condition, especially in the case of color naming (Figure 9.11). That color naming is particularly difficult in the incongruent condition has been attributed to the relatively "automatic", well-practiced nature of reading words, so that the natural tendency to read the word interferes with attending to, and naming, the color of the ink.
+
+The Cohen et al. (1990) Stroop model showed how a maintained PFC task representation can provide a strong top-down bias to support the weaker color processing channel in the face of the stronger word-reading pathway. They were able to establish the difference between word reading and color naming simply as a function of the amount of training provided on each of these tasks. Our simulation reproduces these same core features.
+
+The Stroop model helps clarify the role of **inhibition** in executive function. Many people describe the Stroop task as requiring people to inhibit the prepotent word reading pathway, in order to focus on the ink color, and the model also does involve inhibitory dynamics. However, the PFC in the model does *not* provide a directed form of inhibition to the word reading pathway specifically. Instead, it provides *excitatory* top-down support to the weaker pathway (color naming), which then enables this pathway to better compete (via lateral inhibitory interactions) with the more dominant word reading pathway. Thus, inhibition is seen as a more collateral, automatic process operating throughout the cortex, and top-down biasing is involved in exciting relevant information, rather than inhibiting irrelevant information. Similarly, people have viewed the A-not-B task as requiring inhibition of the prepotent response to repeat a previously-successful action, but the A-not-B model and other models of developing executive function [@MortonMunakata01; @StedronSahniMunakata05] instead succeed via excitation of competing relevant options.
+
+#### Exploration of Top-down Cognitive Control
+
+Open the `stroop` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
 
 ### Substructure within PFC Areas: Stripes
 
@@ -106,34 +134,6 @@ As we saw in Figure 9.3, some PFC neurons exhibit delay-period (active maintenan
 
 For more PBWM details, including further considerations for output gating, how maintained information is cleared when no longer needed (after output gating), and gating biases that can help improve learning, see the *PBWM Details* Appendix, which also includes relevant equations and default parameters.
 
-## Top-down Cognitive Control from Sustained PFC Firing: The Stroop Model
-
-We now turn to a series of computer simulations to explore various facets of executive function. We begin with perhaps the single most studied task used to test for executive function, the *Stroop task*, named after John Ridley Stroop, who first described the basic phenomenon [@Stroop35]. The computational model of this task, developed initially by [@CohenDunbarMcClelland90], has been applied (with appropriate change of labels) to a remarkably wide range of different phenomena. Thus, this deceptively simple task and model capture the most critical features of executive function.
-
-![**Figure 9.10:** The Stroop task requires either reading the word or naming the ink color of stimuli such as these. When there is a conflict between the word and the ink color, the word wins because reading is much more well-practiced. Top-down biasing (executive control) is required to overcome the dominance of word reading, by providing excitatory support for the weaker ink color naming pathway.](../figures/fig_stroop.png){ width=10% }
-
-![**Figure 9.11:** Typical data from neurologically intact participants on the Stroop task, showing differentially slowed performance on the conflict (incongruent) color naming condition. Damage to the PFC produces a differential impairment in this condition relative to the others, indicating that PFC is providing top-down excitatory biasing to support color naming.](../figures/fig_stroop_data.png){ width=40% }
-
-In the Stroop paradigm (Figure 9.10) subjects are presented with color words (e.g., "red", "green") one at a time and are required to either read the word (e.g., "red"), or name the color of the ink that the word is written in. Sometimes the word "red" appears in *green* ink, which represents the *incongruent* or *conflict* condition. The "Stroop effect" is that error rates and response times are larger for this incongruent condition, especially in the case of color naming (Figure 9.11). That color naming is particularly difficult in the incongruent condition has been attributed to the relatively "automatic", well-practiced nature of reading words, so that the natural tendency to read the word interferes with attending to, and naming, the color of the ink.
-
-The Cohen et al. (1990) Stroop model showed how a maintained PFC representation can provide a strong top-down bias to support the weaker color processing channel in the face of the stronger word-reading pathway. They were able to establish the difference between word reading and color naming simply as a function of the amount of training provided on each of these tasks. Our simulation reproduces these same core features.
-
-The Stroop model helps clarify the role of **inhibition** in executive function. Many people describe the Stroop task as requiring people to inhibit the prepotent word reading pathway, in order to focus on the ink color, and the model also does involve inhibitory dynamics. However, the PFC in the model does *not* provide a directed form of inhibition to the word reading pathway specifically. Instead, it provides *excitatory* top-down support to the weaker pathway (color naming), which then enables this pathway to better compete (via lateral inhibitory interactions) with the more dominant word reading pathway. Thus, inhibition is seen as a more collateral, automatic process operating throughout the cortex, and top-down biasing is involved in exciting relevant information, rather than inhibiting irrelevant information.
-
-### Exploration
-
-Open the `stroop` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
-
-## Development of PFC Active Memory Strength and the A-not-B Task
-
-The developmental process can provide important insights into various cognitive phenomena, often by making cognitive failures particularly stark. A great example of this is the A-not-B task developed by pioneering developmental researcher Jean Piaget [@Piaget54]. An infant is repeated shown a toy hidden in one location (labeled *A*), and when the toy is then hidden in a different location (*B*), they continue to reach back to *A*. The behavior is striking --- the infant just saw the toy being hidden, tracking the experimenter's movements with great attention (typically novel, interesting toys are used). And yet they appear to forget all about this in a flash, reverting back to the previously established "habitual" behavior.
-
-The computational model we explore here [@Munakata98] shows how a range of behavioral phenomena, some of it quite subtle and complex, can be captured with a relatively simple model that shares much in common with the Stroop model explored above. Development in this model is operationalized simply as the strength of the reverberant excitatory connections among PFC neurons, which are the only mechanism for active maintenance in this simplified model. The "older" networks can hold onto information for a longer period of time due to their stronger recurrent connections, while information is much more fleeting in the "younger" ones with weaker recurrent connections.
-
-### Exploration
-
-To see how this all plays out, open the `a-not-b` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
-
 ## Dynamic Updating of PFC Active Memory: The SIR Model
 
 Having seen in the Stroop and A-not-B models how sustained PFC activity can influence behavior through top-down biasing, we now turn to the more complex aspects of PFC function, involving the dynamic gating of PFC representations by the basal ganglia, and the ability to rapidly update and robustly maintain information. As a first introduction to this functionality, captured by the PBWM model, we use the simple **SIR (Store, Ignore, Recall)** task. Here is a sample sequence of trials in this task:
@@ -148,7 +148,7 @@ Having seen in the Stroop and A-not-B models how sustained PFC activity can infl
 
 The BG maintenance gating system has to learn to fire Go to drive updating of PFC on the Store trials to encode the associated stimulus for later recall. It also must learn to fire NoGo to the ignore stimuli, so they don't overwrite previously stored information. Finally, on recall trials, the output BG gating mechanism should drive output of the stored information from PFC. It is critical to appreciate that the network starts out knowing nothing about the semantics of these various inputs, and has to learn entirely through trial-and-error what to do with the different inputs.
 
-### Exploration
+### Exploration of Dynamic Updating of PFC Active Memory
 
 To see this learning unfold, open the `sir` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
 
