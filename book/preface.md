@@ -1,7 +1,7 @@
 \newpage
 {<} \huge Preface
 
-This is the fourth edition of this book.  The source of this book is hosted on:
+This is the fifth edition of this book.  The source of this book is hosted on:
 
 https://github.com/CompCogNeuro/ed4
 
