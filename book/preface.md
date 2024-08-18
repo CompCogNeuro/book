@@ -3,7 +3,7 @@
 
 This is the fifth edition of this book.  The source of this book is hosted on:
 
-https://github.com/CompCogNeuro/ed4
+https://github.com/CompCogNeuro/book
 
 The hands-on simulations to explore the models described in this book are available at:
 

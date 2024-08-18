@@ -10,15 +10,15 @@ Web page: [CompCogNeuro.org](https://CompCogNeuro.org)
 
 Please use the following links to download the formatted version of the book:
 
-* [PDF](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.pdf) --- best for printing
+* [PDF](https://github.com/CompCogNeuro/book/releases/download/v1.0.0/ccnbook_ed4.pdf) --- best for printing
 
-* [ePub](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.epub) --- opens in e.g., Mac iBooks -- also works on Kindle too.
+* [ePub](https://github.com/CompCogNeuro/book/releases/download/v1.0.0/ccnbook_ed4.epub) --- opens in e.g., Mac iBooks -- also works on Kindle too.
 
-* [Kindle / MOBI](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.mobi) --- Note: no longer supported by Amazon, next release will have KPF version -- epub version is recommended in the meantime.  You can email this to yourself at your amazon kindle account to get it on your device: [Kindle help page](https://www.amazon.com/gp/help/customer/display.html?nodeId=G7NECT4B4ZWHQ8WV)
+* [Kindle / MOBI](https://github.com/CompCogNeuro/book/releases/download/v1.0.0/ccnbook_ed4.mobi) --- Note: no longer supported by Amazon, next release will have KPF version -- epub version is recommended in the meantime.  You can email this to yourself at your amazon kindle account to get it on your device: [Kindle help page](https://www.amazon.com/gp/help/customer/display.html?nodeId=G7NECT4B4ZWHQ8WV)
 
 * [Amazon.com](https://www.amazon.com//dp/B007H9YWAG) --- you can pay $2.99 (lowest price possible) to have Amazon upload the book to your kindle, or roughly $35 for them to send you an on-demand paperback print version (in color)
 
-* [HTML](https://github.com/CompCogNeuro/ed4/releases/download/v1.0.0/ccnbook_ed4.html) --- single big HTML file --- NOTE: this does not display all of the math correctly, so you should use one of the other formats above for Chapters 2 and 4.
+* [HTML](https://github.com/CompCogNeuro/book/releases/download/v1.0.0/ccnbook_ed4.html) --- single big HTML file --- NOTE: this does not display all of the math correctly, so you should use one of the other formats above for Chapters 2 and 4.
 
 Note: if you click on `book` and the individual `.md` files in there (which is the raw source for the text), you can read the text but the figure captions will not show up, and there will be a `{ width }` styling tag after figures.
 
@@ -36,7 +36,7 @@ Thanks to Covid-19, video lectures by O'Reilly @ UC Davis are being recorded: [Y
 
 Please use this citation for the text:
 
-O'Reilly, R. C., Munakata, Y., Frank, M. J., Hazy, T. E., and Contributors (2012). Computational Cognitive Neuroscience. Wiki Book, 4th Edition (2020). URL: https://github.com/CompCogNeuro/ed4
+O'Reilly, R. C., Munakata, Y., Frank, M. J., Hazy, T. E., and Contributors (2012). Computational Cognitive Neuroscience. Wiki Book, 4th Edition (2020). URL: https://github.com/CompCogNeuro/book
 
 (you could update year to 2020 but maybe better to just keep using the 2012 citation --- either way is fine)
 
@@ -47,8 +47,8 @@ BibTeX:
   author={Randall C. O'Reilly and Yuko Munakata and Michael J. Frank and Thomas E. Hazy and Contributors},
   title={Computational Cognitive Neuroscience},
   year={2012},
-  publisher={Online Book, 4th Edition, URL: \url{https://github.com/CompCogNeuro/ed4}},
-  url={https://github.com/CompCogNeuro/ed4},
+  publisher={Online Book, 4th Edition, URL: \url{https://github.com/CompCogNeuro/book}},
+  url={https://github.com/CompCogNeuro/book},
 }
 ```
 
