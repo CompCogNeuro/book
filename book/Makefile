@@ -1,6 +1,5 @@
 # makefile for building book
 
 all:
-	cd ../; ./citeproc.sh
-	cd ../; ./build
+	author book -o ccnbook_ed5
 

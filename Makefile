@@ -3,14 +3,7 @@
 VERS=v1.0.0
 
 all:
-	./citeproc.sh
-	./build
-
-install:
-	cp book.docx ccnbook_ed4.docx
-	cp book.epub ccnbook_ed4.epub
-	cp book.html ccnbook_ed4.html
-	cp book.pdf ccnbook_ed4.pdf
+	cd book; author book -f html -o ccnbook_ed5
 
 release:
 	git commit -am "$(VERS) release"

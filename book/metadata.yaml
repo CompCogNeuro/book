@@ -46,6 +46,8 @@ language: en-US
 # See https://wiki.mobileread.com/wiki/Genre
 genre: reference
 
+csl: apa-6th-edition.csl
+
 # Set this option if you need to change the paper size. Default is "letter".
 # "A4" is also valid.
 

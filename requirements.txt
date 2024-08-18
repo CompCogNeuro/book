@@ -1,4 +1,0 @@
-PyYAML>=4.2b1
-grizzled-python>=2.0.0
-doit==0.31.1
-panflute==1.11.2

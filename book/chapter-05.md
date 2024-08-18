@@ -57,7 +57,7 @@ Figures 5.3 and 5.4 show more detail on the structure of the neocortex, in terms
 | Hippocampus   | +                 | +          | +++      | +++        | ---        | +++       |
 | Neocortex     | ++                | +++        | ++       | ---        | +++        | +++       |
 
-Table: **Table 5.1** Comparison of learning mechanisms and activity/representational dynamics across four primary areas of the brain. **+++** means that the area definitely has given property, with fewer +'s indicating less confidence in and/or importance of this feature. **---** means that the area definitely does not have the given property, again with fewer -'s indicating lower confidence or importance.
+Table: **Table 5.1** Comparison of learning mechanisms and activity/representational dynamics across four primary areas of the brain. `+++` means that the area definitely has given property, with fewer `+` indicating less confidence in and/or importance of this feature. `---` means that the area definitely does not have the given property, again with fewer `-` indicating lower confidence or importance.
 
 Table 5.1 shows a comparison of four major brain areas according to the learning rules and activation dynamics that they employ. We haven't yet discussed reward-driven learning. We'll do so in the *Motor Control and Reinforcement Learning* Chapter, but for now think of it as learning to predict which pattern of activation will maximize a reward signal (e.g., dopamine level).
 
