@@ -171,7 +171,7 @@ You can explore both weight-based and activation-based priming on a simple stem-
 
 ### Hippocampus Theta Phase
 
-This appendix provides more information about the theta phase hippocampus implementation [@KetzMorkondaOReilly13], which is used in the `hip` exploration.  See [leabra/hip](https://github.com/emer/leabra/tree/master/hip) on github for the source code and more details about the current implementation.
+This appendix provides more information about the theta phase hippocampus implementation [@KetzMorkondaOReilly13], which is used in the `hip` exploration.  See [leabra/hip](https://github.com/emer/leabra/tree/main/hip) on github for the source code and more details about the current implementation.
 
 Here are the three phases of activation dynamics in the network:
 
