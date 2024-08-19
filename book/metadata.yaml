@@ -1,6 +1,6 @@
 copyright:
   owner: "Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E. Hazy, and Contributors"
-  year: 2020
+  year: "2024"
   version: "v1.1.1"
 
 documentclass: book
@@ -12,21 +12,6 @@ title: "Computational Cognitive Neuroscience"
 
 publisher: "Open Textbook, freely available"
 
-# Whether or not to enable PlantUML. You must install PlantUML, and the
-# "plantuml" command must be in your path, if you enable this feature.
-#
-# Default, if not specified: false
-use_plantuml: false
-
-# Whether PDF generation uses Weasy Print (true) or LaTeX (false). Defaults to
-# false (LaTeX).
-use_weasyprint: false
-
-# Set to the language in which the book is written. This is especially
-# useful when generating PDF with weasyprint, because it affects how
-# hyphenation is handled. (When using weasyprint, automatic hyphenation is
-# supported for any language that Pyphen supports.)
-
 # Multiple authors are permitted.
 author:
 - "Randall C. O'Reilly"
@@ -35,10 +20,9 @@ author:
 - Thomas E. Hazy
 - Contributors
 
-# Book identifier is optional.
-#identifier:
-scheme: ISBN 9798633570106
-#  text: 123456789X
+# Book identifier:
+identifier_scheme: ISBN
+identifier: "9798633570106"
 
 # The language and variant in which the book is written.
 language: en-US
@@ -46,13 +30,11 @@ language: en-US
 # See https://wiki.mobileread.com/wiki/Genre
 genre: reference
 
+# citation styling -- get from https://github.com/citation-style-language/styles
 csl: apa-6th-edition.csl
 
 # Set this option if you need to change the paper size. Default is "letter".
 # "A4" is also valid.
-
-#papersize: letter
-
 papersize: letter
 
 urlcolor: "blue"
@@ -62,12 +44,7 @@ link-citations: true
 # align display equations on the left
 classoption: fleqn
 
-# latex-only -- not useful
-glossary: false
-
 subparagraph: true
-
-# crossref options
 
 linkReferences: true
 # note: set in html-metadata
