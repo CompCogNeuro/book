@@ -4,4 +4,4 @@ This is the 5th edition of the online, freely available textbook, providing a co
 
 The first part of this textbook develops a coherent set of computational and neural principles that capture the behavior of networks of interconnected neurons, and the second part applies these principles to understand the above-listed cognitive functions.
 
-For more information, see the [CompCogNeuro website](https://compcogneuro.org/book).
+For more information, see the [book website](https://compcogneuro.org/book).
