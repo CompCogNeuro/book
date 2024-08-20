@@ -1,14 +1,10 @@
-# Acknowledgments
+# Acknowledgments {-}
 
 We thank the large number of students who have helped improve this textbook over the years, in addition to the support and understanding of our families.
 
 \
-\
-\
-\
-\
 
-## About the Authors
+## About the Authors {-}
 
 Randall C. O'Reilly is a Scientist at Obelisk Lab in the Astera Institute, and Adjunct Professor of Psychology and Computer Science at the Center for Neuroscience at the University of California, Davis.  https://ccnlab.org/people/oreilly
 

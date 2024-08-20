@@ -1,4 +1,4 @@
-## Copyright
+# Copyright {-}
 
 This is an open-source textbook, hosted at: https://github.com/CompCogNeuro
 
@@ -14,23 +14,11 @@ addressed “Attention: Book Permissions,” at the address below.
 
 https://ccnlab.org
 
-## Dedication
-
-\
-\
-\
-\
-\
+# Dedication {-}
 
 _To our families._
 
-\
-\
-\
-\
-\
-
-## Preface
+# Preface {-}
 
 This is the fifth edition of this book.  The source of this book is hosted on:
 
