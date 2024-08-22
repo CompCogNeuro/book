@@ -1,6 +1,6 @@
 # Copyright {-}
 
-This is an open-source textbook, hosted at: https://github.com/CompCogNeuro
+This is an open-source textbook, available at [https://compcogneuro.org/book](https://compcogneuro.org/book) and hosted at: [https://github.com/CompCogNeuro]([https://github.com/CompCogNeuro)
 
 Copyright © 2024 Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E. Hazy, and Contributors
 
