@@ -20,11 +20,22 @@ _To our families._
 
 # Preface {-}
 
-This is the fifth edition of this book.  The source of this book is hosted on:
+This is the fifth edition of this book. 
+
+The website for this book is: 
+
+[https://compcogneuro.org/book](https://compcogneuro.org/book)
+
+The hands-on simulations to explore the models described in this book are available at:
+
+[https://compcogneuro.org/simulations](https://compcogneuro.org/simulations)
+\
+\
+The source of this book is hosted on:
 
 https://github.com/CompCogNeuro/book
 
-The hands-on simulations to explore the models described in this book are available at:
+The source of the simulations is hosted on:
 
 https://github.com/CompCogNeuro/sims
 
