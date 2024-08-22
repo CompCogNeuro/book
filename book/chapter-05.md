@@ -12,7 +12,7 @@ As usual, we begin with a basic foundation in biology: the gross anatomy of the 
 
 ## Navigating the Functional Anatomy of the Brain
 
-![**Figure 5.1:** Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](../figures/fig_brain_anatomy.png){#fig:fig-brain_anatomy width=65% }
+![**Figure 5.1:** Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](../figures/fig_brain_anatomy.png){#fig:fig-brain-anatomy width=65% }
 
 Figure 5.1 shows the "gross" (actually quite beautiful and amazing!) anatomy of the brain. The outer portion is the "wrinkled sheet" (upon which our thoughts rest) of the **neocortex**, showing all of the major lobes. This is where most of our complex cognitive function occurs, and what we have been focusing on to this point in the text. The rest of the brain lives inside the neocortex, with some important areas shown in the figure. These are generally referred to as **subcortical** brain areas, and we include some of them in our computational models, including:
 
@@ -26,15 +26,15 @@ Figure 5.1 shows the "gross" (actually quite beautiful and amazing!) anatomy of 
 
 * **Basal Ganglia** --- this is a collection of subcortical areas that plays a critical role in the *Motor Control and Reinforcement Learning* Chapter, and also in *Executive Function* Chapter. It helps to make the final "Go" call on whether (or not) to execute particular actions that the cortex 'proposes', and whether or not to update cognitive plans in the prefrontal cortex. Its policy for making these choices is learned based on their prior history of reinforcement/punishment.
 
-![**Figure 5.2:** Terminology for referring to different parts of the brain --- for everything except lateral and medial, three different terms for the same thing are given.](../figures/fig_location_terms.png){#fig:fig-location_terms width=30% }
+![**Figure 5.2:** Terminology for referring to different parts of the brain --- for everything except lateral and medial, three different terms for the same thing are given.](../figures/fig_location_terms.png){#fig:fig-location-terms width=30% }
 
 Figure 5.2 shows the terminology that anatomists use to talk about different parts of the brain --- it is a good idea to get familiar with these terms --- we'll put them to good use right now.
 
-![**Figure 5.3:** Brodmann's numbering system for the different areas of the neocortex, based on anatomical distinctions such as the thickness of different cortical layers, as we discussed in the Networks Chapter. These anatomical distinctions are remarkably well correlated with the functional differences in what different brain areas do.](../figures/fig_brodmann_areas_color.png){#fig:fig-brodmann_areas_color width=50% }
+![**Figure 5.3:** Brodmann's numbering system for the different areas of the neocortex, based on anatomical distinctions such as the thickness of different cortical layers, as we discussed in the Networks Chapter. These anatomical distinctions are remarkably well correlated with the functional differences in what different brain areas do.](../figures/fig_brodmann_areas_color.png){#fig:fig-brodmann-areas-color width=50% }
 
-![**Figure 5.4:** Color delineated 3D map of Brodmann areas on the external cortical surface. *Top:* anterior view. *Bottom:* posterior view.](../figures/fig_brodmann_areas_3d_color.png){#fig:fig-brodmann_areas_3d_color width=30% }
+![**Figure 5.4:** Color delineated 3D map of Brodmann areas on the external cortical surface. *Top:* anterior view. *Bottom:* posterior view.](../figures/fig_brodmann_areas_3d_color.png){#fig:fig-brodmann-areas-3d-color width=30% }
 
-![**Figure 5.5:** Summary of functions of cortical lobes --- see text for details.](../figures/fig_cortex_lobes.png){#fig:fig-cortex_lobes width=50% }
+![**Figure 5.5:** Summary of functions of cortical lobes --- see text for details.](../figures/fig_cortex_lobes.png){#fig:fig-cortex-lobes width=50% }
 
 Figures 5.3 and 5.4 show more detail on the structure of the neocortex, in terms of **Brodmann areas** --- these areas were identified by Korbinian Brodmann on the basis of anatomical differences (principally the differences in thickness of different cortical layers, which we covered in the *Networks* Chapter). We won't refer too much to things at this level of detail, but learning some of these numbers is a good idea for being able to read the primary literature in cognitive neuroscience. Here is a quick overview of the functions of the cortical lobes (Figure 5.5):
 
