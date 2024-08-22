@@ -1,18 +1,10 @@
 # Copyright {-}
 
-This is an open-source textbook, available at [https://compcogneuro.org/book](https://compcogneuro.org/book) and hosted at: [https://github.com/CompCogNeuro]([https://github.com/CompCogNeuro)
+This is an open-source textbook, available at [https://compcogneuro.org/book](https://compcogneuro.org/book) and hosted at [https://github.com/CompCogNeuro/book](https://github.com/CompCogNeuro/book).
 
 Copyright © 2024 Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E. Hazy, and Contributors
 
-All rights reserved. No part of this publication may be reproduced,
-distributed, or transmitted in any form or by any means, including
-photocopying, recording, or other electronic or mechanical methods, without
-the prior written permission of the publisher, except in the case of brief
-quotations embodied in critical reviews and certain other noncommercial uses
-permitted by copyright law. For permission requests, write to the author,
-addressed “Attention: Book Permissions,” at the address below.
-
-https://ccnlab.org
+All rights reserved. Licensed under [CC-BY-4.0](https://github.com/CompCogNeuro/book/blob/main/LICENSE).
 
 # Dedication {-}
 
@@ -31,11 +23,11 @@ The hands-on simulations to explore the models described in this book are availa
 [https://compcogneuro.org/simulations](https://compcogneuro.org/simulations)
 \
 \
-The source of this book is hosted on:
+The source of this book is hosted at:
 
 https://github.com/CompCogNeuro/book
 
-The source of the simulations is hosted on:
+The source of the simulations is hosted at:
 
 https://github.com/CompCogNeuro/sims
 
