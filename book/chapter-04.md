@@ -155,7 +155,7 @@ Many researchers (and drug companies) have the potentially dangerous belief that
 
 ### Exploration of Self-Organizing Learning
 
-The best way to see this dynamic is via the computational exploration. Open the `self_org` simulation from [CCN Sims](https://github.com/CompCogNeuro/sims) and follow the directions from there.
+The best way to see this dynamic is via the computational exploration. Open the `self_org` simulation from [CCN Sims](https://compcogneuro.org/simulations) and follow the directions from there.
 
 ## Error-Driven Learning
 
@@ -235,7 +235,7 @@ Biologically, the bidirectional connectivity in our models enables these error s
 
 ### Exploration of Error-Driven Learning
 
-The `pat_assoc` simulation from [CCN Sims](https://github.com/CompCogNeuro/sims) provides a nice demonstration of the limitations of self-organizing Hebbian-style learning, and how error-driven learning overcomes these limitations, in the context of a simple two-layer pattern associator that learns basic input/output mappings. Follow the directions in that simulation link to run the exploration.
+The `pat_assoc` simulation from [CCN Sims](https://compcogneuro.org/simulations) provides a nice demonstration of the limitations of self-organizing Hebbian-style learning, and how error-driven learning overcomes these limitations, in the context of a simple two-layer pattern associator that learns basic input/output mappings. Follow the directions in that simulation link to run the exploration.
 
 You should have seen that one of the input/output mapping tasks was *impossible* for even error-driven learning to solve, in the two-layer network. The next exploration, `err_driven_hidden` shows that the addition of a hidden layer, combined with the powerful error-driven learning mechanism, enables even this "impossible" problem to now be solved. This demonstrates the computational power of the Backpropagation algorithm.
 
@@ -255,7 +255,7 @@ $$ \theta_p = \lambda y_l + (1-\lambda) x_m y_m $$
 However, computationally, it is clearer and simpler to just combine separate XCAL functions, each with their own weighting function --- due to the linearity of the function, this is mathematically equivalent:
 $$ \Delta w = \lambda_l f_{xcal} ( x_s y_s, y_l) + \lambda_m f_{xcal} (x_s y_s, x_m y_m) $$
 
-It is reasonable that these lambda parameters may differ according to brain area (i.e., some brain systems learn more about statistical regularities, whereas others are more focused on minimizing error), and even that it may be dynamically regulated (i.e. transient changes in neuromodulators like dopamine and acetylcholine can influence the degree to which error signals are emphasized).  To see a concrete example of how Hebbian learning in early perceptual areas can complement error-driven learning to allow networks to generalize to novel situations, see the `hebberr_combo` simulation in [CCN Sims](https://github.com/CompCogNeuro/sims).
+It is reasonable that these lambda parameters may differ according to brain area (i.e., some brain systems learn more about statistical regularities, whereas others are more focused on minimizing error), and even that it may be dynamically regulated (i.e. transient changes in neuromodulators like dopamine and acetylcholine can influence the degree to which error signals are emphasized).  To see a concrete example of how Hebbian learning in early perceptual areas can complement error-driven learning to allow networks to generalize to novel situations, see the `hebberr_combo` simulation in [CCN Sims](https://compcogneuro.org/simulations).
 
 There are small but reliable computational advantages to automating this balancing of self-organizing vs. error-driven learning (i.e., a dynamically-computed $\lambda_l$ value, while keeping $\lambda_m = 1$), based on two factors: the magnitude of the $y_l$ receiving-unit running average activation, and the average magnitude of the error signals present in a layer (see *Leabra Details* Chapter Appendix).
 
@@ -303,7 +303,7 @@ The different elements of the Leabra framework are therefore synergistic with ea
 
 ### Exploration of Leabra
 
-Open the `family_trees` simulation in [CCN Sims](https://github.com/CompCogNeuro/sims) to explore Leabra learning in a deep multi-layered network running a more complex task with some real-world relevance. This simulation is very interesting for showing how networks can create their own similarity structure based on functional relationships, refuting the common misconception that networks are driven purely by input similarity structure.
+Open the `family_trees` simulation in [CCN Sims](https://compcogneuro.org/simulations) to explore Leabra learning in a deep multi-layered network running a more complex task with some real-world relevance. This simulation is very interesting for showing how networks can create their own similarity structure based on functional relationships, refuting the common misconception that networks are driven purely by input similarity structure.
 
 ## Appendix
 

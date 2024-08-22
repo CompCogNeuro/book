@@ -61,7 +61,7 @@ The division of labor between frontal cortex and basal ganglia is such that the 
 
 ### Exploration of the Basal Ganglia
 
-Open the `bg` simulation from [CCN Sims](https://github.com/CompCogNeuro/sims) for an exploration of a basic model of go vs. nogo action selection and learning dynamics in the basal ganglia. This model also allows you to investigate the effects of Parkinson's disease and dopaminergic medications.
+Open the `bg` simulation from [CCN Sims](https://compcogneuro.org/simulations) for an exploration of a basic model of go vs. nogo action selection and learning dynamics in the basal ganglia. This model also allows you to investigate the effects of Parkinson's disease and dopaminergic medications.
 
 ## Dopamine and Temporal Difference Reinforcement Learning
 
@@ -105,7 +105,7 @@ The TD learning rule can be used to explain a large number of different conditio
 
 ### Exploration of TD Learning
 
-Open the `rl` simulation from [CCN Sims](https://github.com/CompCogNeuro/sims) for an exploration of TD-based reinforcement learning in simple conditioning paradigms. This exploration should help solidify your understanding of reinforcement learning, reward prediction error, and simple classical conditioning.
+Open the `rl` simulation from [CCN Sims](https://compcogneuro.org/simulations) for an exploration of TD-based reinforcement learning in simple conditioning paradigms. This exploration should help solidify your understanding of reinforcement learning, reward prediction error, and simple classical conditioning.
 
 ## The Actor-Critic Architecture for Motor Learning
 
@@ -154,7 +154,7 @@ In short, the PVLV system can explain how the different biological systems are i
 
 ### Exploration of PVLV
 
-Open the `pvlv` simulation in [CCN Sims](https://github.com/CompCogNeuro/sims), which runs the same conditioning paradigms as explored in the TD model.
+Open the `pvlv` simulation in [CCN Sims](https://compcogneuro.org/simulations), which runs the same conditioning paradigms as explored in the TD model.
 
 ## Cerebellum and Error-Driven Learning
 
@@ -174,4 +174,4 @@ Putting all these pieces together, David Marr [@Marr69] and James Albus [@Albus7
 
 ### Exploration of Cerebellum
 
-Open the `cereb` model in [CCN Sims](https://github.com/CompCogNeuro/sims) of motor learning.
+Open the `cereb` model in [CCN Sims](https://compcogneuro.org/simulations) of motor learning.

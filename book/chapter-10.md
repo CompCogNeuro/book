@@ -88,7 +88,7 @@ Unlike the V1 model, however, the individual statistical clusters that emerge fr
 
 ### Exploration
 
-Run the `sem` model from [CCN Sims](https://github.com/CompCogNeuro/sims) for the exploration of semantic learning of word co-occurrences. The model here was trained on an early draft of the first edition of this textbook, and thus has relatively specialized knowledge, hopefully much of which is now shared by you the reader.
+Run the `sem` model from [CCN Sims](https://compcogneuro.org/simulations) for the exploration of semantic learning of word co-occurrences. The model here was trained on an early draft of the first edition of this textbook, and thus has relatively specialized knowledge, hopefully much of which is now shared by you the reader.
 
 ## Spelling to Sound Mappings in Word Reading
 
@@ -139,7 +139,7 @@ Table: **Table 10.1** Comparison of nonword reading performance for our spelling
 
 ### Exploration
 
-Run `ss` (spelling to sound) in [CCN Sims](https://github.com/CompCogNeuro/sims) to explore the spelling-to-sound model, and test its performance on both word and nonword stimuli.
+Run `ss` (spelling to sound) in [CCN Sims](https://compcogneuro.org/simulations) to explore the spelling-to-sound model, and test its performance on both word and nonword stimuli.
 
 ## Reading and Dyslexia in the Triangle Model
 
@@ -161,7 +161,7 @@ That these different forms of dyslexia can be reliably observed in different pat
 
 ![Cluster plot of semantic similarity for words in the simple triangle model of reading and dyslexia. Words that are semantically close (e.g., within the same terminal cluster) are sometimes confused for each other in simulated deep dyslexia.](../figures/fig_dyslex_sem_clust.png){#fig:fig-dyslex-sem-clust width=50% }
 
-Run `dyslexia` from [CCN Sims](https://github.com/CompCogNeuro/sims) for the simulation of the triangle model and associated forms of dyslexia. This model allows you to simulate the different forms of acquired dyslexia, in addition to normal reading, using the small corpus of words as shown in [@fig:fig-dyslex-sem-clust].
+Run `dyslexia` from [CCN Sims](https://compcogneuro.org/simulations) for the simulation of the triangle model and associated forms of dyslexia. This model allows you to simulate the different forms of acquired dyslexia, in addition to normal reading, using the small corpus of words as shown in [@fig:fig-dyslex-sem-clust].
 
 ## Syntax and Semantics in a Sentence Gestalt
 
@@ -245,7 +245,7 @@ The model structure ([@fig:fig-sg-net-deepleabra]) has single word inputs (using
 
 ### Exploration
 
-Run the `sg` model from [CCN Sims](https://github.com/CompCogNeuro/sims) to explore the sentence gestalt model.
+Run the `sg` model from [CCN Sims](https://compcogneuro.org/simulations) to explore the sentence gestalt model.
 
 ## Next Steps in Language Modeling of Sentences and Beyond
 

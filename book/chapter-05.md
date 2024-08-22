@@ -12,7 +12,7 @@ As usual, we begin with a basic foundation in biology: the gross anatomy of the 
 
 ## Navigating the Functional Anatomy of the Brain
 
-![Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](../figures/fig_brain_anatomy.png){#fig:fig-brain-anatomy width=65% }
+![Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](../figures/fig_brain_anatomy.png){#fig:fig-brain-anatomy width=45% }
 
 [@fig:fig-brain-anatomy] shows the "gross" (actually quite beautiful and amazing!) anatomy of the brain. The outer portion is the "wrinkled sheet" (upon which our thoughts rest) of the **neocortex**, showing all of the major lobes. This is where most of our complex cognitive function occurs, and what we have been focusing on to this point in the text. The rest of the brain lives inside the neocortex, with some important areas shown in the figure. These are generally referred to as **subcortical** brain areas, and we include some of them in our computational models, including:
 

@@ -58,7 +58,7 @@ The computational model we explore here [@Munakata98] shows how a range of behav
 
 #### Exploration of Developing Active Maintenance
 
-To see how this all plays out, open the `a-not-b` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
+To see how this all plays out, open the `a-not-b` model in [CCN Sims](https://compcogneuro.org/simulations).
 
 ### Functional Specialization Across PFC Areas
 
@@ -92,7 +92,7 @@ The Stroop model helps clarify the role of **inhibition** in executive function.
 
 #### Exploration of Top-down Cognitive Control
 
-Open the `stroop` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
+Open the `stroop` model in [CCN Sims](https://compcogneuro.org/simulations).
 
 ### Substructure within PFC Areas: Stripes
 
@@ -150,7 +150,7 @@ The BG maintenance gating system has to learn to fire Go to drive updating of PF
 
 ### Exploration of Dynamic Updating of PFC Active Memory
 
-To see this learning unfold, open the `sir` model in [CCN Sims](https://github.com/CompCogNeuro/sims).
+To see this learning unfold, open the `sir` model in [CCN Sims](https://compcogneuro.org/simulations).
 
 While we don't consider it here for simplicity, the same PBWM model, when augmented to have multiple parallel stripes, can learn to separately update and maintain multiple pieces of information in working memory and to retrieve the correct information when needed. A good example of this demand is summarized by the SIR-2 task, where instead of involving a single store and recall task control signal, there are two such signals (i.e. S1 and S2 and R1 and R2). Thus, the network has to learn to separately store two stimuli, update them into separate buffers, and appropriately respond based on the maintained information in the correct buffer when cue to recall R1 vs. R2.
 

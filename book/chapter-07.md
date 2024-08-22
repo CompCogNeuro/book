@@ -42,7 +42,7 @@ But we'll see that this kind of whole-sale abandonment of neural networks is unj
 
 ### Exploration of Catastrophic Interference
 
-Run the `abac` simulation from [CCN Sims](https://github.com/CompCogNeuro/sims).
+Run the `abac` simulation from [CCN Sims](https://compcogneuro.org/simulations).
 
 ## The Hippocampus and Pattern Separation / Pattern Completion
 
@@ -84,7 +84,7 @@ Interestingly, there is a direct tension or tradeoff between pattern separation 
 
 ### Exploration
 
-To explore how the hippocampus encodes and recalls memories, using the AB-AC task, run the `hip` simulation in [CCN Sims](https://github.com/CompCogNeuro/sims).
+To explore how the hippocampus encodes and recalls memories, using the AB-AC task, run the `hip` simulation in [CCN Sims](https://compcogneuro.org/simulations).
 
 ## Complementary Learning Systems
 
@@ -163,7 +163,7 @@ and respond with words like "window" or "winter", "letter" or "lettuce". The pri
 
 ### Exploration
 
-You can explore both weight-based and activation-based priming on a simple stem-completion like task, using a very generic cortical learning model, in the `priming` simulation in [CCN Sims](https://github.com/CompCogNeuro/sims).
+You can explore both weight-based and activation-based priming on a simple stem-completion like task, using a very generic cortical learning model, in the `priming` simulation in [CCN Sims](https://compcogneuro.org/simulations).
 
 ## Appendix
 
