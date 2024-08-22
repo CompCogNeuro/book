@@ -40,7 +40,7 @@ Computationally, the weights determine what a neuron is detecting. A strong weig
 
 ### Biology Details
 
-![Tracing of a cortical pyramidal neuron.](../figures/fig_cortical_neuron.png){#fig:fig-cortical_neuron#fig:fig-cortical-neuron width=20% }
+![Tracing of a cortical pyramidal neuron.](../figures/fig_cortical_neuron.png){#fig:fig-cortical_neuron#fig:fig-cortical-neuron width=19% }
 
 [@fig:fig-cortical-neuron] shows a tracing of a typical excitatory neuron in the cortex called a **pyramidal neuron**, which is the primary type that we simulate in our models.  The major elements of dendrites, cell body, and axon as discussed in the main chapter are shown.  Note that the dendrites have small **spines** on them --- these are where the axons from sending neurons synapse, forming connections between neurons.
 
