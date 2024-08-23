@@ -6,9 +6,9 @@ We thank the large number of students who have helped improve this textbook over
 
 ## About the Authors {-}
 
-Randall C. O'Reilly is a Scientist at Obelisk Lab in the Astera Institute, and Adjunct Professor of Psychology and Computer Science at the Center for Neuroscience at the University of California, Davis.  https://ccnlab.org/people/oreilly
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Randall C. O'Reilly is a Scientist at Obelisk Lab in the Astera Institute, and Adjunct Professor of Psychology and Computer Science at the Center for Neuroscience at the University of California, Davis.  [https://ccnlab.org/people/oreilly](https://ccnlab.org/people/oreilly)
 
-Yuko Munakata is Professor of Psychology in the Center for Mind and Brain at the University of California, Davis. https://psychology.ucdavis.edu/people/yuko-munakata
+Yuko Munakata is Professor of Psychology in the Center for Mind and Brain at the University of California, Davis. [https://psychology.ucdavis.edu/people/yuko-munakata](https://psychology.ucdavis.edu/people/yuko-munakata)
 
 Michael J. Frank is Professor at Brown University.
 
