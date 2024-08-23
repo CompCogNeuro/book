@@ -114,7 +114,7 @@ One compelling demonstration of the importance of spatial invariance in reading 
 
 Clearly this is more effortful than properly spelled text, but the ability to read it at all indicates that just extracting individual letters in an invariant manner goes a long way.
 
-To test the performance of this object-recognition based approach, we ran it through a set of different standard sets of nonwords, several of which were also used to test the PMSP model. The results are shown in Table 10.1.
+To test the performance of this object-recognition based approach, we ran it through a set of different standard sets of nonwords, several of which were also used to test the PMSP model. The results are shown in [@tbl:table-nonword].
 
 * **Glushko regulars** --- nonwords constructed to match strong regularities, for example *nust*, which is completely regular (e.g., *must*, *bust*, *trust*, etc).
 
@@ -135,7 +135,7 @@ The results indicate that the model does a remarkably good job of capturing the 
 | McCann & Besner homoph    | 92.3     | n/a   | 94.3   |
 | Taraban & McClelland      | 97.9     | n/a   | 100.0  |
 
-Table: **Table 10.1** Comparison of nonword reading performance for our spelling-to-sound model (ss Model), the PMSP model, and data from people, across a range of different nonword datasets as described in the text. Our model performs comparably to people, after learning on nearly 3,000 English monosyllabic words.
+Table: Comparison of nonword reading performance for our spelling-to-sound model (ss Model), the PMSP model, and data from people, across a range of different nonword datasets as described in the text. Our model performs comparably to people, after learning on nearly 3,000 English monosyllabic words. {#tbl:table-nonword}
 
 ### Exploration
 

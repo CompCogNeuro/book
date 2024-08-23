@@ -55,6 +55,10 @@ figPrefix:
 - "Figure"
 - "Figures"
 
+tblPrefix:
+- "Table"
+- "Tables"
+
 secPrefix:
 - "Chapter"
 - "Chapters"

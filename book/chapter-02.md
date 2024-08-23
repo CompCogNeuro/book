@@ -302,9 +302,9 @@ This causes the actual final rate code activation output at the current time *t*
 | ErevI (inhib)  | -75mV          | 0.25     | | ErevE (excite)  | 0mV             | 1          |
 | $\theta$ (Thr) | -50mV          | 0.5      | | SpikeThr        | 20mV            | 1.2        |
 
-Table: **Table 2.1:** The parameters used in our simulations are normalized using the above conversion factors so that the typical values that arise in a simulation fall within the 0..1 normalized range. For example, the membrane potential is represented in the range between 0 and 2 where 0 corresponds to $-100mV$ and $2$ corresponds to $+100mV$ and $1$ is thus $0mV$ (and most membrane potential values stay within $0-1$ in this scale). The biological values given are the default values for the AdEx model.
+Table: The parameters used in our simulations are normalized using the above conversion factors so that the typical values that arise in a simulation fall within the 0..1 normalized range. For example, the membrane potential is represented in the range between 0 and 2 where 0 corresponds to $-100mV$ and $2$ corresponds to $+100mV$ and $1$ is thus $0mV$ (and most membrane potential values stay within $0-1$ in this scale). The biological values given are the default values for the AdEx model. {#tbl:table-params}
 
-Table 2.1 shows the normalized values of the parameters used in our simulations. We use these normalized values instead of the normal biological parameters so that everything fits naturally within a 0..1 range, thereby simplifying many practical aspects of working with the simulations.
+[@tbl:table-params] shows the normalized values of the parameters used in our simulations. We use these normalized values instead of the normal biological parameters so that everything fits naturally within a 0..1 range, thereby simplifying many practical aspects of working with the simulations.
 
 The final equations used to update the neuron, in computational order, are shown here, with all variables that change over time indicated as a function of (t):
 
