@@ -110,7 +110,7 @@ The opposite of a distributed representation is a **localist** representation, w
 
 ### Explorations
 
-See the `face_categ` simulation in [CCN Sims](https://compcogneuro.org/simulations) (Part I only) for an exploration of how face images can be categorized in different ways (emotion, gender, identity), each of which emphasizes some aspect of the input stimuli and collapses across others.
+Open the [faces](https://compcogneuro.org/sims/ch3/faces/) simulation in [CCN Sims](https://compcogneuro.org/simulations) (Part I only) for an exploration of how face images can be categorized in different ways (emotion, gender, identity), each of which emphasizes some aspect of the input stimuli and collapses across others.
 
 ## Bidirectional Excitatory Dynamics and Attractors
 
@@ -136,7 +136,7 @@ There is a mathematical way to capture something like the vertical axis in the a
 
 ### Explorations
 
-See `face_categ` in [CCN Sims](https://compcogneuro.org/simulations) (Part II) for an exploration of how top-down and bottom-up processing interact to produce imagery and help resolve ambiguous inputs (partially occluded faces). These additional simulations provide further elaboration of bidirectional computation:
+Open [faces](https://compcogneuro.org/sims/ch3/faces/) in [CCN Sims](https://compcogneuro.org/simulations) (Part II) for an exploration of how top-down and bottom-up processing interact to produce imagery and help resolve ambiguous inputs (partially occluded faces). Open these additional simulations for further elaboration of bidirectional computation:
 
 * `cats-and-dogs` --- fun example of attractor dynamics in a simple semantic network.
 
