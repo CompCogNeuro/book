@@ -12,7 +12,7 @@ As usual, we begin with a basic foundation in biology: the gross anatomy of the 
 
 ## Navigating the Functional Anatomy of the Brain
 
-![Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](../figures/fig_brain_and_lobes.png){#fig:fig-brain-anatomy width=90% }
+![Gross anatomy of the brain. Left panel shows the major lobes of the outer neocortex layer of the brain, and right panel shows some of the major brain areas internal to the neocortex.](figures/fig_brain_and_lobes.png){#fig:fig-brain-anatomy width=90% }
 
 [@fig:fig-brain-anatomy] shows the "gross" (actually quite beautiful and amazing!) anatomy of the brain. The outer portion is the "wrinkled sheet" (upon which our thoughts rest) of the **neocortex**, showing all of the major lobes. This is where most of our complex cognitive function occurs, and what we have been focusing on to this point in the text. The rest of the brain lives inside the neocortex, with some important areas shown in the figure. These are generally referred to as **subcortical** brain areas, and we include some of them in our computational models, including:
 
@@ -26,15 +26,15 @@ As usual, we begin with a basic foundation in biology: the gross anatomy of the 
 
 * **Basal Ganglia** --- this is a collection of subcortical areas that plays a critical role in the *Motor Control and Reinforcement Learning* Chapter, and also in *Executive Function* Chapter. It helps to make the final "Go" call on whether (or not) to execute particular actions that the cortex 'proposes', and whether or not to update cognitive plans in the prefrontal cortex. Its policy for making these choices is learned based on their prior history of reinforcement/punishment.
 
-![Terminology for referring to different parts of the brain --- for everything except lateral and medial, three different terms for the same thing are given.](../figures/fig_location_terms.png){#fig:fig-location-terms width=30% }
+![Terminology for referring to different parts of the brain --- for everything except lateral and medial, three different terms for the same thing are given.](figures/fig_location_terms.png){#fig:fig-location-terms width=30% }
 
 [@fig:fig-location-terms] shows the terminology that anatomists use to talk about different parts of the brain --- it is a good idea to get familiar with these terms --- we'll put them to good use right now.
 
-![Brodmann's numbering system for the different areas of the neocortex, based on anatomical distinctions such as the thickness of different cortical layers, as we discussed in the Networks Chapter. These anatomical distinctions are remarkably well correlated with the functional differences in what different brain areas do.](../figures/fig_brodmann_areas_color.png){#fig:fig-brodmann-areas-color width=50% }
+![Brodmann's numbering system for the different areas of the neocortex, based on anatomical distinctions such as the thickness of different cortical layers, as we discussed in the Networks Chapter. These anatomical distinctions are remarkably well correlated with the functional differences in what different brain areas do.](figures/fig_brodmann_areas_color.png){#fig:fig-brodmann-areas-color width=50% }
 
-![Color delineated 3D map of Brodmann areas on the external cortical surface. *Top:* anterior view. *Bottom:* posterior view.](../figures/fig_brodmann_areas_3d_color.png){#fig:fig-brodmann-areas-3d-color width=30% }
+![Color delineated 3D map of Brodmann areas on the external cortical surface. *Top:* anterior view. *Bottom:* posterior view.](figures/fig_brodmann_areas_3d_color.png){#fig:fig-brodmann-areas-3d-color width=30% }
 
-![Summary of functions of cortical lobes --- see text for details.](../figures/fig_cortex_lobes.png){#fig:fig-cortex-lobes width=50% }
+![Summary of functions of cortical lobes --- see text for details.](figures/fig_cortex_lobes.png){#fig:fig-cortex-lobes width=50% }
 
 [@fig:fig-brodmann-areas-color; @fig:fig-brodmann-areas-3d-color] show more detail on the structure of the neocortex, in terms of **Brodmann areas** --- these areas were identified by Korbinian Brodmann on the basis of anatomical differences (principally the differences in thickness of different cortical layers, which we covered in the *Networks* Chapter). We won't refer too much to things at this level of detail, but learning some of these numbers is a good idea for being able to read the primary literature in cognitive neuroscience. Here is a quick overview of the functions of the cortical lobes ([@fig:fig-cortex-lobes]):
 
@@ -71,11 +71,11 @@ Each chapter in the remainder of Part II focuses on a different cognitive functi
 
 ## Perception and Attention: What vs. Where
 
-![Hierarchy of visual detectors of increasing complexity achieves sophisticated perceptual categorization, with the higher levels being able to recognize thousands of different objects, people, etc.](../figures/fig_category_hierarch_dist_reps.png){#fig:fig-category_hierarch_dist_reps-5 width=100% }
+![Hierarchy of visual detectors of increasing complexity achieves sophisticated perceptual categorization, with the higher levels being able to recognize thousands of different objects, people, etc.](figures/fig_category_hierarch_dist_reps.png){#fig:fig-category_hierarch_dist_reps-5 width=100% }
 
-![Updated and simplified version of Felleman & Van Essen's (1991) diagram of the anatomical connectivity of visual processing pathways, starting with primary visual cortex (V1) and on up.  The blue-shaded areas comprise the ventral *What* pathway, and green-shaded are the dorsal *Where*.  Reproduced from Markov et al., (2014).](../figures/fig_markov_et_al_cort_hier.png){#fig:fig-markov_cort_hier-5 width=50% }
+![Updated and simplified version of Felleman & Van Essen's (1991) diagram of the anatomical connectivity of visual processing pathways, starting with primary visual cortex (V1) and on up.  The blue-shaded areas comprise the ventral *What* pathway, and green-shaded are the dorsal *Where*.  Reproduced from Markov et al., (2014).](figures/fig_markov_et_al_cort_hier.png){#fig:fig-markov_cort_hier-5 width=50% }
 
-![Division of *What* vs *Where* (ventral vs. dorsal) pathways in visual processing, based on the classic Ungerlieder and Mishkin (1982) framework.](../figures/fig_vis_system_bio.png){#fig:fig-vis_system_bio-5 width=50% }
+![Division of *What* vs *Where* (ventral vs. dorsal) pathways in visual processing, based on the classic Ungerlieder and Mishkin (1982) framework.](figures/fig_vis_system_bio.png){#fig:fig-vis_system_bio-5 width=50% }
 
 The perceptual system provides an excellent example of the power of hierarchically organized layers of neural detectors, as we discussed in the *Networks* Chapter. [@fig:fig-category_hierarch_dist_reps-5] summarizes this process, with associated cortical areas noted below each stage of processing. [@fig:fig-markov_cort_hier-5] shows the current best estimate of the actual anatomical connectivity patterns of all of the major visual areas [@MarkovVezoliChameauEtAl14; @FellemanVanEssen91], showing that information really is processed in a hierarchical fashion in the brain (although there are many interconnections outside of a strict hierarchy as well). [@fig:fig-vis_system_bio-5] puts these areas into their anatomical locations, showing more clearly the **what vs where** (**ventral vs dorsal**) split in visual processing [@UngerleiderMishkin82]. Here is a quick summary of the flow of information up the **what** side of the visual pathway (pictured on the left side of [@fig:fig-markov_cort_hier-5]):
 
@@ -111,7 +111,7 @@ Interestingly, all of these "low level" motor control systems end up being co-op
 
 When you think of memory, probably things like "what did I have for dinner last night?" and "how can I remember people's names better?" tend to come to mind. These represent just one category of memory, however. Indeed, memory is ubiquitous in neural networks --- every synapse has the capacity for storing memory, and any given "memory" requires the coordinated actions of millions of such synapses to encode and retrieve. There are many taxonomies of memory, but really the only one you need to know is identical to the functional organization of the brain being provided here. Memory is embedded in every brain area, and the nature of that memory is intimately tied up with what that area does. Motor cortex learns motor memories. Parietal cortex learns things like motor skills --- how to hit a baseball (hint: keep your eye on the ball --- parietal cortex needs visual input!).
 
-![The hippocampus sits on "top" of the cortical hierarchy and can encode information from all over the brain, binding it together into an episodic memory.](../figures/fig_hippo_mem_formation.png){#fig:fig-hippo_mem_formation-5 width=75% }
+![The hippocampus sits on "top" of the cortical hierarchy and can encode information from all over the brain, binding it together into an episodic memory.](figures/fig_hippo_mem_formation.png){#fig:fig-hippo_mem_formation-5 width=75% }
 
 There is one brain area, however, that looms so large in the domain of memory, that we'll spend a while focusing on it. This is the **hippocampus**, which seems to be particularly good at rapidly learning new information, in a way that doesn't interfere too much with previously learned information [@fig:fig-hippo_mem_formation-5]. When you need to remember the name associated with a person you recently met, you're relying on this rapid learning ability of the hippocampus. We'll see that the neural properties of the hippocampal system are ideally suited to producing this rapid learning ability. One key neural property is the use of **extremely sparse representations**, which produce a phenomenon called **pattern separation**, where the neural activity pattern associated with one memory is highly distinct from that associated with other similar memories [@Marr71; @McClellandMcNaughtonOReilly95]. This is what minimizes interference with prior learning --- interference arises as a function of overlap. We'll see how this pattern separation process is complemented by a pattern completion process for recovering memories during retrieval from partial information [@OReillyMcClelland94].
 
@@ -133,7 +133,7 @@ Finally, we tackle the interactions between syntax and semantics in the context 
 
 Finally, we build upon the motor control functions of frontal cortex and basal ganglia to understand how these two areas interact to support high-level executive function.
 
-![The *What* vs. *How* distinction for posterior cortex can be carried forward into prefrontal cortex, to understand the distinctive roles of the ventral and dorsal areas of PFC.](../figures/fig_cortical_fun_org_tins_acc_ofc.png){#fig:fig-cortical_fun_org-5 width=60% }
+![The *What* vs. *How* distinction for posterior cortex can be carried forward into prefrontal cortex, to understand the distinctive roles of the ventral and dorsal areas of PFC.](figures/fig_cortical_fun_org_tins_acc_ofc.png){#fig:fig-cortical_fun_org-5 width=60% }
 
 We also build upon the functional divisions of the posterior cortex to understand how the ventral vs. dorsal areas of prefrontal cortex are functionally organized. [@fig:fig-cortical_fun_org-5] shows an overall schematic for how this occurs. It also illustrates how the lateral surface is more associated with "cold" cognitive function, while the medial surface is more involved in "hot" emotional and motivational processing.
 
