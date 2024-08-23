@@ -127,11 +127,11 @@ You might have noticed that we haven't yet explained at a biological level how t
 
 PVLV organizes these areas into two overall systems, PV (Primary Value) and LV (Learned Value), consistent with evidence that different brain systems are involved in driving phasic dopamine firing at the onset of CSs (the LV system), versus those involved in predicting subsequent USs (the PV system).
 
-The **basolateral amygala (BLA)** is a core element of the LV system.  It learns to associate CS sensory inputs with subsequent US outcomes, by virtue of receiving extensive sensory inputs from the cortex and other subcortical sensory pathways, and US-coding inputs from the **lateral hypothalamus (LH)**.  The LH is a major source of primary reward signals such as food, water etc.
+The **basolateral amygdala (BLA)** is a core element of the LV system.  It learns to associate CS sensory inputs with subsequent US outcomes, by virtue of receiving extensive sensory inputs from the cortex and other subcortical sensory pathways, and US-coding inputs from the **lateral hypothalamus (LH)**.  The LH is a major source of primary reward signals such as food, water etc.
 
 Populations of neurons in the **ventral striatum (VS)** are central to the PV system, by virtue of their ability to directly inhibit dopamine (DA) neurons in the VTA and SNc, thereby shunting DA firing to predicted US outcomes.  In addition the VS projects to the **lateral habenula (LHb)** which is a critical midbrain nucleus that is the primary source of phasic dipping / pausing of DA firing, when expected rewards are not received (and when negative USs are received).
 
-In more abstact mathematical terms, the PV component of PVLV is identical to Rescorla-Wagner, just using different labels for the variables:
+In more abstract mathematical terms, the PV component of PVLV is identical to Rescorla-Wagner, just using different labels for the variables:
 $$ \delta_{pv} = r - \hat{r} $$
 $$ \delta_{pv} = US - PV $$
 
@@ -142,7 +142,7 @@ $$ \delta_{lv} = US - LV $$
 
 But unlike the PV system, the LV system is able to fire for CS onsets, and experiences its primary learning at the time of US onset.  
 
-There are a number of interesting properties of the learning constraints in the PVLV system. For example, the CS must still be active at the time of the external reward in order for the $LV$ system to learn about it, to allow the BLA to form a direct CS -- US association.  Thus, if the CS itself goes off, then some memory of it must be sustained. This fits well with known constraints on CS learning in conditioning paradigms (known as *trace* conditioning).  There is a wealth of specific data on differences in condtioned stimulus vs. unconditioned stimulus associated learning that are consistent with the PVLV framework [@MollickHazyKruegerEtAl20; @HazyFrankOReilly10; @OReillyFrankHazyEtAl07].
+There are a number of interesting properties of the learning constraints in the PVLV system. For example, the CS must still be active at the time of the external reward in order for the $LV$ system to learn about it, to allow the BLA to form a direct CS -- US association.  Thus, if the CS itself goes off, then some memory of it must be sustained. This fits well with known constraints on CS learning in conditioning paradigms (known as *trace* conditioning).  There is a wealth of specific data on differences in conditioned stimulus vs. unconditioned stimulus associated learning that are consistent with the PVLV framework [@MollickHazyKruegerEtAl20; @HazyFrankOReilly10; @OReillyFrankHazyEtAl07].
 
 In short, the PVLV system can explain how the different biological systems are involved in generating phasic dopamine responses as a function of reward associations, in a way that seems to fit with otherwise somewhat peculiar constraints on the system. Also, we will see in the *Executive Function* Chapter that PVLV provides a cleaner learning signal for controlling the basal ganglia's role in the prefrontal cortex working memory system.
 
