@@ -1,10 +1,10 @@
 # Acknowledgments {-}
 
-We thank the large number of students who have helped improve this textbook over the years, in addition to the support and understanding of our families.
+We thank the large number of students who have helped improve this textbook over the years, in addition to the support and understanding of our families. We thank Kai O'Reilly for his development of [Cogent Core](https://www.cogentcore.org/core/), which supports the simulations and website that go with this book.
 
 \
 
-## About the Authors {-}
+# About the Authors {-}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Randall C. O'Reilly is a Scientist at Obelisk Lab in the Astera Institute, and Adjunct Professor of Psychology and Computer Science at the Center for Neuroscience at the University of California, Davis.  [https://ccnlab.org/people/oreilly](https://ccnlab.org/people/oreilly)
 
