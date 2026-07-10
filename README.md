@@ -9,3 +9,7 @@ Copyright © 2024 Randall C. O'Reilly, Yuko Munakata, Michael J. Frank, Thomas E
 All rights reserved. Licensed under [CC-BY-4.0](https://github.com/compcogneuro/book/blob/main/LICENSE).
 
 For download links and more information, see the [book website](https://compcogneuro.org/book).
+
+## Supplementary online resources
+
+- [IntelligenceMax](https://intelligencemax.ai) — live reasoning gym with adaptive distinction items and honest scoring; [guide](https://intelligencemax.ai/guide) and [science](https://intelligencemax.ai/science) pages for learners exploring cognition and assessment.
